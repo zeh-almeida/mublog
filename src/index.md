@@ -1,11 +1,10 @@
-Welcome this blog!
+Hello there and welcome!
 
-This blog serves as a simple showcase of μblog.
+My name is José Ricardo and I use this blog to showcase myself to the world.
 
-With μblog you can create very elegant, minimalistic blog sites, without the need
-for large web frameworks. Out of the box, it doesn't include any javascript, but that
-can easiely be added by the user, if desired.
+really, I have included my resume and letter of introduction, hope this makes my life easier!
 
-The posts are written in Markdown, and converted to HTML, by utilizing pandoc under the hood.
 
-For more information, you can find this project on [GitHub](https://github.com/766F6964/mublog).
+Sometimes I may ramble here. This may include rants, curiosities or even explanations of my personal projects.
+
+This blog is powered by [μblog](https://github.com/766F6964/mublog), please show some love!
