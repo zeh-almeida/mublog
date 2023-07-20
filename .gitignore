@@ -4,21 +4,27 @@
 # Don't ignore directories
 !*/
 
+# Ignore destination as it should be considered compiled data
+/dst/
+
+# Ignore Python Virtual Environment
+/venv/
+
 # Include specific files by extension
 !/*.gitignore
 !/*.md
 !/*.sh
 !/*.py
+!/*.yml
 !/*.conf
+!/*.Dockerfile
+
+!/.github/workflows/*.*
+!/.vscode/*.*
+
 !/src/*.md
 !/src/posts/*.md
 !/src/templates/*.template
 !/src/css/*.css
 !/src/js/*.js
 !/src/assets/*.*
-
-# Ignore destination as it should be considered compiled data
-/dst/
-
-# Ignore Python Virtual Environment
-/venv/
