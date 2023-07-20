@@ -80,7 +80,7 @@ jobs:
           path: /tmp
       
       - name: Extract Build
-        run: unzip /tmp/build.7z -d build
+        run: unzip /tmp/build.zip -d build
 
       - name: Azure Login
         uses: azure/login@v1
