@@ -16,3 +16,6 @@
 !/src/css/*.css
 !/src/js/*.js
 !/src/assets/*.*
+
+# Ignore destination as it should be considered compiled data
+/dst/
