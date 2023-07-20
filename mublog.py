@@ -50,29 +50,6 @@ class BlogConfig:
 
         self.__load_default()
 
-    def load_config(self, path:(str|None)=None):
-        if not path:
-            path = "mublog.ini"
-        
-        config = configparser.ConfigParser()
-        _ = config.read(path, encoding="utf-8")
-
-        if len(config.sections()) == 0:
-            return
-        
-        if "mublog" not in config:
-            return
-        
-        section = config["mublog"]
-
-        self.blog_url = section["blog_url"]
-        self.blog_title = section["blog_title"]
-        self.blog_description = section["blog_description"]
-        self.blog_author_name = section["blog_author_name"]
-        self.blog_author_mail = section["blog_author_mail"]
-        self.post_ignore_prefix = section["post_ignore_prefix"]
-        self.blog_author_copyright = section["blog_author_copyright"]
-
     def __load_default(self):
         self.blog_url = "http://localhost/"
         self.blog_title = "μblog"
@@ -536,6 +513,9 @@ class Blog:
         Generates the blog, i.e. creates the build directory, copies all files to the build directory, processes all
         posts and pages and generates the rss feed
         """
+        logger.debug("Loading configurations...")
+        self.load_configuration()
+
         logger.debug("Creating build directories and copying files...")
         self.clean_build_directory()
         self.create_build_directories()
@@ -550,6 +530,31 @@ class Blog:
         self.process_favicon()
         logger.info("Processing rss feed...")
         self.process_rss_feed()
+
+    def load_configuration(self)->None:
+        path = "mublog.ini"
+        
+        parser = configparser.ConfigParser()
+        _ = parser.read(path, encoding="utf-8")
+
+        if len(parser.sections()) == 0:
+            logger.warning("No configuration sections were loaded")
+            return
+        
+        if "mublog" not in parser:
+            logger.warning("mublog configuration section was not found")
+            return
+        
+        section = parser["mublog"]
+        logger.error(dict(section))
+
+        self.config.blog_url = section["blog_url"]
+        self.config.blog_title = section["blog_title"]
+        self.config.blog_description = section["blog_description"]
+        self.config.blog_author_name = section["blog_author_name"]
+        self.config.blog_author_mail = section["blog_author_mail"]
+        self.config.post_ignore_prefix = section["post_ignore_prefix"]
+        self.config.blog_author_copyright = section["blog_author_copyright"]
 
     def clean_build_directory(self) -> None:
         """
@@ -675,8 +680,6 @@ if __name__ == '__main__':
 
     # Start blog generation
     blog_conf = BlogConfig()
-    blog_conf.load_config()
-
     path_conf = PathConfig()
     blog = Blog(blog_conf, path_conf)
     blog.generate()

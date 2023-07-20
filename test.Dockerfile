@@ -22,8 +22,9 @@ RUN ln -sf python3 /usr/bin/python \
     && python3 -m ensurepip \
     && pip3 install --no-cache --upgrade pip setuptools
 
-# Copy blog script
+# Copy blog script and configs
 COPY ./mublog.py ./mublog.py
+COPY ./mublog.ini ./mublog.ini
 
 # Copy blog data
 COPY ./src ./src
