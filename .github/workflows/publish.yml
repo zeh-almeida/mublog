@@ -59,7 +59,7 @@ jobs:
 
       - name: Copy build file
         run: |
-          docker cp $(docker ps --filter ancestor=publish-mublog -a --format "{{.Names}}" --latest):app/build.7z /temp
+          docker cp $(docker ps --filter ancestor=publish-mublog -a --format "{{.Names}}" --latest):app/build.7z /tmp
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
