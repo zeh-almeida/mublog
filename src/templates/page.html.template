@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="all" href="${css_dir}/normalize.css">
     <link rel="stylesheet" type="text/css" media="all" href="${css_dir}/style.css">
+    <link rel="favicon" href="favicon.ico"/>
 
     <script type="text/javascript" src="${js_dir}/tags.js"></script>
 

@@ -268,6 +268,7 @@ class Post:
             "post_tags": self.get_tags_as_html(),
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
             "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
+            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
         }
         return Template(post_template).substitute(substitutions)
 
@@ -304,6 +305,7 @@ class Page:
             "page_content": self.html_content,
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
             "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
+            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
         }
         return Template(page_template).substitute(substitutions)
 
@@ -356,6 +358,7 @@ class TagsPage(Page):
             "page_content": self.html_content + tags_html,
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
             "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
+            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
         }
         return Template(tags_page_template).substitute(substitutions)
 
@@ -405,6 +408,7 @@ class ArticlesPage(Page):
             "page_content": self.html_content + self.get_article_listing_as_html(),
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
             "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
+            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
         }
         return Template(articles_page_template).substitute(substitutions)
 
@@ -508,6 +512,8 @@ class Blog:
         self.process_pages()
         logger.info("Processing scripts...")
         self.process_scripts()
+        logger.info("Processing favicon...")
+        self.process_favicon()
         logger.info("Processing rss feed...")
         self.process_rss_feed()
 
@@ -612,6 +618,16 @@ class Blog:
             substitutions = {"tag_mapping": "\n" + ",\n".join(entries) + "\n"}
             f.write(Template(js_template).substitute(substitutions))
 
+    def process_favicon(self)->None:
+        """
+        Processes the site's Favicon, if present.
+        """
+        icon_path = os.path.join(self.paths.dst_assets_dir_path, "favicon.ico")
+        icon_exists = os.path.isfile(icon_path)
+
+        if icon_exists:
+            destination_path = os.path.join(self.paths.dst_dir_name, "favicon.ico")
+            shutil.copy(icon_path, destination_path)
 
 if __name__ == '__main__':
     # Configure logging
