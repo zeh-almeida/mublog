@@ -58,11 +58,9 @@ class BlogConfig:
         _ = config.read(path, encoding="utf-8")
 
         if len(config.sections()) == 0:
-            self.__load_default()
             return
         
         if "mublog" not in config:
-            self.__load_default()
             return
         
         section = config["mublog"]
@@ -83,6 +81,7 @@ class BlogConfig:
         self.blog_author_mail = "766F6964@example.com"
         self.blog_author_copyright = f"Copyright 2023 {self.blog_author_name}"
         self.post_ignore_prefix = "_"
+
 
 class LogFormatter(logging.Formatter):
     FORMATS = {
