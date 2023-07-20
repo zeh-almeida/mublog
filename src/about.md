@@ -1,4 +1,21 @@
-Welcome, 
+![](assets/profile.jpg#profile-pic "Zeh and Arroz")
 
-This is the about page of μblog.
-Use this space to tell the world something about yourself, or tell people how they can get in touch with you.
+# About me
+
+Hello there, my name is **José Ricardo**. 
+
+I am a Senior Developer with a career spanning across 13 years as of 2023 working on multiple different systems with a large number of languages and technologies, including .Net, java, Python on industries such as Banking, Oil and Gas, Automotive, Healthcare and general consulting, including others.
+
+Since 2017 I have worked mainly as a Senior Developer. In this role I have analyzed requirements, drawn system architectures, written down tasks for other developers, mentored junior developers, defined processes, implemented the test pyramid paradigm and, of course, coded a lot of things as well.
+
+Being in the fray for over a decade, I had the opportunity to work in many different companies and industries, connecting with people all over the world, making contact with many different cultures and life styles.
+
+Currently, I have the personal objective to help other succeed in their development career as both a mentor and colleague. I strongly believe the best software is not written by a single person but by a very cohesive and tight team.
+
+I have a dog named **Arroz**, which means "rice" in Portuguese. Sometimes he sneaks into my meetings, disrupting everyone for a little time. He's **cute** so he's forgiven.
+
+If you would like to know more about me, please take a look at my curriculum post as well as the links I've placed here as they will direct you to my LinkedIn professional profile as well as my GitHub personal profile, where I keep some of my personal projects public, including this blog!
+
+## Links
+- LinkedIn: <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
+- GitHub: <https://github.com/zeh-almeida>
