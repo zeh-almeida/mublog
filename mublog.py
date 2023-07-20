@@ -260,6 +260,7 @@ class Post:
 
         substitutions = {
             "blog_title": self.config.blog_title,
+            "blog_description": self.config.blog_description,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "post_title": self.title,
@@ -296,6 +297,7 @@ class Page:
 
         substitutions = {
             "blog_title": self.config.blog_title,
+            "blog_description": self.config.blog_description,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "page_title": self.page_title,
@@ -347,6 +349,7 @@ class TagsPage(Page):
 
         substitutions = {
             "blog_title": self.config.blog_title,
+            "blog_description": self.config.blog_description,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "page_title": "Tags",
@@ -395,6 +398,7 @@ class ArticlesPage(Page):
         # Write the page template with the actual values
         substitutions = {
             "blog_title": self.config.blog_title,
+            "blog_description": self.config.blog_description,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "page_title": "Articles",
@@ -464,8 +468,8 @@ class RSSFeed:
         # Substitute the placeholders with the actual values
         substitutions = {
             "blog_title": self.config.blog_title,
-            "blog_url": self.config.blog_url,
             "blog_description": self.config.blog_description,
+            "blog_url": self.config.blog_url,
             "rss_items": self.feed_data,
         }
         rss_template = Template(rss_template).substitute(substitutions)

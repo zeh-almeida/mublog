@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="${blog_title}">
+    <meta name="description" content="${blog_title} - ${blog_description}">
 
     <link rel="stylesheet" type="text/css" media="all" href="${css_dir}/normalize.css">
     <link rel="stylesheet" type="text/css" media="all" href="${css_dir}/style.css">
