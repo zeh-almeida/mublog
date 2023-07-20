@@ -378,7 +378,7 @@ class ArticlesPage(Page):
         for post in self.posts:
             article_listing += f'<li id=\"{post.filename}\">'
             article_listing += f'<b>[{post.date}]</b> '
-            article_listing += f'<a href=\"{post.remote_path}\">{post.title}</a>'
+            article_listing += f'<a href=\"{post.remote_path}\" title=\"{post.title}\">{post.title}</a>'
             article_listing += f'</li>'
         article_listing += "</ul>"
         article_listing += "</article>"
