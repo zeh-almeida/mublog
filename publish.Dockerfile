@@ -33,4 +33,4 @@ COPY ./src ./src
 RUN python3 mublog.py
 
 # zip blog generated data for output
-RUN 7z a build ./dst/*
+RUN 7z a -t7z -mx=9 build ./dst/*

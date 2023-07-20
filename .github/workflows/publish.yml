@@ -78,3 +78,23 @@ jobs:
         with:
           name: build
           path: /tmp
+      
+      - uses: edgarrc/action-7z@v1
+        with:
+          args: 7z e /tmp/build.7z ./build/
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Upload to blob storage
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob upload-batch --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} --overwrite true -d '$web' -s build
+            
+      - name: Azure Logout
+        run: |
+          az logout
+        if: always()
