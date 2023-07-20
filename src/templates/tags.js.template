@@ -18,7 +18,7 @@ function get_tag_parameter() {
 }
 
 function hide_article_listing(filename) {
-	elem = document.getElementById(filename);
+	const elem = document.getElementById(filename);
 	if (elem) {
 		elem.style.display = 'none';
 	}
