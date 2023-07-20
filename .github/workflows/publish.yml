@@ -59,13 +59,13 @@ jobs:
 
       - name: Copy build file
         run: |
-          docker cp $(docker ps --filter ancestor=publish-mublog -a --format "{{.Names}}" --latest):app/build.7z /tmp
+          docker cp $(docker ps --filter ancestor=publish-mublog -a --format "{{.Names}}" --latest):app/build.zip /tmp
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: /tmp/build.7z
+          path: /tmp/build.zip
 
   publish-blog:
     name: "Publish Blog"
@@ -79,16 +79,15 @@ jobs:
           name: build
           path: /tmp
       
-      - uses: edgarrc/action-7z@v1
-        with:
-          args: 7z x /tmp/build.7z -obuild
+      - name: Extract Build
+        run: unzip /tmp/build.7z -d build
 
       - name: Azure Login
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Upload to blob storage
+      - name: Upload Build to Blob Storage as Static Website
         uses: azure/CLI@v1
         with:
           inlineScript: |

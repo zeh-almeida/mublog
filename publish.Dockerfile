@@ -15,8 +15,7 @@ ENV PYTHONUNBUFFERED=1
 # Install all necessary packages
 RUN apk add --update --no-cache \
     pandoc \
-    python3 \
-    7zip
+    python3
 
 # Configure Python/pip
 RUN ln -sf python3 /usr/bin/python \
@@ -33,4 +32,4 @@ COPY ./src ./src
 RUN python3 mublog.py
 
 # zip blog generated data for output
-RUN 7z a -t7z -mx=9 build ./dst/*
+RUN zip -r build.zip ./dst
