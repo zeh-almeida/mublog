@@ -1,3 +1,4 @@
+import configparser
 import glob
 import logging
 import os
@@ -39,14 +40,49 @@ class PathConfig:
 
 class BlogConfig:
     def __init__(self):
-        self.blog_url = "https://zeh-almeida.olamundo.org/"
-        self.blog_title = "Zeh's Ramblings and Quirks"
-        self.blog_description = "Self presentation and some ramblings, of course"
-        self.blog_author_name = "José Ricardo Carvalho Prado de Almeida"
-        self.blog_author_mail = "zeca_16@hotmail.com"
+        self.blog_url = ""
+        self.blog_title = ""
+        self.blog_description = ""
+        self.blog_author_name = ""
+        self.blog_author_mail = ""
+        self.post_ignore_prefix = ""
+        self.blog_author_copyright = ""
+
+        self.__load_default()
+
+    def load_config(self, path:(str|None)=None):
+        if not path:
+            path = "mublog.ini"
+        
+        config = configparser.ConfigParser()
+        _ = config.read(path, encoding="utf-8")
+
+        if len(config.sections()) == 0:
+            self.__load_default()
+            return
+        
+        if "mublog" not in config:
+            self.__load_default()
+            return
+        
+        section = config["mublog"]
+
+        self.blog_url = section["blog_url"]
+        self.blog_title = section["blog_title"]
+        self.blog_description = section["blog_description"]
+        self.blog_author_name = section["blog_author_name"]
+        self.blog_author_mail = section["blog_author_mail"]
+        self.post_ignore_prefix = section["post_ignore_prefix"]
+        self.blog_author_copyright = section["blog_author_copyright"]
+
+    def __load_default(self):
+        self.blog_url = "http://localhost/"
+        self.blog_title = "μblog"
+        self.blog_description = "Blog System"
+        self.blog_author_name = "766F6964"
+        self.blog_author_mail = "766F6964@example.com"
         self.blog_author_copyright = f"Copyright 2023 {self.blog_author_name}"
         self.post_ignore_prefix = "_"
-
 
 class LogFormatter(logging.Formatter):
     FORMATS = {
@@ -640,6 +676,8 @@ if __name__ == '__main__':
 
     # Start blog generation
     blog_conf = BlogConfig()
+    blog_conf.load_config()
+
     path_conf = PathConfig()
     blog = Blog(blog_conf, path_conf)
     blog.generate()

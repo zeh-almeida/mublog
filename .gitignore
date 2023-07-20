@@ -17,6 +17,7 @@
 !/*.py
 !/*.yml
 !/*.conf
+!/*.ini
 !/*.Dockerfile
 
 !/.github/workflows/*.*
