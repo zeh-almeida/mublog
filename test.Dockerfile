@@ -1,4 +1,5 @@
 # syntax=docker/dockerfile:1
+
 FROM amd64/alpine:latest
 WORKDIR /app
 

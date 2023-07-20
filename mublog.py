@@ -259,6 +259,7 @@ class Post:
             post_template = f.read()
 
         substitutions = {
+            "blog_title": self.config.blog_title,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "post_title": self.title,
@@ -294,6 +295,7 @@ class Page:
             page_template = f.read()
 
         substitutions = {
+            "blog_title": self.config.blog_title,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "page_title": self.page_title,
@@ -344,6 +346,7 @@ class TagsPage(Page):
         tags_html = self.get_post_tags_with_count_as_html()
 
         substitutions = {
+            "blog_title": self.config.blog_title,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "page_title": "Tags",
@@ -391,6 +394,7 @@ class ArticlesPage(Page):
 
         # Write the page template with the actual values
         substitutions = {
+            "blog_title": self.config.blog_title,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "page_title": "Articles",
