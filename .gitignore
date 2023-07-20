@@ -19,3 +19,6 @@
 
 # Ignore destination as it should be considered compiled data
 /dst/
+
+# Ignore Python Virtual Environment
+/venv/
