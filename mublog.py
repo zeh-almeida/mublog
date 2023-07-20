@@ -2,7 +2,6 @@ import glob
 import logging
 import os
 import time
-import sys
 import shutil
 import subprocess
 import re
