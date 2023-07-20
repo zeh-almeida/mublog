@@ -546,7 +546,6 @@ class Blog:
             return
         
         section = parser["mublog"]
-        logger.error(dict(section))
 
         self.config.blog_url = section["blog_url"]
         self.config.blog_title = section["blog_title"]
