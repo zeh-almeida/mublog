@@ -81,7 +81,7 @@ jobs:
       
       - uses: edgarrc/action-7z@v1
         with:
-          args: 7z e /tmp/build.7z ./build/
+          args: 7z x /tmp/build.7z -obuild
 
       - name: Azure Login
         uses: azure/login@v1
