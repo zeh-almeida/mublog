@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/normalize.css?v=${blog_version}">
     <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/style.css?v=${blog_version}">
+    <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/fontawesome_all.min.css?v=${blog_version}">
+
     <link rel="favicon" href="favicon.ico"/>
 
     <script type="text/javascript" src="../${js_dir}/tags.js?v=${blog_version}"></script>
