@@ -24,4 +24,20 @@ function hide_article_listing(filename) {
 	}
 }
 
+function toggle_dark_mode(event) {
+	if (!event.target.matches('.dark-toggle')) {
+		return;
+	}
+
+	const hasClass = document.documentElement.classList.contains('darken');
+
+	if (hasClass) {
+		document.documentElement.classList.remove('darken');
+	
+	} else {
+		document.documentElement.classList.add('darken');
+	}
+}
+
 document.addEventListener('DOMContentLoaded', get_tag_parameter);
+document.addEventListener('click', toggle_dark_mode, false);

@@ -342,7 +342,11 @@ img[src*="#profile-pic"] {
   scrollbar-color: rgb(69, 74, 77) rgb(32, 35, 36);
 }
 
-.darken h1 {
+.darken h1,
+.darken h2,
+.darken h3,
+.darken h5,
+.darken h6 {
   color-scheme: dark;
 
   color: rgb(201, 196, 189);
@@ -357,4 +361,9 @@ img[src*="#profile-pic"] {
 
   scrollbar-color: rgb(69, 74, 77) rgb(32, 35, 36);
   text-decoration-color: rgb(207, 203, 197);
+}
+
+.darken .tag-bubble {
+    color-scheme: dark;
+    color: rgb(207, 203, 197);
 }

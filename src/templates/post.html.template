@@ -25,6 +25,7 @@
     <a href="../about.html">about</a>
 </nav>
 <main>
+    <button class="dark-toggle">Toggle dark mode</button>
 <hr>
 ${post_content}
 ${post_tags}
