@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="${blog_title} - ${blog_description}">
 
-    <link rel="stylesheet" type="text/css" media="all" href="${css_dir}/normalize.css">
-    <link rel="stylesheet" type="text/css" media="all" href="${css_dir}/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="${css_dir}/normalize.css?v=${blog_version}">
+    <link rel="stylesheet" type="text/css" media="all" href="${css_dir}/style.css?v=${blog_version}">
     <link rel="favicon" href="favicon.ico"/>
 
-    <script type="text/javascript" src="${js_dir}/tags.js"></script>
+    <script type="text/javascript" src="${js_dir}/tags.js?v=${blog_version}"></script>
 
     <title>
         ${page_title} - ${blog_title}

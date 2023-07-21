@@ -8,6 +8,7 @@ import subprocess
 import re
 import html
 import urllib.parse
+import uuid
 from string import Template
 from urllib.parse import urljoin
 
@@ -47,6 +48,8 @@ class BlogConfig:
         self.blog_author_mail = ""
         self.post_ignore_prefix = ""
         self.blog_author_copyright = ""
+
+        self.blog_version = uuid.uuid4().hex
 
 
 class LogFormatter(logging.Formatter):
@@ -261,6 +264,7 @@ class Post:
         substitutions = {
             "blog_title": self.config.blog_title,
             "blog_description": self.config.blog_description,
+            "blog_version": self.config.blog_version,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "post_title": self.title,
@@ -299,6 +303,7 @@ class Page:
         substitutions = {
             "blog_title": self.config.blog_title,
             "blog_description": self.config.blog_description,
+            "blog_version": self.config.blog_version,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "page_title": self.page_title,
@@ -352,6 +357,7 @@ class TagsPage(Page):
         substitutions = {
             "blog_title": self.config.blog_title,
             "blog_description": self.config.blog_description,
+            "blog_version": self.config.blog_version,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "page_title": "Tags",
@@ -402,6 +408,7 @@ class ArticlesPage(Page):
         substitutions = {
             "blog_title": self.config.blog_title,
             "blog_description": self.config.blog_description,
+            "blog_version": self.config.blog_version,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
             "page_title": "Articles",
@@ -473,6 +480,7 @@ class RSSFeed:
         substitutions = {
             "blog_title": self.config.blog_title,
             "blog_description": self.config.blog_description,
+            "blog_version": self.config.blog_version,
             "blog_url": self.config.blog_url,
             "rss_items": self.feed_data,
         }
