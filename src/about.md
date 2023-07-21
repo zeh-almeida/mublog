@@ -6,7 +6,7 @@ Hello there, my name is **José Ricardo**.
 
 I am a Senior Developer with a career spanning across 13 years as of 2023 working on multiple different systems with a large number of languages and technologies, including .Net, java, Python on industries such as Banking, Oil and Gas, Automotive, Healthcare and general consulting, including others.
 
-I am located in Curitiba, Paraná - Brazil but I was born in São Paulo. I have lived in Curitiba since 2023 and during this period, I was part of an Exchange Program to the USA between 2008 and 2009.
+I am located in Curitiba, Paraná - Brazil but I was born in São Paulo. I live in Curitiba since 2000 and during this period I was part of an Exchange Program to the USA between 2008 and 2009.
 
 Since 2017 I have worked mainly as a Senior Developer. In this role I have analyzed requirements, drawn system architectures, written down tasks for other developers, mentored junior developers, defined processes, implemented the test pyramid paradigm and, of course, coded a lot of things as well.
 
