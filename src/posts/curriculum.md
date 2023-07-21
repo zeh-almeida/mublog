@@ -1,8 +1,8 @@
 ---
 title: Curriculum
 description: My curriculum vitae, up to date
-date: 2011-08-22
-tags: curriculum,skills,about
+date: 2023-07-20
+tags: curriculum,about,.net,experience,proficiency,azure,aws,development,programming
 ---
 # Objective
 
@@ -12,7 +12,13 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 
 - Post-graduation degree in Software Engineering by PUC-PR, class of 2018.
 - Bachelor degree in Information Systems by PUC-PR, class of 2014.
+- Certificate of Proficiency in English, Council of Europe level C2, finished in 2010.
 - Experience abroad – Lived in Sterling, Virginia, USA, for 10 months. Studied at Park View High School. (September of 2008 - July of 2009).
+
+# Languages
+
+- Portuguese - Native
+- English – Fluent
 
 # Professional Experience
 
@@ -172,11 +178,6 @@ Development, Analysis and Support for Ruby on Rails, JavaScript, Android. Emphas
 ### Title: Programmer
 
 Development, Analysis and Support for C#, Android. Emphasis on Web Systems and Web-services, all based in ASPX.
-
-# Qualifications and Professional Activities
-
-- Portuguese - Native
-- English – Fluent (Cultura Inglesa - CPE, 7 years, finished in 2010).
 
 # Additional Information
 
