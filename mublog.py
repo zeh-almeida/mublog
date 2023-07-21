@@ -1,4 +1,5 @@
 import configparser
+import datetime
 import glob
 import logging
 import os
@@ -92,7 +93,7 @@ class Helper:
         :return: The stripped path
         """
         parts = path.split(os.sep)
-        return os.sep.join(parts[1:]) if len(parts) > 1 else path
+        return "/".join(parts[1:]) if len(parts) > 1 else path
 
     @staticmethod
     def copy_files(src_path: str, dst_path: str) -> None:
@@ -492,6 +493,77 @@ class RSSFeed:
             f.write(rss_template)
 
 
+class Sitemap:
+
+    def __init__(self, config: BlogConfig, paths: PathConfig, posts: list[Post]):
+        self.config = config
+        self.paths = paths
+        self.posts = posts
+        self.feed_data = ""
+
+    def replace_relative_url_with_abs_url(self, match: re.Match) -> str:
+        """
+        Converts a relative url to an absolute url, prefixed with the blog url
+        :param match: The match object
+        :return: The absolute url, prefixed with the blog url
+        """
+        if match.group(1).startswith('/'):
+            return urljoin(self.config.blog_url, match.group(1).lstrip('/'))
+        elif match.group(1).startswith('../'):
+            return urljoin(self.config.blog_url, match.group(1))
+        else:
+            return urljoin(self.config.blog_url, os.path.join(self.paths.post_dir_name, match.group(1)))
+
+    def make_post_urls_absolute(self, post: Post) -> str:
+        """
+        Converts all relative urls in the post to absolute urls, prefixed with the blog url
+        :param post: The post in which to convert the urls
+        :return: The post content with all relative urls converted to absolute urls
+        """
+        if not post.html_content:
+            return ''
+        
+        regex_pattern = r'''(?:url\(|<(?:link|a|script|img)[^>]+(?:src|href)\s*=\s*)(?!['"]?(?:data|http|https))['"]?([^'"\)\s>#]+)'''
+        return re.sub(regex_pattern, lambda match: self.replace_relative_url_with_abs_url(match), post.html_content)
+
+    def generate(self) -> None:
+        """
+        Formats all posts as Sitemap entries and writes the feed to a file
+        """
+
+        # Load Sitemap template
+        template_path = os.path.join(self.paths.src_templates_dir_path, "sitemap.xml.template")
+        logger.debug(f"Processing {template_path} ...")
+        with open(template_path, mode="r", encoding="utf-8") as f:
+            sitemap_template = f.read()
+
+        lastmod = datetime.date.today().strftime("%Y-%m-%d")
+
+        site_paths = [self.config.blog_url + post.remote_path for post in self.posts]
+        site_paths.append(self.config.blog_url + "index.html")
+        site_paths.append(self.config.blog_url + "articles.html")
+        site_paths.append(self.config.blog_url + "tags.html")
+        site_paths.append(self.config.blog_url + "about.html")
+
+        # Create a feed entry for each post
+        for site_path in site_paths:
+            self.feed_data += f"<url>"
+            self.feed_data += f"<loc>{site_path}</loc>"
+            self.feed_data += f"<lastmod>{lastmod}</lastmod>"
+            self.feed_data += f"</url>"
+
+        # Substitute the placeholders with the actual values
+        substitutions = {
+            "sitemap_items": self.feed_data,
+        }
+        sitemap_template = Template(sitemap_template).substitute(substitutions)
+
+        # Write substituted template to file
+        sitemap_path = os.path.join(self.paths.dst_dir_path, "sitemap.xml")
+        with open(sitemap_path, mode="w", encoding="utf-8") as f:
+            f.write(sitemap_template)
+
+
 class Blog:
 
     def __init__(self, config: BlogConfig, paths: PathConfig):
@@ -527,6 +599,8 @@ class Blog:
         self.process_favicon()
         logger.info("Processing rss feed...")
         self.process_rss_feed()
+        logger.info("Processing sitemap...")
+        self.process_sitemap()
 
     def load_configuration(self)->None:
         path = "mublog.ini"
@@ -663,6 +737,13 @@ class Blog:
         if icon_exists:
             destination_path = os.path.join(self.paths.dst_dir_name, "favicon.ico")
             shutil.copy(icon_path, destination_path)
+
+    def process_sitemap(self) -> None:
+        """
+        Generates the Sitemap
+        """
+        sitemap = Sitemap(self.config, self.paths, self.posts)
+        sitemap.generate()
 
 if __name__ == '__main__':
     # Configure logging
