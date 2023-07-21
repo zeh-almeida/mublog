@@ -22,7 +22,8 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 
 # Professional Experience
 
-## 2021 - CI&T
+## CI&T
+### Activity: 2021 - 2023
 ### Title: Senior Software Engineer
 ### Projects:
 
@@ -73,7 +74,8 @@ Main activities:
 - Analysis
 - Support for junior developers
 
-## 2021 – Ahoy by Belago Group
+## Ahoy by Belago Group
+### Activity: 2021 - 2021
 ### Title: Full Stack Senior Developer
 ### Project:
 
@@ -90,7 +92,8 @@ Main activities:
 - Development
 - Support
 
-## 2020 – TIVIT
+## TIVIT
+### Activity: 2020 - 2021
 ### Title: Full Stack Senior Developer
 ### Project:
 
@@ -113,9 +116,10 @@ Main activities:
 - Analysis
 - Support
 
-## 2018 – ExxonMobil Global Business Center
+## ExxonMobil Global Business Center
+### Activity: 2017 - 2020
 ### Title: Systems Analyst
-### Project:
+### Projects:
 
 - Development and Maintenance of the Sales Order API.
     - One of the senior developers in a Agile team. Responsible for Developing, testing and following the project pipeline in order to finish tasks.
@@ -123,22 +127,6 @@ Main activities:
     - All tasks were performed with pair-programming, rotating team members every sprint in order to get in sync with the team and improve out abilities.
     
     - Used Java and micro-service architecture in order to implement a RESTful API as well a event-driven API using Kafka.
-
-Main technologies:
-- Java
-- Jenkins
-- Springboot
-- OpenShift
-- Azure DevOps
-
-Main activities:
-- Development
-- Testing
-- Team-building
-
-## 2017 – ExxonMobil Business Support Center
-### Title: Systems Analyst
-### Project:
 
 - Design and Implementation of a company-wide calendar event scheduler.
     - Using then-new .Net Core 3.1 and then-recently released Azure Functions v2, I was tasked to design and implement a calendar event system akin to MS Outlook with a cloud-first operation.
@@ -148,6 +136,11 @@ Main activities:
     - The system had to work on IE11 and Chrome using the company’s Azure AD instance for logins. The application was written with React on the front-end.
 
 Main technologies:
+- Java
+- Jenkins
+- Springboot
+- OpenShift
+- Azure DevOps
 - .Net Core 3.1
 - Azure Functions v2
 - React
@@ -158,23 +151,28 @@ Main activities:
 - Development
 - Testing
 - Design
+- Team-building
 
 ## 2016 - Regazzo Soluções em Tecnologia
+### Activity: 2016 - 2017
 ### Title: Software Engineer
 
 Development, Analysis and Support for C#, JavaScript, SQL Server 2012. Emphasis on Web systems and Web-services based on .Net Core. API Integration based on JSON and XML, Version updates from C#6 to C#7 and MVC6 to MVC Core.
 
-## 2016 – FH Consultoria
+## FH Consultoria
+### Activity: 2016 - 2016
 ### Title: Hybris Programmer
 
 Development, Java Analysis and Support, JavaScript. Emphasis on Web systems and Web-services based on Hybris, Java, HTML5 and Bootstrap. Front-End Restructuring for Hybris-based e-commerce. Development of a Git-based versioning system used in all Hybris-based projects.
 
-## 2016 - Trackmob
+## Trackmob
+### Activity: 2015 - 2016
 ### Title: Software Engineer
 
 Development, Analysis and Support for Ruby on Rails, JavaScript, Android. Emphasis on Web Systems e Web-services based on Ruby on Rails and JSON, HTML5 and Bootstrap. Payment integration via EDI (Credit, debit and tickets) or online (gateways such as Braspag, PagarMe). Development of Service Desk guidelines for the company and all its projects. 
 
-## 2014 – Regazzo Soluções em Tecnologia
+## Regazzo Soluções em Tecnologia
+### Activity: 2014 - 2016
 ### Title: Programmer
 
 Development, Analysis and Support for C#, Android. Emphasis on Web Systems and Web-services, all based in ASPX.
