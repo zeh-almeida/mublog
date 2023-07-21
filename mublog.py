@@ -48,17 +48,6 @@ class BlogConfig:
         self.post_ignore_prefix = ""
         self.blog_author_copyright = ""
 
-        self.__load_default()
-
-    def __load_default(self):
-        self.blog_url = "http://localhost/"
-        self.blog_title = "μblog"
-        self.blog_description = "Blog System"
-        self.blog_author_name = "766F6964"
-        self.blog_author_mail = "766F6964@example.com"
-        self.blog_author_copyright = f"Copyright 2023 {self.blog_author_name}"
-        self.post_ignore_prefix = "_"
-
 
 class LogFormatter(logging.Formatter):
     FORMATS = {
@@ -538,12 +527,12 @@ class Blog:
         _ = parser.read(path, encoding="utf-8")
 
         if len(parser.sections()) == 0:
-            logger.warning("No configuration sections were loaded")
-            return
+            logger.error("No configuration sections were loaded")
+            raise FileNotFoundError(path)
         
         if "mublog" not in parser:
-            logger.warning("mublog configuration section was not found")
-            return
+            logger.error("mublog configuration section was not found")
+            raise FileNotFoundError(path)
         
         section = parser["mublog"]
 
