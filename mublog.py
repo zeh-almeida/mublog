@@ -564,6 +564,35 @@ class Sitemap:
             f.write(sitemap_template)
 
 
+class Robots:
+
+    def __init__(self, config: BlogConfig, paths: PathConfig):
+        self.config = config
+        self.paths = paths
+
+    def generate(self) -> None:
+        """
+        Generates a robots.txt file in the destination
+        """
+
+        # Load Robots template
+        template_path = os.path.join(self.paths.src_templates_dir_path, "robots.txt.template")
+        logger.debug(f"Processing {template_path} ...")
+        with open(template_path, mode="r", encoding="utf-8") as f:
+            robots_template = f.read()
+
+        # Substitute the placeholders with the actual values
+        substitutions = {
+            "blog_url": self.config.blog_url,
+        }
+        robots_template = Template(robots_template).substitute(substitutions)
+
+        # Write substituted template to file
+        sitemap_path = os.path.join(self.paths.dst_dir_path, "robots.txt")
+        with open(sitemap_path, mode="w", encoding="utf-8") as f:
+            f.write(robots_template)
+
+
 class Blog:
 
     def __init__(self, config: BlogConfig, paths: PathConfig):
@@ -601,6 +630,8 @@ class Blog:
         self.process_rss_feed()
         logger.info("Processing sitemap...")
         self.process_sitemap()
+        logger.info("Processing robots...")
+        self.process_robots()
 
     def load_configuration(self)->None:
         path = "mublog.ini"
@@ -740,9 +771,16 @@ class Blog:
 
     def process_sitemap(self) -> None:
         """
-        Generates the Sitemap
+        Generates the Sitemap.xml file
         """
         sitemap = Sitemap(self.config, self.paths, self.posts)
+        sitemap.generate()
+
+    def process_robots(self) -> None:
+        """
+        Generates the Robots.txt file
+        """
+        sitemap = Robots(self.config, self.paths)
         sitemap.generate()
 
 if __name__ == '__main__':
