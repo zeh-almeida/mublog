@@ -1,8 +1,8 @@
-Hello there and welcome!
+<i class="fa-solid fa-user-astronaut"></i>  Hello there and welcome!
 
 My name is José Ricardo and I use this blog to showcase myself to the world.
 
-really, I have included my resume and letter of introduction, hope this makes my life easier!
+Really, I have included my resume and letter of introduction, hope this makes my life easier!
 
 
 Sometimes I may ramble here. This may include rants, curiosities or even explanations of my personal projects.

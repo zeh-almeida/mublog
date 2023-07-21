@@ -1,8 +1,8 @@
 ![](assets/profile.jpg#profile-pic "Zeh and Arroz")
 
-# About me
+# <i class="fa-solid fa-user-astronaut"></i> About me
 
-Hello there, my name is **José Ricardo**. 
+Hello there, my name is **José Ricardo**.
 
 I am a Senior Developer with a career spanning across 13 years as of 2023 working on multiple different systems with a large number of languages and technologies, including .Net, java, Python on industries such as Banking, Oil and Gas, Automotive, Healthcare and general consulting, including others.
 
@@ -20,6 +20,6 @@ I am not married but I have a partner, [Isabela Salmazo](https://instagram.com/m
 
 If you would like to know more about me, please take a look at my curriculum post as well as the links I've placed here as they will direct you to my LinkedIn professional profile as well as my GitHub personal profile, where I keep some of my personal projects public, including this blog!
 
-## Links
-- LinkedIn: <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
-- GitHub: <https://github.com/zeh-almeida>
+## <i class="fa-regular fa-address-card"></i> Links
+- <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
+- <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>
