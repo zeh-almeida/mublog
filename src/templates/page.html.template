@@ -19,12 +19,12 @@
     </title>
 </head>
 <nav>
-    <a href="index.html" title="home">home</a>
-    <a href="articles.html" title="articles">articles</a>
-    <a href="tags.html" title="tags">tags</a>
-    <a href="mailto:${author_mail}" title="mail">mail</a>
-    <a href="feed.xml" title="rss">rss</a>
-    <a href="about.html" title="about">about</a>
+    <i class="fa-solid fa-house fa-xs"></i> <a href="index.html" title="home">home</a>
+    <i class="fa-regular fa-newspaper fa-xs"></i> <a href="articles.html" title="articles">articles</a>
+    <i class="fa-solid fa-tags fa-xs"></i> <a href="tags.html" title="tags">tags</a>
+    <i class="fa-regular fa-envelope fa-xs"></i> <a href="mailto:${author_mail}" title="mail">mail</a>
+    <i class="fa-solid fa-rss fa-xs"></i> <a href="feed.xml" title="rss">rss</a>
+    <i class="fa-regular fa-address-card fa-xs"></i> <a href="about.html" title="about">about</a>
 </nav>
 <main>
 <button class="dark-toggle">Toggle dark mode</button>
