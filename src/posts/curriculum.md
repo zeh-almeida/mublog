@@ -4,27 +4,28 @@ description: My curriculum vitae, up to date
 date: 2023-07-20
 tags: curriculum,about,.net,experience,proficiency,azure,aws,development,programming
 ---
-# Objective
+# <i class="fa-solid fa-bullseye"></i> Objective
 
 Engineering and Architecture of intelligent systems, focused on back-end, micro services, integration and DevOps.
 
-# Formation
+# <i class="fa-solid fa-user-graduate"></i> Formation
 
 - Post-graduation degree in Software Engineering by PUC-PR, class of 2018.
 - Bachelor degree in Information Systems by PUC-PR, class of 2014.
 - Certificate of Proficiency in English, Council of Europe level C2, finished in 2010.
 - Experience abroad – Lived in Sterling, Virginia, USA, for 10 months. Studied at Park View High School. (September of 2008 - July of 2009).
 
-# Languages
+# <i class="fa-regular fa-comments"></i> Languages
 
 - Portuguese - Native
 - English – Fluent
 
-# Professional Experience
+# <i class="fa-solid fa-briefcase"></i> Professional Experience
 
 ## CI&T
-### Activity: 2021 - 2023
-### Title: Senior Software Engineer
+<i class="fa-regular fa-calendar"></i> 2021 - 2023
+<i class="fa-regular fa-circle-dot"></i> Senior Software Engineer
+
 ### Projects:
 
 - SAP integration with Node.js APIs using Azure for a major beverage company.
@@ -75,8 +76,9 @@ Main activities:
 - Support for junior developers
 
 ## Ahoy by Belago Group
-### Activity: 2021 - 2021
-### Title: Full Stack Senior Developer
+<i class="fa-regular fa-calendar"></i> 2021 - 2021
+<i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
+
 ### Project:
 
 - Implementation of a complex solution for managing a Family Office.
@@ -93,8 +95,9 @@ Main activities:
 - Support
 
 ## TIVIT
-### Activity: 2020 - 2021
-### Title: Full Stack Senior Developer
+<i class="fa-regular fa-calendar"></i> 2020 - 2021
+<i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
+
 ### Project:
 
 - Architecture and implementation of a financial analysis workflow for a major industrial bank.
@@ -117,8 +120,9 @@ Main activities:
 - Support
 
 ## ExxonMobil Global Business Center
-### Activity: 2017 - 2020
-### Title: Systems Analyst
+<i class="fa-regular fa-calendar"></i> 2017 - 2020
+<i class="fa-regular fa-circle-dot"></i> Systems Analyst
+
 ### Projects:
 
 - Development and Maintenance of the Sales Order API.
@@ -154,30 +158,30 @@ Main activities:
 - Team-building
 
 ## 2016 - Regazzo Soluções em Tecnologia
-### Activity: 2016 - 2017
-### Title: Software Engineer
+<i class="fa-regular fa-calendar"></i> 2016 - 2017
+<i class="fa-regular fa-circle-dot"></i> Software Engineer
 
 Development, Analysis and Support for C#, JavaScript, SQL Server 2012. Emphasis on Web systems and Web-services based on .Net Core. API Integration based on JSON and XML, Version updates from C#6 to C#7 and MVC6 to MVC Core.
 
 ## FH Consultoria
-### Activity: 2016 - 2016
-### Title: Hybris Programmer
+<i class="fa-regular fa-calendar"></i> 2016 - 2016
+<i class="fa-regular fa-circle-dot"></i> Hybris Programmer
 
 Development, Java Analysis and Support, JavaScript. Emphasis on Web systems and Web-services based on Hybris, Java, HTML5 and Bootstrap. Front-End Restructuring for Hybris-based e-commerce. Development of a Git-based versioning system used in all Hybris-based projects.
 
 ## Trackmob
-### Activity: 2015 - 2016
-### Title: Software Engineer
+<i class="fa-regular fa-calendar"></i> 2015 - 2016
+<i class="fa-regular fa-circle-dot"></i> Software Engineer
 
 Development, Analysis and Support for Ruby on Rails, JavaScript, Android. Emphasis on Web Systems e Web-services based on Ruby on Rails and JSON, HTML5 and Bootstrap. Payment integration via EDI (Credit, debit and tickets) or online (gateways such as Braspag, PagarMe). Development of Service Desk guidelines for the company and all its projects. 
 
 ## Regazzo Soluções em Tecnologia
-### Activity: 2014 - 2016
-### Title: Programmer
+<i class="fa-regular fa-calendar"></i> 2014 - 2016
+<i class="fa-regular fa-circle-dot"></i> Programmer
 
 Development, Analysis and Support for C#, Android. Emphasis on Web Systems and Web-services, all based in ASPX.
 
-# Additional Information
+# <i class="fa-regular fa-address-card"></i> Additional Information
 
-- LinkedIn: <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
-- GitHub: <https://github.com/zeh-almeida>
+- <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
+- <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>
