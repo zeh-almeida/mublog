@@ -62,6 +62,7 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
     - Because of the age of some sources and data complexity, many meetings with different teams had to be arranged in order to validate sources, formats and other data characteristics.
 
 Main technologies:
+
 - .Net Core
 - Node.js
 - Python
@@ -70,6 +71,7 @@ Main technologies:
 - Micro-services
 
 Main activities:
+
 - Development
 - Analysis
 - Support for junior developers
@@ -83,12 +85,14 @@ Main activities:
     - Responsible for developing and supporting junior developers in the implementation of a Family Office system that would handle data input as well as many financial calculations.
 
 Main technologies:
+
 - .Net Core
 - SQL Server
 - Azure
 - Micro-services
 
 Main activities:
+
 - Development
 - Support
 
@@ -105,6 +109,7 @@ Main activities:
     - The implementation ran in a event-driven environment fully orchestrated in Azure using Azure Functions.
 
 Main technologies:
+
 - .Net Core
 - SQL Server
 - Azure
@@ -112,6 +117,7 @@ Main technologies:
 - Micro-services
 
 Main activities:
+
 - Development
 - Analysis
 - Support
@@ -136,6 +142,7 @@ Main activities:
     - The system had to work on IE11 and Chrome using the company’s Azure AD instance for logins. The application was written with React on the front-end.
 
 Main technologies:
+
 - Java
 - Jenkins
 - Springboot
@@ -148,6 +155,7 @@ Main technologies:
 - Service Bus
 
 Main activities:
+
 - Development
 - Testing
 - Design
