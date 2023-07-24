@@ -624,10 +624,12 @@ class Blog:
         self.process_pages()
         logger.info("Processing scripts...")
         self.process_scripts()
-        logger.info("Processing favicon...")
-        self.process_favicon()
         logger.info("Processing rss feed...")
         self.process_rss_feed()
+        logger.info("Processing favicon...")
+        self.process_favicon()
+        logger.info("Processing manifest...")
+        self.process_manifest()
         logger.info("Processing sitemap...")
         self.process_sitemap()
         logger.info("Processing robots...")
@@ -768,6 +770,18 @@ class Blog:
         if icon_exists:
             destination_path = os.path.join(self.paths.dst_dir_name, "favicon.ico")
             shutil.copy(icon_path, destination_path)
+
+    def process_manifest(self) -> None:
+        """
+        Processes the site's manifest, if present.
+        """
+                
+        manifest_path = os.path.join(self.paths.dst_assets_dir_path, "site.webmanifest")
+        manifest_exists = os.path.isfile(manifest_path)
+
+        if manifest_exists:
+            destination_path = os.path.join(self.paths.dst_dir_name, "site.webmanifest")
+            shutil.copy(manifest_path, destination_path)
 
     def process_sitemap(self) -> None:
         """

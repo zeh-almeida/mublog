@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="${post_title} - ${blog_title} - ${blog_description}">
 
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/${assets_dir}/apple-touch-icon.png?v=${blog_version}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/${assets_dir}/favicon-32x32.png?v=${blog_version}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/${assets_dir}/favicon-16x16.png?v=${blog_version}">
+    <link rel="favicon" href="/favicon.ico?v=${blog_version}"/>
+
     <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/normalize.css?v=${blog_version}">
     <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/style.css?v=${blog_version}">
     <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/fontawesome_all.min.css?v=${blog_version}">
-
-    <link rel="favicon" href="favicon.ico"/>
 
     <script type="text/javascript" src="../${js_dir}/tags.js?v=${blog_version}"></script>
 
