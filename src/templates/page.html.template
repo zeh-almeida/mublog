@@ -3,8 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, archive">
+    <meta name="canonical" content="${blog_url}">
+
     <meta name="description" content="${blog_title} - ${blog_description}">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="${blog_title}" />
+
+    <meta property="og:title" content="${page_title}" />
+    <meta property="og:description" content="${blog_description}" />
+    <meta property="og:url" content="${blog_url}${page_title}.html" />
 
     <link rel="manifest" href="/site.webmanifest">
 

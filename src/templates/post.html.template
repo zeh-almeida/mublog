@@ -3,8 +3,24 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="${post_title} - ${blog_title} - ${blog_description}">
+    <meta name="robots" content="index, archive">
+    <meta name="canonical" content="${blog_url}">
+
+    <meta name="description" content="${post_description}">
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="${blog_title}" />
+    
+    <meta property="og:title" content="${post_title}" />
+    <meta property="og:description" content="${post_description}" />
+    <meta property="og:url" content="${posts_url}/${post_title}.html" />
+
+    <meta property="og:article:published_time" content="${post_date}" />
+    <meta property="og:article:author" content="${post_author}" />
+    ${post_meta_tags}
 
     <link rel="manifest" href="/site.webmanifest">
 
@@ -13,12 +29,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/${assets_dir}/favicon-16x16.png?v=${blog_version}">
     <link rel="favicon" href="/favicon.ico?v=${blog_version}"/>
 
-    <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/normalize.css?v=${blog_version}">
-    <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/style.css?v=${blog_version}">
-    <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/fontawesome_all.min.css?v=${blog_version}">
+    <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/normalize.css?v=${blog_version}">
+    <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/style.css?v=${blog_version}">
+    <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/fontawesome_all.min.css?v=${blog_version}">
 
-    <script type="text/javascript" src="../${js_dir}/darkmode.js?v=${blog_version}"></script>
-    <script type="text/javascript" src="../${js_dir}/tags.js?v=${blog_version}"></script>
+    <script type="text/javascript" src="/${js_dir}/darkmode.js?v=${blog_version}"></script>
+    <script type="text/javascript" src="/${js_dir}/tags.js?v=${blog_version}"></script>
 
     <title>
         ${post_title} - ${blog_title}

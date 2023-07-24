@@ -249,6 +249,17 @@ class Post:
             tag_html = f"<div class=\"tag-bubble\" onclick=\"location.href='/articles.html?{tag_name}'\">{tag}</div>"
             tags.append(tag_html)
         return "<div class=\"tags\">\n" + "\n".join(tags) + "\n</div>"
+    
+    def get_tags_as_meta(self) -> str:
+        """
+        Wraps the tags of the post in header meta tags
+        :return: The tags wrapped in header meta tags
+        """
+        tags = []
+        for tag in self.tags:
+            tag_html = f"<meta property=\"og:article:tag\" content=\"{tag}\"/>"
+            tags.append(tag_html)
+        return "".join(tags)
 
     def generate(self) -> str:
         """
@@ -269,8 +280,14 @@ class Post:
             "blog_version": self.config.blog_version,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
+            "blog_url": self.config.blog_url,
             "post_title": self.title,
+            "post_description": self.description,
+            "post_author": self.config.blog_author_name,
+            "post_date": self.date,
+            "posts_url": self.config.blog_url + "posts",
             "post_content": self.html_content,
+            "post_meta_tags": self.get_tags_as_meta(),
             "post_tags": self.get_tags_as_html(),
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
             "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
@@ -308,6 +325,7 @@ class Page:
             "blog_version": self.config.blog_version,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
+            "blog_url": self.config.blog_url,
             "page_title": self.page_title,
             "page_content": self.html_content,
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
@@ -362,6 +380,7 @@ class TagsPage(Page):
             "blog_version": self.config.blog_version,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
+            "blog_url": self.config.blog_url,
             "page_title": "Tags",
             "page_content": self.html_content + tags_html,
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
@@ -413,6 +432,7 @@ class ArticlesPage(Page):
             "blog_version": self.config.blog_version,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
+            "blog_url": self.config.blog_url,
             "page_title": "Articles",
             "page_content": self.html_content + self.get_article_listing_as_html(),
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
