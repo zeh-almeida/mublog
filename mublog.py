@@ -21,6 +21,7 @@ class PathConfig:
         self.src_dir_name = "src"
         self.post_dir_name = "posts"
         self.assets_dir_name = "assets"
+        self.meta_dir_name = "meta"
         self.js_dir_name = "js"
         self.css_dir_name = "css"
         self.templates_dir_name = "templates"
@@ -29,6 +30,7 @@ class PathConfig:
         self.src_dir_path = self.src_dir_name
         self.src_posts_dir_path = os.path.join(self.src_dir_path, self.post_dir_name)
         self.src_assets_dir_path = os.path.join(self.src_dir_path, self.assets_dir_name)
+        self.src_meta_dir_path = os.path.join(self.src_dir_path, self.meta_dir_name)
         self.src_css_dir_path = os.path.join(self.src_dir_path, self.css_dir_name)
         self.src_js_dir_path = os.path.join(self.src_dir_path, self.js_dir_name)
         self.src_templates_dir_path = os.path.join(self.src_dir_path, self.templates_dir_name)
@@ -37,6 +39,7 @@ class PathConfig:
         self.dst_dir_path = self.dst_dir_name
         self.dst_posts_dir_path = os.path.join(self.dst_dir_path, self.post_dir_name)
         self.dst_assets_dir_path = os.path.join(self.dst_dir_path, self.assets_dir_name)
+        self.dst_meta_dir_path = os.path.join(self.dst_dir_path, self.meta_dir_name)
         self.dst_css_dir_path = os.path.join(self.dst_dir_path, self.css_dir_name)
         self.dst_js_dir_path = os.path.join(self.dst_dir_path, self.js_dir_name)
 
@@ -123,6 +126,37 @@ class Helper:
         file_name = os.path.basename(src_file_path)
         base_name, _ = os.path.splitext(file_name)
         return os.path.join(dst_dir, base_name + dst_ext)
+    
+    @staticmethod
+    def replace_relative_url_with_abs_url(match: re.Match, base_url: str, folder_name: str) -> str:
+        """
+        Converts a relative url to an absolute url, prefixed with the base url
+        :param match: The match object
+        :param base_url: The base url which the other urls come from
+        :param folder_name: The name of the folder which sits between the base url and the partial
+        :return: The absolute url, prefixed with the base url
+        """
+        if match.group(1).startswith('/'):
+            return urljoin(base_url, match.group(1).lstrip('/'))
+        elif match.group(1).startswith('../'):
+            return urljoin(base_url, match.group(1))
+        else:
+            return urljoin(base_url, urljoin(folder_name, match.group(1)))
+    
+    @staticmethod
+    def make_urls_absolute(content: str, base_url: str, folder_name: str) -> str:
+        """
+        Converts all relative urls in the content to absolute urls, prefixed with the blog url
+        :param content: The content in which to convert the urls
+        :param base_url: The base url which the other urls come from
+        :param folder_name: The name of the folder which sits between the base url and the partial
+        :return: The content with all relative urls converted to absolute urls
+        """        
+        if not content:            
+            return ""
+        
+        regex_pattern = r'''(?:url\(|<(?:link|a|script|img)[^>]+(?:src|href)\s*=\s*)(?!['"]?(?:data|http|https))['"]?([^'"\)\s>#]+)'''
+        return re.sub(regex_pattern, lambda match: Helper.replace_relative_url_with_abs_url(match, base_url, folder_name), content)
 
 
 class Post:
@@ -278,17 +312,19 @@ class Post:
             "blog_title": self.config.blog_title,
             "blog_description": self.config.blog_description,
             "blog_version": self.config.blog_version,
+            "blog_url": self.config.blog_url,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
-            "blog_url": self.config.blog_url,
             "post_title": self.title,
             "post_description": self.description,
             "post_author": self.config.blog_author_name,
             "post_date": self.date,
-            "posts_url": self.config.blog_url + "posts",
             "post_content": self.html_content,
-            "post_meta_tags": self.get_tags_as_meta(),
+            "posts_url": self.config.blog_url + self.paths.post_dir_name,
             "post_tags": self.get_tags_as_html(),
+            "post_meta_tags": self.get_tags_as_meta(),
+            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
+            "meta_dir": Helper.strip_top_directory_in_path(self.paths.dst_meta_dir_path),
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
             "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
             "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
@@ -323,11 +359,13 @@ class Page:
             "blog_title": self.config.blog_title,
             "blog_description": self.config.blog_description,
             "blog_version": self.config.blog_version,
+            "blog_url": self.config.blog_url,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
-            "blog_url": self.config.blog_url,
             "page_title": self.page_title,
             "page_content": self.html_content,
+            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
+            "meta_dir": Helper.strip_top_directory_in_path(self.paths.dst_meta_dir_path),
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
             "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
             "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
@@ -378,11 +416,13 @@ class TagsPage(Page):
             "blog_title": self.config.blog_title,
             "blog_description": self.config.blog_description,
             "blog_version": self.config.blog_version,
+            "blog_url": self.config.blog_url,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
-            "blog_url": self.config.blog_url,
             "page_title": "Tags",
             "page_content": self.html_content + tags_html,
+            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
+            "meta_dir": Helper.strip_top_directory_in_path(self.paths.dst_meta_dir_path),
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
             "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
             "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
@@ -430,11 +470,13 @@ class ArticlesPage(Page):
             "blog_title": self.config.blog_title,
             "blog_description": self.config.blog_description,
             "blog_version": self.config.blog_version,
+            "blog_url": self.config.blog_url,
             "author_mail": self.config.blog_author_mail,
             "author_copyright": self.config.blog_author_copyright,
-            "blog_url": self.config.blog_url,
             "page_title": "Articles",
             "page_content": self.html_content + self.get_article_listing_as_html(),
+            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
+            "meta_dir": Helper.strip_top_directory_in_path(self.paths.dst_meta_dir_path),
             "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
             "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
             "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
@@ -450,31 +492,6 @@ class RSSFeed:
         self.posts = posts
         self.feed_data = ""
 
-    def replace_relative_url_with_abs_url(self, match: re.Match) -> str:
-        """
-        Converts a relative url to an absolute url, prefixed with the blog url
-        :param match: The match object
-        :return: The absolute url, prefixed with the blog url
-        """
-        if match.group(1).startswith('/'):
-            return urljoin(self.config.blog_url, match.group(1).lstrip('/'))
-        elif match.group(1).startswith('../'):
-            return urljoin(self.config.blog_url, match.group(1))
-        else:
-            return urljoin(self.config.blog_url, os.path.join(self.paths.post_dir_name, match.group(1)))
-
-    def make_post_urls_absolute(self, post: Post) -> str:
-        """
-        Converts all relative urls in the post to absolute urls, prefixed with the blog url
-        :param post: The post in which to convert the urls
-        :return: The post content with all relative urls converted to absolute urls
-        """
-        if not post.html_content:
-            return ''
-        
-        regex_pattern = r'''(?:url\(|<(?:link|a|script|img)[^>]+(?:src|href)\s*=\s*)(?!['"]?(?:data|http|https))['"]?([^'"\)\s>#]+)'''
-        return re.sub(regex_pattern, lambda match: self.replace_relative_url_with_abs_url(match), post.html_content)
-
     def generate(self) -> None:
         """
         Formats all posts as RSS feed entries and writes the feed to a file
@@ -489,8 +506,8 @@ class RSSFeed:
         # Create a feed entry for each post
         for post in self.posts:
             post_title = html.escape(post.title)
-            post_link = os.path.join(self.config.blog_url, post.remote_path)
-            post_content = html.escape(self.make_post_urls_absolute(post))
+            post_link = urljoin(self.config.blog_url, post.remote_path)
+            post_content = html.escape(Helper.make_urls_absolute(post.html_content, self.config.blog_url, self.paths.post_dir_name))
 
             self.feed_data += f"<item>"
             self.feed_data += f"<title>{post_title}</title>"
@@ -522,31 +539,6 @@ class Sitemap:
         self.posts = posts
         self.feed_data = ""
 
-    def replace_relative_url_with_abs_url(self, match: re.Match) -> str:
-        """
-        Converts a relative url to an absolute url, prefixed with the blog url
-        :param match: The match object
-        :return: The absolute url, prefixed with the blog url
-        """
-        if match.group(1).startswith('/'):
-            return urljoin(self.config.blog_url, match.group(1).lstrip('/'))
-        elif match.group(1).startswith('../'):
-            return urljoin(self.config.blog_url, match.group(1))
-        else:
-            return urljoin(self.config.blog_url, os.path.join(self.paths.post_dir_name, match.group(1)))
-
-    def make_post_urls_absolute(self, post: Post) -> str:
-        """
-        Converts all relative urls in the post to absolute urls, prefixed with the blog url
-        :param post: The post in which to convert the urls
-        :return: The post content with all relative urls converted to absolute urls
-        """
-        if not post.html_content:
-            return ''
-        
-        regex_pattern = r'''(?:url\(|<(?:link|a|script|img)[^>]+(?:src|href)\s*=\s*)(?!['"]?(?:data|http|https))['"]?([^'"\)\s>#]+)'''
-        return re.sub(regex_pattern, lambda match: self.replace_relative_url_with_abs_url(match), post.html_content)
-
     def generate(self) -> None:
         """
         Formats all posts as Sitemap entries and writes the feed to a file
@@ -560,11 +552,11 @@ class Sitemap:
 
         lastmod = datetime.date.today().strftime("%Y-%m-%d")
 
-        site_paths = [self.config.blog_url + post.remote_path for post in self.posts]
-        site_paths.append(self.config.blog_url + "index.html")
-        site_paths.append(self.config.blog_url + "articles.html")
-        site_paths.append(self.config.blog_url + "tags.html")
-        site_paths.append(self.config.blog_url + "about.html")
+        site_paths = [urljoin(self.config.blog_url, post.remote_path) for post in self.posts]
+        site_paths.append(urljoin(self.config.blog_url, "index.html"))
+        site_paths.append(urljoin(self.config.blog_url, "articles.html"))
+        site_paths.append(urljoin(self.config.blog_url, "tags.html"))
+        site_paths.append(urljoin(self.config.blog_url, "about.html"))
 
         # Create a feed entry for each post
         for site_path in site_paths:
@@ -634,7 +626,7 @@ class Blog:
         """
         logger.debug("Loading configurations...")
         self.load_configuration()
-
+        
         logger.debug("Creating build directories and copying files...")
         self.clean_build_directory()
         self.create_build_directories()
@@ -698,6 +690,7 @@ class Blog:
             self.paths.dst_posts_dir_path,
             self.paths.dst_css_dir_path,
             self.paths.dst_assets_dir_path,
+            self.paths.dst_meta_dir_path,
             self.paths.dst_js_dir_path,
         ]
         for directory in directories:
@@ -712,6 +705,7 @@ class Blog:
         Copies css and assets from the src directory to the build directory
         """
         Helper.copy_files(self.paths.src_css_dir_path, self.paths.dst_css_dir_path)
+        Helper.copy_files(self.paths.src_meta_dir_path, self.paths.dst_meta_dir_path)
         Helper.copy_files(self.paths.src_assets_dir_path, self.paths.dst_assets_dir_path)
 
     def process_posts(self) -> None:
@@ -788,7 +782,7 @@ class Blog:
         """
         Processes the site's Favicon, if present.
         """
-        icon_path = os.path.join(self.paths.dst_assets_dir_path, "favicon.ico")
+        icon_path = os.path.join(self.paths.src_meta_dir_path, "favicon.ico")
         icon_exists = os.path.isfile(icon_path)
 
         if icon_exists:

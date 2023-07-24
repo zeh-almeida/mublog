@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, archive">
     <meta name="canonical" content="${blog_url}">
-
+    
     <meta name="description" content="${blog_title} - ${blog_description}">
 
     <meta property="og:type" content="website" />
@@ -18,11 +18,11 @@
     <meta property="og:description" content="${blog_description}" />
     <meta property="og:url" content="${blog_url}${page_title}.html" />
 
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/${meta_dir}/site.webmanifest">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/${assets_dir}/apple-touch-icon.png?v=${blog_version}">
-    <link rel="icon" type="image/png" sizes="32x32" href="/${assets_dir}/favicon-32x32.png?v=${blog_version}">
-    <link rel="icon" type="image/png" sizes="16x16" href="/${assets_dir}/favicon-16x16.png?v=${blog_version}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/${meta_dir}/apple-touch-icon.png?v=${blog_version}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/${meta_dir}/favicon-32x32.png?v=${blog_version}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/${meta_dir}/favicon-16x16.png?v=${blog_version}">
     <link rel="favicon" href="/favicon.ico?v=${blog_version}"/>
 
     <link rel="stylesheet" type="text/css" media="all" href="${css_dir}/normalize.css?v=${blog_version}">
@@ -37,12 +37,12 @@
     </title>
 </head>
 <nav>
-    <i class="fa-solid fa-house fa-xs"></i> <a href="index.html" title="home">home</a>
-    <i class="fa-regular fa-newspaper fa-xs"></i> <a href="articles.html" title="articles">articles</a>
-    <i class="fa-solid fa-tags fa-xs"></i> <a href="tags.html" title="tags">tags</a>
+    <i class="fa-solid fa-house fa-xs"></i> <a href="/index.html" title="home">home</a>
+    <i class="fa-regular fa-newspaper fa-xs"></i> <a href="/articles.html" title="articles">articles</a>
+    <i class="fa-solid fa-tags fa-xs"></i> <a href="/tags.html" title="tags">tags</a>
     <i class="fa-regular fa-envelope fa-xs"></i> <a href="mailto:${author_mail}" title="mail">mail</a>
-    <i class="fa-solid fa-rss fa-xs"></i> <a href="feed.xml" title="rss">rss</a>
-    <i class="fa-regular fa-address-card fa-xs"></i> <a href="about.html" title="about">about</a>
+    <i class="fa-solid fa-rss fa-xs"></i> <a href="/feed.xml" title="rss">rss</a>
+    <i class="fa-regular fa-address-card fa-xs"></i> <a href="/about.html" title="about">about</a>
 </nav>
 <main>
     <button class="dark-toggle">Toggle dark mode</button>

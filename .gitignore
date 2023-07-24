@@ -29,3 +29,4 @@
 !/src/css/*.css
 !/src/js/*.js
 !/src/assets/*.*
+!/src/meta/*.*
