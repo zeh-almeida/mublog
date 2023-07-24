@@ -30,6 +30,7 @@ class PathConfig:
         self.src_posts_dir_path = os.path.join(self.src_dir_path, self.post_dir_name)
         self.src_assets_dir_path = os.path.join(self.src_dir_path, self.assets_dir_name)
         self.src_css_dir_path = os.path.join(self.src_dir_path, self.css_dir_name)
+        self.src_js_dir_path = os.path.join(self.src_dir_path, self.js_dir_name)
         self.src_templates_dir_path = os.path.join(self.src_dir_path, self.templates_dir_name)
 
         # Construct local dst directory paths
@@ -748,6 +749,9 @@ class Blog:
         """
         Processes all scripts, i.e. generates the tag mapping script
         """
+        Helper.copy_files(self.paths.src_js_dir_path, self.paths.dst_js_dir_path)
+        Helper.copy_files(self.paths.src_assets_dir_path, self.paths.dst_assets_dir_path)
+
         # Load the JavaScript template
         tags_template_path = os.path.join(self.paths.src_templates_dir_path, "tags.js.template")
         logger.debug(f"Processing {tags_template_path} ...")

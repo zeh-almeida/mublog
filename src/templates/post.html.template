@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/style.css?v=${blog_version}">
     <link rel="stylesheet" type="text/css" media="all" href="../${css_dir}/fontawesome_all.min.css?v=${blog_version}">
 
-    <script type="text/javascript" src="../${assets_dir}/darkmode.js?v=${blog_version}"></script>
+    <script type="text/javascript" src="../${js_dir}/darkmode.js?v=${blog_version}"></script>
     <script type="text/javascript" src="../${js_dir}/tags.js?v=${blog_version}"></script>
 
     <title>
