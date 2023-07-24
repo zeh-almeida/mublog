@@ -794,12 +794,22 @@ class Blog:
         Processes the site's manifest, if present.
         """
                 
-        manifest_path = os.path.join(self.paths.dst_assets_dir_path, "site.webmanifest")
+        manifest_path = os.path.join(self.paths.src_templates_dir_path, "site.webmanifest.template")
         manifest_exists = os.path.isfile(manifest_path)
 
         if manifest_exists:
-            destination_path = os.path.join(self.paths.dst_dir_name, "site.webmanifest")
-            shutil.copy(manifest_path, destination_path)
+            with open(manifest_path, mode="r", encoding="utf-8") as f:
+                manifest_template = f.read()
+                        
+            substitutions = {
+                "blog_title": self.config.blog_title,
+                "blog_description": self.config.blog_description,
+            }
+
+            with open(os.path.join(self.paths.dst_dir_name, "site.webmanifest"), mode="w", encoding="utf-8") as f:
+                manifest_template = Template(manifest_template).substitute(substitutions)
+                f.write(manifest_template)
+
 
     def process_sitemap(self) -> None:
         """
