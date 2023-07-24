@@ -758,7 +758,7 @@ class Blog:
             substitutions = {"tag_mapping": "\n" + ",\n".join(entries) + "\n"}
             f.write(Template(js_template).substitute(substitutions))
 
-    def process_favicon(self)->None:
+    def process_favicon(self) -> None:
         """
         Processes the site's Favicon, if present.
         """
