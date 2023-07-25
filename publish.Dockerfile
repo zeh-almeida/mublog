@@ -16,6 +16,8 @@ ENV PYTHONUNBUFFERED=1
 RUN apk add --update --no-cache \
     pandoc \
     python3 \
+    rust \
+    cargo \
     zip
 
 # Configure Python/pip

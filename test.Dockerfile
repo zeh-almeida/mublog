@@ -15,7 +15,9 @@ ENV PYTHONUNBUFFERED=1
 # Install all necessary packages
 RUN apk add --update --no-cache \
     pandoc \
-    python3
+    python3 \
+    rust \
+    cargo
 
 # Configure Python/pip
 RUN ln -sf python3 /usr/bin/python \
