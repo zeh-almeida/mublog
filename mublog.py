@@ -126,7 +126,7 @@ class Helper:
         file_name = os.path.basename(src_file_path)
         base_name, _ = os.path.splitext(file_name)
         return os.path.join(dst_dir, base_name + dst_ext)
-    
+
     @staticmethod
     def replace_relative_url_with_abs_url(match: re.Match, base_url: str, folder_name: str) -> str:
         """
@@ -142,7 +142,7 @@ class Helper:
             return urljoin(base_url, match.group(1))
         else:
             return urljoin(base_url, urljoin(folder_name, match.group(1)))
-    
+
     @staticmethod
     def make_urls_absolute(content: str, base_url: str, folder_name: str) -> str:
         """
@@ -151,12 +151,36 @@ class Helper:
         :param base_url: The base url which the other urls come from
         :param folder_name: The name of the folder which sits between the base url and the partial
         :return: The content with all relative urls converted to absolute urls
-        """        
-        if not content:            
+        """
+        if not content:
             return ""
-        
+
         regex_pattern = r'''(?:url\(|<(?:link|a|script|img)[^>]+(?:src|href)\s*=\s*)(?!['"]?(?:data|http|https))['"]?([^'"\)\s>#]+)'''
         return re.sub(regex_pattern, lambda match: Helper.replace_relative_url_with_abs_url(match, base_url, folder_name), content)
+
+    @staticmethod
+    def common_substitutions(config: BlogConfig, paths: PathConfig) -> dict[str, str]:
+        """
+        Maps common substitutions in blog templates
+        :param config: The content in which to convert the urls
+        :param paths: The base url which the other urls come from
+        :return: Map of known substitutions to make in templates
+        """
+        return {
+            "blog_url": config.blog_url,
+            "blog_title": config.blog_title,
+            "blog_version": config.blog_version,
+            "blog_description": config.blog_description,
+
+            "author_name": config.blog_author_name,
+            "author_mail": config.blog_author_mail,
+            "author_copyright": config.blog_author_copyright,
+
+            "js_dir": Helper.strip_top_directory_in_path(paths.dst_js_dir_path),
+            "css_dir": Helper.strip_top_directory_in_path(paths.dst_css_dir_path),
+            "meta_dir": Helper.strip_top_directory_in_path(paths.dst_meta_dir_path),
+            "assets_dir": Helper.strip_top_directory_in_path(paths.dst_assets_dir_path),
+        }
 
 
 class Post:
@@ -283,7 +307,7 @@ class Post:
             tag_html = f"<div class=\"tag-bubble\" onclick=\"location.href='/articles.html?{tag_name}'\">{tag}</div>"
             tags.append(tag_html)
         return "<div class=\"tags\">\n" + "\n".join(tags) + "\n</div>"
-    
+
     def get_tags_as_meta(self) -> str:
         """
         Wraps the tags of the post in header meta tags
@@ -308,13 +332,9 @@ class Post:
         with open(os.path.join(self.paths.src_templates_dir_path, "post.html.template"), mode="r", encoding="utf-8") as f:
             post_template = f.read()
 
-        substitutions = {
-            "blog_title": self.config.blog_title,
-            "blog_description": self.config.blog_description,
-            "blog_version": self.config.blog_version,
-            "blog_url": self.config.blog_url,
-            "author_mail": self.config.blog_author_mail,
-            "author_copyright": self.config.blog_author_copyright,
+        common_subs = Helper.common_substitutions(self.config, self.paths)
+
+        post_subs = {
             "post_title": self.title,
             "post_description": self.description,
             "post_author": self.config.blog_author_name,
@@ -323,12 +343,9 @@ class Post:
             "posts_url": self.config.blog_url + self.paths.post_dir_name,
             "post_tags": self.get_tags_as_html(),
             "post_meta_tags": self.get_tags_as_meta(),
-            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
-            "meta_dir": Helper.strip_top_directory_in_path(self.paths.dst_meta_dir_path),
-            "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
-            "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
-            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
         }
+
+        substitutions = {**common_subs, **post_subs}
         return Template(post_template).substitute(substitutions)
 
 
@@ -355,21 +372,14 @@ class Page:
         with open(os.path.join(self.paths.src_templates_dir_path, "page.html.template"), mode="r", encoding="utf-8") as f:
             page_template = f.read()
 
-        substitutions = {
-            "blog_title": self.config.blog_title,
-            "blog_description": self.config.blog_description,
-            "blog_version": self.config.blog_version,
-            "blog_url": self.config.blog_url,
-            "author_mail": self.config.blog_author_mail,
-            "author_copyright": self.config.blog_author_copyright,
+        common_subs = Helper.common_substitutions(self.config, self.paths)
+
+        page_subs = {
             "page_title": self.page_title,
             "page_content": self.html_content,
-            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
-            "meta_dir": Helper.strip_top_directory_in_path(self.paths.dst_meta_dir_path),
-            "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
-            "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
-            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
         }
+
+        substitutions = {**common_subs, **page_subs}
         return Template(page_template).substitute(substitutions)
 
 
@@ -412,21 +422,14 @@ class TagsPage(Page):
         # Get tags from posts, sorted by count and convert them to html
         tags_html = self.get_post_tags_with_count_as_html()
 
-        substitutions = {
-            "blog_title": self.config.blog_title,
-            "blog_description": self.config.blog_description,
-            "blog_version": self.config.blog_version,
-            "blog_url": self.config.blog_url,
-            "author_mail": self.config.blog_author_mail,
-            "author_copyright": self.config.blog_author_copyright,
+        common_subs = Helper.common_substitutions(self.config, self.paths)
+
+        tag_subs = {
             "page_title": "Tags",
             "page_content": self.html_content + tags_html,
-            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
-            "meta_dir": Helper.strip_top_directory_in_path(self.paths.dst_meta_dir_path),
-            "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
-            "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
-            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
         }
+
+        substitutions = {**common_subs, **tag_subs}
         return Template(tags_page_template).substitute(substitutions)
 
 
@@ -465,22 +468,15 @@ class ArticlesPage(Page):
         with open(template_path, mode="r", encoding="utf-8") as f:
             articles_page_template = f.read()
 
+        common_subs = Helper.common_substitutions(self.config, self.paths)
+
         # Write the page template with the actual values
-        substitutions = {
-            "blog_title": self.config.blog_title,
-            "blog_description": self.config.blog_description,
-            "blog_version": self.config.blog_version,
-            "blog_url": self.config.blog_url,
-            "author_mail": self.config.blog_author_mail,
-            "author_copyright": self.config.blog_author_copyright,
+        article_subs = {
             "page_title": "Articles",
             "page_content": self.html_content + self.get_article_listing_as_html(),
-            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
-            "meta_dir": Helper.strip_top_directory_in_path(self.paths.dst_meta_dir_path),
-            "css_dir": Helper.strip_top_directory_in_path(self.paths.dst_css_dir_path),
-            "js_dir": Helper.strip_top_directory_in_path(self.paths.dst_js_dir_path),
-            "assets_dir": Helper.strip_top_directory_in_path(self.paths.dst_assets_dir_path),
         }
+
+        substitutions = {**common_subs, **article_subs}
         return Template(articles_page_template).substitute(substitutions)
 
 
@@ -515,14 +511,14 @@ class RSSFeed:
             self.feed_data += f"<description>{post_content}</description>"
             self.feed_data += f"</item>"
 
+        common_subs = Helper.common_substitutions(self.config, self.paths)
+
         # Substitute the placeholders with the actual values
-        substitutions = {
-            "blog_title": self.config.blog_title,
-            "blog_description": self.config.blog_description,
-            "blog_version": self.config.blog_version,
-            "blog_url": self.config.blog_url,
+        rss_subs = {
             "rss_items": self.feed_data,
         }
+
+        substitutions = {**common_subs, **rss_subs}
         rss_template = Template(rss_template).substitute(substitutions)
 
         # Write substituted template to file
@@ -565,10 +561,14 @@ class Sitemap:
             self.feed_data += f"<lastmod>{lastmod}</lastmod>"
             self.feed_data += f"</url>"
 
+        common_subs = Helper.common_substitutions(self.config, self.paths)
+
         # Substitute the placeholders with the actual values
-        substitutions = {
+        sitemap_subs = {
             "sitemap_items": self.feed_data,
         }
+
+        substitutions = {**common_subs, **sitemap_subs}
         sitemap_template = Template(sitemap_template).substitute(substitutions)
 
         # Write substituted template to file
@@ -595,9 +595,7 @@ class Robots:
             robots_template = f.read()
 
         # Substitute the placeholders with the actual values
-        substitutions = {
-            "blog_url": self.config.blog_url,
-        }
+        substitutions = Helper.common_substitutions(self.config, self.paths)
         robots_template = Template(robots_template).substitute(substitutions)
 
         # Write substituted template to file
@@ -626,7 +624,7 @@ class Blog:
         """
         logger.debug("Loading configurations...")
         self.load_configuration()
-        
+
         logger.debug("Creating build directories and copying files...")
         self.clean_build_directory()
         self.create_build_directories()
@@ -650,18 +648,18 @@ class Blog:
 
     def load_configuration(self)->None:
         path = "mublog.ini"
-        
+
         parser = configparser.ConfigParser()
         _ = parser.read(path, encoding="utf-8")
 
         if len(parser.sections()) == 0:
             logger.error("No configuration sections were loaded")
             raise FileNotFoundError(path)
-        
+
         if "mublog" not in parser:
             logger.error("mublog configuration section was not found")
             raise FileNotFoundError(path)
-        
+
         section = parser["mublog"]
 
         self.config.blog_url = section["blog_url"]
@@ -793,18 +791,15 @@ class Blog:
         """
         Processes the site's manifest, if present.
         """
-                
+
         manifest_path = os.path.join(self.paths.src_templates_dir_path, "site.webmanifest.template")
         manifest_exists = os.path.isfile(manifest_path)
 
         if manifest_exists:
             with open(manifest_path, mode="r", encoding="utf-8") as f:
                 manifest_template = f.read()
-                        
-            substitutions = {
-                "blog_title": self.config.blog_title,
-                "blog_description": self.config.blog_description,
-            }
+
+            substitutions = Helper.common_substitutions(self.config, self.paths)
 
             with open(os.path.join(self.paths.dst_dir_name, "site.webmanifest"), mode="w", encoding="utf-8") as f:
                 manifest_template = Template(manifest_template).substitute(substitutions)
@@ -824,6 +819,7 @@ class Blog:
         """
         sitemap = Robots(self.config, self.paths)
         sitemap.generate()
+
 
 if __name__ == '__main__':
     # Configure logging
