@@ -772,8 +772,8 @@ class Blog:
 
         # Create a mapping of post filenames to tags and substitute the template placeholders with the actual values
         with open(os.path.join(self.paths.dst_js_dir_path, "tags.js"), mode="w", encoding="utf-8") as f:
-            entries = [f'"{post.filename}": [{", ".join(map(repr, post.tags))}]' for post in self.posts]
-            substitutions = {"tag_mapping": "\n" + ",\n".join(entries) + "\n"}
+            entries = [f'"{post.filename}": [{",".join(map(repr, post.tags))}]' for post in self.posts]
+            substitutions = {"tag_mapping": ",".join(entries)}
             f.write(Template(js_template).substitute(substitutions))
 
     def process_favicon(self) -> None:

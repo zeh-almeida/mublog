@@ -1,17 +1,19 @@
-const tag_mapping = {
-	${tag_mapping}
-};
 
 function get_tag_parameter() {
 	const urlParams = new URLSearchParams(window.location.search);
 	const tag = urlParams.get('tag');
 
 	if (tag) {
+		const tag_mapping = {
+			${tag_mapping}
+		};
+
 		for (const item of Object.keys(tag_mapping)) {
 			const tags = tag_mapping[item];
 
 			if (!tags.includes(tag)) {
 				hide_article_listing(item);
+				break;
 			}
 		}
 	}
@@ -19,10 +21,10 @@ function get_tag_parameter() {
 
 function hide_article_listing(filename) {
 	const elem = document.getElementById(filename);
-	
+
 	if (elem) {
 		elem.style.display = 'none';
 	}
 }
 
-document.addEventListener('DOMContentLoaded', get_tag_parameter);
+document.addEventListener('DOMContentLoaded', get_tag_parameter, true);
