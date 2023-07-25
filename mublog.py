@@ -816,8 +816,6 @@ class Blog:
                     file.write(minified)
                     file.truncate()
 
-
-
     def process_favicon(self) -> None:
         """
         Processes the site's Favicon, if present.
