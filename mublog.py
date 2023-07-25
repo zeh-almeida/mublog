@@ -535,7 +535,6 @@ class Sitemap:
         self.config = config
         self.paths = paths
         self.posts = posts
-        self.feed_data = ""
 
     def generate(self) -> None:
         """
@@ -550,24 +549,33 @@ class Sitemap:
 
         lastmod = datetime.date.today().strftime("%Y-%m-%d")
 
-        site_paths = [urljoin(self.config.blog_url, post.remote_path) for post in self.posts]
+        feed_data = []
+        site_paths = []
         site_paths.append(urljoin(self.config.blog_url, "index.html"))
         site_paths.append(urljoin(self.config.blog_url, "articles.html"))
         site_paths.append(urljoin(self.config.blog_url, "tags.html"))
         site_paths.append(urljoin(self.config.blog_url, "about.html"))
 
-        # Create a feed entry for each post
+        # Create a feed entry for each page
         for site_path in site_paths:
-            self.feed_data += f"<url>"
-            self.feed_data += f"<loc>{site_path}</loc>"
-            self.feed_data += f"<lastmod>{lastmod}</lastmod>"
-            self.feed_data += f"</url>"
+            feed_data.append(f"<url>")
+            feed_data.append(f"<loc>{site_path}</loc>")
+            feed_data.append(f"<lastmod>{lastmod}</lastmod>")
+            feed_data.append(f"<changefreq>daily</changefreq>")
+            feed_data.append(f"</url>")
 
+        for post in self.posts:
+            feed_data.append(f"<url>")
+            feed_data.append(f"<loc>{urljoin(self.config.blog_url, post.remote_path)}</loc>")
+            feed_data.append(f"<lastmod>{post.date}</lastmod>")
+            feed_data.append(f"<changefreq>daily</changefreq>")
+            feed_data.append(f"</url>")
+            
         common_subs = Helper.common_substitutions(self.config, self.paths)
 
         # Substitute the placeholders with the actual values
         sitemap_subs = {
-            "sitemap_items": self.feed_data,
+            "sitemap_items": "".join(feed_data),
         }
 
         substitutions = {**common_subs, **sitemap_subs}
@@ -637,8 +645,6 @@ class Blog:
         self.process_pages()
         logger.info("Processing scripts...")
         self.process_scripts()
-        logger.info("Processing minification...")
-        self.minify_scripts_styles()
         logger.info("Processing rss feed...")
         self.process_rss_feed()
         logger.info("Processing favicon...")
@@ -649,6 +655,8 @@ class Blog:
         self.process_sitemap()
         logger.info("Processing robots...")
         self.process_robots()
+        logger.info("Processing minification...")
+        self.minify_files()
 
     def load_configuration(self)->None:
         path = "mublog.ini"
@@ -726,16 +734,8 @@ class Blog:
             post = Post(self.config, self.paths, file_path)
             if post.validate_header():
                 with open(post.dst_path, mode="w", encoding="utf-8") as f:
-                    generated = post.generate()
-                    minified = minify_html.minify(
-                        generated,
-                        minify_js=True,                        
-                        minify_css=True,
-                        do_not_minify_doctype=True,
-                        keep_spaces_between_attributes=True,
-                        ensure_spec_compliant_unquoted_attribute_values=True)
+                    f.write(post.generate())
 
-                    f.write(minified)
                 self.processed_posts += 1
                 self.posts.append(post)
             else:
@@ -761,16 +761,8 @@ class Blog:
 
             # Write the generated page to disk
             with open(page.dst_path, mode="w", encoding="utf-8") as f:
-                generated = page.generate()
-                minified = minify_html.minify(
-                    generated,
-                    minify_js=True,
-                    minify_css=True,
-                    do_not_minify_doctype=True,
-                    keep_spaces_between_attributes=True,
-                    ensure_spec_compliant_unquoted_attribute_values=True)
-                
-                f.write(minified)
+                f.write(page.generate())
+
             self.pages.append(page)
 
     def process_rss_feed(self) -> None:
@@ -796,25 +788,31 @@ class Blog:
             substitutions = {"tag_mapping": ",".join(entries)}            
             f.write(Template(js_template).substitute(substitutions))
 
-    def minify_scripts_styles(self) -> None:
+    def minify_files(self) -> None:
         """
-        Minifies all JS and CSS files
+        Minifies all files in the destination
         """
-        paths = [self.paths.dst_js_dir_path, self.paths.dst_css_dir_path]
+        files = []
+        targets = ['**/*.js', '**/*.html', '**/*.css', '**/*.xml', '**/*.webmanifest']
 
-        for path in paths:
-            for item in glob.glob(f"{path}/*"):
-                with open(item, mode="r+", encoding="utf-8") as file:
-                    contents = file.read()
-                    file.seek(0)
+        for target in targets:
+            files += glob.glob(os.path.join(self.paths.dst_dir_path, target), recursive=True)
 
-                    minified = minify_html.minify(
-                        contents,
-                        minify_js=True,
-                        minify_css=True)
+        for item in files:
+            with open(item, mode="r+", encoding="utf-8") as file:
+                contents = file.read()
+                file.seek(0)
+
+                minified = minify_html.minify(
+                    contents,
+                    minify_js=True,
+                    minify_css=True,
+                    do_not_minify_doctype=True,
+                    keep_spaces_between_attributes=True,
+                    ensure_spec_compliant_unquoted_attribute_values=True)
                     
-                    file.write(minified)
-                    file.truncate()
+                file.write(minified)
+                file.truncate()
 
     def process_favicon(self) -> None:
         """
