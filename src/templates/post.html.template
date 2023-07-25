@@ -36,9 +36,7 @@
     <script type="text/javascript" src="/${js_dir}/darkmode.js?v=${blog_version}"></script>
     <script type="text/javascript" src="/${js_dir}/tags.js?v=${blog_version}"></script>
 
-    <title>
-        ${post_title} - ${blog_title}
-    </title>
+    <title>${post_title} - ${blog_title}</title>
 </head>
 <nav>
     <i class="fa-solid fa-house fa-xs"></i> <a href="/index.html" title="home">home</a>

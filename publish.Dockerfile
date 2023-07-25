@@ -21,7 +21,7 @@ RUN apk add --update --no-cache \
 # Configure Python/pip
 RUN ln -sf python3 /usr/bin/python \
     && python3 -m ensurepip \
-    && pip3 install --no-cache --upgrade pip setuptools
+    && pip3 install --no-cache --upgrade pip setuptools minify-html
 
 # Copy blog script and configs
 COPY ./mublog.py ./mublog.py

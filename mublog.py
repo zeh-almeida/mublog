@@ -13,6 +13,8 @@ import uuid
 from string import Template
 from urllib.parse import urljoin
 
+import minify_html
+
 
 class PathConfig:
     def __init__(self):
@@ -635,6 +637,8 @@ class Blog:
         self.process_pages()
         logger.info("Processing scripts...")
         self.process_scripts()
+        logger.info("Processing minification...")
+        self.minify_scripts_styles()
         logger.info("Processing rss feed...")
         self.process_rss_feed()
         logger.info("Processing favicon...")
@@ -702,6 +706,7 @@ class Blog:
         """
         Copies css and assets from the src directory to the build directory
         """
+        Helper.copy_files(self.paths.src_js_dir_path, self.paths.dst_js_dir_path)
         Helper.copy_files(self.paths.src_css_dir_path, self.paths.dst_css_dir_path)
         Helper.copy_files(self.paths.src_meta_dir_path, self.paths.dst_meta_dir_path)
         Helper.copy_files(self.paths.src_assets_dir_path, self.paths.dst_assets_dir_path)
@@ -721,7 +726,16 @@ class Blog:
             post = Post(self.config, self.paths, file_path)
             if post.validate_header():
                 with open(post.dst_path, mode="w", encoding="utf-8") as f:
-                    f.write(post.generate())
+                    generated = post.generate()
+                    minified = minify_html.minify(
+                        generated,
+                        minify_js=True,                        
+                        minify_css=True,
+                        do_not_minify_doctype=True,
+                        keep_spaces_between_attributes=True,
+                        ensure_spec_compliant_unquoted_attribute_values=True)
+
+                    f.write(minified)
                 self.processed_posts += 1
                 self.posts.append(post)
             else:
@@ -747,7 +761,16 @@ class Blog:
 
             # Write the generated page to disk
             with open(page.dst_path, mode="w", encoding="utf-8") as f:
-                f.write(page.generate())
+                generated = page.generate()
+                minified = minify_html.minify(
+                    generated,
+                    minify_js=True,
+                    minify_css=True,
+                    do_not_minify_doctype=True,
+                    keep_spaces_between_attributes=True,
+                    ensure_spec_compliant_unquoted_attribute_values=True)
+                
+                f.write(minified)
             self.pages.append(page)
 
     def process_rss_feed(self) -> None:
@@ -761,9 +784,6 @@ class Blog:
         """
         Processes all scripts, i.e. generates the tag mapping script
         """
-        Helper.copy_files(self.paths.src_js_dir_path, self.paths.dst_js_dir_path)
-        Helper.copy_files(self.paths.src_assets_dir_path, self.paths.dst_assets_dir_path)
-
         # Load the JavaScript template
         tags_template_path = os.path.join(self.paths.src_templates_dir_path, "tags.js.template")
         logger.debug(f"Processing {tags_template_path} ...")
@@ -773,8 +793,30 @@ class Blog:
         # Create a mapping of post filenames to tags and substitute the template placeholders with the actual values
         with open(os.path.join(self.paths.dst_js_dir_path, "tags.js"), mode="w", encoding="utf-8") as f:
             entries = [f'"{post.filename}": [{",".join(map(repr, post.tags))}]' for post in self.posts]
-            substitutions = {"tag_mapping": ",".join(entries)}
+            substitutions = {"tag_mapping": ",".join(entries)}            
             f.write(Template(js_template).substitute(substitutions))
+
+    def minify_scripts_styles(self) -> None:
+        """
+        Minifies all JS and CSS files
+        """
+        paths = [self.paths.dst_js_dir_path, self.paths.dst_css_dir_path]
+
+        for path in paths:
+            for item in glob.glob(f"{path}/*"):
+                with open(item, mode="r+", encoding="utf-8") as file:
+                    contents = file.read()
+                    file.seek(0)
+
+                    minified = minify_html.minify(
+                        contents,
+                        minify_js=True,
+                        minify_css=True)
+                    
+                    file.write(minified)
+                    file.truncate()
+
+
 
     def process_favicon(self) -> None:
         """
@@ -804,7 +846,6 @@ class Blog:
             with open(os.path.join(self.paths.dst_dir_name, "site.webmanifest"), mode="w", encoding="utf-8") as f:
                 manifest_template = Template(manifest_template).substitute(substitutions)
                 f.write(manifest_template)
-
 
     def process_sitemap(self) -> None:
         """
