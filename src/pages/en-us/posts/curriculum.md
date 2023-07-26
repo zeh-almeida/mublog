@@ -4,28 +4,30 @@ description: My curriculum vitae, up to date
 date: 2023-07-20
 tags: curriculum,about,.net,java,javascript,backend,experience,proficiency,azure,aws,development,programming
 ---
-# <i class="fa-solid fa-bullseye"></i> Objective
+# <i class="fa-solid fa-scroll"></i> Curriculum
+
+## <i class="fa-solid fa-bullseye"></i> Objective
 
 Engineering and Architecture of intelligent systems, focused on back-end, micro services, integration and DevOps.
 
-# <i class="fa-solid fa-user-graduate"></i> Formation
+## <i class="fa-solid fa-user-graduate"></i> Formation
 
 - Post-graduation degree in Software Engineering by PUC-PR, class of 2018.
 - Bachelor degree in Information Systems by PUC-PR, class of 2014.
 - Certificate of Proficiency in English, Council of Europe level C2, finished in 2010.
 - Experience abroad – Lived in Sterling, Virginia, USA, for 10 months. Studied at Park View High School. (September of 2008 - July of 2009).
 
-# <i class="fa-regular fa-comments"></i> Languages
+## <i class="fa-regular fa-comments"></i> Languages
 
 - Portuguese - Native
 - English – Fluent
 
-# <i class="fa-solid fa-briefcase"></i> Professional Experience
+## <i class="fa-solid fa-briefcase"></i> Professional Experience
 
-## <i class="fa-regular fa-building"></i> CI&T <i class="fa-regular fa-circle-dot"></i> Senior Software Engineer
+### <i class="fa-regular fa-building"></i> CI&T <i class="fa-regular fa-circle-dot"></i> Senior Software Engineer
 <i class="fa-regular fa-calendar"></i> 2021 - 2023
 
-### Projects:
+#### Projects:
 
 - SAP integration with Node.js APIs using Azure for a major beverage company.
 
@@ -76,10 +78,10 @@ Main activities:
 - Analysis
 - Support for junior developers
 
-## <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
+### <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
 <i class="fa-regular fa-calendar"></i> 2021 - 2021
 
-### Project:
+#### Project:
 
 - Implementation of a complex solution for managing a Family Office.
     - Responsible for developing and supporting junior developers in the implementation of a Family Office system that would handle data input as well as many financial calculations.
@@ -96,10 +98,10 @@ Main activities:
 - Development
 - Support
 
-## <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
+### <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
 <i class="fa-regular fa-calendar"></i> 2020 - 2021
 
-### Project:
+#### Project:
 
 - Architecture and implementation of a financial analysis workflow for a major industrial bank.
     - Responsible for designing and implementing a solution which would receive data from external systems in order to validate if a process would be approved or not.
@@ -122,10 +124,10 @@ Main activities:
 - Analysis
 - Support
 
-## <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Systems Analyst
+### <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Systems Analyst
 <i class="fa-regular fa-calendar"></i> 2017 - 2020
 
-### Projects:
+#### Projects:
 
 - Development and Maintenance of the Sales Order API.
     - One of the senior developers in a Agile team. Responsible for Developing, testing and following the project pipeline in order to finish tasks.
@@ -161,27 +163,27 @@ Main activities:
 - Design
 - Team-building
 
-## <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Software Engineer
+### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2016 - 2017
 
 Development, Analysis and Support for C#, JavaScript, SQL Server 2012. Emphasis on Web systems and Web-services based on .Net Core. API Integration based on JSON and XML, Version updates from C#6 to C#7 and MVC6 to MVC Core.
 
-## <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
+### <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
 <i class="fa-regular fa-calendar"></i> 2016 - 2016
 
 Development, Analysis and Support, for Java and JavaScript. Emphasis on Web systems and Web-services based on Hybris, Java, HTML5 and Bootstrap. Front-End Restructuring for Hybris-based e-commerce. Development of a Git-based versioning system used in all Hybris-based projects.
 
-## <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
+### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2015 - 2016
 
 Development, Analysis and Support for Ruby on Rails, JavaScript, Android. Emphasis on Web Systems e Web-services based on Ruby on Rails and JSON, HTML5 and Bootstrap. Payment integration via EDI (Credit, debit and tickets) or online (gateways such as Braspag, PagarMe). Development of Service Desk guidelines for the company and all its projects.
 
-## <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
+### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
 <i class="fa-regular fa-calendar"></i> 2014 - 2016
 
 Development, Analysis and Support for C#, Android. Emphasis on Web Systems and Web-services, all based in ASPX.
 
-# <i class="fa-regular fa-address-card"></i> Additional Information
+## <i class="fa-regular fa-address-card"></i> Additional Information
 
 - <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
 - <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>

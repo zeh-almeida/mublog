@@ -4,28 +4,30 @@ description: Meu currículo atualizado
 date: 2023-07-20
 tags: curriculo,sobre,.net,java,javascript,backend,experiência,proficiência,azure,aws,desenvolvimento,programação
 ---
-# <i class="fa-solid fa-bullseye"></i> Objetivo
+# <i class="fa-solid fa-scroll"></i> Currículo
+
+## <i class="fa-solid fa-bullseye"></i> Objetivo
 
 Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro services, integrações e DevOps.
 
-# <i class="fa-solid fa-user-graduate"></i> Formação
+## <i class="fa-solid fa-user-graduate"></i> Formação
 
 - Pós graduado em Engenharia de Software pela PUC-PR, turma de 2018.
 - Graduado como Bacharel em Sistemas de Informação pela PUC-PR, turma de 2014.
 - Certificate of Proficiency in English, Council of Europe level C2, recebido em 2010.
 - Experiência no exterior – Vivi em Sterling, Virginia, USA, por 10 meses. Estudei em Park View High School. (Setembro de 2008 - Julho de 2009).
 
-# <i class="fa-regular fa-comments"></i> Línguas
+## <i class="fa-regular fa-comments"></i> Línguas
 
 - Português - Nativo
 - Inglês – Fluente
 
-# <i class="fa-solid fa-briefcase"></i> Experiência Profissional
+## <i class="fa-solid fa-briefcase"></i> Experiência Profissional
 
-## <i class="fa-regular fa-building"></i> CI&T <i class="fa-regular fa-circle-dot"></i> Engenheiro de Software Sênior
+### <i class="fa-regular fa-building"></i> CI&T <i class="fa-regular fa-circle-dot"></i> Engenheiro de Software Sênior
 <i class="fa-regular fa-calendar"></i> 2021 - 2023
 
-### Projetos:
+#### Projetos:
 
 - Integrações SAP com APIs Node.js usando Azure para uma grande empresa de bebidas.
 
@@ -76,12 +78,12 @@ Atividades principais:
 - Análise
 - Suporte para desenvolvedores junior
 
-## <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Desenvolvedor Sênior Full Stack
+### <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Desenvolvedor Sênior Full Stack
 <i class="fa-regular fa-calendar"></i> 2021 - 2021
 
-### Em construção
+#### Em construção
 
-# <i class="fa-regular fa-address-card"></i> Informações Adicionais
+## <i class="fa-regular fa-address-card"></i> Informações Adicionais
 
 - <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
 - <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>
