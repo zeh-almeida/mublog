@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="${current_lang}">
+<html lang="en-us">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,7 +11,7 @@
     <meta name="description" content="${blog_title} - ${blog_description}">
 
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="${current_lang}" />
+    <meta property="og:locale" content="en-us" />
     <meta property="og:site_name" content="${blog_title}" />
 
     <meta property="og:title" content="${page_title}" />
@@ -32,28 +32,15 @@
 
     <script type="text/javascript" src="/${js_dir}/darkmode.js?v=${blog_version}"></script>
     <script type="text/javascript" src="/${js_dir}/lang_button.js?v=${blog_version}"></script>
-    <script type="text/javascript" src="/${js_dir}/tags_${current_lang}.js?v=${blog_version}"></script>
 
-    <title>${page_title} - ${blog_title}</title>
+    <title>${blog_title}</title>
 </head>
 <nav>
-    <i class="fa-solid fa-house fa-xs pl-half"></i>
-    <a href="/${current_lang}/index.html" title="home" class="pl-half">home</a>
-
-    <i class="fa-regular fa-newspaper fa-xs pl-half"></i>
-    <a href="/${current_lang}/articles.html" title="articles" class="pl-half">articles</a>
-
-    <i class="fa-solid fa-tags fa-xs pl-half"></i>
-    <a href="/${current_lang}/tags.html" title="tags" class="pl-half">tags</a>
-
     <i class="fa-regular fa-envelope fa-xs pl-half"></i>
     <a href="mailto:${author_mail}" title="mail" class="pl-half">mail</a>
 
     <i class="fa-solid fa-rss fa-xs pl-half"></i>
     <a href="/feed.xml" title="rss" class="pl-half">rss</a>
-
-    <i class="fa-regular fa-address-card fa-xs pl-half"></i>
-    <a href="/${current_lang}/about.html" title="about" class="pl-half">about</a>
 </nav>
 <main>
 <div class="buttons">

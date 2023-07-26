@@ -367,3 +367,16 @@ img[src*="#profile-pic"] {
     color-scheme: dark;
     color: rgb(207, 203, 197);
 }
+
+.pr-half {
+  padding-right: .5em;
+}
+
+.pl-half {
+  padding-left: .5em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="${current_lang}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,9 +11,9 @@
     <meta name="description" content="${post_description}">
 
     <meta property="og:type" content="article" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="${current_lang}" />
     <meta property="og:site_name" content="${blog_title}" />
-    
+
     <meta property="og:title" content="${post_title}" />
     <meta property="og:description" content="${post_description}" />
     <meta property="og:url" content="${posts_url}/${post_title}.html" />
@@ -32,22 +32,40 @@
     <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/normalize.css?v=${blog_version}">
     <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/style.css?v=${blog_version}">
     <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/fontawesome_all.min.css?v=${blog_version}">
+    <link rel="stylesheet" type="text/css" media="all" crossorigin="anonymous" referrerpolicy="no-referrer" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.9.1/css/flag-icons.min.css" integrity="sha512-ZQKxM5Z+PmOVa/VmISvHcqlUgzPejY92+I+sur69qiB7Vd+dAaDNMwy7AnRr6HcFbYY4so1FFPBgugE5s2jm7Q==" />
 
     <script type="text/javascript" src="/${js_dir}/darkmode.js?v=${blog_version}"></script>
-    <script type="text/javascript" src="/${js_dir}/tags.js?v=${blog_version}"></script>
+    <script type="text/javascript" src="/${js_dir}/lang_button.js?v=${blog_version}"></script>
+    <script type="text/javascript" src="/${js_dir}/tags_${current_lang}.js?v=${blog_version}"></script>
 
     <title>${post_title} - ${blog_title}</title>
 </head>
 <nav>
-    <i class="fa-solid fa-house fa-xs"></i> <a href="/index.html" title="home">home</a>
-    <i class="fa-regular fa-newspaper fa-xs"></i> <a href="/articles.html" title="articles">articles</a>
-    <i class="fa-solid fa-tags fa-xs"></i> <a href="/tags.html" title="tags">tags</a>
-    <i class="fa-regular fa-envelope fa-xs"></i> <a href="mailto:${author_mail}" title="mail">mail</a>
-    <i class="fa-solid fa-rss fa-xs"></i> <a href="/feed.xml" title="rss">rss</a>
-    <i class="fa-regular fa-address-card fa-xs"></i> <a href="/about.html" title="about">about</a>
+    <i class="fa-solid fa-house fa-xs pl-half"></i>
+    <a href="/${current_lang}/index.html" title="home" class="pl-half">home</a>
+
+    <i class="fa-regular fa-newspaper fa-xs pl-half"></i>
+    <a href="/${current_lang}/articles.html" title="articles" class="pl-half">articles</a>
+
+    <i class="fa-solid fa-tags fa-xs pl-half"></i>
+    <a href="/${current_lang}/tags.html" title="tags" class="pl-half">tags</a>
+
+    <i class="fa-regular fa-envelope fa-xs pl-half"></i>
+    <a href="mailto:${author_mail}" title="mail" class="pl-half">mail</a>
+
+    <i class="fa-solid fa-rss fa-xs pl-half"></i>
+    <a href="/feed.xml" title="rss" class="pl-half">rss</a>
+
+    <i class="fa-regular fa-address-card fa-xs pl-half"></i>
+    <a href="/${current_lang}/about.html" title="about" class="pl-half">about</a>
 </nav>
 <main>
-    <button class="dark-toggle" type="button"><i class="fa-regular fa-lightbulb"></i> Toggle dark mode</button>
+<div class="buttons">
+    <button class="dark-toggle" type="button">
+        <i class="fa-regular fa-lightbulb"></i> Toggle dark mode
+    </button>
+    ${languages}
+</div>
 <hr>
 ${post_content}
 ${post_tags}

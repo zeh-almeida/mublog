@@ -23,10 +23,9 @@
 !/.github/workflows/*.*
 !/.vscode/*.*
 
-!/src/*.md
-!/src/posts/*.md
 !/src/templates/*.template
 !/src/css/*.css
 !/src/js/*.js
 !/src/assets/*.*
 !/src/meta/*.*
+!/src/pages/**

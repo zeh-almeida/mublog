@@ -22,6 +22,7 @@ class PathConfig:
         self.dst_dir_name = "dst"
         self.src_dir_name = "src"
         self.post_dir_name = "posts"
+        self.page_dir_name = "pages"
         self.assets_dir_name = "assets"
         self.meta_dir_name = "meta"
         self.js_dir_name = "js"
@@ -30,6 +31,7 @@ class PathConfig:
 
         # Construct local src directory paths
         self.src_dir_path = self.src_dir_name
+        self.src_page_dir_path = os.path.join(self.src_dir_path, self.page_dir_name)
         self.src_posts_dir_path = os.path.join(self.src_dir_path, self.post_dir_name)
         self.src_assets_dir_path = os.path.join(self.src_dir_path, self.assets_dir_name)
         self.src_meta_dir_path = os.path.join(self.src_dir_path, self.meta_dir_name)
@@ -45,6 +47,9 @@ class PathConfig:
         self.dst_css_dir_path = os.path.join(self.dst_dir_path, self.css_dir_name)
         self.dst_js_dir_path = os.path.join(self.dst_dir_path, self.js_dir_name)
 
+    def language_source(self, language_key: str) -> str:
+        return os.path.join(self.src_page_dir_path, language_key)
+
 
 class BlogConfig:
     def __init__(self):
@@ -55,6 +60,9 @@ class BlogConfig:
         self.blog_author_mail = ""
         self.post_ignore_prefix = ""
         self.blog_author_copyright = ""
+
+        self.preferred_language = ""
+        self.available_languages: list[str] = []
 
         self.blog_version = uuid.uuid4().hex
 
@@ -161,7 +169,16 @@ class Helper:
         return re.sub(regex_pattern, lambda match: Helper.replace_relative_url_with_abs_url(match, base_url, folder_name), content)
 
     @staticmethod
-    def common_substitutions(config: BlogConfig, paths: PathConfig) -> dict[str, str]:
+    def build_language_selector(config: BlogConfig) -> str:
+        options = []
+
+        for lang in config.available_languages:            
+            options.append(f"<button class=\"language-button\" data-link=\"/{lang}/index.html\"><span class=\"fi fi-{lang[-2:]}\"></span> {lang}</button>")
+            
+        return "".join(options)
+
+    @staticmethod
+    def common_substitutions(config: BlogConfig, paths: PathConfig, current_lang: str) -> dict[str, str]:
         """
         Maps common substitutions in blog templates
         :param config: The content in which to convert the urls
@@ -178,6 +195,10 @@ class Helper:
             "author_mail": config.blog_author_mail,
             "author_copyright": config.blog_author_copyright,
 
+            "current_lang": current_lang,
+
+            "languages": Helper.build_language_selector(config),
+
             "js_dir": Helper.strip_top_directory_in_path(paths.dst_js_dir_path),
             "css_dir": Helper.strip_top_directory_in_path(paths.dst_css_dir_path),
             "meta_dir": Helper.strip_top_directory_in_path(paths.dst_meta_dir_path),
@@ -186,20 +207,20 @@ class Helper:
 
 
 class Post:
-    def __init__(self, config: BlogConfig, paths: PathConfig, src_file_path: str):
+    def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_file_path: str):
         self.config = config
         self.paths = paths
+        self.current_lang = current_lang
 
         self.title = ""
         self.description = ""
         self.date = ""
         self.tags = []
 
-        self.md_content = ""
         self.html_content = ""
 
         self.src_path = src_file_path
-        self.dst_path = Helper.post_src_to_dst_path(self.src_path, self.paths.dst_posts_dir_path, ".html")
+        self.dst_path = Helper.post_src_to_dst_path(self.src_path, os.path.join(self.paths.dst_dir_path, self.current_lang, self.paths.post_dir_name), ".html")
         self.remote_path = Helper.strip_top_directory_in_path(self.dst_path)
         self.filename = os.path.basename(self.dst_path)
 
@@ -334,7 +355,7 @@ class Post:
         with open(os.path.join(self.paths.src_templates_dir_path, "post.html.template"), mode="r", encoding="utf-8") as f:
             post_template = f.read()
 
-        common_subs = Helper.common_substitutions(self.config, self.paths)
+        common_subs = Helper.common_substitutions(self.config, self.paths, self.current_lang)
 
         post_subs = {
             "post_title": self.title,
@@ -353,13 +374,24 @@ class Post:
 
 class Page:
 
-    def __init__(self, config: BlogConfig, paths: PathConfig, src_page_path: str):
+    def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_page_path: str, template: str="page.html.template"):
         self.config = config
         self.paths = paths
+        self.template = template
+        self.current_lang = current_lang
+
         self.src_path = src_page_path
-        self.dst_path = Helper.post_src_to_dst_path(src_page_path, self.paths.dst_dir_path, ".html")
+        self.dst_path = Helper.post_src_to_dst_path(src_page_path, os.path.join(self.paths.dst_dir_path, self.current_lang), ".html")
+        self.remote_path = Helper.strip_top_directory_in_path(self.dst_path)
         self.page_title = os.path.basename(src_page_path).split('.')[0]
-        self.html_content = ""
+
+    def build_language_selector(self) -> str:
+        options = []
+
+        for lang in self.config.available_languages:            
+            options.append(f"<button class=\"language-button\" data-link=\"/{lang}/index.html\"><span class=\"fi fi-{lang[-2:]}\"></span> {lang}</button>")
+            
+        return "".join(options)
 
     def generate(self) -> str:
         """
@@ -368,17 +400,17 @@ class Page:
         """
 
         # Convert page from markdown to html
-        self.html_content = Helper.pandoc_md_to_html(self.src_path)
+        html_content = Helper.pandoc_md_to_html(self.src_path)
 
         # Load the page template and substitute the placeholders with the actual values
-        with open(os.path.join(self.paths.src_templates_dir_path, "page.html.template"), mode="r", encoding="utf-8") as f:
+        with open(os.path.join(self.paths.src_templates_dir_path, self.template), mode="r", encoding="utf-8") as f:
             page_template = f.read()
 
-        common_subs = Helper.common_substitutions(self.config, self.paths)
+        common_subs = Helper.common_substitutions(self.config, self.paths, self.current_lang)
 
         page_subs = {
             "page_title": self.page_title,
-            "page_content": self.html_content,
+            "page_content": Template(html_content).substitute(common_subs),
         }
 
         substitutions = {**common_subs, **page_subs}
@@ -387,8 +419,8 @@ class Page:
 
 class TagsPage(Page):
 
-    def __init__(self, config: BlogConfig, paths: PathConfig, src_page_path: str, posts: list[Post]):
-        super().__init__(config, paths, src_page_path)
+    def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_page_path: str, posts: list[Post]):
+        super().__init__(config, paths, current_lang, src_page_path)
         self.posts = posts
 
     def get_post_tags_with_count_as_html(self) -> str:
@@ -399,15 +431,15 @@ class TagsPage(Page):
         unique_tags = list(set(tag for post in self.posts for tag in post.tags))
         tag_counts = {tag: sum(tag in post.tags for post in self.posts) for tag in unique_tags}
         sorted_tags = sorted(unique_tags, key=lambda tag: tag_counts[tag], reverse=True)
-
-        tags = "<div class=\"tags\">"
+        
+        tags = ["<div class=\"tags\">"]
         for tag in sorted_tags:
             tag_count = tag_counts[tag]
             tag_param = urllib.parse.urlencode({"tag": tag})
-            tags += (f'<div class="tag-bubble" onclick="location.href=\'articles.html?{tag_param}\'">'
+            tags.append(f'<div class="tag-bubble" onclick="location.href=\'articles.html?{tag_param}\'">'
                      f"{tag}<span>{tag_count}</span></div>")
-        tags += "</div>"
-        return tags
+        tags.append("</div>")
+        return "".join(tags)
 
     def generate(self) -> str:
         """
@@ -415,7 +447,7 @@ class TagsPage(Page):
         :return: The generated page in html format
         """
         # Convert page from markdown to html
-        self.html_content = Helper.pandoc_md_to_html(self.src_path)
+        html_content = Helper.pandoc_md_to_html(self.src_path)
 
         # Load the page template and substitute the placeholders with the actual values
         with open(os.path.join(self.paths.src_templates_dir_path, "page.html.template"), mode="r", encoding="utf-8") as f:
@@ -424,11 +456,11 @@ class TagsPage(Page):
         # Get tags from posts, sorted by count and convert them to html
         tags_html = self.get_post_tags_with_count_as_html()
 
-        common_subs = Helper.common_substitutions(self.config, self.paths)
+        common_subs = Helper.common_substitutions(self.config, self.paths, self.current_lang)
 
         tag_subs = {
             "page_title": "Tags",
-            "page_content": self.html_content + tags_html,
+            "page_content": html_content + tags_html,
         }
 
         substitutions = {**common_subs, **tag_subs}
@@ -436,8 +468,8 @@ class TagsPage(Page):
 
 
 class ArticlesPage(Page):
-    def __init__(self, config: BlogConfig, paths: PathConfig, src_page_path: str, posts: list[Post]):
-        super().__init__(config, paths, src_page_path)
+    def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_page_path: str, posts: list[Post]):
+        super().__init__(config, paths, current_lang, src_page_path)
         self.posts = posts
 
     def get_article_listing_as_html(self) -> str:
@@ -445,17 +477,17 @@ class ArticlesPage(Page):
         Generates the html for the article listing of all posts
         :return: The html for the article listing
         """
-        article_listing = "<article>"
-        article_listing += "<ul class=\"articles\">"
+        article_listing = ["<article>"]
+        article_listing.append("<ul class=\"articles\">")
         for post in self.posts:
-            article_listing += f'<li id=\"{post.filename}\">'
-            article_listing += f'<b>[{post.date}]</b> '
-            article_listing += f'<a href=\"{post.remote_path}\" title=\"{post.title}\">{post.title}</a>'
-            article_listing += f'</li>'
-        article_listing += "</ul>"
-        article_listing += "</article>"
+            article_listing.append(f'<li id=\"{post.filename}\">')
+            article_listing.append(f'<b>[{post.date}]</b> ')
+            article_listing.append(f'<a href=\"/{post.remote_path}\" title=\"{post.title}\">{post.title}</a>')
+            article_listing.append(f'</li>')
+        article_listing.append("</ul>")
+        article_listing.append("</article>")
 
-        return article_listing
+        return "".join(article_listing)
 
     def generate(self) -> str:
         """
@@ -463,19 +495,19 @@ class ArticlesPage(Page):
         :return: The generated page in html format
         """
         # Convert page from markdown to html
-        self.html_content = Helper.pandoc_md_to_html(self.src_path)
+        html_content = Helper.pandoc_md_to_html(self.src_path)
 
         # Load the page template
         template_path = os.path.join(self.paths.src_templates_dir_path, "page.html.template")
         with open(template_path, mode="r", encoding="utf-8") as f:
             articles_page_template = f.read()
 
-        common_subs = Helper.common_substitutions(self.config, self.paths)
+        common_subs = Helper.common_substitutions(self.config, self.paths, self.current_lang)
 
         # Write the page template with the actual values
         article_subs = {
             "page_title": "Articles",
-            "page_content": self.html_content + self.get_article_listing_as_html(),
+            "page_content": html_content + self.get_article_listing_as_html(),
         }
 
         substitutions = {**common_subs, **article_subs}
@@ -488,7 +520,6 @@ class RSSFeed:
         self.config = config
         self.paths = paths
         self.posts = posts
-        self.feed_data = ""
 
     def generate(self) -> None:
         """
@@ -501,23 +532,25 @@ class RSSFeed:
         with open(template_path, mode="r", encoding="utf-8") as f:
             rss_template = f.read()
 
+        feed_data = []
+
         # Create a feed entry for each post
         for post in self.posts:
             post_title = html.escape(post.title)
             post_link = urljoin(self.config.blog_url, post.remote_path)
             post_content = html.escape(Helper.make_urls_absolute(post.html_content, self.config.blog_url, self.paths.post_dir_name))
 
-            self.feed_data += f"<item>"
-            self.feed_data += f"<title>{post_title}</title>"
-            self.feed_data += f"<link>{post_link}</link>"
-            self.feed_data += f"<description>{post_content}</description>"
-            self.feed_data += f"</item>"
+            feed_data.append(f"<item>")
+            feed_data.append(f"<title>{post_title}</title>")
+            feed_data.append(f"<link>{post_link}</link>")
+            feed_data.append(f"<description>{post_content}</description>")
+            feed_data.append(f"</item>")
 
-        common_subs = Helper.common_substitutions(self.config, self.paths)
+        common_subs = Helper.common_substitutions(self.config, self.paths, "")
 
         # Substitute the placeholders with the actual values
         rss_subs = {
-            "rss_items": self.feed_data,
+            "rss_items": "".join(feed_data),
         }
 
         substitutions = {**common_subs, **rss_subs}
@@ -531,14 +564,15 @@ class RSSFeed:
 
 class Sitemap:
 
-    def __init__(self, config: BlogConfig, paths: PathConfig, posts: list[Post]):
+    def __init__(self, config: BlogConfig, paths: PathConfig, posts: list[Post], pages: list[Page]):
         self.config = config
         self.paths = paths
         self.posts = posts
+        self.pages = pages
 
     def generate(self) -> None:
         """
-        Formats all posts as Sitemap entries and writes the feed to a file
+        Formats all posts and pages as Sitemap entries and writes the feed to a file
         """
 
         # Load Sitemap template
@@ -550,16 +584,11 @@ class Sitemap:
         lastmod = datetime.date.today().strftime("%Y-%m-%d")
 
         feed_data = []
-        site_paths = []
-        site_paths.append(urljoin(self.config.blog_url, "index.html"))
-        site_paths.append(urljoin(self.config.blog_url, "articles.html"))
-        site_paths.append(urljoin(self.config.blog_url, "tags.html"))
-        site_paths.append(urljoin(self.config.blog_url, "about.html"))
 
         # Create a feed entry for each page
-        for site_path in site_paths:
+        for page in self.pages:
             feed_data.append(f"<url>")
-            feed_data.append(f"<loc>{site_path}</loc>")
+            feed_data.append(f"<loc>{urljoin(self.config.blog_url, page.remote_path)}</loc>")
             feed_data.append(f"<lastmod>{lastmod}</lastmod>")
             feed_data.append(f"<changefreq>daily</changefreq>")
             feed_data.append(f"</url>")
@@ -570,8 +599,8 @@ class Sitemap:
             feed_data.append(f"<lastmod>{post.date}</lastmod>")
             feed_data.append(f"<changefreq>daily</changefreq>")
             feed_data.append(f"</url>")
-            
-        common_subs = Helper.common_substitutions(self.config, self.paths)
+
+        common_subs = Helper.common_substitutions(self.config, self.paths, "")
 
         # Substitute the placeholders with the actual values
         sitemap_subs = {
@@ -605,7 +634,7 @@ class Robots:
             robots_template = f.read()
 
         # Substitute the placeholders with the actual values
-        substitutions = Helper.common_substitutions(self.config, self.paths)
+        substitutions = Helper.common_substitutions(self.config, self.paths, "")
         robots_template = Template(robots_template).substitute(substitutions)
 
         # Write substituted template to file
@@ -619,10 +648,14 @@ class Blog:
     def __init__(self, config: BlogConfig, paths: PathConfig):
         self.config = config
         self.paths = paths
-        self.posts = []
-        self.pages = []
+
+        self.posts: list[Post] = []
+        self.pages: list[Page] = []
+
         self.processed_posts = 0
         self.skipped_posts = 0
+
+        self.current_lang=""
 
         if not shutil.which("pandoc"):
             logger.error("Pandoc is not installed. Exiting...")
@@ -639,12 +672,20 @@ class Blog:
         self.clean_build_directory()
         self.create_build_directories()
         self.copy_files_to_build_directories()
-        logger.info("Processing posts...")
-        self.process_posts()
-        logger.info("Processing pages...")
-        self.process_pages()
-        logger.info("Processing scripts...")
-        self.process_scripts()
+
+        for lang in self.config.available_languages:
+            self.current_lang = lang
+            logger.info(f"Processing language '{self.current_lang}'...")
+
+            logger.info("Processing posts...")
+            self.process_posts()
+            logger.info("Processing pages...")
+            self.process_pages()
+            logger.info("Processing scripts...")
+            self.process_scripts()
+
+        logger.info("Processing root index...")
+        self.process_index()
         logger.info("Processing rss feed...")
         self.process_rss_feed()
         logger.info("Processing favicon...")
@@ -682,6 +723,9 @@ class Blog:
         self.config.post_ignore_prefix = section["post_ignore_prefix"]
         self.config.blog_author_copyright = section["blog_author_copyright"]
 
+        self.config.preferred_language = section["preferred_language"]
+        self.config.available_languages = section["available_languages"].split(",")
+
     def clean_build_directory(self) -> None:
         """
         Removes the build directory and all its contents
@@ -697,15 +741,23 @@ class Blog:
         """
         directories = [
             self.paths.dst_dir_path,
-            self.paths.dst_posts_dir_path,
             self.paths.dst_css_dir_path,
             self.paths.dst_assets_dir_path,
             self.paths.dst_meta_dir_path,
             self.paths.dst_js_dir_path,
         ]
+
+        for lang in self.config.available_languages:
+            lang_dir = os.path.join(self.paths.dst_dir_path, lang)
+            post_dir = os.path.join(self.paths.dst_dir_path, lang, self.paths.post_dir_name)
+
+            directories.append(lang_dir)
+            directories.append(post_dir)
+
         for directory in directories:
             try:
                 os.makedirs(directory, exist_ok=True)
+
             except Exception as e:
                 logger.error(f"Failed to create directory: {str(e)}")
                 exit(1)
@@ -723,7 +775,8 @@ class Blog:
         """
         Processes all posts, i.e. validates the post header, generates the post html and writes the post to a file
         """
-        for file_path in glob.glob(os.path.join(self.paths.src_posts_dir_path, "*.md")):
+        source_path = os.path.join(self.paths.language_source(self.current_lang), self.paths.post_dir_name)
+        for file_path in glob.glob(os.path.join(source_path, "*.md")):
             # Skip posts that start with the ignore prefix
             if os.path.basename(file_path).startswith(self.config.post_ignore_prefix):
                 logger.warning(f"Skipping {file_path} ...")
@@ -731,7 +784,7 @@ class Blog:
                 continue
 
             # Validate and generate the post
-            post = Post(self.config, self.paths, file_path)
+            post = Post(self.config, self.paths, self.current_lang, file_path)
             if post.validate_header():
                 with open(post.dst_path, mode="w", encoding="utf-8") as f:
                     f.write(post.generate())
@@ -746,18 +799,38 @@ class Blog:
         """
         Processes all pages, generates the page html and writes the page to a file
         """
-        for file_path in glob.glob(os.path.join(self.paths.src_dir_path, "*.md")):
+
+        filtered_posts = [post for post in self.posts if post.current_lang == self.current_lang]
+
+        source_path = self.paths.language_source(self.current_lang)
+        for file_path in glob.glob(os.path.join(source_path, "*.md")):
             logger.debug(f"Processing {file_path} ...")
             # ToDo: Add header to pages, e.g. to set the title
             # ToDo: Add page header validation
 
             # Create page of the appropriate type
             if os.path.basename(file_path) == "articles.md":
-                page = ArticlesPage(self.config, self.paths, file_path, self.posts)
+                page = ArticlesPage(self.config, self.paths, self.current_lang, file_path, filtered_posts)
             elif os.path.basename(file_path) == "tags.md":
-                page = TagsPage(self.config, self.paths, file_path, self.posts)
+                page = TagsPage(self.config, self.paths, self.current_lang, file_path, filtered_posts)
             else:
-                page = Page(self.config, self.paths, file_path)
+                page = Page(self.config, self.paths, self.current_lang, file_path)
+
+            # Write the generated page to disk
+            with open(page.dst_path, mode="w", encoding="utf-8") as f:
+                f.write(page.generate())
+
+            self.pages.append(page)
+
+    def process_index(self) -> None:
+        """
+        Processes the main index page regardless of languages
+        """
+        for file_path in glob.glob(os.path.join(self.paths.src_page_dir_path, "*.md")):
+            logger.debug(f"Processing {file_path} ...")
+            # ToDo: Add header to pages, e.g. to set the title
+            # ToDo: Add page header validation
+            page = Page(self.config, self.paths, "", file_path, "index.html.template")
 
             # Write the generated page to disk
             with open(page.dst_path, mode="w", encoding="utf-8") as f:
@@ -783,9 +856,11 @@ class Blog:
             js_template = f.read()
 
         # Create a mapping of post filenames to tags and substitute the template placeholders with the actual values
-        with open(os.path.join(self.paths.dst_js_dir_path, "tags.js"), mode="w", encoding="utf-8") as f:
+        with open(os.path.join(self.paths.dst_js_dir_path, f"tags_{self.current_lang}.js"), mode="w", encoding="utf-8") as f:
             entries = [f'"{post.filename}": [{",".join(map(repr, post.tags))}]' for post in self.posts]
-            substitutions = {"tag_mapping": ",".join(entries)}            
+            substitutions = {
+                "tag_mapping": ",".join(entries)
+            }
             f.write(Template(js_template).substitute(substitutions))
 
     def minify_files(self) -> None:
@@ -793,7 +868,7 @@ class Blog:
         Minifies all files in the destination
         """
         files = []
-        targets = ['**/*.js', '**/*.html', '**/*.css', '**/*.xml', '**/*.webmanifest']
+        targets = ['**/*.js', '**/*.html', '**/*.css', '**/*.webmanifest']
 
         for target in targets:
             files += glob.glob(os.path.join(self.paths.dst_dir_path, target), recursive=True)
@@ -804,13 +879,18 @@ class Blog:
                 file.seek(0)
 
                 minified = minify_html.minify(
-                    contents,
+                    code=contents,
                     minify_js=True,
                     minify_css=True,
+                    remove_bangs=True,
+                    keep_comments=False,
+                    keep_closing_tags=True,
                     do_not_minify_doctype=True,
                     keep_spaces_between_attributes=True,
+                    remove_processing_instructions=True,
+                    keep_html_and_head_opening_tags=True,
                     ensure_spec_compliant_unquoted_attribute_values=True)
-                    
+
                 file.write(minified)
                 file.truncate()
 
@@ -837,7 +917,7 @@ class Blog:
             with open(manifest_path, mode="r", encoding="utf-8") as f:
                 manifest_template = f.read()
 
-            substitutions = Helper.common_substitutions(self.config, self.paths)
+            substitutions = Helper.common_substitutions(self.config, self.paths, "")
 
             with open(os.path.join(self.paths.dst_dir_name, "site.webmanifest"), mode="w", encoding="utf-8") as f:
                 manifest_template = Template(manifest_template).substitute(substitutions)
@@ -847,7 +927,7 @@ class Blog:
         """
         Generates the Sitemap.xml file
         """
-        sitemap = Sitemap(self.config, self.paths, self.posts)
+        sitemap = Sitemap(self.config, self.paths, self.posts, self.pages)
         sitemap.generate()
 
     def process_robots(self) -> None:

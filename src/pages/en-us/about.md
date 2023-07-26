@@ -1,4 +1,4 @@
-![](assets/profile.jpg#profile-pic "Zeh and Arroz")
+![](/assets/profile.jpg#profile-pic "Zeh and Arroz")
 
 # <i class="fa-solid fa-user-astronaut"></i> About me
 
