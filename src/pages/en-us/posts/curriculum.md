@@ -29,12 +29,12 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 
 - SAP integration with Node.js APIs using Azure for a major beverage company.
 
-    - Responsible for analyzing requirements and breaking them down into technical documents which the team would work on. 
-    
+    - Responsible for analyzing requirements and breaking them down into technical documents which the team would work on.
+
     - Once the team started work, it was my responsibility to ensure the developers had the necessary assistance, tools and knowledge to complete their assignments using pair-programming and other techniques.
-    
-    - As soons as the code was written, I was one of the key people necessary to approve their work, revising their code and making suggestions.
-    
+
+    - As soon as the code was written, I was one of the key people necessary to approve their work, revising their code and making suggestions.
+
     - Because of the analysis phase, I was also responsible for communicating with the client and other stakeholders in order to gather as much information on the requirements possible.
 
     - All this work was done with international teams from multiple geographical locations.
@@ -42,23 +42,23 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 - Developing a solution to collect data from Brazilian Health Department (ANVISA) and make it available in a data lake using AWS for a major pharmaceutical company.
 
    - Responsible for designing the architecture as well as implementing it. I was responsible for communicating directly with the client and stakeholders in order to gather the requirements as well as having the architecture defined and approved.
-   
+
    - Once approved, the team and I were responsible for implementing it, using Python, AWS Step Functions and AWS Lambda running pipelines on Jenkins with Terraform.
-   
+
    - Techniques such as pair-programming proved to be very efficient and increased the team’s productivity. Unit tests were also very important because of the data volume and data source availability.
 
 - Architecture design of micro-services for a multi-corporation solution for a major technology conglomerate.
 
     - Responsible for gathering requirements, designing and validating solutions with clients and stakeholders.
-    
-    - One of my most curious assignments because most of what was asked to be designed already existed in the solution in a different form. 
-    
+
+    - One of my most curious assignments because most of what was asked to be designed already existed in the solution in a different form.
+
     - Therefore, most of my work was not in creating new things but showing the customer how to use the solution in a more effective way, increasing it’s value.
 
 - Development of solutions to gather data from a major financial institution in Brazil.
 
-    - Implementation of programs to gather data from multiple sources, filter and process them in order to integrate with an external system. 
-    
+    - Implementation of programs to gather data from multiple sources, filter and process them in order to integrate with an external system.
+
     - Because of the age of some sources and data complexity, many meetings with different teams had to be arranged in order to validate sources, formats and other data characteristics.
 
 Main technologies:
@@ -102,10 +102,10 @@ Main activities:
 ### Project:
 
 - Architecture and implementation of a financial analysis workflow for a major industrial bank.
-    - Responsible for designing and implementing a solution which would receive data from external systems in order to validate if a process would be approved or not. 
-    
+    - Responsible for designing and implementing a solution which would receive data from external systems in order to validate if a process would be approved or not.
+
     - This included data enrichment from internal company sources as well as external systems.
-    
+
     - The implementation ran in a event-driven environment fully orchestrated in Azure using Azure Functions.
 
 Main technologies:
@@ -129,16 +129,16 @@ Main activities:
 
 - Development and Maintenance of the Sales Order API.
     - One of the senior developers in a Agile team. Responsible for Developing, testing and following the project pipeline in order to finish tasks.
-    
+
     - All tasks were performed with pair-programming, rotating team members every sprint in order to get in sync with the team and improve out abilities.
-    
+
     - Used Java and micro-service architecture in order to implement a RESTful API as well a event-driven API using Kafka.
 
 - Design and Implementation of a company-wide calendar event scheduler.
     - Using then-new .Net Core 3.1 and then-recently released Azure Functions v2, I was tasked to design and implement a calendar event system akin to MS Outlook with a cloud-first operation.
-    
+
     - The system needed to have a waiting queue when the participation quorum was full as well as e-mail notifications when event changed, queues moved, etc.
-    
+
     - The system had to work on IE11 and Chrome using the company’s Azure AD instance for logins. The application was written with React on the front-end.
 
 Main technologies:
@@ -169,12 +169,12 @@ Development, Analysis and Support for C#, JavaScript, SQL Server 2012. Emphasis 
 ## <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
 <i class="fa-regular fa-calendar"></i> 2016 - 2016
 
-Development, Java Analysis and Support, JavaScript. Emphasis on Web systems and Web-services based on Hybris, Java, HTML5 and Bootstrap. Front-End Restructuring for Hybris-based e-commerce. Development of a Git-based versioning system used in all Hybris-based projects.
+Development, Analysis and Support, for Java and JavaScript. Emphasis on Web systems and Web-services based on Hybris, Java, HTML5 and Bootstrap. Front-End Restructuring for Hybris-based e-commerce. Development of a Git-based versioning system used in all Hybris-based projects.
 
 ## <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2015 - 2016
 
-Development, Analysis and Support for Ruby on Rails, JavaScript, Android. Emphasis on Web Systems e Web-services based on Ruby on Rails and JSON, HTML5 and Bootstrap. Payment integration via EDI (Credit, debit and tickets) or online (gateways such as Braspag, PagarMe). Development of Service Desk guidelines for the company and all its projects. 
+Development, Analysis and Support for Ruby on Rails, JavaScript, Android. Emphasis on Web Systems e Web-services based on Ruby on Rails and JSON, HTML5 and Bootstrap. Payment integration via EDI (Credit, debit and tickets) or online (gateways such as Braspag, PagarMe). Development of Service Desk guidelines for the company and all its projects.
 
 ## <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
 <i class="fa-regular fa-calendar"></i> 2014 - 2016
