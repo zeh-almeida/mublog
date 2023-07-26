@@ -39,27 +39,27 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 
     - Todo o trabalho foi executado com times internacionais e de várias localizações geográficas diferentes.
 
-- Developing a solution to collect data from Brazilian Health Department (ANVISA) and make it available in a data lake using AWS for a major pharmaceutical company.
+- Desenvolvimento de uma solução para coletar dados da Agência Nacional de Vigilância Sanitária (ANVISA) e torna-los disponíveis num data lake usando AWS para uma grande empresa farmacêutica.
 
-   - Responsible for designing the Arquitetura as well as implementing it. I was responsible for communicating directly with the client and stakeholders in order to gather the requirements as well as having the Arquitetura defined and approved.
+    - Responsável por desenhar a Arquitetura bem como implementa-la. Fui responsável por me comunicar diretamente com o cliente e stakeholders para elicitar os requisitos e ter as definições de arquitetura aprovadas.
 
-   - Once approved, the team and I were responsible for implementing it, using Python, AWS Step Functions and AWS Lambda running pipelines on Jenkins with Terraform.
+    - Uma vez que a arquitetura estivesse aprovada, o time e eu éramos responsáveis por implanta-la usando Python, AWS Step Functions e AWS Lambda executando pipelines via Jenkins com Terraform.
 
-   - Techniques such as pair-programming proved to be very efficient and increased the team’s productivity. Unit tests were also very important because of the data volume and data source availability.
+    - Técnicas como programação em pares provaram ser muito eficientes e aumentaram a produtividade do time. testes unitários foram muito importantes por conta da disponiblidade da fonte de dados bem como o volume dos dados.
 
-- Arquitetura design of Micro-serviços for a multi-corporation solution for a major technology conglomerate.
+- Arquitetura de Micro-serviços para uma solução de multi-empresas de um grande comglomerado tecnológico.
 
-    - Responsible for gathering requirements, designing and validating solutions with clients and stakeholders.
+    - Responsável por analisar os requerimentos, desenhar e validar a solução com clientes e stakeholders.
 
-    - One of my most curious assignments because most of what was asked to be designed already existed in the solution in a different form.
+    - Uma de minhas atuações mais curiosas pois o trabalho pedido já havia sido implantado de uma forma diferente.
 
-    - Therefore, most of my work was not in creating new things but showing the customer how to use the solution in a more effective way, increasing it’s value.
+    - Com isso em vista, a maior parte do meu trabalho se focou em mostrar ao cliente como usar a solução existente de uma forma mais efetiva, aumentando seu valor para o negócio.
 
-- Desenvolvimento of solutions to gather data from a major financial institution in Brazil.
+- Desenvolvimento de soluções para agregação de dados de uma grande instituição financeira brasileira.
 
-    - Implementação of programs to gather data from multiple sources, filter and process them in order to integrate with an external sistema.
+    - Implementação de programas para agregar dadosde múltiplas fontes, filtrando e processando esses dados para disponibiliza-los para uma integração entre sistemas externos.
 
-    - Because of the age of some sources and data complexity, many meetings with different teams had to be arranged in order to validate sources, formats and other data characteristics.
+    - Em vista da idade e complexidade de algumas das fontes, muitas reuniões entre diversos times foram necessárias para entendimento de fontes, formatos, contratos e outras características dos dados.
 
 Tecnologias principais:
 
