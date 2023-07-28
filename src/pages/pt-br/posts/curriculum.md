@@ -19,15 +19,15 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 
 ## <i class="fa-regular fa-comments"></i> Línguas
 
-- Português - Nativo
-- Inglês – Fluente
+- <span class="fi fi-br"></span> Português - Nativo
+- <span class="fi fi-gb"></span> Inglês – Fluente
 
 ## <i class="fa-solid fa-briefcase"></i> Experiência Profissional
 
 ### <i class="fa-regular fa-building"></i> CI&T <i class="fa-regular fa-circle-dot"></i> Engenheiro de Software Sênior
 <i class="fa-regular fa-calendar"></i> 2021 - 2023
 
-#### Projetos:
+#### <i class="fa-solid fa-diagram-project"></i> Projetos:
 
 - Integrações SAP com APIs Node.js usando Azure para uma grande empresa de bebidas.
 
@@ -63,7 +63,7 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 
     - Em vista da idade e complexidade de algumas das fontes, muitas reuniões entre diversos times foram necessárias para entendimento de fontes, formatos, contratos e outras características dos dados.
 
-Tecnologias principais:
+#### <i class="fa-solid fa-microchip"></i> Tecnologias principais:
 
 - .Net Core
 - Node.js
@@ -72,7 +72,7 @@ Tecnologias principais:
 - Azure
 - Micro-serviços
 
-Atividades principais:
+#### <i class="fa-solid fa-person-chalkboard"></i> Atividades principais:
 
 - Desenvolvimento
 - Análise
@@ -81,21 +81,21 @@ Atividades principais:
 ### <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Desenvolvedor Sênior Full Stack
 <i class="fa-regular fa-calendar"></i> 2021 - 2021
 
-#### Projeto:
+#### <i class="fa-solid fa-diagram-project"></i> Projeto:
 
 - Implementação de uma solução complexa para gerenciamento de um Family Office.
     - Responsável por devenvolver e dar suporte para desenvolvedores júniors na implementação do sistema
     - Necessário inserir dados financeiros de diversas fontes, moedas e valores
     - Gerar relatórios de posição, carteira e outras visões gerenciais e cálculos financeiros.
 
-Tecnologias principais:
+#### <i class="fa-solid fa-microchip"></i> Tecnologias principais:
 
 - .Net Core
 - SQL Server
 - Azure
 - Micro-serviços
 
-Atividades principais:
+#### <i class="fa-solid fa-person-chalkboard"></i> Atividades principais:
 
 - Desenvolvimento
 - Suporte para desenvolvedores junior
@@ -103,7 +103,7 @@ Atividades principais:
 ### <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
 <i class="fa-regular fa-calendar"></i> 2020 - 2021
 
-#### Projeto:
+#### <i class="fa-solid fa-diagram-project"></i> Projeto:
 
 - Arquitetura e implementação de um fluxo de análise de empréstimo para um grande branco industrial.
     - Responsável por desenhar e implementar a solução.
@@ -113,7 +113,7 @@ Atividades principais:
     - A execução podia ser reiniciada em qualquer fase da análise para evitar indisponibilidades de sistemas externos.
     - Acompanhamento da execução e suporte em Produção para avaliar impedimnentos do processo.
 
-Tecnologias principais:
+#### <i class="fa-solid fa-microchip"></i> Tecnologias principais:
 
 - .Net Core
 - SQL Server
@@ -122,7 +122,7 @@ Tecnologias principais:
 - Azure Service Bus
 - Micro-services
 
-Atividades principais:
+#### <i class="fa-solid fa-person-chalkboard"></i> Atividades principais:
 
 - Desenvolvimento
 - Análise
@@ -131,7 +131,7 @@ Atividades principais:
 ### <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Systems Analyst
 <i class="fa-regular fa-calendar"></i> 2017 - 2020
 
-#### Projetos:
+#### <i class="fa-solid fa-diagram-project"></i> Projetos:
 
 - Desenvolvimento e Manutencão da API de Ordem de Vendas.
     - Um dos desenvolvedores mais sêniors num time Ágil usando Scrum. Responsável por desenvolver, testar e acompanhar a pipeline do projeto para finalização das tarefas.
@@ -147,7 +147,7 @@ Atividades principais:
 
     - O sistema tinha como requerimento funcionar no IE11 e Chrome usando Azure AD para autenticação e autorização. A aplicação foi escrita em react para o front-end.
 
-Tecnologias principais:
+#### <i class="fa-solid fa-microchip"></i> Tecnologias principais:
 
 - Java
 - Jenkins
@@ -161,7 +161,7 @@ Tecnologias principais:
 - Service Bus
 - Ágil e Scrum
 
-Atividades principais:
+#### <i class="fa-solid fa-person-chalkboard"></i> Atividades principais:
 
 - Desenvolvimento
 - Testes

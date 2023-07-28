@@ -62,7 +62,7 @@
 <main>
 <div class="buttons">
     <button class="dark-toggle" type="button">
-        <i class="fa-regular fa-lightbulb"></i> Toggle dark mode
+        <i class="fa-regular fa-lightbulb"></i> Dark mode
     </button>
     ${languages}
 </div>

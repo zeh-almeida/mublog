@@ -19,15 +19,15 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 
 ## <i class="fa-regular fa-comments"></i> Languages
 
-- Portuguese - Native
-- English – Fluent
+- <span class="fi fi-br"></span> Portuguese - Native
+- <span class="fi fi-gb"></span> English – Fluent
 
 ## <i class="fa-solid fa-briefcase"></i> Professional Experience
 
 ### <i class="fa-regular fa-building"></i> CI&T <i class="fa-regular fa-circle-dot"></i> Senior Software Engineer
 <i class="fa-regular fa-calendar"></i> 2021 - 2023
 
-#### Projects:
+#### <i class="fa-solid fa-diagram-project"></i> Projects:
 
 - SAP integration with Node.js APIs using Azure for a major beverage company.
 
@@ -63,7 +63,7 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 
     - Because of the age of some sources and data complexity, many meetings with different teams had to be arranged in order to validate sources, formats and other data characteristics.
 
-Main technologies:
+#### <i class="fa-solid fa-microchip"></i> Main technologies: 
 
 - .Net Core
 - Node.js
@@ -72,7 +72,7 @@ Main technologies:
 - Azure
 - Micro-services
 
-Main activities:
+#### <i class="fa-solid fa-person-chalkboard"></i> Main activities:
 
 - Development
 - Analysis
@@ -81,19 +81,19 @@ Main activities:
 ### <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
 <i class="fa-regular fa-calendar"></i> 2021 - 2021
 
-#### Project:
+#### <i class="fa-solid fa-diagram-project"></i> Project:
 
 - Implementation of a complex solution for managing a Family Office.
     - Responsible for developing and supporting junior developers in the implementation of a Family Office system that would handle data input as well as many financial calculations.
 
-Main technologies:
+#### <i class="fa-solid fa-microchip"></i> Main technologies: 
 
 - .Net Core
 - SQL Server
 - Azure
 - Micro-services
 
-Main activities:
+#### <i class="fa-solid fa-person-chalkboard"></i> Main activities:
 
 - Development
 - Support
@@ -101,7 +101,7 @@ Main activities:
 ### <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
 <i class="fa-regular fa-calendar"></i> 2020 - 2021
 
-#### Project:
+#### <i class="fa-solid fa-diagram-project"></i> Project:
 
 - Architecture and implementation of a financial analysis workflow for a major industrial bank.
     - Responsible for designing and implementing a solution which would receive data from external systems in order to validate if a process would be approved or not.
@@ -114,7 +114,7 @@ Main activities:
 
     - Monitoring the execution flow in Production to evaluate possible blocks in the process.
 
-Main technologies:
+#### <i class="fa-solid fa-microchip"></i> Main technologies: 
 
 - .Net Core
 - SQL Server
@@ -123,7 +123,7 @@ Main technologies:
 - Azure Service Bus
 - Micro-services
 
-Main activities:
+#### <i class="fa-solid fa-person-chalkboard"></i> Main activities:
 
 - Development
 - Analysis
@@ -132,7 +132,7 @@ Main activities:
 ### <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Systems Analyst
 <i class="fa-regular fa-calendar"></i> 2017 - 2020
 
-#### Projects:
+#### <i class="fa-solid fa-diagram-project"></i> Projects:
 
 - Development and Maintenance of the Sales Order API.
     - One of the senior developers in a Agile team using Scrum. Responsible for Developing, testing and following the project pipeline in order to finish tasks.
@@ -148,7 +148,7 @@ Main activities:
 
     - The system had to work on IE11 and Chrome using the company’s Azure AD instance for authorization and authentication. The application was written with React on the front-end.
 
-Main technologies:
+#### <i class="fa-solid fa-microchip"></i> Main technologies: 
 
 - Java
 - Jenkins
@@ -162,7 +162,7 @@ Main technologies:
 - Service Bus
 - Agile and Scrum
 
-Main activities:
+#### <i class="fa-solid fa-person-chalkboard"></i> Main activities:
 
 - Development
 - Testing
