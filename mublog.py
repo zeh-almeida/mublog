@@ -486,6 +486,7 @@ class ArticlesPage(Page):
         """
         article_listing = ["<article>"]
         article_listing.append("<ul class=\"articles\">")
+        
         for post in self.posts:
             article_listing.append(f'<li id=\"{post.filename}\">')
             article_listing.append(f'<b>[{post.date}]</b> ')
