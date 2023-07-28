@@ -2,7 +2,7 @@
 title: Currículo
 description: Meu currículo atualizado
 date: 2023-07-20
-tags: curriculo,sobre,.net,java,javascript,backend,experiência,proficiência,azure,aws,desenvolvimento,programação
+tags: currículo,sobre,.net,java,javascript,backend,experiência,proficiência,azure,aws,desenvolvimento,programação
 ---
 # <i class="fa-solid fa-scroll"></i> Currículo
 
@@ -31,13 +31,13 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 
 - Integrações SAP com APIs Node.js usando Azure para uma grande empresa de bebidas.
 
-    - responsável por analisar os requerimentos e quebra-los em detalhes técnicos de forma que o time pudesse atuar nessas demandas.
+    - Responsável por analisar os requerimentos e quebra-los em detalhes técnicos de forma que o time pudesse atuar nessas demandas.
 
-    - Uma vez que o time iniciasse o trabalho, era minha responsabilidade garantir que os desenvolvedores tivessem todas as ferramentas, conhecimento e asistência necessários para completar suas tarefas utilizando programação em pares e outras técnicas relevantes.
+    - Uma vez que o time iniciasse o trabalho, era minha responsabilidade garantir que os desenvolvedores tivessem todas as ferramentas, conhecimento e assistência necessários para completar suas tarefas utilizando programação em pares e outras técnicas relevantes.
 
-    - Assi mque código era escrito, eu era uma das pessoas chave para aprovação dos desenvolvimentos, bem como a revisão dessas mudanças.
+    - Assim que o código era escrito, eu era uma das pessoas chave para aprovação dos desenvolvimentos, bem como a revisão dessas mudanças.
 
-    - Por conta da fase de Análise, também era minha responsabilidade me comunicar com o cliente e outros stqakeholders para ter acesso ao máximo de informação dos requisitos possível.
+    - Por conta da fase de Análise, também era minha responsabilidade me comunicar com o cliente e outros stakeholders para ter acesso ao máximo de informação dos requisitos possível.
 
     - Todo o trabalho foi executado com times internacionais e de várias localizações geográficas diferentes.
 
@@ -47,9 +47,9 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 
     - Uma vez que a arquitetura estivesse aprovada, o time e eu éramos responsáveis por implanta-la usando Python, AWS Step Functions e AWS Lambda executando pipelines via Jenkins com Terraform.
 
-    - Técnicas como programação em pares provaram ser muito eficientes e aumentaram a produtividade do time. testes unitários foram muito importantes por conta da disponiblidade da fonte de dados bem como o volume dos dados.
+    - Técnicas como programação em pares provaram ser muito eficientes e aumentaram a produtividade do time. testes unitários foram muito importantes por conta da disponibilidade da fonte de dados bem como o volume dos dados.
 
-- Arquitetura de Micro-serviços para uma solução de multi-empresas de um grande comglomerado tecnológico.
+- Arquitetura de Micro-serviços para uma solução de multi-empresas de um grande conglomerado tecnológico.
 
     - Responsável por analisar os requerimentos, desenhar e validar a solução com clientes e stakeholders.
 
@@ -59,7 +59,7 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 
 - Desenvolvimento de soluções para agregação de dados de uma grande instituição financeira brasileira.
 
-    - Implementação de programas para agregar dadosde múltiplas fontes, filtrando e processando esses dados para disponibiliza-los para uma integração entre sistemas externos.
+    - Implementação de programas para agregar dados de múltiplas fontes, filtrando e processando esses dados para disponibiliza-los para uma integração entre sistemas externos.
 
     - Em vista da idade e complexidade de algumas das fontes, muitas reuniões entre diversos times foram necessárias para entendimento de fontes, formatos, contratos e outras características dos dados.
 
@@ -84,7 +84,7 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 #### <i class="fa-solid fa-diagram-project"></i> Projeto:
 
 - Implementação de uma solução complexa para gerenciamento de um Family Office.
-    - Responsável por devenvolver e dar suporte para desenvolvedores júniors na implementação do sistema
+    - Responsável por desenvolver e dar suporte para desenvolvedores júniores na implementação do sistema
     - Necessário inserir dados financeiros de diversas fontes, moedas e valores
     - Gerar relatórios de posição, carteira e outras visões gerenciais e cálculos financeiros.
 
@@ -109,9 +109,9 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
     - Responsável por desenhar e implementar a solução.
     - Sistema recebe e consulta dados de sistemas externos para validar se o empréstimo deve ser aprovado ou não.
     - O dado é enriquecido de fontes do próprio banco bem como sistemas externos.
-    - A imeplementação executa num ambiente orientado a eventos totalmente orquestrado na Azure usando Azure Functions e Service Bus.
+    - A implementação executa num ambiente orientado a eventos totalmente orquestrado na Azure usando Azure Functions e Service Bus.
     - A execução podia ser reiniciada em qualquer fase da análise para evitar indisponibilidades de sistemas externos.
-    - Acompanhamento da execução e suporte em Produção para avaliar impedimnentos do processo.
+    - Acompanhamento da execução e suporte em Produção para avaliar impedimentos do processo.
 
 #### <i class="fa-solid fa-microchip"></i> Tecnologias principais:
 
@@ -133,17 +133,17 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 
 #### <i class="fa-solid fa-diagram-project"></i> Projetos:
 
-- Desenvolvimento e Manutencão da API de Ordem de Vendas.
-    - Um dos desenvolvedores mais sêniors num time Ágil usando Scrum. Responsável por desenvolver, testar e acompanhar a pipeline do projeto para finalização das tarefas.
+- Desenvolvimento e Manutenção da API de Ordem de Vendas.
+    - Um dos desenvolvedores mais sêniores num time Ágil usando Scrum. Responsável por desenvolver, testar e acompanhar a pipeline do projeto para finalização das tarefas.
 
-    - Todas as tarefas eram executadas utilizando Programação em Pares, rotacionando os pares toda Sprint para garantir uma sincronicidade do time e melhorar nossas abilidades.
+    - Todas as tarefas eram executadas utilizando Programação em Pares, rotacionando os pares toda Sprint para garantir uma sincronicidade do time e melhorar nossas habilidades.
 
     - Utilizei Java e uma arquitetura orientada a Micro-serviços para implementar APIs em REST e orientadas a eventos com Kafka.
 
-- Desnho e implemenentação de um sistema de Eventos e Calendário para a empresa toda.
+- Desenho e implementação de um sistema de Eventos e Calendário para a empresa toda.
     - Utilizando o então recém lançado .Net Core 3.1 e então recém lançada Azure Functions v2, eu desenhei e implementei um sistema de evento e calendário parecido com MS Outlook voltado para uma operação Cloud-First.
 
-    - O sistema substituia o Outlook pois possui Fila de Espera quando o evento não possui mais lugares bem como notificações via e-mail sobre alterações, movimentações na fila de espera, etc.
+    - O sistema substituía o Outlook pois possui Fila de Espera quando o evento não possui mais lugares bem como notificações via e-mail sobre alterações, movimentações na fila de espera, etc.
 
     - O sistema tinha como requerimento funcionar no IE11 e Chrome usando Azure AD para autenticação e autorização. A aplicação foi escrita em react para o front-end.
 
@@ -185,7 +185,7 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 ### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2015 - 2016
 
-- Desenvolvimento, Análise e Suporte para aplicações escritas em Ruby on Rails, JavaScript, Android. Ênfase em sistemas Web e Web-services baseados em Ruby on Rails and JSON, HTML5 e Bootstrap. Integração de pagamentos via EDI (Crédit, débito e boletos) ou online (gateways como Braspag, PagarMe). 
+- Desenvolvimento, Análise e Suporte para aplicações escritas em Ruby on Rails, JavaScript, Android. Ênfase em sistemas Web e Web-services baseados em Ruby on Rails and JSON, HTML5 e Bootstrap. Integração de pagamentos via EDI (Crédito, débito e boletos) ou online (gateways como Braspag, PagarMe). 
 
 - Desenvolvimento dos modelos de atendimento do Service Desk para a empresa e todos seus projetos.
 

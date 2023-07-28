@@ -1,4 +1,16 @@
 {
     "python.analysis.typeCheckingMode": "basic",
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "cSpell.language": "en,pt-BR",
+    "cSpell.words": [
+        "Belago",
+        "Braspag",
+        "linkedin",
+        "Regazzo",
+        "Salmazo",
+        "Springboot",
+        "TIVIT",
+        "Trackmob",
+        "μblog"
+    ]
 }
