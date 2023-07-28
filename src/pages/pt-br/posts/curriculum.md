@@ -126,7 +126,47 @@ Atividades principais:
 
 - Desenvolvimento
 - Análise
-- Support
+- Suporte
+
+### <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Systems Analyst
+<i class="fa-regular fa-calendar"></i> 2017 - 2020
+
+#### Projetos:
+
+- Desenvolvimento e Manutencão da API de Ordem de Vendas.
+    - Um dos desenvolvedores mais sêniors num time Ágil usando Scrum. Responsável por desenvolver, testar e acompanhar a pipeline do projeto para finalização das tarefas.
+
+    - Todas as tarefas eram executadas utilizando Programação em Pares, rotacionando os pares toda Sprint para garantir uma sincronicidade do time e melhorar nossas abilidades.
+
+    - Utilizei Java e uma arquitetura orientada a Micro-serviços para implementar APIs em REST e orientadas a eventos com Kafka.
+
+- Desnho e implemenentação de um sistema de Eventos e Calendário para a empresa toda.
+    - Utilizando o então recém lançado .Net Core 3.1 e então recém lançada Azure Functions v2, eu desenhei e implementei um sistema de evento e calendário parecido com MS Outlook voltado para uma operação Cloud-First.
+
+    - O sistema substituia o Outlook pois possui Fila de Espera quando o evento não possui mais lugares bem como notificações via e-mail sobre alterações, movimentações na fila de espera, etc.
+
+    - O sistema tinha como requerimento funcionar no IE11 e Chrome usando Azure AD para autenticação e autorização. A aplicação foi escrita em react para o front-end.
+
+Tecnologias principais:
+
+- Java
+- Jenkins
+- Springboot
+- OpenShift
+- Azure DevOps
+- .Net Core 3.1
+- Azure Functions v2
+- React
+- Azure AD
+- Service Bus
+- Ágil e Scrum
+
+Atividades principais:
+
+- Desenvolvimento
+- Testes
+- Design
+- Entrosamento do time
 
 ## <i class="fa-regular fa-address-card"></i> Informações Adicionais
 

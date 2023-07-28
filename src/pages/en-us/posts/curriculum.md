@@ -135,7 +135,7 @@ Main activities:
 #### Projects:
 
 - Development and Maintenance of the Sales Order API.
-    - One of the senior developers in a Agile team. Responsible for Developing, testing and following the project pipeline in order to finish tasks.
+    - One of the senior developers in a Agile team using Scrum. Responsible for Developing, testing and following the project pipeline in order to finish tasks.
 
     - All tasks were performed with pair-programming, rotating team members every sprint in order to get in sync with the team and improve out abilities.
 
@@ -144,9 +144,9 @@ Main activities:
 - Design and Implementation of a company-wide calendar event scheduler.
     - Using then-new .Net Core 3.1 and then-recently released Azure Functions v2, I was tasked to design and implement a calendar event system akin to MS Outlook with a cloud-first operation.
 
-    - The system needed to have a waiting queue when the participation quorum was full as well as e-mail notifications when event changed, queues moved, etc.
+    - The system improved Outllok's offering as it has a waiting queue when the participation quorum was full as well as e-mail notifications when event changed, queues moved, etc.
 
-    - The system had to work on IE11 and Chrome using the company’s Azure AD instance for logins. The application was written with React on the front-end.
+    - The system had to work on IE11 and Chrome using the company’s Azure AD instance for authorization and authentication. The application was written with React on the front-end.
 
 Main technologies:
 
@@ -160,6 +160,7 @@ Main technologies:
 - React
 - Azure AD
 - Service Bus
+- Agile and Scrum
 
 Main activities:
 
