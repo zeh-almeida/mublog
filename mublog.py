@@ -879,7 +879,7 @@ class Blog:
         """
         for file_path in glob.glob(os.path.join(self.paths.src_page_dir_path, "*.md")):
             logger.debug(f"Processing {file_path} ...")
-            page = Page(self.config, self.paths, self.config.preferred_language, file_path, "index.html.template")
+            page = Page(self.config, self.paths, "", file_path, "index.html.template")
 
             page.raise_when_invalid()
             with open(page.dst_path, mode="w", encoding="utf-8") as f:
