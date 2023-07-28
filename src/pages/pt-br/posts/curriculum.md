@@ -171,12 +171,23 @@ Atividades principais:
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2016 - 2017
 
-Desenvolvimento, Análise e Suporte para aplicações escritas em C#, JavaScript, SQL Server 2012. Ênfase em sistemas Web e Web-services baseados em .Net Core. Integração de APIs baseadas em JSON e XML, atualização de versão de C#6 para C#7 e MVC6 para MVC Core.
+- Desenvolvimento, Análise e Suporte para aplicações escritas em C#, JavaScript, SQL Server 2012. Ênfase em sistemas Web e Web-services baseados em .Net Core.
+
+- Integração de APIs baseadas em JSON e XML, atualização de versão de C#6 para C#7 e MVC6 para MVC Core.
 
 ### <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
 <i class="fa-regular fa-calendar"></i> 2016 - 2016
 
-Desenvolvimento, Análise e Suporte para aplicações escritas em Java e JavaScript. Ênfase em sistemas Web e Web-services baseados em Hybris, Java, HTML5 e Bootstrap. Reestruturação do Front-End para e-commerce baseados em Hybris. Desenvolvimento de um sistema de versionamento baseado em Git utilizado em todos os projetos Hybris.
+- Desenvolvimento, Análise e Suporte para aplicações escritas em Java e JavaScript. Ênfase em sistemas Web e Web-services baseados em Hybris, Java, HTML5 e Bootstrap. Reestruturação do Front-End para e-commerce baseados em Hybris.
+
+- Desenvolvimento de um sistema de versionamento baseado em Git utilizado em todos os projetos Hybris.
+
+### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
+<i class="fa-regular fa-calendar"></i> 2015 - 2016
+
+- Desenvolvimento, Análise e Suporte para aplicações escritas em Ruby on Rails, JavaScript, Android. Ênfase em sistemas Web e Web-services baseados em Ruby on Rails and JSON, HTML5 e Bootstrap. Integração de pagamentos via EDI (Crédit, débito e boletos) ou online (gateways como Braspag, PagarMe). 
+
+- Desenvolvimento dos modelos de atendimento do Service Desk para a empresa e todos seus projetos.
 
 ## <i class="fa-regular fa-address-card"></i> Informações Adicionais
 

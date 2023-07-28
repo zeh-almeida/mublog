@@ -172,22 +172,28 @@ Main activities:
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2016 - 2017
 
-Development, Analysis and Support for C#, JavaScript, SQL Server 2012. Emphasis on Web systems and Web-services based on .Net Core. API Integration based on JSON and XML, Version updates from C#6 to C#7 and MVC6 to MVC Core.
+- Development, Analysis and Support for C#, JavaScript, SQL Server 2012. Emphasis on Web systems and Web-services based on .Net Core.
+
+- API Integration based on JSON and XML, Version updates from C#6 to C#7 and MVC6 to MVC Core.
 
 ### <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
 <i class="fa-regular fa-calendar"></i> 2016 - 2016
 
-Development, Analysis and Support, for Java and JavaScript. Emphasis on Web systems and Web-services based on Hybris, Java, HTML5 and Bootstrap. Front-End Restructuring for Hybris-based e-commerce. Development of a Git-based versioning system used in all Hybris-based projects.
+- Development, Analysis and Support, for Java and JavaScript. Emphasis on Web systems and Web-services based on Hybris, Java, HTML5 and Bootstrap. Front-End Restructuring for Hybris-based e-commerce.
+
+- Development of a Git-based versioning system used in all Hybris-based projects.
 
 ### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2015 - 2016
 
-Development, Analysis and Support for Ruby on Rails, JavaScript, Android. Emphasis on Web Systems e Web-services based on Ruby on Rails and JSON, HTML5 and Bootstrap. Payment integration via EDI (Credit, debit and tickets) or online (gateways such as Braspag, PagarMe). Development of Service Desk guidelines for the company and all its projects.
+- Development, Analysis and Support for Ruby on Rails, JavaScript, Android. Emphasis on Web Systems e Web-services based on Ruby on Rails and JSON, HTML5 and Bootstrap. Payment integration via EDI (Credit, debit and tickets) or online (gateways such as Braspag, PagarMe).
+
+- Development of Service Desk guidelines for the company and all its projects.
 
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
 <i class="fa-regular fa-calendar"></i> 2014 - 2016
 
-Development, Analysis and Support for C#, Android. Emphasis on Web Systems and Web-services, all based in ASPX.
+- Development, Analysis and Support for C#, Android. Emphasis on Web Systems and Web-services, all based in ASPX.
 
 ## <i class="fa-regular fa-address-card"></i> Additional Information
 
