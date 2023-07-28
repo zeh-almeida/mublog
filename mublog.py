@@ -91,7 +91,14 @@ class Helper:
         :param src_path: The path to the markdown file
         :return: The html content of the markdown file
         """
-        command = ["pandoc", src_path, "-f", "markdown+markdown_in_html_blocks", "-t", "html"]
+        command = [
+            "pandoc",
+            src_path,
+            "--no-highlight",
+            "-f",
+            "markdown+markdown_in_html_blocks",
+            "-t", 
+            "html"]
         try:
             result = subprocess.run(command, check=True, capture_output=True, text=True, encoding="utf-8")
             return result.stdout
