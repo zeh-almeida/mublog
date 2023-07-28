@@ -100,6 +100,34 @@ Atividades principais:
 - Desenvolvimento
 - Suporte para desenvolvedores junior
 
+### <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
+<i class="fa-regular fa-calendar"></i> 2020 - 2021
+
+#### Projeto:
+
+- Arquitetura e implementação de um fluxo de análise de empréstimo para um grande branco industrial.
+    - Responsável por desenhar e implementar a solução.
+    - Sistema recebe e consulta dados de sistemas externos para validar se o empréstimo deve ser aprovado ou não.
+    - O dado é enriquecido de fontes do próprio banco bem como sistemas externos.
+    - A imeplementação executa num ambiente orientado a eventos totalmente orquestrado na Azure usando Azure Functions e Service Bus.
+    - A execução podia ser reiniciada em qualquer fase da análise para evitar indisponibilidades de sistemas externos.
+    - Acompanhamento da execução e suporte em Produção para avaliar impedimnentos do processo.
+
+Tecnologias principais:
+
+- .Net Core
+- SQL Server
+- Azure
+- Azure Functions
+- Azure Service Bus
+- Micro-services
+
+Atividades principais:
+
+- Desenvolvimento
+- Análise
+- Support
+
 ## <i class="fa-regular fa-address-card"></i> Informações Adicionais
 
 - <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>

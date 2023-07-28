@@ -108,7 +108,11 @@ Main activities:
 
     - This included data enrichment from internal company sources as well as external systems.
 
-    - The implementation ran in a event-driven environment fully orchestrated in Azure using Azure Functions.
+    - The implementation ran in a event-driven environment fully orchestrated in Azure using Azure Functions and ServiceBus.
+
+    - Execution could be restarted at any point during the analysis flow in order to avoid unavailability of any external system.
+
+    - Monitoring the execution flow in Production to evaluate possible blocks in the process.
 
 Main technologies:
 
@@ -116,6 +120,7 @@ Main technologies:
 - SQL Server
 - Azure
 - Azure Functions
+- Azure Service Bus
 - Micro-services
 
 Main activities:
