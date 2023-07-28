@@ -189,6 +189,11 @@ Atividades principais:
 
 - Desenvolvimento dos modelos de atendimento do Service Desk para a empresa e todos seus projetos.
 
+### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
+<i class="fa-regular fa-calendar"></i> 2014 - 2016
+
+-  Desenvolvimento, Análise e Suporte para aplicações escritas em C#, Android. Ênfase em sistemas Web e Web-services, todos baseados em ASPX.
+
 ## <i class="fa-regular fa-address-card"></i> Informações Adicionais
 
 - <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
