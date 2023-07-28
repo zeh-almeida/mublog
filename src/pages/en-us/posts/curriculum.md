@@ -2,6 +2,7 @@
 title: Curriculum
 description: My curriculum vitae, up to date
 date: 2023-07-20
+modified: 2023-07-28
 tags: curriculum,about,.net,java,javascript,backend,experience,proficiency,azure,aws,development,programming
 ---
 # <i class="fa-solid fa-scroll"></i> Curriculum

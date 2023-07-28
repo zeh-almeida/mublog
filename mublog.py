@@ -240,6 +240,7 @@ class Post:
         self.title = ""
         self.description = ""
         self.date = ""
+        self.modified = ""
         self.tags = []
 
         self.html_content = ""
@@ -301,6 +302,20 @@ class Post:
         self.date = re.search(r'([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$)', md_data).group(1)
         return True
 
+    def validate_modified_field(self, md_data: str) -> bool:
+        """
+        Validate the presence and correctness of the modified field of a markdown post.
+        The date field must be in the format YYYY-MM-DD.
+        :param md_data: The full content of the markdown post file
+        :return: True if the date field is valid, False otherwise
+        """
+        if not re.match(r'^modified:\s*([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$)', md_data):
+            logger.error(
+                f"Failed to validate header of {self.src_path} - the modified field is missing, empty, or incorrect.")
+            return False
+        self.modified = re.search(r'([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$)', md_data).group(1)
+        return True
+
     def validate_tags_field(self, md_data: str) -> bool:
         """
         Validate the presence and correctness of the tags field of a markdown post
@@ -340,7 +355,8 @@ class Post:
         # Validate all fields in the header
         if not self.validate_starting_marker(md_data[0]) or not self.validate_title_field(md_data[1]) or \
                 not self.validate_description_field(md_data[2]) or not self.validate_date_field(md_data[3]) or \
-                not self.validate_tags_field(md_data[4]) or not self.validate_end_marker(md_data[5]):
+                not self.validate_modified_field(md_data[4]) or not self.validate_tags_field(md_data[5]) or \
+                not self.validate_end_marker(md_data[6]):
             return False
         return True
 
@@ -387,6 +403,7 @@ class Post:
             "post_description": self.description,
             "post_author": self.config.blog_author_name,
             "post_date": self.date,
+            "post_modified": self.modified,
             "post_content": self.html_content,
             "posts_url": self.config.blog_url + self.paths.post_dir_name,
             "post_tags": self.get_tags_as_html(),
@@ -622,7 +639,7 @@ class Sitemap:
         for post in self.posts:
             feed_data.append(f"<url>")
             feed_data.append(f"<loc>{urljoin(self.config.blog_url, post.remote_path)}</loc>")
-            feed_data.append(f"<lastmod>{post.date}</lastmod>")
+            feed_data.append(f"<lastmod>{post.modified}</lastmod>")
             feed_data.append(f"<changefreq>daily</changefreq>")
             feed_data.append(f"</url>")
 

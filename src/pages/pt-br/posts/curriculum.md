@@ -1,7 +1,8 @@
 ---
 title: Currículo
 description: Meu currículo atualizado
-date: 2023-07-20
+date: 2023-07-28
+modified: 2023-07-28
 tags: currículo,sobre,.net,java,javascript,backend,experiência,proficiência,azure,aws,desenvolvimento,programação
 ---
 # <i class="fa-solid fa-scroll"></i> Currículo
