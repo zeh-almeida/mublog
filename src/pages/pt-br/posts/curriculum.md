@@ -81,7 +81,24 @@ Atividades principais:
 ### <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Desenvolvedor Sênior Full Stack
 <i class="fa-regular fa-calendar"></i> 2021 - 2021
 
-#### Em construção
+#### Projeto:
+
+- Implementação de uma solução complexa para gerenciamento de um Family Office.
+    - Responsável por devenvolver e dar suporte para desenvolvedores júniors na implementação do sistema
+    - Necessário inserir dados financeiros de diversas fontes, moedas e valores
+    - Gerar relatórios de posição, carteira e outras visões gerenciais e cálculos financeiros.
+
+Tecnologias principais:
+
+- .Net Core
+- SQL Server
+- Azure
+- Micro-serviços
+
+Atividades principais:
+
+- Desenvolvimento
+- Suporte para desenvolvedores junior
 
 ## <i class="fa-regular fa-address-card"></i> Informações Adicionais
 
