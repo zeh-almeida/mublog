@@ -1,3 +1,10 @@
+---
+title: Índice
+description: Página Inicial
+date: 2023-07-20
+modified: 2023-07-20
+tags: home,index,português
+---
 # <i class="fa-solid fa-user-astronaut"></i>  Olá, seja bem-vindo!
 
 Meu nome é José Ricardo e eu uso esse blog para me apresentar ao mundo.

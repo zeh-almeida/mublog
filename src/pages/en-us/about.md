@@ -1,3 +1,10 @@
+---
+title: About
+description: Hello and welcome to the show!
+date: 2023-07-20
+modified: 2023-07-28
+tags: about,partner,daughter,pet,dog,arroz,mari,nena,isabela
+---
 ![](/assets/profile.jpg#profile-pic "Zeh and Arroz")
 
 # <i class="fa-solid fa-user-astronaut"></i> About me

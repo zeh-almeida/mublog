@@ -1,5 +1,4 @@
 import configparser
-import datetime
 import glob
 import logging
 import os
@@ -609,15 +608,13 @@ class Sitemap:
         with open(template_path, mode="r", encoding="utf-8") as f:
             sitemap_template = f.read()
 
-        lastmod = datetime.date.today().strftime("%Y-%m-%d")
-
         feed_data = []
 
         # Create a feed entry for each page
         for page in self.pages:
             feed_data.append(f"<url>")
             feed_data.append(f"<loc>{urljoin(self.config.blog_url, page.remote_path)}</loc>")
-            feed_data.append(f"<lastmod>{lastmod}</lastmod>")
+            feed_data.append(f"<lastmod>{page.modified}</lastmod>")
             feed_data.append(f"<changefreq>daily</changefreq>")
             feed_data.append(f"</url>")
 
@@ -861,8 +858,6 @@ class Blog:
 
         for file_path in glob.glob(os.path.join(source_path, "*.md")):
             logger.debug(f"Processing {file_path} ...")
-            # ToDo: Add header to pages, e.g. to set the title
-            # ToDo: Add page header validation
 
             # Create page of the appropriate type
             if os.path.basename(file_path) == "articles.md":
@@ -872,7 +867,7 @@ class Blog:
             else:
                 page = Page(self.config, self.paths, self.current_lang, file_path)
             
-            # page.raise_when_invalid()
+            page.raise_when_invalid()
             with open(page.dst_path, mode="w", encoding="utf-8") as f:
                 f.write(page.generate())
 
@@ -884,11 +879,9 @@ class Blog:
         """
         for file_path in glob.glob(os.path.join(self.paths.src_page_dir_path, "*.md")):
             logger.debug(f"Processing {file_path} ...")
-            # ToDo: Add header to pages, e.g. to set the title
-            # ToDo: Add page header validation
-            page = Page(self.config, self.paths, "", file_path, "index.html.template")
+            page = Page(self.config, self.paths, self.config.preferred_language, file_path, "index.html.template")
 
-            # Write the generated page to disk
+            page.raise_when_invalid()
             with open(page.dst_path, mode="w", encoding="utf-8") as f:
                 f.write(page.generate())
 

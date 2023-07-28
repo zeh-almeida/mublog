@@ -1,3 +1,10 @@
+---
+title: Index
+description: Homepage
+date: 2023-07-20
+modified: 2023-07-20
+tags: home,index,english
+---
 # <i class="fa-solid fa-user-astronaut"></i>  Hello there and welcome!
 
 My name is José Ricardo and I use this blog to showcase myself to the world.

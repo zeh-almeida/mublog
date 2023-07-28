@@ -1,4 +1,10 @@
-
+---
+title: Landing
+description: Blog's Front Do0r
+date: 2023-07-20
+modified: 2023-07-20
+tags: home,index,language
+---
 # ${blog_title}
 
 ## <span class="fi fi-us"></span> Hey there and welcome!

@@ -1,3 +1,10 @@
+---
+title: Sobre Mim
+description: Minha apresentação para o mundo!
+date: 2023-07-20
+modified: 2023-07-28
+tags: sobre,parceira,filha,animal,cachorro,arroz,mari,nena,isabela
+---
 ![](/assets/profile.jpg#profile-pic "Zeh e Arroz")
 
 # <i class="fa-solid fa-user-astronaut"></i> Sobre mim
