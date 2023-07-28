@@ -38,27 +38,27 @@
 </head>
 <nav>
     <i class="fa-solid fa-house fa-xs pl-half"></i>
-    <a href="/${current_lang}/index.html" title="home" class="pl-half">home</a>
+    <a href="/${current_lang}/index.html" title="${label_home}" class="pl-half">${label_home}</a>
 
     <i class="fa-regular fa-newspaper fa-xs pl-half"></i>
-    <a href="/${current_lang}/articles.html" title="articles" class="pl-half">articles</a>
+    <a href="/${current_lang}/articles.html" title="${label_article}" class="pl-half">${label_article}</a>
 
     <i class="fa-solid fa-tags fa-xs pl-half"></i>
-    <a href="/${current_lang}/tags.html" title="tags" class="pl-half">tags</a>
+    <a href="/${current_lang}/tags.html" title="${label_tags}" class="pl-half">${label_tags}</a>
 
     <i class="fa-regular fa-envelope fa-xs pl-half"></i>
-    <a href="mailto:${author_mail}" title="mail" class="pl-half">mail</a>
+    <a href="mailto:${author_mail}" title="${label_mail}" class="pl-half">${label_mail}</a>
 
     <i class="fa-solid fa-rss fa-xs pl-half"></i>
-    <a href="/feed.xml" title="rss" class="pl-half">rss</a>
+    <a href="/feed.xml" title="${label_rss}" class="pl-half">${label_rss}</a>
 
     <i class="fa-regular fa-address-card fa-xs pl-half"></i>
-    <a href="/${current_lang}/about.html" title="about" class="pl-half">about</a>
+    <a href="/${current_lang}/about.html" title="${label_about}" class="pl-half">${label_about}</a>
 </nav>
 <main>
 <div class="buttons">
     <button class="dark-toggle" type="button">
-        <i class="fa-regular fa-lightbulb"></i> Dark mode
+        <i class="fa-regular fa-lightbulb"></i> ${label_dark_mode}
     </button>
     ${languages}
 </div>

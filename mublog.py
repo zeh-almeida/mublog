@@ -64,6 +64,16 @@ class BlogConfig:
         self.preferred_language = ""
         self.available_languages: list[str] = []
 
+        self.blog_title = ""
+        self.blog_description = ""
+        self.label_about = ""
+        self.label_article = ""
+        self.label_home = ""
+        self.label_mail = ""
+        self.label_tags = ""
+        self.label_rss = ""
+        self.label_dark_mode = ""
+
         self.blog_version = uuid.uuid4().hex
 
 
@@ -203,6 +213,14 @@ class Helper:
             "author_copyright": config.blog_author_copyright,
 
             "current_lang": current_lang,
+
+            "label_about": config.label_about,
+            "label_article": config.label_article,
+            "label_home": config.label_home,
+            "label_mail": config.label_mail,
+            "label_tags": config.label_tags,
+            "label_rss": config.label_rss,
+            "label_dark_mode": config.label_dark_mode,
 
             "languages": Helper.build_language_selector(config),
 
@@ -486,7 +504,7 @@ class ArticlesPage(Page):
         """
         article_listing = ["<article>"]
         article_listing.append("<ul class=\"articles\">")
-        
+
         for post in self.posts:
             article_listing.append(f'<li id=\"{post.filename}\">')
             article_listing.append(f'<b>[{post.date}]</b> ')
@@ -673,8 +691,8 @@ class Blog:
         Generates the blog, i.e. creates the build directory, copies all files to the build directory, processes all
         posts and pages and generates the rss feed
         """
-        logger.debug("Loading configurations...")
-        self.load_configuration()
+        logger.debug("Loading base configurations...")
+        self.load_base_configuration()
 
         logger.debug("Creating build directories and copying files...")
         self.clean_build_directory()
@@ -684,6 +702,8 @@ class Blog:
         for lang in self.config.available_languages:
             self.current_lang = lang
             logger.info(f"Processing language '{self.current_lang}'...")
+            logger.debug("Loading language configurations...")
+            self.load_lang_configuration(self.current_lang)
 
             logger.info("Processing posts...")
             self.process_posts()
@@ -691,6 +711,9 @@ class Blog:
             self.process_pages()
             logger.info("Processing scripts...")
             self.process_scripts()
+
+        logger.debug("Loading default language...")
+        self.load_lang_configuration(self.config.preferred_language)
 
         logger.info("Processing root index...")
         self.process_index()
@@ -707,7 +730,7 @@ class Blog:
         logger.info("Processing minification...")
         self.minify_files()
 
-    def load_configuration(self)->None:
+    def load_base_configuration(self)->None:
         path = "mublog.ini"
 
         parser = configparser.ConfigParser()
@@ -724,8 +747,6 @@ class Blog:
         section = parser["mublog"]
 
         self.config.blog_url = section["blog_url"]
-        self.config.blog_title = section["blog_title"]
-        self.config.blog_description = section["blog_description"]
         self.config.blog_author_name = section["blog_author_name"]
         self.config.blog_author_mail = section["blog_author_mail"]
         self.config.post_ignore_prefix = section["post_ignore_prefix"]
@@ -733,6 +754,33 @@ class Blog:
 
         self.config.preferred_language = section["preferred_language"]
         self.config.available_languages = section["available_languages"].split(",")
+        
+    def load_lang_configuration(self, lang: str)->None:
+        path = "mublog.ini"
+
+        parser = configparser.ConfigParser()
+        _ = parser.read(path, encoding="utf-8")
+
+        if len(parser.sections()) == 0:
+            logger.error("No configuration sections were loaded")
+            raise FileNotFoundError(path)
+
+        if lang not in parser:
+            logger.error(f"language configuration section '{lang}' was not found")
+            raise FileNotFoundError(path)
+
+        section = parser[lang]
+
+        self.config.blog_title = section["blog_title"]
+        self.config.blog_description = section["blog_description"]
+        
+        self.config.label_about = section["label_about"]
+        self.config.label_article = section["label_article"]
+        self.config.label_home = section["label_home"]
+        self.config.label_mail = section["label_mail"]
+        self.config.label_tags = section["label_tags"]
+        self.config.label_rss = section["label_rss"]
+        self.config.label_dark_mode = section["label_dark_mode"]
 
     def clean_build_directory(self) -> None:
         """
