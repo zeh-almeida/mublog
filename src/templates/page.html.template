@@ -16,7 +16,7 @@
 
     <meta property="og:title" content="${page_title}" />
     <meta property="og:description" content="${blog_description}" />
-    <meta property="og:url" content="${blog_url}${page_title}.html" />
+    <meta property="og:url" content="${blog_url}${file_name}.html" />
 
     <link rel="manifest" href="/${meta_dir}/site.webmanifest">
 

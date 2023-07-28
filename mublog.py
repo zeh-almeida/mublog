@@ -107,7 +107,7 @@ class Helper:
             "--no-highlight",
             "-f",
             "markdown+markdown_in_html_blocks",
-            "-t", 
+            "-t",
             "html"]
         try:
             result = subprocess.run(command, check=True, capture_output=True, text=True, encoding="utf-8")
@@ -189,17 +189,15 @@ class Helper:
     def build_language_selector(config: BlogConfig) -> str:
         options = []
 
-        for lang in config.available_languages:            
+        for lang in config.available_languages:
             options.append(f"<button class=\"language-button\" data-link=\"/{lang}/index.html\"><span class=\"fi fi-{lang[-2:]}\"></span> {lang}</button>")
-            
+
         return "".join(options)
 
     @staticmethod
-    def common_substitutions(config: BlogConfig, paths: PathConfig, current_lang: str) -> dict[str, str]:
+    def common_substitutions(config: BlogConfig, paths: PathConfig) -> dict[str, str]:
         """
         Maps common substitutions in blog templates
-        :param config: The content in which to convert the urls
-        :param paths: The base url which the other urls come from
         :return: Map of known substitutions to make in templates
         """
         return {
@@ -211,8 +209,6 @@ class Helper:
             "author_name": config.blog_author_name,
             "author_mail": config.blog_author_mail,
             "author_copyright": config.blog_author_copyright,
-
-            "current_lang": current_lang,
 
             "label_about": config.label_about,
             "label_article": config.label_article,
@@ -230,12 +226,15 @@ class Helper:
             "assets_dir": Helper.strip_top_directory_in_path(paths.dst_assets_dir_path),
         }
 
+class Page:
 
-class Post:
-    def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_file_path: str):
+    def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_page_path: str, template: str="page.html.template"):
         self.config = config
         self.paths = paths
+        self.template = template
         self.current_lang = current_lang
+
+        self.html_content = ""
 
         self.title = ""
         self.description = ""
@@ -243,12 +242,74 @@ class Post:
         self.modified = ""
         self.tags = []
 
-        self.html_content = ""
-
-        self.src_path = src_file_path
-        self.dst_path = Helper.post_src_to_dst_path(self.src_path, os.path.join(self.paths.dst_dir_path, self.current_lang, self.paths.post_dir_name), ".html")
+        self.src_path = src_page_path
+        self.dst_path = Helper.post_src_to_dst_path(src_page_path, os.path.join(self.paths.dst_dir_path, self.current_lang), ".html")
         self.remote_path = Helper.strip_top_directory_in_path(self.dst_path)
-        self.filename = os.path.basename(self.dst_path)
+        self.file_name = os.path.basename(src_page_path).split('.')[0]
+
+    def build_language_selector(self) -> str:
+        options = []
+
+        for lang in self.config.available_languages:
+            options.append(f"<button class=\"language-button\" data-link=\"/{lang}/index.html\"><span class=\"fi fi-{lang[-2:]}\"></span> {lang}</button>")
+
+        return "".join(options)
+
+    def load_template(self) -> str:
+        with open(os.path.join(self.paths.src_templates_dir_path, self.template), mode="r", encoding="utf-8") as f:
+            page_template = f.read()
+
+        return page_template
+
+    def page_substitutions(self) -> dict[str, str]:
+        """
+        Maps common substitutions in blog templates
+        :return: Map of known substitutions to make in templates
+        """
+        common_subs = Helper.common_substitutions(self.config, self.paths)
+        page_subs = {
+            "file_name": self.file_name,
+            "current_lang": self.current_lang,
+
+            "page_title": self.title,
+            "page_description": self.description,
+            "page_date": self.date,
+            "page_modified": self.modified,
+        }
+
+        return {**common_subs, **page_subs}
+
+    def get_page_substitutions(self) -> dict[str, str]:
+        """
+        Loads the common substitutions used in any page.
+        :return: The common content substitutions
+        """
+        common_subs = self.page_substitutions()
+
+        page_subs = {
+            "page_content": Template(self.html_content).safe_substitute(common_subs),
+        }
+
+        return {**common_subs, **page_subs}
+
+    def process_content(self) -> tuple[str, dict[str, str]]:
+        """
+        Converts the markdown page to html and generates and wraps the html content in the page template
+        :return: The generated page in html format
+        """
+        self.html_content = Helper.pandoc_md_to_html(self.src_path)
+        page_template = self.load_template()
+        substitutions = self.get_page_substitutions()
+
+        return (page_template, substitutions)
+
+    def generate(self) -> str:
+        """
+        Converts the markdown page to html and generates and wraps the html content in the page template
+        :return: The generated page in html format
+        """
+        page_template, substitutions = self.process_content()
+        return Template(page_template).substitute(substitutions)
 
     def validate_starting_marker(self, md_data: str) -> bool:
         """
@@ -360,6 +421,19 @@ class Post:
             return False
         return True
 
+    def raise_when_invalid(self) -> None:
+        if not self.validate_header():
+            raise Exception(f"page '{self.src_path}' is not valid")
+
+class Post(Page):
+
+    def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_file_path: str):
+        super().__init__(config, paths, current_lang, src_file_path, "post.html.template")
+
+        self.dst_path = Helper.post_src_to_dst_path(self.src_path, os.path.join(self.paths.dst_dir_path, self.current_lang, self.paths.post_dir_name), ".html")
+        self.remote_path = Helper.strip_top_directory_in_path(self.dst_path)
+        self.file_name = os.path.basename(self.dst_path)
+
     def get_tags_as_html(self) -> str:
         """
         Wraps the tags of the post in html divs
@@ -383,80 +457,18 @@ class Post:
             tags.append(tag_html)
         return "".join(tags)
 
-    def generate(self) -> str:
-        """
-        Converts the markdown post to html and generates and wraps the html content in the post template
-        :return: The generated post in html format wrapped in the post template
-        """
-
-        # Convert post from markdown to html
-        self.html_content = Helper.pandoc_md_to_html(self.src_path)
-
-        # Load the post template and substitute the placeholders with the actual values
-        with open(os.path.join(self.paths.src_templates_dir_path, "post.html.template"), mode="r", encoding="utf-8") as f:
-            post_template = f.read()
-
-        common_subs = Helper.common_substitutions(self.config, self.paths, self.current_lang)
+    def process_content(self) -> tuple[str, dict[str, str]]:
+        page_template, common_subs = super().process_content()
 
         post_subs = {
-            "post_title": self.title,
-            "post_description": self.description,
-            "post_author": self.config.blog_author_name,
-            "post_date": self.date,
-            "post_modified": self.modified,
-            "post_content": self.html_content,
             "posts_url": self.config.blog_url + self.paths.post_dir_name,
+
             "post_tags": self.get_tags_as_html(),
             "post_meta_tags": self.get_tags_as_meta(),
         }
 
         substitutions = {**common_subs, **post_subs}
-        return Template(post_template).substitute(substitutions)
-
-
-class Page:
-
-    def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_page_path: str, template: str="page.html.template"):
-        self.config = config
-        self.paths = paths
-        self.template = template
-        self.current_lang = current_lang
-
-        self.src_path = src_page_path
-        self.dst_path = Helper.post_src_to_dst_path(src_page_path, os.path.join(self.paths.dst_dir_path, self.current_lang), ".html")
-        self.remote_path = Helper.strip_top_directory_in_path(self.dst_path)
-        self.page_title = os.path.basename(src_page_path).split('.')[0]
-
-    def build_language_selector(self) -> str:
-        options = []
-
-        for lang in self.config.available_languages:            
-            options.append(f"<button class=\"language-button\" data-link=\"/{lang}/index.html\"><span class=\"fi fi-{lang[-2:]}\"></span> {lang}</button>")
-            
-        return "".join(options)
-
-    def generate(self) -> str:
-        """
-        Converts the markdown page to html and generates and wraps the html content in the page template
-        :return: The generated page in html format
-        """
-
-        # Convert page from markdown to html
-        html_content = Helper.pandoc_md_to_html(self.src_path)
-
-        # Load the page template and substitute the placeholders with the actual values
-        with open(os.path.join(self.paths.src_templates_dir_path, self.template), mode="r", encoding="utf-8") as f:
-            page_template = f.read()
-
-        common_subs = Helper.common_substitutions(self.config, self.paths, self.current_lang)
-
-        page_subs = {
-            "page_title": self.page_title,
-            "page_content": Template(html_content).substitute(common_subs),
-        }
-
-        substitutions = {**common_subs, **page_subs}
-        return Template(page_template).substitute(substitutions)
+        return (page_template, substitutions)
 
 
 class TagsPage(Page):
@@ -473,7 +485,7 @@ class TagsPage(Page):
         unique_tags = list(set(tag for post in self.posts for tag in post.tags))
         tag_counts = {tag: sum(tag in post.tags for post in self.posts) for tag in unique_tags}
         sorted_tags = sorted(unique_tags, key=lambda tag: tag_counts[tag], reverse=True)
-        
+
         tags = ["<div class=\"tags\">"]
         for tag in sorted_tags:
             tag_count = tag_counts[tag]
@@ -483,35 +495,22 @@ class TagsPage(Page):
         tags.append("</div>")
         return "".join(tags)
 
-    def generate(self) -> str:
-        """
-        Converts the markdown tags-page to html and generates and wraps the html content in the page template
-        :return: The generated page in html format
-        """
-        # Convert page from markdown to html
-        html_content = Helper.pandoc_md_to_html(self.src_path)
-
-        # Load the page template and substitute the placeholders with the actual values
-        with open(os.path.join(self.paths.src_templates_dir_path, "page.html.template"), mode="r", encoding="utf-8") as f:
-            tags_page_template = f.read()
-
-        # Get tags from posts, sorted by count and convert them to html
+    def process_content(self) -> tuple[str, dict[str, str]]:
+        page_template, common_subs = super().process_content()
         tags_html = self.get_post_tags_with_count_as_html()
 
-        common_subs = Helper.common_substitutions(self.config, self.paths, self.current_lang)
+        common_subs["page_content"] = Template(common_subs["page_content"]).safe_substitute({
+            "tags_content": tags_html,
+        })
 
-        tag_subs = {
-            "page_title": "Tags",
-            "page_content": html_content + tags_html,
-        }
-
-        substitutions = {**common_subs, **tag_subs}
-        return Template(tags_page_template).substitute(substitutions)
+        return (page_template, common_subs)
 
 
 class ArticlesPage(Page):
     def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_page_path: str, posts: list[Post]):
-        super().__init__(config, paths, current_lang, src_page_path)
+        super().__init__(config, paths, current_lang, src_page_path, "page.html.template")
+
+        self.title = self.config.label_article
         self.posts = posts
 
     def get_article_listing_as_html(self) -> str:
@@ -523,7 +522,7 @@ class ArticlesPage(Page):
         article_listing.append("<ul class=\"articles\">")
 
         for post in self.posts:
-            article_listing.append(f'<li id=\"{post.filename}\">')
+            article_listing.append(f'<li id=\"{post.file_name}\">')
             article_listing.append(f'<b>[{post.date}]</b> ')
             article_listing.append(f'<a href=\"/{post.remote_path}\" title=\"{post.title}\">{post.title}</a>')
             article_listing.append(f'</li>')
@@ -532,29 +531,15 @@ class ArticlesPage(Page):
 
         return "".join(article_listing)
 
-    def generate(self) -> str:
-        """
-        Converts the markdown articles-page to html and generates and wraps the html content in the page template
-        :return: The generated page in html format
-        """
-        # Convert page from markdown to html
-        html_content = Helper.pandoc_md_to_html(self.src_path)
+    def process_content(self) -> tuple[str, dict[str, str]]:
+        page_template, common_subs = super().process_content()
+        articles_html = self.get_article_listing_as_html()
 
-        # Load the page template
-        template_path = os.path.join(self.paths.src_templates_dir_path, "page.html.template")
-        with open(template_path, mode="r", encoding="utf-8") as f:
-            articles_page_template = f.read()
+        common_subs["page_content"] = Template(common_subs["page_content"]).safe_substitute({
+            "articles_content": articles_html,
+        })
 
-        common_subs = Helper.common_substitutions(self.config, self.paths, self.current_lang)
-
-        # Write the page template with the actual values
-        article_subs = {
-            "page_title": "Articles",
-            "page_content": html_content + self.get_article_listing_as_html(),
-        }
-
-        substitutions = {**common_subs, **article_subs}
-        return Template(articles_page_template).substitute(substitutions)
+        return (page_template, common_subs)
 
 
 class RSSFeed:
@@ -589,7 +574,7 @@ class RSSFeed:
             feed_data.append(f"<description>{post_content}</description>")
             feed_data.append(f"</item>")
 
-        common_subs = Helper.common_substitutions(self.config, self.paths, "")
+        common_subs = Helper.common_substitutions(self.config, self.paths)
 
         # Substitute the placeholders with the actual values
         rss_subs = {
@@ -643,7 +628,7 @@ class Sitemap:
             feed_data.append(f"<changefreq>daily</changefreq>")
             feed_data.append(f"</url>")
 
-        common_subs = Helper.common_substitutions(self.config, self.paths, "")
+        common_subs = Helper.common_substitutions(self.config, self.paths)
 
         # Substitute the placeholders with the actual values
         sitemap_subs = {
@@ -677,7 +662,7 @@ class Robots:
             robots_template = f.read()
 
         # Substitute the placeholders with the actual values
-        substitutions = Helper.common_substitutions(self.config, self.paths, "")
+        substitutions = Helper.common_substitutions(self.config, self.paths)
         robots_template = Template(robots_template).substitute(substitutions)
 
         # Write substituted template to file
@@ -771,7 +756,7 @@ class Blog:
 
         self.config.preferred_language = section["preferred_language"]
         self.config.available_languages = section["available_languages"].split(",")
-        
+
     def load_lang_configuration(self, lang: str)->None:
         path = "mublog.ini"
 
@@ -790,7 +775,7 @@ class Blog:
 
         self.config.blog_title = section["blog_title"]
         self.config.blog_description = section["blog_description"]
-        
+
         self.config.label_about = section["label_about"]
         self.config.label_article = section["label_article"]
         self.config.label_home = section["label_home"]
@@ -858,15 +843,13 @@ class Blog:
 
             # Validate and generate the post
             post = Post(self.config, self.paths, self.current_lang, file_path)
-            if post.validate_header():
-                with open(post.dst_path, mode="w", encoding="utf-8") as f:
-                    f.write(post.generate())
+            post.raise_when_invalid()
 
-                self.processed_posts += 1
-                self.posts.append(post)
-            else:
-                logger.error(f"Post validation failed. Exiting...")
-                exit(1)
+            with open(post.dst_path, mode="w", encoding="utf-8") as f:
+                f.write(post.generate())
+
+            self.processed_posts += 1
+            self.posts.append(post)
 
     def process_pages(self) -> None:
         """
@@ -874,8 +857,8 @@ class Blog:
         """
 
         filtered_posts = [post for post in self.posts if post.current_lang == self.current_lang]
-
         source_path = self.paths.language_source(self.current_lang)
+
         for file_path in glob.glob(os.path.join(source_path, "*.md")):
             logger.debug(f"Processing {file_path} ...")
             # ToDo: Add header to pages, e.g. to set the title
@@ -888,8 +871,8 @@ class Blog:
                 page = TagsPage(self.config, self.paths, self.current_lang, file_path, filtered_posts)
             else:
                 page = Page(self.config, self.paths, self.current_lang, file_path)
-
-            # Write the generated page to disk
+            
+            # page.raise_when_invalid()
             with open(page.dst_path, mode="w", encoding="utf-8") as f:
                 f.write(page.generate())
 
@@ -930,7 +913,7 @@ class Blog:
 
         # Create a mapping of post filenames to tags and substitute the template placeholders with the actual values
         with open(os.path.join(self.paths.dst_js_dir_path, f"tags_{self.current_lang}.js"), mode="w", encoding="utf-8") as f:
-            entries = [f'"{post.filename}": [{",".join(map(repr, post.tags))}]' for post in self.posts]
+            entries = [f'"{post.file_name}": [{",".join(map(repr, post.tags))}]' for post in self.posts]
             substitutions = {
                 "tag_mapping": ",".join(entries)
             }
@@ -990,7 +973,7 @@ class Blog:
             with open(manifest_path, mode="r", encoding="utf-8") as f:
                 manifest_template = f.read()
 
-            substitutions = Helper.common_substitutions(self.config, self.paths, "")
+            substitutions = Helper.common_substitutions(self.config, self.paths)
 
             with open(os.path.join(self.paths.dst_dir_name, "site.webmanifest"), mode="w", encoding="utf-8") as f:
                 manifest_template = Template(manifest_template).substitute(substitutions)

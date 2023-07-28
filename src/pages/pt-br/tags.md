@@ -1,3 +1,4 @@
 # Tags
 
-Encontre postagens por tags
+Encontre postagens por tags:
+${tags_content}
