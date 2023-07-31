@@ -38,9 +38,6 @@
 <nav>
     <i class="fa-regular fa-envelope fa-xs pl-half"></i>
     <a href="mailto:${author_mail}" title="mail" class="pl-half">mail</a>
-
-    <i class="fa-solid fa-rss fa-xs pl-half"></i>
-    <a href="/feed.xml" title="rss" class="pl-half">rss</a>
 </nav>
 <main>
 <div class="buttons">

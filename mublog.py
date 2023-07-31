@@ -543,10 +543,11 @@ class ArticlesPage(Page):
 
 class RSSFeed:
 
-    def __init__(self, config: BlogConfig, paths: PathConfig, posts: list[Post]):
+    def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, posts: list[Post]):
         self.config = config
         self.paths = paths
         self.posts = posts
+        self.current_lang = current_lang
 
     def generate(self) -> None:
         """
@@ -559,10 +560,11 @@ class RSSFeed:
         with open(template_path, mode="r", encoding="utf-8") as f:
             rss_template = f.read()
 
-        feed_data = []
+        feed_data = []        
+        filtered_posts = [post for post in self.posts if post.current_lang == self.current_lang]
 
         # Create a feed entry for each post
-        for post in self.posts:
+        for post in filtered_posts:
             post_title = html.escape(post.title)
             post_link = urljoin(self.config.blog_url, post.remote_path)
             post_content = html.escape(Helper.make_urls_absolute(post.html_content, self.config.blog_url, self.paths.post_dir_name))
@@ -584,7 +586,7 @@ class RSSFeed:
         rss_template = Template(rss_template).substitute(substitutions)
 
         # Write substituted template to file
-        feed_path = os.path.join(self.paths.dst_dir_path, "feed.xml")
+        feed_path = os.path.join(self.paths.dst_dir_path, f"{self.current_lang}_feed.xml")
         with open(feed_path, mode="w", encoding="utf-8") as f:
             f.write(rss_template)
 
@@ -710,14 +712,14 @@ class Blog:
             self.process_pages()
             logger.info("Processing scripts...")
             self.process_scripts()
+            logger.info("Processing rss feed...")
+            self.process_rss_feed()
 
         logger.debug("Loading default language...")
         self.load_lang_configuration(self.config.preferred_language)
 
         logger.info("Processing root index...")
         self.process_index()
-        logger.info("Processing rss feed...")
-        self.process_rss_feed()
         logger.info("Processing favicon...")
         self.process_favicon()
         logger.info("Processing manifest...")
@@ -890,8 +892,8 @@ class Blog:
     def process_rss_feed(self) -> None:
         """
         Generates the rss feed
-        """
-        feed = RSSFeed(self.config, self.paths, self.posts)
+        """        
+        feed = RSSFeed(self.config, self.paths, self.current_lang, self.posts)
         feed.generate()
 
     def process_scripts(self) -> None:

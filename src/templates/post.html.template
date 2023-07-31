@@ -55,7 +55,7 @@
     <a href="mailto:${author_mail}" title="${label_mail}" class="pl-half">${label_mail}</a>
 
     <i class="fa-solid fa-rss fa-xs pl-half"></i>
-    <a href="/feed.xml" title="${label_rss}" class="pl-half">${label_rss}</a>
+    <a href="/${current_lang}_feed.xml" title="${label_rss}" class="pl-half">${label_rss}</a>
 
     <i class="fa-regular fa-address-card fa-xs pl-half"></i>
     <a href="/${current_lang}/about.html" title="${label_about}" class="pl-half">${label_about}</a>
