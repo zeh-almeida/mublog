@@ -1,4 +1,5 @@
 import configparser
+import email.utils
 import glob
 import logging
 import os
@@ -9,11 +10,11 @@ import re
 import html
 import urllib.parse
 import uuid
+from datetime import datetime, date
 from string import Template
 from urllib.parse import urljoin
 
 import minify_html
-
 
 class PathConfig:
     def __init__(self):
@@ -560,25 +561,32 @@ class RSSFeed:
         with open(template_path, mode="r", encoding="utf-8") as f:
             rss_template = f.read()
 
-        feed_data = []        
+        feed_data = []
         filtered_posts = [post for post in self.posts if post.current_lang == self.current_lang]
 
         # Create a feed entry for each post
         for post in filtered_posts:
             post_title = html.escape(post.title)
+            post_description = html.escape(post.description)
             post_link = urljoin(self.config.blog_url, post.remote_path)
-            post_content = html.escape(Helper.make_urls_absolute(post.html_content, self.config.blog_url, self.paths.post_dir_name))
+
+            pub_date = email.utils.format_datetime(datetime.strptime(post.date, "%Y-%m-%d"))
+            updated = email.utils.format_datetime(datetime.strptime(post.modified, "%Y-%m-%d"))
 
             feed_data.append(f"<item>")
+            feed_data.append(f"<pubDate>{pub_date}</pubDate>")
+            feed_data.append(f"<updated>{updated}</updated>")
+
             feed_data.append(f"<title>{post_title}</title>")
             feed_data.append(f"<link>{post_link}</link>")
-            feed_data.append(f"<description>{post_content}</description>")
+            feed_data.append(f"<description>{post_description}</description>")
             feed_data.append(f"</item>")
 
         common_subs = Helper.common_substitutions(self.config, self.paths)
 
         # Substitute the placeholders with the actual values
         rss_subs = {
+            "current_lang": self.current_lang,
             "rss_items": "".join(feed_data),
         }
 
@@ -868,7 +876,7 @@ class Blog:
                 page = TagsPage(self.config, self.paths, self.current_lang, file_path, filtered_posts)
             else:
                 page = Page(self.config, self.paths, self.current_lang, file_path)
-            
+
             page.raise_when_invalid()
             with open(page.dst_path, mode="w", encoding="utf-8") as f:
                 f.write(page.generate())
@@ -892,7 +900,7 @@ class Blog:
     def process_rss_feed(self) -> None:
         """
         Generates the rss feed
-        """        
+        """
         feed = RSSFeed(self.config, self.paths, self.current_lang, self.posts)
         feed.generate()
 

@@ -3,6 +3,9 @@
 <channel>
   <title>${blog_title}</title>
   <link>${blog_url}</link>
+  <language>${current_lang}</language>
+  <copyright>${author_copyright}</copyright>
+  <generator>μblog</generator>
   <description>${blog_description}</description>
   ${rss_items}
 </channel>
