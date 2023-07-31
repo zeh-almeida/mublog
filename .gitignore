@@ -26,6 +26,6 @@
 !/src/templates/*.template
 !/src/css/*.css
 !/src/js/*.js
-!/src/assets/*.*
+!/src/assets/**
 !/src/meta/*.*
 !/src/pages/**

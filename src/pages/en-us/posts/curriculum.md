@@ -7,6 +7,8 @@ tags: curriculum,about,.net,java,javascript,backend,experience,proficiency,azure
 ---
 # <i class="fa-solid fa-scroll"></i> Curriculum
 
+<i class="fa-regular fa-file-pdf fa-xl"></i> [Download in PDF](/assets/files/Curriculum_ENG.pdf)
+
 ## <i class="fa-solid fa-bullseye"></i> Objective
 
 Engineering and Architecture of intelligent systems, focused on back-end, micro services, integration and DevOps.

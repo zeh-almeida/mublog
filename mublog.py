@@ -24,6 +24,7 @@ class PathConfig:
         self.post_dir_name = "posts"
         self.page_dir_name = "pages"
         self.assets_dir_name = "assets"
+        self.files_dir_name = "files"
         self.meta_dir_name = "meta"
         self.js_dir_name = "js"
         self.css_dir_name = "css"
@@ -34,6 +35,7 @@ class PathConfig:
         self.src_page_dir_path = os.path.join(self.src_dir_path, self.page_dir_name)
         self.src_posts_dir_path = os.path.join(self.src_dir_path, self.post_dir_name)
         self.src_assets_dir_path = os.path.join(self.src_dir_path, self.assets_dir_name)
+        self.src_files_dir_path = os.path.join(self.src_assets_dir_path, self.files_dir_name)
         self.src_meta_dir_path = os.path.join(self.src_dir_path, self.meta_dir_name)
         self.src_css_dir_path = os.path.join(self.src_dir_path, self.css_dir_name)
         self.src_js_dir_path = os.path.join(self.src_dir_path, self.js_dir_name)
@@ -43,6 +45,7 @@ class PathConfig:
         self.dst_dir_path = self.dst_dir_name
         self.dst_posts_dir_path = os.path.join(self.dst_dir_path, self.post_dir_name)
         self.dst_assets_dir_path = os.path.join(self.dst_dir_path, self.assets_dir_name)
+        self.dst_files_dir_path = os.path.join(self.dst_assets_dir_path, self.files_dir_name)
         self.dst_meta_dir_path = os.path.join(self.dst_dir_path, self.meta_dir_name)
         self.dst_css_dir_path = os.path.join(self.dst_dir_path, self.css_dir_name)
         self.dst_js_dir_path = os.path.join(self.dst_dir_path, self.js_dir_name)
@@ -135,7 +138,8 @@ class Helper:
         """
         try:
             for f in glob.glob(f"{src_path}/*"):
-                shutil.copy(f, dst_path)
+                if os.path.isfile(f):
+                    shutil.copy(f, dst_path)
         except Exception as e:
             logger.error(f"Failed to copy files: {str(e)}")
             exit(1)
@@ -424,6 +428,7 @@ class Page:
     def raise_when_invalid(self) -> None:
         if not self.validate_header():
             raise Exception(f"page '{self.src_path}' is not valid")
+
 
 class Post(Page):
 
@@ -808,6 +813,7 @@ class Blog:
             self.paths.dst_dir_path,
             self.paths.dst_css_dir_path,
             self.paths.dst_assets_dir_path,
+            self.paths.dst_files_dir_path,
             self.paths.dst_meta_dir_path,
             self.paths.dst_js_dir_path,
         ]
@@ -835,6 +841,7 @@ class Blog:
         Helper.copy_files(self.paths.src_css_dir_path, self.paths.dst_css_dir_path)
         Helper.copy_files(self.paths.src_meta_dir_path, self.paths.dst_meta_dir_path)
         Helper.copy_files(self.paths.src_assets_dir_path, self.paths.dst_assets_dir_path)
+        Helper.copy_files(self.paths.src_files_dir_path, self.paths.dst_files_dir_path)
 
     def process_posts(self) -> None:
         """

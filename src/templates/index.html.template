@@ -37,12 +37,12 @@
 </head>
 <nav>
     <i class="fa-regular fa-envelope fa-xs pl-half"></i>
-    <a href="mailto:${author_mail}" title="mail" class="pl-half">mail</a>
+    <a href="mailto:${author_mail}" title="${label_mail}" class="pl-half">${label_mail}</a>
 </nav>
 <main>
 <div class="buttons">
     <button class="dark-toggle" type="button">
-        <i class="fa-regular fa-lightbulb"></i> Dark mode
+        <i class="fa-regular fa-lightbulb"></i> ${label_dark_mode}
     </button>
     ${languages}
 </div>
