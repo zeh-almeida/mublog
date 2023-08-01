@@ -7,6 +7,8 @@ tags: currículo,sobre,.net,java,javascript,backend,experiência,proficiência,a
 ---
 # <i class="fa-solid fa-scroll"></i> Currículo
 
+<i class="fa-regular fa-file-pdf fa-xl"></i> [Download em PDF](/assets/files/Curriculum_PT.pdf)
+
 ## <i class="fa-solid fa-bullseye"></i> Objetivo
 
 Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro services, integrações e DevOps.
