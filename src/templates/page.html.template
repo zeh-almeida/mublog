@@ -37,23 +37,29 @@
     <title>${page_title} - ${blog_title}</title>
 </head>
 <nav>
-    <i class="fa-solid fa-house fa-xs pl-half"></i>
-    <a href="/${current_lang}/index.html" title="${label_home}" class="pl-half">${label_home}</a>
+    <span class="pl-half">
+        <i class="fa-solid fa-house fa-xs icon-padding"></i><a href="/${current_lang}/index.html" title="${label_home}">${label_home}</a>
+    </span>
 
-    <i class="fa-regular fa-newspaper fa-xs pl-half"></i>
-    <a href="/${current_lang}/articles.html" title="${label_article}" class="pl-half">${label_article}</a>
+    <span class="pl-half">
+        <i class="fa-regular fa-newspaper fa-xs icon-padding"></i><a href="/${current_lang}/articles.html" title="${label_article}">${label_article}</a>
+    </span>
 
-    <i class="fa-solid fa-tags fa-xs pl-half"></i>
-    <a href="/${current_lang}/tags.html" title="${label_tags}" class="pl-half">${label_tags}</a>
+    <span class="pl-half">
+        <i class="fa-solid fa-tags fa-xs icon-padding"></i><a href="/${current_lang}/tags.html" title="${label_tags}">${label_tags}</a>
+    </span>
 
-    <i class="fa-regular fa-envelope fa-xs pl-half"></i>
-    <a href="mailto:${author_mail}" title="${label_mail}" class="pl-half">${label_mail}</a>
+    <span class="pl-half">
+        <i class="fa-regular fa-envelope fa-xs icon-padding"></i><a href="mailto:${author_mail}" title="${label_mail}">${label_mail}</a>
+    </span>
 
-    <i class="fa-solid fa-rss fa-xs pl-half"></i>
-    <a href="/${current_lang}_feed.xml" title="${label_rss}" class="pl-half">${label_rss}</a>
+    <span class="pl-half">
+        <i class="fa-solid fa-rss fa-xs icon-padding"></i><a href="/${current_lang}_feed.xml" title="${label_rss}">${label_rss}</a>
+    </span>
 
-    <i class="fa-regular fa-address-card fa-xs pl-half"></i>
-    <a href="/${current_lang}/about.html" title="${label_about}" class="pl-half">${label_about}</a>
+    <span class="pl-half">
+        <i class="fa-regular fa-address-card fa-xs icon-padding"></i><a href="/${current_lang}/about.html" title="${label_about}">${label_about}</a>
+    </span>
 </nav>
 <main>
 <div class="buttons">

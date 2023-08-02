@@ -376,6 +376,10 @@ img[src*="#profile-pic"] {
   padding-left: .5em;
 }
 
+.icon-padding {
+  padding-right: 0.25em;
+}
+
 .buttons {
   display: flex;
   justify-content: space-evenly;
