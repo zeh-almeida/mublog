@@ -84,7 +84,7 @@ This is analogous to what we call [`computer instructions`](https://pclt.sites.y
 
 #### <i class="fa-solid fa-tape"></i> The Tape
 
-`The Tape` of the machine is analogous to what we call `memory` in today's computers. 
+`The Tape` of the machine is analogous to what we call `memory` in today's computers.
 
 In this abstract machine, it is a `infinite tape` divided into cells, all of the same size. Each cell may contain a symbol from the `Alphabet` or simply be empty.
 
@@ -115,9 +115,7 @@ Let's list some of the objects which are `Turing Machines`:
 - Smart TVs
 - Smartphones
 - Tablets
-- Doorbells
 - Vehicles
-- Kitchen appliances
 - Any of those "_smart_" appliances
 
 The list goes on and on...
@@ -131,9 +129,10 @@ In a word? Yes. In another word? **absolutely**. The whole idea of a programmer 
 Even if you use languages such as `Python`, `Javascript`, `Java`, `C#`, `Rust` or `C/C++` the code will eventually turn into `assembly`, either directly by compilation such as `Rust` and `C/C++` or by interpretation such as the other examples.
 
 Every computer architecture has it's own `assembly alphabet` and here are some of the architectures I can remember on the top of my head:
+
 - [x86/x64](https://en.wikipedia.org/wiki/X86-64) - Pretty much every Windows computer, since ever. Granted, there is the whole 16, 32 and 64-bit eras but this is topic for another discussion.
 - [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family) - Pretty much all appliances you have, such as TVs, Cellphones, etc.
-- [MIPS](https://en.wikipedia.org/wiki/MIPS_architecture) - Ah the good old N64 and PlayStation... 
+- [MIPS](https://en.wikipedia.org/wiki/MIPS_architecture) - Ah the good old N64 and PlayStation...
 - [RISC V](https://en.wikipedia.org/wiki/RISC-V) - New player, comparable to ARM chips but it is a different architecture
 - [POWER](https://en.wikipedia.org/wiki/IBM_POWER_architecture) - IBM architecture. used mainly in mainframes and other industrial applications.
 
