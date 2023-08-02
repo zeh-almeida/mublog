@@ -10,6 +10,7 @@ import re
 import html
 import urllib.parse
 import uuid
+import sys
 from datetime import datetime, date
 from string import Template
 from urllib.parse import urljoin
@@ -115,8 +116,8 @@ class Helper:
         try:
             result = subprocess.run(command, check=True, capture_output=True, text=True, encoding="utf-8")
             return result.stdout
-        except subprocess.CalledProcessError:
-            logger.error(f"Pandoc failed while processing {src_path}")
+        except subprocess.CalledProcessError as ex:
+            logger.error(f"Pandoc failed while processing {src_path}: {ex.stderr}")
             exit(1)
 
     @staticmethod

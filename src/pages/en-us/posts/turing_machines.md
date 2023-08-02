@@ -26,7 +26,7 @@ tags: turing,machine,computer,definition,instruction,algorithm,tape,head,alphabe
     - [Why does it matter?](#why-does-it-matter)
     - [Is this really important for a programmer?](#is-this-really-important-for-a-programmer)
 
----
+___
 ## First of all, who is Turing?
 > Our dead are never dead to us, until we have forgotten them. - [George Elliot](https://www.brainyquote.com/quotes/george_eliot_148896)
 
@@ -131,4 +131,4 @@ Nothing is more important in today's world than a well-defined `algorithm`.
 
 Makes you think, right?
 
----
+___
