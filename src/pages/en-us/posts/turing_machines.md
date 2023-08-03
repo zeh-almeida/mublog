@@ -23,7 +23,6 @@ tags: turing,machine,computer,definition,instruction,algorithm,tape,head,alphabe
         - [The Tape](#the-tape)
         - [The Head](#the-head)
 - [Ok but why should I care?](#ok-but-why-should-i-care)
-    - [Why does it matter?](#why-does-it-matter)
     - [Is this really important for a programmer?](#is-this-really-important-for-a-programmer)
 
 ___
