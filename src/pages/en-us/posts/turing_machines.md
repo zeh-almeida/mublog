@@ -2,7 +2,7 @@
 title: Turing Machines
 description: The most basic definition of a computer
 date: 2023-08-01
-modified: 2023-08-01
+modified: 2023-08-03
 tags: turing,machine,computer,definition,instruction,algorithm,tape,head,alphabet,general,purpose
 ---
 # <i class="fa-solid fa-computer"></i> Turing Machines - The Most Basic Definition of a Computer
