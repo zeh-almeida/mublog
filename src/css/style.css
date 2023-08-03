@@ -384,3 +384,29 @@ img[src*="#profile-pic"] {
   display: flex;
   justify-content: space-evenly;
 }
+
+code {
+  background-color: rgba(185, 188, 190, 0.6);
+  border-bottom-left-radius: 0.375em;
+  border-bottom-right-radius: 0.375em;
+  border-top-left-radius: 0.375em;
+  border-top-right-radius: 0.375em;
+  box-sizing: border-box;
+  font-size: 0.85em;
+  line-height: 20.4px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  overflow-wrap: break-word;
+  padding-bottom: 0.16em;
+  padding-left: 0.34em;
+  padding-right: 0.34em;
+  padding-top: 0.16em;
+  white-space: break-spaces;
+}
+
+.darken code {
+  color: white;
+  background-color: rgba(220, 224, 228, 0.6);
+}
