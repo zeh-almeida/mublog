@@ -42,17 +42,19 @@ Really, much of the modern society we live in is still based on things Turing th
 
 #### <i class="fa-solid fa-shuffle"></i> **[TL;DR](https://www.urbandictionary.com/define.php?term=tl%3Bdr)**
 
-Algorithms are the definition, step-by-step, of how to solve a problem.
+`Algorithms` are the definition, step-by-step, of how to solve a problem.
 
 A good way to think about it is like a recipe: if you follow the steps correctly in the order they are presented using the same ingredients and measurements, you will get a repeatable result, every time.
 
 #### <i class="fa-solid fa-scroll"></i> The long version
 
-An Algorithm is a set of very specific instructions which must be followed in their entirety in order to solve a problem.
+An `Algorithm` is a set of very specific instructions which must be followed in their entirety in order to solve a problem.
 
-Such instructions may include conditions and even interact with other Algorithms, as long as they are defined in a way in which they are expected to have a final state, i.e., they will eventually stop, either successfully or not.
+Such instructions may include conditions and even interact with other `Algorithms`, as long as they are defined in a way in which they are expected to have a final state, i.e., they will eventually stop, either successfully or not.
 
-I think the International Institute in Geneva has a better explanation I could ever give [here](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding).
+If you use `Facebook`, `TikTok`, `YouTube` or any other social media, you are probably aware of the existence of the `Recommendation Algorithms`. Those are proprietary sets of `algorithms` and can be considered part of the brain of those applications
+
+I think the International Institute in Geneva has a better explanation I could ever give about `algorithms` [here](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding).
 
 ### <i class="fa-solid fa-server"></i> General-purpose Computing
 
@@ -100,43 +102,36 @@ This is analogous to how modern-day [CPUs work](https://en.wikipedia.org/wiki/In
 
 As mentioned many times before in this article, pretty much all computers since the invention of the `Turing Machine` use this model.
 
-It doesn't matter if you have a Original IBM PC from 1980 or the newest iPhone 99: they both have a CPU that is modeled after the `Turing Machine`.
+Understanding this model could help you have a better time with any technology as well, since you will probably understand how to better "communicate" with the machines.
 
-Yes, even those "[cheapo](https://www.pinterest.com/pin/102105116538007472/)" games are `Turing Machines` in a way or another.
+It doesn't matter if you have a Original IBM PC from 1980 or the newest fictional (for now) iPhone 99x Pro: they both have a CPU that is modeled after the `Turing Machine`.
 
-### <i class="fa-solid fa-bug"></i> Why does it matter?
+And yes, even those "[cheapo](https://www.pinterest.com/pin/102105116538007472/)" games are `Turing Machines` in a way or another.
 
-Well, if that doesn't makes you curious how such a simple yet ingenious model pretty much *changed humanity* since the last century, what will?
-
-Understanding this model could help you navigate technology easier as well, since you will probably understand how to better "communicate" with the machines.
-
-Let's list some of the objects which are `Turing Machines`:
+Let's list some of the objects which are also `Turing Machines`:
 
 - Smart TVs
-- Smartphones
 - Tablets
 - Vehicles
 - Any of those "_smart_" appliances
 
 The list goes on and on...
 
-### <i class="fa-solid fa-terminal"></i> Is this really important for a programmer?
+### <i class="fa-solid fa-terminal"></i> Is this important for a programmer?
 
-In a word? Yes. In another word? **absolutely**. The whole idea of a programmer is to create `Algorithms` for the `Turing Machines` to process.
+In a word? Yes. In another word? **absolutely**. The whole existence of a programmer is to create `Algorithms` for the `Turing Machines` to process.
 
-> In  my opinion, nothing is more important in today's world than a well-defined `algorithm`.
+> In  my opinion, nothing is more important in today's world than a well-defined, well-documented `algorithm`, regardless of it's application.
 
-Even if you use languages such as `Python`, `Javascript`, `Java`, `C#`, `Rust` or `C/C++` the code will eventually turn into `assembly`, either directly by compilation such as `Rust` and `C/C++` or by interpretation such as the other examples.
+Even if you use programming languages such as `Python`, `Javascript`, `Java`, `C#`, `Rust` or `C/C++` the code will eventually turn into `assembly`, either directly by compilation such as `Rust` and `C/C++` or by interpretation such as the other examples.
 
 Every computer architecture has it's own `assembly alphabet` and here are some of the architectures I can remember on the top of my head:
 
-- [x86/x64](https://en.wikipedia.org/wiki/X86-64) - Pretty much every Windows computer, since ever. Granted, there is the whole 16, 32 and 64-bit eras but this is topic for another discussion.
+- [x86/x64](https://en.wikipedia.org/wiki/X86-64) - Pretty much every Windows computer, since ever. Granted, there is the whole `16`, `32` and `64-bit` eras but this is topic for another discussion.
 - [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family) - Pretty much all appliances you have, such as TVs, Cellphones, etc.
 - [MIPS](https://en.wikipedia.org/wiki/MIPS_architecture) - Ah the good old N64 and PlayStation...
-- [RISC V](https://en.wikipedia.org/wiki/RISC-V) - New player, comparable to ARM chips but it is a different architecture
+- [RISC V](https://en.wikipedia.org/wiki/RISC-V) - New player, comparable to ARM chips but it is a different architecture.
 - [POWER](https://en.wikipedia.org/wiki/IBM_POWER_architecture) - IBM architecture. used mainly in mainframes and other industrial applications.
-
-
-Maybe this Turing guy was onto something, I guess...
+- [6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) - used in the Nintendo Entertainment System, Apple II and many others.
 
 ___
