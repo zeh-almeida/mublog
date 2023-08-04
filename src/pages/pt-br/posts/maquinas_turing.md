@@ -53,13 +53,13 @@ Essas instruções podem conter condições e até interagir com outros `Algorit
 
 Se você usa `Facebook`, `TikTok`, `YouTube` ou qualquer outra mídia social, você provavelmente já conhece a existência dos `Algoritmos de Recomendação`. Esses são `algoritmos` proprietários que podem ser considerados parte do cérebro dessas aplicações.
 
-Eu acho que o Instituto Internacional de Geneva tem uma explicação muito melhor que a minha sobre `algoritmos` [aqui](https://www.iig.ch/en-en/blog/computador-science/algoritmo-computador-science-definição-and-understanding).
+Eu acho que o Instituto Internacional de Geneva tem uma explicação muito melhor que a minha sobre `algoritmos` [aqui](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding).
 
 ### <i class="fa-solid fa-server"></i> Computador de Propósito Genérico
 
 No passado a computação era usada como uma forma de executar cálculos mais fácil do que qualquer humano. Porém, esses computadores tinham uma lógica extremamente específica, de forma que eles não podiam ser reprogramados para executar cálculos diferentes daqueles para os que foram projetados em primeiro lugar.
 
-Essa limitação, bem, como a grande complexidade e tamanhos gigantescos, fez com que essas máquinas fossem muito caras e difíceis de manter, como é explicado na [história do primeiro genérico computador, o ENIAC](https://penntoday.upenn.edu/news/worlds-first-genérico-propósito-computador-turns-75).
+Essa limitação, bem, como a grande complexidade e tamanhos gigantescos, fez com que essas máquinas fossem muito caras e difíceis de manter, como é explicado na [história do primeiro genérico computador, o ENIAC](https://penntoday.upenn.edu/news/worlds-first-general-purpose-computer-turns-75).
 
 Tudo isso significava que eram necessários `algoritmos` extremamente específicos para máquinas extremamente específicas. Não era possível simplesmente atualizar a lógica e re-executar. Seria necessário realinhar partes do computador ou até ter que usar uma máquina completamente diferente, o que podia ser impeditivo.
 
@@ -81,7 +81,7 @@ A `Máquina de Turing` é feita de algumas, digamos, partes: a `Cabeça`, a `Fit
 
 para que a máquina funcione, um `Alfabeto` precisa ser definido, assim a máquina pode executar suas ações a partir do significado desses símbolos.
 
-Isso é análogo ao que chamados de [`instruções de máquina`](https://pclt.sites.yale.edu/cpu-instruções) hoje.
+Isso é análogo ao que chamados de [`instruções de máquina`](https://pclt.sites.yale.edu/cpu-instructions) hoje.
 
 #### <i class="fa-solid fa-fita"></i> A Fita
 
