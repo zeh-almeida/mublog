@@ -9,7 +9,7 @@ tags: turing,máquina,computador,definição,instrução,algoritmo,fita,cabeça,
 
 ## <i class="fa-solid fa-triangle-exclamation"></i> Atenção
 
-> A maior parte das coisas que escrevi está em formato livre e toda a tradução foi feita diretamente por mim. Claro, eu fiz minha pesquisa e deixei as links com as fontes no texto mas não leve o conteúdo tão a sério: eu não sou um cientista da computação muito menos um pesquisador.
+> A maior parte das coisas que escrevi está em formato livre e toda a tradução foi feita diretamente por mim. Claro, eu fiz minha pesquisa e deixei os links com as fontes no texto mas não leve o conteúdo tão a sério: eu não sou um cientista da computação muito menos um pesquisador.
 **Em caso de dúvida, consulte as fontes**. Obrigado e que o show continue!
 
 ## <i class="fa-solid fa-list-ul"></i> Índice
@@ -33,7 +33,7 @@ ___
 
 Ele foi um dos responsáveis pela criação e desenvolvimento da ciência da computação por definir conceitos como **algoritmos** e **computador de propósito genérico** via **Máquina de Turing**.
 
-Sério, muito da sociedade moderna que vivemos ainda é baseada em conceitos que Turing pensou a quase um século atrás.
+É incrível pensar que muito da sociedade moderna que vivemos ainda é baseada em conceitos que Turing pensou a quase um século atrás.
 
 ## <i class="fa-regular fa-circle-question"></i> O Que São Essas Coisas?
 
@@ -41,7 +41,7 @@ Sério, muito da sociedade moderna que vivemos ainda é baseada em conceitos que
 
 #### <i class="fa-solid fa-shuffle"></i> **[TL;DR](https://www.urbandictionary.com/define.php?term=tl%3Bdr)**
 
-`Algoritmos` são definição, passo-a-passo, de como resolver um problema.
+`Algoritmos` a são definição, passo-a-passo, de como resolver um problema.
 
 É como se fosse uma receita: se você seguir os passos corretamente, na mesma ordem que foram apresentados e usando os mesmos ingredientes e medidas, você tem um resultado igual e constante todas as vezes.
 
@@ -53,25 +53,25 @@ Essas instruções podem conter condições e até interagir com outros `Algorit
 
 Se você usa `Facebook`, `TikTok`, `YouTube` ou qualquer outra mídia social, você provavelmente já conhece a existência dos `Algoritmos de Recomendação`. Esses são `algoritmos` proprietários que podem ser considerados parte do cérebro dessas aplicações.
 
-Eu acho que o Instituto Internacional de Geneva tem uma explicação muito melhor que a minha sobre `algoritmos` [aqui](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding).
+Eu acho que o Instituto Internacional de Geneva tem uma explicação muito melhor que a minha sobre `algoritmos` [aqui](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding) (texto em inglês).
 
 ### <i class="fa-solid fa-server"></i> Computador de Propósito Genérico
 
-No passado a computação era usada como uma forma de executar cálculos mais fácil do que qualquer humano. Porém, esses computadores tinham uma lógica extremamente específica, de forma que eles não podiam ser reprogramados para executar cálculos diferentes daqueles para os que foram projetados em primeiro lugar.
+No passado a computação era usada como uma forma de executar cálculos mais rápido do que qualquer humano. Porém, esses computadores tinham uma lógica extremamente específica, de forma que eles não podiam ser reprogramados para executar cálculos diferentes daqueles para os que foram projetados em primeiro lugar.
 
-Essa limitação, bem, como a grande complexidade e tamanhos gigantescos, fez com que essas máquinas fossem muito caras e difíceis de manter, como é explicado na [história do primeiro genérico computador, o ENIAC](https://penntoday.upenn.edu/news/worlds-first-general-purpose-computer-turns-75).
+Essa limitação, bem como a grande complexidade e tamanhos gigantescos, fez com que essas máquinas fossem muito caras e difíceis de manter, como é explicado na história do primeiro computador genérico, [o ENIAC](https://penntoday.upenn.edu/news/worlds-first-general-purpose-computer-turns-75).
 
-Tudo isso significava que eram necessários `algoritmos` extremamente específicos para máquinas extremamente específicas. Não era possível simplesmente atualizar a lógica e re-executar. Seria necessário realinhar partes do computador ou até ter que usar uma máquina completamente diferente, o que podia ser impeditivo.
+Tudo isso significava que eram necessários `algoritmos` extremamente específicos para máquinas extremamente específicas. Não era possível simplesmente atualizar a lógica e re-executar. Seria necessário realinhar partes do computador ou até ter que usar uma máquina completamente diferente, o que podia ser um impeditivo.
 
-A ideia de ter uma única máquina capaz de executar `algoritmos` diferentes sem a necessidade de qualquer tipo de mudança estrutura;é o que chamamos de  `Computação de Propósito Genérico` e como no artigo referenciado acima, ENIAC foi a primeira máquina com essa capacidade.
+A ideia de ter uma única máquina capaz de executar `algoritmos` diferentes, sem a necessidade de qualquer tipo de mudança na estrutura, é o que chamamos de `Computação de Propósito Genérico` e como no artigo referenciado acima, ENIAC foi a primeira máquina com essa capacidade.
 
 ### <i class="fa-solid fa-cash-register"></i> Máquina de Turing
 
-Nesse ponto da História ficou bem claro que um computador de propósito genérico era necessário mas como definir um? Ah, é ai que Alan Turing e sua Máquina chegam para o resgate!
+Nesse ponto da História ficou bem claro que um computador de propósito genérico era necessário mas como definir um? Ah, é ai que Alan Turing e sua Máquina entram no circuito!
 
-Turing foi capaz de definir em termos muito simples o que a máquina genérica seria e como opera-la. Claro, sua definição é de uma máquina abstrata, Não de uma máquina física.
+Turing foi capaz de definir em termos muito simples o que a máquina genérica seria e como opera-la. Claro, sua definição é de uma máquina abstrata, não de uma máquina física.
 
-Essa máquina é capaz de rodar qualquer tipo de `algoritmo`, desde que sigam a regra do estado finito.
+Essa máquina é capaz de executar qualquer tipo de `algoritmo`, desde que sigam a regra do estado finito, discutido anteriormente.
 
 #### <i class="fa-solid fa-satellite"></i> O que é a Máquina?
 
@@ -79,11 +79,11 @@ A `Máquina de Turing` é feita de algumas, digamos, partes: a `Cabeça`, a `Fit
 
 #### <i class="fa-solid fa-braille"></i> O Alfabeto
 
-para que a máquina funcione, um `Alfabeto` precisa ser definido, assim a máquina pode executar suas ações a partir do significado desses símbolos.
+Para que a máquina funcione, um `Alfabeto` precisa ser definido, assim a máquina pode executar suas ações a partir do significado desses símbolos.
 
 Isso é análogo ao que chamados de [`instruções de máquina`](https://pclt.sites.yale.edu/cpu-instructions) hoje.
 
-#### <i class="fa-solid fa-fita"></i> A Fita
+#### <i class="fa-solid fa-tape"></i> A Fita
 
 `A Fita` da máquina é análogo a `memória` que temos nos computadores de hoje.
 
@@ -93,7 +93,7 @@ Nessa máquina abstrata, essa `fita infinita` é dividida em células, todas do 
 
 `A Cabeça` da máquina é capaz de se mover entre qualquer uma das células da `Fita`, em qualquer direção mas apenas uma de cada vez.
 
-Uma vez que a `cabeça` entra numa célula, ela escaneia o conteúdo e a partir da definição do `Alfabeto` ela se move para outra célula ou escreve um novo símbolo na célula atual.
+Uma vez que a `cabeça` entra numa célula, ela escaneia o conteúdo e a partir da definição do `Alfabeto`, se move para outra célula ou escreve um novo símbolo na célula atual.
 
 isso é análogo ao modo como as [CPUs modernas trabalham](https://en.wikipedia.org/wiki/Instruction_cycle).
 
@@ -105,9 +105,9 @@ Entender esse modelo pode ajudar a interagir melhor com a tecnologia também, um
 
 Não importa se a máquina é um IBM PC Original de 1980 ou o ficcional (por enquanto) iPhone 99x Pro: ambos possuem uma CPU modelada a a partir da `Máquina de Turing`.
 
-E sim, mesmo aqueles [joguinhos](https://www.pinterest.com/pin/102105116538007472/)" são `Máquinas de Turing` de uma forma.
+E sim, mesmo aqueles "[joguinhos](https://www.pinterest.com/pin/102105116538007472/)" são `Máquinas de Turing` de uma forma.
 
-Vamos listar alguns objetos que também são`Máquinas de Turing`:
+Vamos listar alguns objetos que também são `Máquinas de Turing`:
 
 - Smart TVs
 - Tablets
@@ -118,7 +118,7 @@ A lista continua indefinidamente...
 
 ### <i class="fa-solid fa-terminal"></i> Isso é Realmente Importante Para um Programador?
 
-Numa palavra? Sim. Em outra palavra? **absolutamente**. Toda a existência de um programador é criar `Algoritmos` para as `Máquinas de Turing` processarem.
+Numa palavra? Sim. Em outra palavra? **Absolutamente**. Toda a existência de um programador é criar `Algoritmos` para as `Máquinas de Turing` processarem.
 
 > Na minha opinião, nada é mais importante no mundo de hoje do que um `algoritmo` bem definido e bem documentado, independente da sua aplicação.
 
