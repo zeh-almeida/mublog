@@ -385,6 +385,10 @@ img[src*="#profile-pic"] {
   justify-content: space-evenly;
 }
 
+.code-block pre {
+  display: flex;
+}
+
 code {
   background-color: rgba(185, 188, 190, 0.6);
   border-bottom-left-radius: 0.375em;

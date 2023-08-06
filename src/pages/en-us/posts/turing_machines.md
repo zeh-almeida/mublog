@@ -2,7 +2,7 @@
 title: Turing Machines
 description: The most basic definition of a computer
 date: 2023-08-01
-modified: 2023-08-03
+modified: 2023-08-05
 tags: turing,machine,computer,definition,instruction,algorithm,tape,head,alphabet,general,purpose
 ---
 # <i class="fa-solid fa-computer"></i> Turing Machines - The Most Basic Definition of a Computer
@@ -24,6 +24,15 @@ tags: turing,machine,computer,definition,instruction,algorithm,tape,head,alphabe
         - [The Head](#the-head)
 - [Ok but why should I care?](#ok-but-why-should-i-care)
     - [Is this really important for a programmer?](#is-this-really-important-for-a-programmer)
+- [How does the Architectures Implement the Turing machine Model?](#how-does-the-architectures-implement-the-turing-machine-model)
+    - [Everything is Either Black or White](#everything-is-either-black-or-white)
+    - [How Many Bits can you Take?](#how-many-bits-can-you-take)
+        - [What is the Word?](#what-is-the-word)
+    - [The 6502 Alphabet](#the-6502-alphabet)
+        - [Instruct Me, Please](#instruct-me-please)
+        - [Example Time](#example-time)
+        - [To the Winner Goes the Spoils](#to-the-winner-goes-the-spoils)
+- [Execution Terminated](#execution-terminated)
 
 ___
 ## <i class="fa-solid fa-person-circle-question"></i> First of all, who is Turing?
@@ -132,5 +141,117 @@ Every computer architecture has it's own `assembly alphabet` and here are some o
 - [RISC V](https://en.wikipedia.org/wiki/RISC-V) - New player, comparable to ARM chips but it is a different architecture.
 - [POWER](https://en.wikipedia.org/wiki/IBM_POWER_architecture) - IBM architecture. used mainly in mainframes and other industrial applications.
 - [6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) - used in the Nintendo Entertainment System, Apple II and many others.
+
+## <i class="fa-solid fa-robot"></i> How does the Architectures Implement the Turing machine Model?
+
+Let's just get this out of the way: CPUs are very complex entities. It is **VERY** hard to explain them because you start stepping into the _bit_ territory and let me tell you, it gets weird fast.
+
+I mentioned this before, I am not a computer scientist. I am just a very crazy person that loves programming so my knowledge stems from my curiosity and great amounts of reading I do on this subject.
+
+This is all to say that I will do my best in explaining this as if you were 5 years-old. Next year you'll be six so it may be easier to understand later.
+
+I will use the [MOS 6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) architecture as an example because it is a (relatively) very simple and straight-forward architecture.
+
+### <i class="fa-solid fa-palette"></i> Everything is Either Black or White
+
+Well, not really `black` or `white`, more like `ones` and `zeros`.
+
+Using this example again, it doesn't matter if you have a Original IBM PC from 1980 or the newest fictional (for now) iPhone 99x Pro, they are both `binary machines`, meaning they only read `1` and `0` values.
+
+### <i class="fa-solid fa-drumstick-bite"></i> How Many Bits can you Take?
+
+The `6502` implements the `Turing Machine` with the following characteristics:
+
+- The `Alphabet` is comprised of `8-bit` `words`;
+- The `Tape` can have up to `65.535` cells (in this case, `bits`);
+- The `Head` has some special cells called `registers` so it can store some execution information such as `Tape cell index`, for example;
+
+#### <i class="fa-solid fa-dove"></i> What is the Word?
+
+It is a little weird to compare `Alphabet` to `Words` but I can explain:
+
+- The `bit` is a very limited `letter`, let's put it this way, because it can only be either `one` or `zero` in value.
+- As a CPU may perform many operations, the `symbol` of the `Alphabet` must be unique.
+
+This combination of characteristics makes the binary nature of the `bit` hard for the `Alphabet` to have sufficiently `symbols` so the only answer is: let's make a `symbol` a combination of `8 bits`, or in this case, a `word`.
+
+### <i class="fa-solid fa-microchip"></i> The 6502 Alphabet
+
+For the purpose of this example I will not explain the full `6502 alphabet` also known as the `instruction set` because it is very technical.
+
+Instead, I will explain a couple of `words` or `instructions` just to illustrate how the computer would process them.
+
+#### <i class="fa-solid fa-chalkboard-user"></i> Instruct Me, Please
+
+> For the pedantic: I know the 6502 has addressing modes and other quirks but they are not relevant here. Matter of fact, I have a [6502 emulator](https://github.com/zeh-almeida/6502-sharp) that goes into those details if you're interested.
+
+I will do my best to explain some simple `instructions` which will show up in an example later.
+
+##### Clear Carry Flag ([CLC](https://masswerk.at/6502/6502_instruction_set.html#CLC))
+
+Tells the `head` to set the `carry register` as `zero`.
+
+##### Load Accumulator ([LDA](https://masswerk.at/6502/6502_instruction_set.html#LDA))
+
+Tells the `head` to set the value of the `accumulator register` to a value we will define.
+
+##### Add With Carry ([ADC](https://masswerk.at/6502/6502_instruction_set.html#ADC))
+
+Reads a `cell` from the `tape` and increments the `accumulator register` in the `head`.
+
+If the resulting value is larger than `255`, the maximum value for an `8-bit` number, it restarts from `0` and marks the `carry register` in the `head` with a value.
+
+What this means is that you can add numbers way past the `255` value because you will always know if it "spilled" or not.
+
+##### Branch Carry Clear ([BCC](https://masswerk.at/6502/6502_instruction_set.html#BCC))
+
+Instructs the `head` to jump to a specific `cell` if the `carry register` is `zero`.
+
+#### <i class="fa-solid fa-flask-vial"></i> Example Time
+
+We will create a very simple `algorithm` with the sole purpose of counting up to `255` and exiting once it does so.
+
+Because `Turing Machines` operate at one `symbol` at a time, we got to improve the `algorithm` details:
+
+```
+Starting at zero, increment the value by one until it reaches 255, then exit.
+```
+
+Ah, now we are getting somewhere but it is still not something a `6502` can process. Thankfully, we already know which `instructions` we need to use to write this `algorithm`:
+
+<div class="code-block">
+```
+CLC     ; Makes sure the clear register equals zero
+
+LDA #0  ; Makes sure the accumulator register equals zero
+
+ADC #1  ; Adds one to the accumulator register
+
+BCC FC  ; Jumps back to the previous cell if the clear flag equals zero.
+        ; Otherwise, terminates the program.
+```
+</div>
+
+I see you're looking at that `FC` value there thinking: What?
+
+Well, it is understandable, is seemly came out of nowhere. It is the number `255` minus `3 bytes`, meaning it will land on the `cell` for the `ADC` `instruction` but this time expressed in [hexadecimal notation](https://en.wikipedia.org/wiki/Hexadecimal).
+
+#### <i class="fa-solid fa-flag-checkered"></i> To the Winner Goes the Spoils
+
+Congratulations, you just (hopefully) understood basic `6502` `assembly code`!
+
+Not only that, you also programmed your first `algorithm`. Dang, you're in a roll!
+
+I hope this example was enough to explain how the `Turing Machine` model is implemented in regular CPUs. If it wasn't, well, my e-mail is at the top of the page: please let me know your thoughts on this.
+
+## <i class="fa-solid fa-trophy"></i> Execution Terminated
+
+We reach the conclusion of my epic tale of the `Turing Machine`, the design which revolutionized the world.
+
+I hope my examples were clear and wish you were able to dwell into the `assembly` stuff with relative ease.
+
+If you have any questions or comments, I will gladly accept them in my e-mail at the top of the page.
+
+Hope you tune again for other articles in the future.
 
 ___
