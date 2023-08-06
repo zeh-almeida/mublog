@@ -166,7 +166,7 @@ The `6502` implements the `Turing Machine` with the following characteristics:
 - The `Tape` can have up to `65.535` cells (in this case, `bits`);
 - The `Head` has some special cells called `registers` so it can store some execution information such as `Tape cell index`, for example;
 
-#### <i class="fa-solid fa-dove"></i> What is the Word?
+#### <i class="fa-solid fa-dove"></i> What is the [Word](https://youtu.be/9Gc4QTqslN4)?
 
 It is a little weird to compare `Alphabet` to `Words` but I can explain:
 
