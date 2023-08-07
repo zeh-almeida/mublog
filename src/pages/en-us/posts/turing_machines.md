@@ -102,7 +102,7 @@ In this abstract machine, it is a `infinite tape` divided into cells, all of the
 
 `The Head` of the machine is able to move between each and every cell of the `Tape`, in any direction but only once cell at a time.
 
-Once the `head` enters a cell, it scans its content and based on the `Alphabet` definition it will move itself to another cell or write another symbol in the current cell.
+Once the `Head` enters a cell, it scans its content and based on the `Alphabet` definition it will move itself to another cell or write another symbol in the current cell.
 
 This is analogous to how modern-day [CPUs work](https://en.wikipedia.org/wiki/Instruction_cycle).
 
@@ -189,23 +189,25 @@ I will do my best to explain some simple `instructions` which will show up in an
 
 ##### Clear Carry Flag ([CLC](https://masswerk.at/6502/6502_instruction_set.html#CLC))
 
-Tells the `head` to set the `carry register` as `zero`.
+Tells the `Head` to set the `carry register` as `zero`.
 
 ##### Load Accumulator ([LDA](https://masswerk.at/6502/6502_instruction_set.html#LDA))
 
-Tells the `head` to set the value of the `accumulator register` to a value we will define.
+Tells the `Head` to replace the value of the `accumulator register` with the value we defined.
 
 ##### Add With Carry ([ADC](https://masswerk.at/6502/6502_instruction_set.html#ADC))
 
-Reads a `cell` from the `tape` and increments the `accumulator register` in the `head`.
+Increments the `accumulator register` in the `Head` with the value we defined.
 
-If the resulting value is larger than `255`, the maximum value for an `8-bit` number, it restarts from `0` and marks the `carry register` in the `head` with a value.
+If the resulting value is larger than `255`, the maximum value for an `8-bit` number, it restarts from `0` and marks the `carry register` in the `Head` with a value.
 
 What this means is that you can add numbers way past the `255` value because you will always know if it "spilled" or not.
 
+A good analogy to this behavior is how we can count past `5` using our hands: we know how many times we restarted the fingers during the count, that's how we can keep track of values larger than `5`.
+
 ##### Branch Carry Clear ([BCC](https://masswerk.at/6502/6502_instruction_set.html#BCC))
 
-Instructs the `head` to jump to a specific `cell` if the `carry register` is `zero`.
+Instructs the `Head` to jump to a specific `cell` if the `carry register` is `zero`.
 
 #### <i class="fa-solid fa-flask-vial"></i> Example Time
 
@@ -217,7 +219,9 @@ Because `Turing Machines` operate at one `symbol` at a time, we got to improve t
 Starting at zero, increment the value by one until it reaches 255, then exit.
 ```
 
-Ah, now we are getting somewhere but it is still not something a `6502` can process. Thankfully, we already know which `instructions` we need to use to write this `algorithm`:
+Ah, now we are getting somewhere but it is still not something a `6502` can process.
+
+Thankfully, we already know which `instructions` we need to use to write this `algorithm`, so let's "translate" it to machine language:
 
 <div class="code-block">
 ```

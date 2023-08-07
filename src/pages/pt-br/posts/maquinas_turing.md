@@ -198,19 +198,21 @@ Instrui a `Cabeça` a marcar o `registrador carry` com `zero`.
 
 ##### Load Accumulator ([LDA](https://masswerk.at/6502/6502_instruction_set.html#LDA))
 
-Instrui a `Cabeça` a definir o valor do `registrador acumulador` com o valor que definirmos.
+Instrui a `Cabeça` a substituir o valor atual do `registrador acumulador` com o valor que definirmos.
 
 ##### Add With Carry ([ADC](https://masswerk.at/6502/6502_instruction_set.html#ADC))
 
-Lê uma `célula` da `Fita` e incrementa o `registrador acumulador` na `Cabeça`.
+Incrementa o `registrador acumulador` na `Cabeça` com o valor que definirmos.
 
 Se o resultado do incremento for maior que `255`, o maior valor possível para um número de `8-bit`, ele recomeça do `0` e marca o `registrador carry` da `Cabeça` com `1`.
 
-Isso significa que é possível adicionar números além do valor de `255` porque você sempre saberá que o valor "resetou" ou não.
+Isso significa que é possível adicionar números além do valor de `255` porque você sempre saberá se o valor extrapolar seu limite.
+
+Uma analogia é tentar contar número maiores que `5` na sua mão: você sabe quantas vezes você precisou recomeçar a conta nos dedos e por isso consegue contar valores maiores que `5` sem problemas.
 
 ##### Branch Carry Clear ([BCC](https://masswerk.at/6502/6502_instruction_set.html#BCC))
 
-Instrui a `Cabeça` a pular para uma `célula` específica se o `registrador carry` for `zero`.
+Instrui a `Cabeça` a pular para uma `célula` específica apenas se o `registrador carry` for `zero`.
 
 #### <i class="fa-solid fa-flask-vial"></i> Hora de Exemplificar
 
@@ -221,7 +223,10 @@ Como `Máquinas de Turing` operam um `símbolo` de cada vez, nós precisamos dar
 ```
 Começando do zero, incremente o valor em uma unidade até chegar em 255, então finalize.
 ```
-Agora sim estamos chegando lá mas ainda não é algo que o `6502` possa processar. Ainda bem que já sabemos quais `instruções"` nós precisamos para escrever esse `algoritmo`:
+
+Agora sim estamos chegando lá mas ainda não é algo que o `6502` possa processar.
+
+Ainda bem que já sabemos quais `instruções` nós precisamos para escrever esse `algoritmo`, então vamos "traduzi-lo" para linguagem de máquina:
 
 <div class="code-block">
 ```
