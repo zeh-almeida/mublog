@@ -2,7 +2,7 @@
 title: Curriculum
 description: My curriculum vitae, up to date
 date: 2023-07-20
-modified: 2023-08-08
+modified: 2023-08-09
 tags: curriculum,about,.net,java,javascript,backend,experience,proficiency,azure,aws,development,programming
 ---
 # <i class="fa-solid fa-scroll"></i> Curriculum
@@ -82,7 +82,7 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 
     - Because of the age of some sources and data complexity, many meetings with different teams had to be arranged in order to validate sources, formats and other data characteristics.
 
-#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+#### <i class="fa-solid fa-microchip"></i> Main technologies:
 
 - .Net Core
 - Node.js
@@ -106,7 +106,7 @@ ___
 - Implementation of a complex solution for managing a Family Office.
     - Responsible for developing and supporting junior developers in the implementation of a Family Office system that would handle data input as well as many financial calculations.
 
-#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+#### <i class="fa-solid fa-microchip"></i> Main technologies:
 
 - .Net Core
 - SQL Server
@@ -135,7 +135,7 @@ ___
 
     - Monitoring the execution flow in Production to evaluate possible blocks in the process.
 
-#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+#### <i class="fa-solid fa-microchip"></i> Main technologies:
 
 - .Net Core
 - SQL Server
@@ -170,7 +170,7 @@ ___
 
     - The system had to work on IE11 and Chrome using the company’s Azure AD instance for authorization and authentication. The application was written with React on the front-end.
 
-#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+#### <i class="fa-solid fa-microchip"></i> Main technologies:
 
 - Java
 - Jenkins
@@ -210,7 +210,7 @@ ___
 
     - System had to communicate with legacy on-premises banking system to fetch customer information as well as calculation parameters using SOAP.
 
-#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+#### <i class="fa-solid fa-microchip"></i> Main technologies:
 
 - .Net Core 3.1
 - ASP.Net MVC Core
@@ -248,7 +248,7 @@ ___
 
     - Used the basic guidelines to establish the culture of source control, commit messages and Pull Requests.
 
-#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+#### <i class="fa-solid fa-microchip"></i> Main technologies:
 
 - Java
 - Hybris
@@ -293,7 +293,7 @@ ___
     - Using ZenDesk system as base;
     - Creating automatic replies, classification and ordering of clients, their threads and responses;
 
-#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+#### <i class="fa-solid fa-microchip"></i> Main technologies:
 
 - Ruby
 - Ruby on Rails
@@ -301,6 +301,7 @@ ___
 - CSS
 - Bootstrap
 - Git
+- PostgreSQL
 
 #### <i class="fa-solid fa-person-chalkboard"></i> Main activities:
 
@@ -308,13 +309,31 @@ ___
 - Testing
 - Design
 - Quality Assurance
-- 
 
 ___
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
 <i class="fa-regular fa-calendar"></i> 2014 - 2015
 
-- Development, Analysis and Support for C#, Android. Emphasis on Web Systems and Web-services, all based in ASPX.
+- Maintenance of a Android app and it's web-service for vehicle inspection tailor-made for a vehicle factory park maintainer in a major factory in the Curitiba area.
+    - Users took pictures of the vehicles in three distinct moments: when they left the assembly, when they were placed in the transports or in regular checks in the vehicle park where they resided.
+    - The app allowed users to select specific chassis for different vehicle classes;
+    - The app had to work in tablets and had to support for intermittent or simply no available networks at any time during execution.
+    - Once the user finished the checklist, the data had to be uploaded to a SOAP/XML web-service with the form data as well as the pictures taken.
+    
+    - My job was to implement techniques for fault-tolerance with the web-server communication process in order not to lose any data as well as to retry if connection was lost.
+    - Testing was done even in the building stairwells to ensure similar conditions before testing in the field.
+    -The app was written by a third-party no longer involved with the project, with close to no documentation available.
+
+#### <i class="fa-solid fa-microchip"></i> Main technologies:
+
+- .Net Framework 4.5
+- Java
+- SQL Server 2012
+
+#### <i class="fa-solid fa-person-chalkboard"></i> Main activities:
+
+- Development
+- Testing
 
 ## <i class="fa-regular fa-address-card"></i> Additional Information
 
