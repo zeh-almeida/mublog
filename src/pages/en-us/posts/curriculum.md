@@ -26,7 +26,7 @@ tags: .Net Core,ASP.Net MVC Core,AWS,Agile and Scrum,Analysis,Azure,Azure AD,Azu
 - [Additional Information](#additional-information)
 
 ___
-## [>](#index) <i class="fa-solid fa-bullseye"></i> Objective 
+## [>](#index) <i class="fa-solid fa-bullseye"></i> Objective
 
 Engineering and Architecture of intelligent systems, focused on back-end, micro services, integration and DevOps.
 
@@ -305,7 +305,7 @@ ___
             - Braspag - JSON API
             - PagarMe - JSON API
 
-- Maintenance if the Trackmob Management System.
+- Maintenance for the Trackmob Management System.
     - Existing system used by technicians to schedule appointments and coordinate their teams in their services;
     - Performance improvements to the loading times as well as queries and navigation;
     - Adding information to the service data such as parts used and requested, their price, equipment information, pictures, etc.
@@ -343,7 +343,7 @@ ___
     - The app allowed users to select specific chassis for different vehicle classes;
     - The app had to work in tablets and had to support for intermittent or simply no available networks at any time during execution.
     - Once the user finished the checklist, the data had to be uploaded to a SOAP/XML web-service with the form data as well as the pictures taken.
-    
+
     - My job was to implement techniques for fault-tolerance with the web-server communication process in order not to lose any data as well as to retry if connection was lost.
     - Testing was done even in the building stairwells to ensure similar conditions before testing in the field.
     -The app was written by a third-party no longer involved with the project, with close to no documentation available.

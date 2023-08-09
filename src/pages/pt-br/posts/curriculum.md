@@ -2,8 +2,8 @@
 title: Currículo
 description: Meu currículo atualizado
 date: 2023-07-28
-modified: 2023-07-28
-tags: currículo,sobre,.net,java,javascript,backend,experiência,proficiência,azure,aws,desenvolvimento,programação
+modified: 2023-08-09
+tags: .Net Core,ASP.Net MVC Core,AWS,Análise,Azure,Azure AD,Azure DevOps,Azure Functions,Azure Functions v2,Azure Service Bus,Bootstrap,CSS,Controle de Qualidade,Desenvolvimento,Design,Entrosamento do time,Git,Hybris,JSON,Java,Javascript,Jenkins,Micro-serviços,Node.js,OCR,OpenShift,PostgreSQL,Python,React,Ruby,Ruby on Rails,SOAP,SQL Server,Scrum,Service Bus,Springboot,Suporte,Suporte para desenvolvedores junior,Testes,XML,jQuery,Ágil,Exeriência,Proficiência,Currículo
 ---
 # <i class="fa-solid fa-scroll"></i> Currículo
 
@@ -155,7 +155,7 @@ ___
 - Azure
 - Azure Functions
 - Azure Service Bus
-- Micro-services
+- Micro-serviços
 
 #### <i class="fa-solid fa-person-chalkboard"></i> Atividades principais:
 
@@ -212,9 +212,36 @@ ___
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Engenheiro de Software
 <i class="fa-regular fa-calendar"></i> 2016 - 2017
 
-- Desenvolvimento, Análise e Suporte para aplicações escritas em C#, JavaScript, SQL Server 2012. Ênfase em sistemas Web e Web-services baseados em .Net Core.
+#### <i class="fa-solid fa-diagram-project"></i> Projeto:
 
-- Integração de APIs baseadas em JSON e XML, atualização de versão de C#6 para C#7 e MVC6 para MVC Core.
+- Manutenção e evolução de um sistema de Empréstimo Consignado baseado em ASPX para um banco regional no estado do Paraná.
+    - Sistema escrito de maneira monolítica, muitos controles escritos diretamente em ASPX e outros em Javascript/jQuery.
+
+    - Trabalho principal foi a adição da leitura de contracheques, aplicando OCR nos documentos para extrair o maior número de dados de diferentes formatos, uma vez que isso ajudaria a preencher os formulários de forma muito mais eficiente bem como executar pré-validações em valores e taxas.
+
+    - Sistema foi originalmente escrito em C#6 e MVC6, migrei para C#7 e MVC Core.
+
+    - Sistema de OCR disponível apenas via uma API externa, respondendo em XML com JSON embutido.
+        - Um leitor customizado foi desenvolvido para trabalhar com essa estranha combinação de dialetos.
+        - Todo o serviço de comunicação OCR foi escrito numa arquitetura orientada a eventos dentro da aplicação ASPX, utilizando os serviços e workers.
+
+    - Sistema tinha a necessidade de se comunicar com um sistema bancário legado on-premises com todas as informações e parâmetros de cálculo via SOAP.
+
+#### <i class="fa-solid fa-microchip"></i> Tecnologias principais:
+
+- .Net Core 3.1
+- ASP.Net MVC Core
+- Azure DevOps
+- JSON
+- XML
+- SOAP
+- OCR
+
+#### <i class="fa-solid fa-person-chalkboard"></i> Atividades principais:
+
+- Desenvolvimento
+- Análise
+- Suporte
 
 [> Volta para Experiências](#experiência-profissional)
 
@@ -222,9 +249,38 @@ ___
 ### <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Programador Hybris
 <i class="fa-regular fa-calendar"></i> 2016 - 2016
 
-- Desenvolvimento, Análise e Suporte para aplicações escritas em Java e JavaScript. Ênfase em sistemas Web e Web-services baseados em Hybris, Java, HTML5 e Bootstrap. Reestruturação do Front-End para e-commerce baseados em Hybris.
+#### <i class="fa-solid fa-diagram-project"></i> Projetos:
 
-- Desenvolvimento de um sistema de versionamento baseado em Git utilizado em todos os projetos Hybris.
+- Manutenção de uma loja Hybris e implementação de ferramentas analíticas para um grande player da indústria têxtil brasileira.
+    - Diversas melhorias na estrutura, layout e performance do website, já que as páginas não tinham um layout HTML/CSS layout bem estruturado como Bootstrap. Na verdade, era tudo praticamente em livre formato.
+
+    - Implementação de ferramentas analíticas como Chaordic na página bem como ajustes das configurações no back-end.
+
+- Reconstrução das páginas the um grande vendedor de pneus.
+    - Várias divisões da empresa dividiam o mesmo layout base para os sites das lojas porém esse layout não levava em conta qualquer tipo de responsividade ou acessibilidades para os usuários.
+
+    - Toda a estrutura das páginas foi migrada para Bootstrap CSS para aproveitar ao máximo as ferramentas da biblioteca, como responsividade e componentes pré-existentes.
+
+- Implementação do git como sistema de versionamento nos projetos baseados em Hybris.
+    - Projetos ainda utilizavam o já ultrapassado sistema de SVN como versionador.
+
+    - Utilizadas as recomendações básicas do Git para estabelecer uma cultura de controle de versionamento, mensagens de commit e Pull Requests.
+
+#### <i class="fa-solid fa-microchip"></i> Tecnologias principais:
+
+- Java
+- Hybris
+- Javascript
+- jQuery
+- CSS
+- Bootstrap
+- Git
+
+#### <i class="fa-solid fa-person-chalkboard"></i> Atividades principais:
+
+- Desenvolvimento
+- Análise
+- Suporte
 
 [> Volta para Experiências](#experiência-profissional)
 
@@ -232,9 +288,45 @@ ___
 ### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Engenheiro de Software
 <i class="fa-regular fa-calendar"></i> 2015 - 2016
 
-- Desenvolvimento, Análise e Suporte para aplicações escritas em Ruby on Rails, JavaScript, Android. Ênfase em sistemas Web e Web-services baseados em Ruby on Rails and JSON, HTML5 e Bootstrap. Integração de pagamentos via EDI (Crédito, débito e boletos) ou online (gateways como Braspag, PagarMe). 
+- Análise e Desenvolvimento de um sistema CRM para ONGs
+    - Escrito em Ruby on Rails numa arquitetura monolítica por se tratar de um MVP.
+    - Desenhado de forma a ser multi-cliente, como um SaaS.
+    - Usado para manutenção de informações de leads e doadores de qualquer ONG.
+    - Sistema deveria gerar arquivos para os bancos executarem a cobrança das doações.
+        - Alguns dos Bancos e formatos implementados:
+            - Itaú, CNAB240
+            - Santander, Febraban150, CNAB400
+            - HSBC, Febraban150
+            - Cielo - Formato proprietário
+            - Braspag - JSON API
+            - PagarMe - JSON API
 
-- Desenvolvimento dos modelos de atendimento do Service Desk para a empresa e todos seus projetos.
+- Manutenção do sistema de Gerenciamento Trackmob.
+    - Sistema já existente para empresas de manutenção de linha branca marcarem visitas e coordenar suas equipes;
+    - Melhorias na performance de carregamento dos dados, queries e navegação;
+    - Adição de informações de serviço como partes e peças utilizadas, preços, informação de equipamentos, fotos, etc.
+    - Maintenance of the API used to communicate with the Android app using JSON.
+
+- Desenvolvimento de guidelines de Service Desk para a empresa e seus projetos.
+    - Utilização do sistema ZenDesk como base;
+    - Criação de respostas automáticas, classificação e ordenação dos clientes, suas questões e respostas;
+
+#### <i class="fa-solid fa-microchip"></i> Tecnologias principais:
+
+- Ruby
+- Ruby on Rails
+- Javascript
+- CSS
+- Bootstrap
+- Git
+- PostgreSQL
+
+#### <i class="fa-solid fa-person-chalkboard"></i> Atividades principais:
+
+- Desenvolvimento
+- Análise
+- Suporte
+- Controle de Qualidade
 
 [> Volta para Experiências](#experiência-profissional)
 
@@ -242,7 +334,26 @@ ___
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programador
 <i class="fa-regular fa-calendar"></i> 2014 - 2016
 
--  Desenvolvimento, Análise e Suporte para aplicações escritas em C#, Android. Ênfase em sistemas Web e Web-services, todos baseados em ASPX.
+- Manutenção de um aplicativo Android e seu web-service para inspeção de veículos feito sob medida para um gestor de pátio de uma grande fábrica na região de Curitiba.
+    - Usuários podem tirar fotos dos veículos em três momentos distintos: quando saem da linha de montagem,quando são entregues a transportadora ou em inspeções regulares dentro do pátio.
+    - A aplicação permite a seleção de diversos chassis e classes de veículos;
+    - A aplicação deve funcionar em tablets e ser capaz de trabalhar com rede indisponível ou intermitente durante sua execução.
+    - Uma vez finalizada a inspeção, os dados eram enviados via SOAP/XML para o web-service junto com as fotos do processo.
+
+    - Implementei técnicas para tolerância de falhas no processo de comunicação entre a aplicação e o web-server para não perder nenhum dado bem como retentativas em casos de falha.
+    - Testes foram executados até dentro da escadaria do prédio para simular as condições antes dos testes em campo.
+    - A aplicação foi escrita originalmente por um terceiro não mais envolvido no projeto, sem nenhuma documentação disponível.
+
+#### <i class="fa-solid fa-microchip"></i> Tecnologias principais:
+
+- .Net Framework 4.5
+- Java
+- SQL Server 2012
+
+#### <i class="fa-solid fa-person-chalkboard"></i> Atividades principais:
+
+- Desenvolvimento
+- Suporte
 
 [> Volta para Experiências](#experiência-profissional)
 
