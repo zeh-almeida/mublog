@@ -2,12 +2,28 @@
 title: Curriculum
 description: My curriculum vitae, up to date
 date: 2023-07-20
-modified: 2023-07-28
+modified: 2023-08-08
 tags: curriculum,about,.net,java,javascript,backend,experience,proficiency,azure,aws,development,programming
 ---
 # <i class="fa-solid fa-scroll"></i> Curriculum
 
 <i class="fa-regular fa-file-pdf fa-xl"></i> [Download in PDF](/assets/files/Curriculum_ENG.pdf)
+
+## Index
+
+- [Objective](#objective)
+- [Formation](#formation)
+- [Languages](#languages)
+- [Professional Experience](#professional-experience)
+    - [2021 - 2023 | Senior Software Engineer, CI&T](#cit-senior-software-engineer)
+    - [2021 - 2021 | Full Stack Senior Developer, Ahoy by Belago Group](#ahoy-by-belago-group-full-stack-senior-developer)
+    - [2020 - 2021 | Full Stack Senior Developer, TIVIT](#tivit-full-stack-senior-developer)
+    - [2017 - 2020 | Systems Analyst, ExxonMobil Global Business Center](#exxonmobil-global-business-center-systems-analyst)
+    - [2016 - 2017 | Software Engineer, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-software-engineer)
+    - [2016 - 2016 | Hybris Programmer, FH Consultoria](#fh-consultoria-hybris-programmer)
+    - [2015 - 2016 | Software Engineer, Trackmob](#trackmob-software-engineer)
+    - [2014 - 2015 | Programmer, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-programmer)
+- [Additional Information](#additional-information)
 
 ## <i class="fa-solid fa-bullseye"></i> Objective
 
@@ -175,9 +191,36 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2016 - 2017
 
-- Development, Analysis and Support for C#, JavaScript, SQL Server 2012. Emphasis on Web systems and Web-services based on .Net Core.
+#### <i class="fa-solid fa-diagram-project"></i> Project:
 
-- API Integration based on JSON and XML, Version updates from C#6 to C#7 and MVC6 to MVC Core.
+- Maintenance and evolution of a ASPX-based payroll deductible loan system for a regional bank in the Paraná state.
+    - System written in a monolithic approach, with many controls in ASPX and many others in Javascript/jQuery.
+
+    - Main job was to add the capability to scan paychecks, apply OCR to the documents and read as many data as possible from the document, as this would allow a much quicker filling of the loan form as well as some value, availability and rate validations.
+
+    - System was previously written in C#6 and MVC6, I was tasked to move it to C#7 and MVC Core.
+
+    - OCR system was available via an external API, written mostly in XML with embedded JSON.
+        - Custom parser had to be developed for this weird combination of dialects.
+        - Whole OCR service communication written in a event-driven approach inside the ASPX application, using services and workers.
+
+    - System had to communicate with legacy on-premises banking system to fetch customer information as well as calculation parameters using SOAP.
+
+#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+
+- .Net Core 3.1
+- ASP.Net MVC Core
+- Azure DevOps
+- JSON
+- XML
+- SOAP
+- OCR
+
+#### <i class="fa-solid fa-person-chalkboard"></i> Main activities:
+
+- Development
+- Testing
+- Design
 
 ### <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
 <i class="fa-regular fa-calendar"></i> 2016 - 2016
@@ -194,7 +237,7 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 - Development of Service Desk guidelines for the company and all its projects.
 
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
-<i class="fa-regular fa-calendar"></i> 2014 - 2016
+<i class="fa-regular fa-calendar"></i> 2014 - 2015
 
 - Development, Analysis and Support for C#, Android. Emphasis on Web Systems and Web-services, all based in ASPX.
 
@@ -202,3 +245,5 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 
 - <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
 - <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>
+
+___
