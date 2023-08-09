@@ -9,23 +9,49 @@ tags: currículo,sobre,.net,java,javascript,backend,experiência,proficiência,a
 
 <i class="fa-regular fa-file-pdf fa-xl"></i> [Download em PDF](/assets/files/Curriculum_PT.pdf)
 
-## <i class="fa-solid fa-bullseye"></i> Objetivo
+## <i class="fa-solid fa-list-ul"></i> Índice
+
+- [Objetivo](#objetivo)
+- [Formação](#formação)
+- [Línguas](#línguas)
+- [Experiência Profissional](#experiência-profissional)
+    - [2021 - 2023 | Engenheiro de Software Sênior, CI&T](#cit-engenheiro-de-software-sênior)
+    - [2021 - 2021 | Desenvolvedor Sênior Full Stack, Ahoy by Belago Group](#ahoy-by-belago-group-desenvolvedor-sênior-full-stack)
+    - [2020 - 2021 | Desenvolvedor Sênior Full Stack, TIVIT](#tivit-desenvolvedor-sênior-full-stack)
+    - [2017 - 2020 | Analista de Sistemas, ExxonMobil Global Business Center](#exxonmobil-global-business-center-analista-de-sistemas)
+    - [2016 - 2017 | Engenheiro de Software, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-engenheiro-de-software)
+    - [2016 - 2016 | Programador Hybris, FH Consultoria](#fh-consultoria-programador-hybris)
+    - [2015 - 2016 | Engenheiro de Software, Trackmob](#trackmob-engenheiro-de-software)
+    - [2014 - 2015 | Programador, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-programador)
+- [Informações Adicionais](#informações-adicionais)
+
+___
+## [>](#índice) <i class="fa-solid fa-bullseye"></i> Objetivo
 
 Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro services, integrações e DevOps.
 
-## <i class="fa-solid fa-user-graduate"></i> Formação
+## [>](#índice) <i class="fa-solid fa-user-graduate"></i> Formação
 
 - Pós graduado em Engenharia de Software pela PUC-PR, turma de 2018.
 - Graduado como Bacharel em Sistemas de Informação pela PUC-PR, turma de 2014.
 - Certificate of Proficiency in English, Council of Europe level C2, recebido em 2010.
 - Experiência no exterior – Vivi em Sterling, Virginia, USA, por 10 meses. Estudei em Park View High School. (Setembro de 2008 - Julho de 2009).
 
-## <i class="fa-regular fa-comments"></i> Línguas
+## [>](#índice) <i class="fa-regular fa-comments"></i> Línguas
 
 - <span class="fi fi-br"></span> Português - Nativo
 - <span class="fi fi-gb"></span> Inglês – Fluente
 
-## <i class="fa-solid fa-briefcase"></i> Experiência Profissional
+## [>](#índice) <i class="fa-solid fa-briefcase"></i> Experiência Profissional
+
+- [2021 - 2023 | Engenheiro de Software Sênior, CI&T](#cit-engenheiro-de-software-sênior)
+- [2021 - 2021 | Desenvolvedor Sênior Full Stack, Ahoy by Belago Group](#ahoy-by-belago-group-desenvolvedor-sênior-full-stack)
+- [2020 - 2021 | Desenvolvedor Sênior Full Stack, TIVIT](#tivit-desenvolvedor-sênior-full-stack)
+- [2017 - 2020 | Analista de Sistemas, ExxonMobil Global Business Center](#exxonmobil-global-business-center-analista-de-sistemas)
+- [2016 - 2017 | Engenheiro de Software, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-engenheiro-de-software)
+- [2016 - 2016 | Programador Hybris, FH Consultoria](#fh-consultoria-programador-hybris)
+- [2015 - 2016 | Engenheiro de Software, Trackmob](#trackmob-engenheiro-de-software)
+- [2014 - 2015 | Programador, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-programador)
 
 ### <i class="fa-regular fa-building"></i> CI&T <i class="fa-regular fa-circle-dot"></i> Engenheiro de Software Sênior
 <i class="fa-regular fa-calendar"></i> 2021 - 2023
@@ -81,6 +107,9 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 - Análise
 - Suporte para desenvolvedores junior
 
+[> Volta para Experiências](#experiência-profissional)
+
+___
 ### <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Desenvolvedor Sênior Full Stack
 <i class="fa-regular fa-calendar"></i> 2021 - 2021
 
@@ -103,7 +132,10 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 - Desenvolvimento
 - Suporte para desenvolvedores junior
 
-### <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
+[> Volta para Experiências](#experiência-profissional)
+
+___
+### <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Desenvolvedor Sênior Full Stack
 <i class="fa-regular fa-calendar"></i> 2020 - 2021
 
 #### <i class="fa-solid fa-diagram-project"></i> Projeto:
@@ -131,7 +163,10 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 - Análise
 - Suporte
 
-### <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Systems Analyst
+[> Volta para Experiências](#experiência-profissional)
+
+___
+### <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Analista de Sistemas
 <i class="fa-regular fa-calendar"></i> 2017 - 2020
 
 #### <i class="fa-solid fa-diagram-project"></i> Projetos:
@@ -171,33 +206,47 @@ Engenharia e Arquitetura de sistemas inteligentes, focado em back-end, micro ser
 - Design
 - Entrosamento do time
 
-### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Software Engineer
+[> Volta para Experiências](#experiência-profissional)
+
+___
+### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Engenheiro de Software
 <i class="fa-regular fa-calendar"></i> 2016 - 2017
 
 - Desenvolvimento, Análise e Suporte para aplicações escritas em C#, JavaScript, SQL Server 2012. Ênfase em sistemas Web e Web-services baseados em .Net Core.
 
 - Integração de APIs baseadas em JSON e XML, atualização de versão de C#6 para C#7 e MVC6 para MVC Core.
 
-### <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
+[> Volta para Experiências](#experiência-profissional)
+
+___
+### <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Programador Hybris
 <i class="fa-regular fa-calendar"></i> 2016 - 2016
 
 - Desenvolvimento, Análise e Suporte para aplicações escritas em Java e JavaScript. Ênfase em sistemas Web e Web-services baseados em Hybris, Java, HTML5 e Bootstrap. Reestruturação do Front-End para e-commerce baseados em Hybris.
 
 - Desenvolvimento de um sistema de versionamento baseado em Git utilizado em todos os projetos Hybris.
 
-### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
+[> Volta para Experiências](#experiência-profissional)
+
+___
+### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Engenheiro de Software
 <i class="fa-regular fa-calendar"></i> 2015 - 2016
 
 - Desenvolvimento, Análise e Suporte para aplicações escritas em Ruby on Rails, JavaScript, Android. Ênfase em sistemas Web e Web-services baseados em Ruby on Rails and JSON, HTML5 e Bootstrap. Integração de pagamentos via EDI (Crédito, débito e boletos) ou online (gateways como Braspag, PagarMe). 
 
 - Desenvolvimento dos modelos de atendimento do Service Desk para a empresa e todos seus projetos.
 
-### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
+[> Volta para Experiências](#experiência-profissional)
+
+___
+### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programador
 <i class="fa-regular fa-calendar"></i> 2014 - 2016
 
 -  Desenvolvimento, Análise e Suporte para aplicações escritas em C#, Android. Ênfase em sistemas Web e Web-services, todos baseados em ASPX.
 
-## <i class="fa-regular fa-address-card"></i> Informações Adicionais
+[> Volta para Experiências](#experiência-profissional)
+
+## [>](#índice) <i class="fa-regular fa-address-card"></i> Informações Adicionais
 
 - <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
 - <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>

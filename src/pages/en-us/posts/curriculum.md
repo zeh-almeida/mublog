@@ -25,6 +25,7 @@ tags: .Net Core,ASP.Net MVC Core,AWS,Agile and Scrum,Analysis,Azure,Azure AD,Azu
     - [2014 - 2015 | Programmer, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-programmer)
 - [Additional Information](#additional-information)
 
+___
 ## [>](#index) <i class="fa-solid fa-bullseye"></i> Objective 
 
 Engineering and Architecture of intelligent systems, focused on back-end, micro services, integration and DevOps.
