@@ -97,6 +97,7 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 - Analysis
 - Support for junior developers
 
+___
 ### <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
 <i class="fa-regular fa-calendar"></i> 2021 - 2021
 
@@ -117,6 +118,7 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 - Development
 - Support
 
+___
 ### <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
 <i class="fa-regular fa-calendar"></i> 2020 - 2021
 
@@ -148,6 +150,7 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 - Analysis
 - Support
 
+___
 ### <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Systems Analyst
 <i class="fa-regular fa-calendar"></i> 2017 - 2020
 
@@ -188,6 +191,7 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 - Design
 - Team-building
 
+___
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2016 - 2017
 
@@ -222,20 +226,91 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 - Testing
 - Design
 
+___
 ### <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
 <i class="fa-regular fa-calendar"></i> 2016 - 2016
 
-- Development, Analysis and Support, for Java and JavaScript. Emphasis on Web systems and Web-services based on Hybris, Java, HTML5 and Bootstrap. Front-End Restructuring for Hybris-based e-commerce.
+#### <i class="fa-solid fa-diagram-project"></i> Projects:
+
+- Maintenance of the Hybris store and implementation of analytics for a major clothing industry player.
+    - Several improvements to the website structure, layout, styling and overall performance of the pages, as the layout was not using a structured HTML/CSS layout such as Bootstrap. Instead, it was pretty much free form.
+
+    - Implementation of the analytic softwares such as Chaordic and wiring the configurations at the back-end.
+
+- Rebuild of the pages for a major tire sales company.
+    - The company had many different websites, all using the same layout base.
+    - However, the base layout did not account for different form factors, responsiveness or any other quality-of-life.
+
+    - All the website structure was migrated to Bootstrap CSS in order to leverage all the quality-of-life the library provides, as well as the pre-existing components.
 
 - Development of a Git-based versioning system used in all Hybris-based projects.
+    - Projects were still using the then-outdated SVN system for source control.
 
+    - Used the basic guidelines to establish the culture of source control, commit messages and Pull Requests.
+
+#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+
+- Java
+- Hybris
+- Javascript
+- jQuery
+- CSS
+- Bootstrap
+- Git
+
+#### <i class="fa-solid fa-person-chalkboard"></i> Main activities:
+
+- Development
+- Testing
+- Design
+
+___
 ### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2015 - 2016
 
-- Development, Analysis and Support for Ruby on Rails, JavaScript, Android. Emphasis on Web Systems e Web-services based on Ruby on Rails and JSON, HTML5 and Bootstrap. Payment integration via EDI (Credit, debit and tickets) or online (gateways such as Braspag, PagarMe).
+#### <i class="fa-solid fa-diagram-project"></i> Projects:
+
+- Analysis and Development of the NGO CRM system
+    - Written on Ruby on Rails in a monolithic approach, as it was an MVP.
+    - Designed with a multi-client SaaS approach.
+    - Used to manage information about all leads and donors of any NGO.
+    - System must generate the files needed for banks to execute the donation payments.
+        - Banks and formats used, non-exhaustive list:
+            - Itaú, CNAB240
+            - Santander, Febraban150, CNAB400
+            - HSBC, Febraban150
+            - Cielo - Proprietary format
+            - Braspag - JSON API
+            - PagarMe - JSON API
+
+- Maintenance if the Trackmob Management System.
+    - Existing system used by technicians to schedule appointments and coordinate their teams in their services;
+    - Performance improvements to the loading times as well as queries and navigation;
+    - Adding information to the service data such as parts used and requested, their price, equipment information, pictures, etc.
+    - Maintenance of the API used to communicate with the Android app using JSON.
 
 - Development of Service Desk guidelines for the company and all its projects.
+    - Using ZenDesk system as base;
+    - Creating automatic replies, classification and ordering of clients, their threads and responses;
 
+#### <i class="fa-solid fa-microchip"></i> Main technologies: 
+
+- Ruby
+- Ruby on Rails
+- Javascript
+- CSS
+- Bootstrap
+- Git
+
+#### <i class="fa-solid fa-person-chalkboard"></i> Main activities:
+
+- Development
+- Testing
+- Design
+- Quality Assurance
+- 
+
+___
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
 <i class="fa-regular fa-calendar"></i> 2014 - 2015
 
