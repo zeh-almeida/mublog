@@ -25,25 +25,34 @@ tags: .Net Core,ASP.Net MVC Core,AWS,Agile and Scrum,Analysis,Azure,Azure AD,Azu
     - [2014 - 2015 | Programmer, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-programmer)
 - [Additional Information](#additional-information)
 
-## <i class="fa-solid fa-bullseye"></i> Objective
+## [>](#index) <i class="fa-solid fa-bullseye"></i> Objective 
 
 Engineering and Architecture of intelligent systems, focused on back-end, micro services, integration and DevOps.
 
-## <i class="fa-solid fa-user-graduate"></i> Formation
+## [>](#index) <i class="fa-solid fa-user-graduate"></i> Formation
 
 - Post-graduation degree in Software Engineering by PUC-PR, class of 2018.
 - Bachelor degree in Information Systems by PUC-PR, class of 2014.
 - Certificate of Proficiency in English, Council of Europe level C2, finished in 2010.
 - Experience abroad – Lived in Sterling, Virginia, USA, for 10 months. Studied at Park View High School. (September of 2008 - July of 2009).
 
-## <i class="fa-regular fa-comments"></i> Languages
+## [>](#index) <i class="fa-regular fa-comments"></i> Languages
 
 - <span class="fi fi-br"></span> Portuguese - Native
 - <span class="fi fi-gb"></span> English – Fluent
 
-## <i class="fa-solid fa-briefcase"></i> Professional Experience
+## [>](#index) <i class="fa-solid fa-briefcase"></i> Professional Experience
 
-### <i class="fa-regular fa-building"></i> CI&T <i class="fa-regular fa-circle-dot"></i> Senior Software Engineer
+- [2021 - 2023 | Senior Software Engineer, CI&T](#cit-senior-software-engineer)
+- [2021 - 2021 | Full Stack Senior Developer, Ahoy by Belago Group](#ahoy-by-belago-group-full-stack-senior-developer)
+- [2020 - 2021 | Full Stack Senior Developer, TIVIT](#tivit-full-stack-senior-developer)
+- [2017 - 2020 | Systems Analyst, ExxonMobil Global Business Center](#exxonmobil-global-business-center-systems-analyst)
+- [2016 - 2017 | Software Engineer, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-software-engineer)
+- [2016 - 2016 | Hybris Programmer, FH Consultoria](#fh-consultoria-hybris-programmer)
+- [2015 - 2016 | Software Engineer, Trackmob](#trackmob-software-engineer)
+- [2014 - 2015 | Programmer, Regazzo Soluções em Tecnologia](#regazzo-soluções-em-tecnologia-programmer)
+
+### [>](#professional-experience) <i class="fa-regular fa-building"></i> CI&T <i class="fa-regular fa-circle-dot"></i> Senior Software Engineer
 <i class="fa-regular fa-calendar"></i> 2021 - 2023
 
 #### <i class="fa-solid fa-diagram-project"></i> Projects:
@@ -97,8 +106,10 @@ Engineering and Architecture of intelligent systems, focused on back-end, micro 
 - Analysis
 - Support for junior developers
 
+[> Back to Experiences](#professional-experience)
+
 ___
-### <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
+### [>](#professional-experience) <i class="fa-regular fa-building"></i> Ahoy by Belago Group <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
 <i class="fa-regular fa-calendar"></i> 2021 - 2021
 
 #### <i class="fa-solid fa-diagram-project"></i> Project:
@@ -118,8 +129,10 @@ ___
 - Development
 - Support
 
+[> Back to Experiences](#professional-experience)
+
 ___
-### <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
+### [>](#professional-experience) <i class="fa-regular fa-building"></i> TIVIT <i class="fa-regular fa-circle-dot"></i> Full Stack Senior Developer
 <i class="fa-regular fa-calendar"></i> 2020 - 2021
 
 #### <i class="fa-solid fa-diagram-project"></i> Project:
@@ -150,8 +163,10 @@ ___
 - Analysis
 - Support
 
+[> Back to Experiences](#professional-experience)
+
 ___
-### <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Systems Analyst
+### [>](#professional-experience) <i class="fa-regular fa-building"></i> ExxonMobil Global Business Center <i class="fa-regular fa-circle-dot"></i> Systems Analyst
 <i class="fa-regular fa-calendar"></i> 2017 - 2020
 
 #### <i class="fa-solid fa-diagram-project"></i> Projects:
@@ -191,8 +206,10 @@ ___
 - Design
 - Team-building
 
+[> Back to Experiences](#professional-experience)
+
 ___
-### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Software Engineer
+### [>](#professional-experience) <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2016 - 2017
 
 #### <i class="fa-solid fa-diagram-project"></i> Project:
@@ -226,8 +243,10 @@ ___
 - Testing
 - Design
 
+[> Back to Experiences](#professional-experience)
+
 ___
-### <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
+### [>](#professional-experience) <i class="fa-regular fa-building"></i> FH Consultoria <i class="fa-regular fa-circle-dot"></i> Hybris Programmer
 <i class="fa-regular fa-calendar"></i> 2016 - 2016
 
 #### <i class="fa-solid fa-diagram-project"></i> Projects:
@@ -264,8 +283,10 @@ ___
 - Testing
 - Design
 
+[> Back to Experiences](#professional-experience)
+
 ___
-### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
+### [>](#professional-experience) <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Software Engineer
 <i class="fa-regular fa-calendar"></i> 2015 - 2016
 
 #### <i class="fa-solid fa-diagram-project"></i> Projects:
@@ -310,8 +331,10 @@ ___
 - Design
 - Quality Assurance
 
+[> Back to Experiences](#professional-experience)
+
 ___
-### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
+### [>](#professional-experience) <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
 <i class="fa-regular fa-calendar"></i> 2014 - 2015
 
 - Maintenance of a Android app and it's web-service for vehicle inspection tailor-made for a vehicle factory park maintainer in a major factory in the Curitiba area.
@@ -335,7 +358,9 @@ ___
 - Development
 - Testing
 
-## <i class="fa-regular fa-address-card"></i> Additional Information
+[> Back to Experiences](#professional-experience)
+
+## [>](#index) <i class="fa-regular fa-address-card"></i> Additional Information
 
 - <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
 - <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>
