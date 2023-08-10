@@ -3,7 +3,7 @@ title: Curriculum
 description: My curriculum vitae, up to date
 date: 2023-07-20
 modified: 2023-08-09
-tags: .Net Core,ASP.Net MVC Core,AWS,Agile and Scrum,Analysis,Azure,Azure AD,Azure DevOps,Azure Functions,Azure Functions v2,Azure Service Bus,Bootstrap,CSS,Design,Development,Git,Hybris,JSON,Java,Javascript,Jenkins,Micro-services,Node.js,OCR,OpenShift,PostgreSQL,Python,Quality Assurance,React,Ruby,Ruby on Rails,SOAP,SQL Server,Service Bus,Springboot,Support,Support for junior developers,Team-building,Testing,XML,jQuery,curriculum,about,backend,experience,proficiency
+tags: .Net Core,ASP.Net MVC Core,AWS,agile,scrum,Analysis,Azure,Azure AD,Azure DevOps,Azure Functions,Azure Functions v2,Azure Service Bus,Bootstrap,CSS,Design,Development,Git,Hybris,JSON,Java,Javascript,Jenkins,Micro-services,Node.js,OCR,OpenShift,PostgreSQL,Python,Quality Assurance,React,Ruby,Ruby on Rails,SOAP,SQL Server,Service Bus,Springboot,Support,junior,Team-building,Testing,XML,jQuery,curriculum,about,backend,experience,proficiency
 ---
 # <i class="fa-solid fa-scroll"></i> Curriculum
 
