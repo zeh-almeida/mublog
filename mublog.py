@@ -527,7 +527,9 @@ class ArticlesPage(Page):
         article_listing = ["<article>"]
         article_listing.append("<ul class=\"articles\">")
 
-        for post in self.posts:
+        article_posts = sorted(self.posts, key=lambda p: p.date, reverse=True)
+
+        for post in article_posts:
             article_listing.append(f'<li id=\"{post.file_name}\">')
             article_listing.append(f'<b>[{post.date}]</b> ')
             article_listing.append(f'<a href=\"/{post.remote_path}\" title=\"{post.title}\">{post.title}</a>')
