@@ -231,6 +231,7 @@ class Helper:
             "assets_dir": Helper.strip_top_directory_in_path(paths.dst_assets_dir_path),
         }
 
+
 class Page:
 
     def __init__(self, config: BlogConfig, paths: PathConfig, current_lang: str, src_page_path: str, template: str="page.html.template"):
@@ -245,7 +246,7 @@ class Page:
         self.description = ""
         self.date = ""
         self.modified = ""
-        self.tags = []
+        self.tags: list[str] = []
 
         self.src_path = src_page_path
         self.dst_path = Helper.post_src_to_dst_path(src_page_path, os.path.join(self.paths.dst_dir_path, self.current_lang), ".html")
@@ -490,14 +491,17 @@ class TagsPage(Page):
         """
         unique_tags = list(set(tag for post in self.posts for tag in post.tags))
         tag_counts = {tag: sum(tag in post.tags for post in self.posts) for tag in unique_tags}
-        sorted_tags = sorted(unique_tags, key=lambda tag: tag_counts[tag], reverse=True)
+        sorted_tags = sorted(unique_tags, key=lambda tag: (tag_counts[tag], tag.casefold()))
 
         tags = ["<div class=\"tags\">"]
+        
         for tag in sorted_tags:
             tag_count = tag_counts[tag]
             tag_param = urllib.parse.urlencode({"tag": tag})
-            tags.append(f'<div class="tag-bubble" onclick="location.href=\'articles.html?{tag_param}\'">'
-                     f"{tag}<span>{tag_count}</span></div>")
+
+            tags.append(f'<a class="tag-bubble" href="articles.html?{tag_param}">'
+                     f"{tag}<span>{tag_count}</span></a>")
+            
         tags.append("</div>")
         return "".join(tags)
 

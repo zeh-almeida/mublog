@@ -2,8 +2,8 @@
 title: Currículo
 description: Meu currículo atualizado
 date: 2023-07-28
-modified: 2023-08-09
-tags: .Net Core,ASP.Net MVC Core,AWS,Análise,Azure,Azure AD,Azure DevOps,Azure Functions,Azure Functions v2,Azure Service Bus,Bootstrap,CSS,Controle de Qualidade,Desenvolvimento,Design,Entrosamento do time,Git,Hybris,JSON,Java,Javascript,Jenkins,Micro-serviços,Node.js,OCR,OpenShift,PostgreSQL,Python,React,Ruby,Ruby on Rails,SOAP,SQL Server,Scrum,Service Bus,Springboot,Suporte,Suporte para desenvolvedores junior,Testes,XML,jQuery,Ágil,Exeriência,Proficiência,Currículo
+modified: 2023-08-10
+tags: .Net Core,ASP.Net MVC Core,AWS,Análise,Azure,Azure AD,Azure DevOps,Azure Functions,Azure Functions v2,Azure Service Bus,Bootstrap,CSS,Controle de Qualidade,Desenvolvimento,Design,Entrosamento do time,Git,Hybris,JSON,Java,Javascript,Jenkins,Micro-serviços,Node.js,OCR,OpenShift,PostgreSQL,Python,React,Ruby,Ruby on Rails,SOAP,SQL Server,Scrum,Service Bus,Springboot,Suporte,Suporte para desenvolvedores junior,Testes,XML,jQuery,Agilidade,Experiência,Proficiência,Currículo
 ---
 # <i class="fa-solid fa-scroll"></i> Currículo
 

@@ -414,3 +414,8 @@ code {
   color: white;
   background-color: rgba(220, 224, 228, 0.6);
 }
+
+a.tag-bubble {
+  font-style: normal;
+  text-decoration: none;
+}
