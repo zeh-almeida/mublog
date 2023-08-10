@@ -9,11 +9,11 @@ tags: home,index,english
 
 My name is **José Ricardo Carvalho Prado de Almeida** and I use this blog to showcase myself to the world.
 
-Really, I have included my [resume](posts/curriculum.html) and [my introduction](about.html), hope this makes my life easier!
+Really, I have included my [resume](posts/curriculum.html "Complete and updated Curriculum") and [my introduction](about.html "Just who is this crazy person?"), hope this makes my life easier!
 
 Sometimes I may ramble here. This may include rants, curiosities or even explanations of my personal projects.
 
-This blog is powered by [μblog](https://github.com/766F6964/mublog), please show some love!
+This blog is powered by [μblog](https://github.com/766F6964/mublog "External project used in the development of this blog"), please show some love!
 
 ## <i class="fa-regular fa-address-card"></i> Personal Links
 

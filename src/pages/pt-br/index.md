@@ -9,11 +9,11 @@ tags: home,index,português
 
 Meu nome é **José Ricardo Carvalho Prado de Almeida** e eu uso esse blog para me apresentar ao mundo.
 
-Sério, até incluí minha [apresentação](about.html) e meu [currículo](posts/curriculum.html), espero que isso facilite minha vida!
+Sério, até incluí minha [apresentação](about.html "Quem é esse doido?") e meu [currículo](posts/curriculum.html "Currículo completo e atualizado"), espero que isso facilite minha vida!
 
 As vezes eu também escrevo sobre reclamações, curiosidades e até explico meus projetos pessoais.
 
-Esse blog usa o projeto [μblog](https://github.com/766F6964/mublog), por favor contribuam!
+Esse blog usa o projeto [μblog](https://github.com/766F6964/mublog "Projeto externo utilizado na criação deste blog"), por favor contribuam!
 
 ## <i class="fa-regular fa-address-card"></i> Links Pessoais
 
