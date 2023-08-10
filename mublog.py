@@ -335,7 +335,7 @@ class Page:
         :param md_data: The full content of the markdown post file
         :return: True if the title field is valid, False otherwise
         """
-        matched = re.match(r'^title:\s*(\S+)', md_data)
+        matched = re.match(r'^title:\s*(.*?)\s*$', md_data)
 
         if not matched:
             logger.error(
@@ -351,7 +351,7 @@ class Page:
         :param md_data: The full content of the markdown post file
         :return: True if the description field is valid, False otherwise
         """
-        matched = re.match(r'^description:\s*(\S+)', md_data)
+        matched = re.match(r'^description:\s*(.*?)\s*$', md_data)
 
         if not matched:
             logger.error(
@@ -402,7 +402,7 @@ class Page:
         :param md_data: The full content of the markdown post file
         :return: True if the tags field is valid, False otherwise
         """
-        matched = re.match(r'^tags:\s*(\S+)', md_data)
+        matched = re.match(r'^tags:\s*(.*?)\s*$', md_data)
 
         if not matched:
             logger.error(
