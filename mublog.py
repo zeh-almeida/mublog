@@ -10,8 +10,7 @@ import re
 import html
 import urllib.parse
 import uuid
-import sys
-from datetime import datetime, date
+from datetime import datetime
 from string import Template
 from urllib.parse import urljoin
 
@@ -327,6 +326,7 @@ class Page:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the starting marker \"---\" is missing or incorrect.")
             return False
+        
         return True
 
     def validate_title_field(self, md_data: str) -> bool:
@@ -335,11 +335,14 @@ class Page:
         :param md_data: The full content of the markdown post file
         :return: True if the title field is valid, False otherwise
         """
-        if not re.match(r'^title:\s*(\S+)', md_data):
+        matched = re.match(r'^title:\s*(\S+)', md_data)
+
+        if not matched:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the title field is missing, empty, or incorrect.")
             return False
-        self.title = re.search(r'^title:\s*(.*?)\s*$', md_data).group(1)
+        
+        self.title = matched.group(1)
         return True
 
     def validate_description_field(self, md_data: str) -> bool:
@@ -348,11 +351,14 @@ class Page:
         :param md_data: The full content of the markdown post file
         :return: True if the description field is valid, False otherwise
         """
-        if not re.match(r'^description:\s*(\S+)', md_data):
+        matched = re.match(r'^description:\s*(\S+)', md_data)
+
+        if not matched:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the description field is missing, empty, or incorrect.")
             return False
-        self.description = re.search(r'^description:\s*(.*?)\s*$', md_data).group(1)
+        
+        self.description = matched.group(1)
         return True
 
     def validate_date_field(self, md_data: str) -> bool:
@@ -362,11 +368,14 @@ class Page:
         :param md_data: The full content of the markdown post file
         :return: True if the date field is valid, False otherwise
         """
-        if not re.match(r'^date:\s*([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$)', md_data):
+        matched = re.match(r'^date:\s*([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$)', md_data)
+
+        if not matched:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the date field is missing, empty, or incorrect.")
             return False
-        self.date = re.search(r'([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$)', md_data).group(1)
+        
+        self.date = matched.group(1)
         return True
 
     def validate_modified_field(self, md_data: str) -> bool:
@@ -376,11 +385,14 @@ class Page:
         :param md_data: The full content of the markdown post file
         :return: True if the date field is valid, False otherwise
         """
-        if not re.match(r'^modified:\s*([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$)', md_data):
+        matched = re.match(r'^modified:\s*([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$)', md_data)
+
+        if not matched:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the modified field is missing, empty, or incorrect.")
             return False
-        self.modified = re.search(r'([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$)', md_data).group(1)
+        
+        self.modified = matched.group(1)
         return True
 
     def validate_tags_field(self, md_data: str) -> bool:
@@ -390,12 +402,14 @@ class Page:
         :param md_data: The full content of the markdown post file
         :return: True if the tags field is valid, False otherwise
         """
-        if not re.match(r'^tags:\s*(\S+)', md_data):
+        matched = re.match(r'^tags:\s*(\S+)', md_data)
+
+        if not matched:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the tags field is missing, empty, or incorrect.")
             return False
-        tag_values = re.search(r'^tags:\s*(.*?)\s*$', md_data).group(1)
-        self.tags = [tag for tag in re.findall(r'[^,\s][^,]*[^,\s]|[^,\s]', tag_values)]
+        
+        self.tags = [tag for tag in re.findall(r'[^,\s][^,]*[^,\s]|[^,\s]', matched.group(1))]
         return True
 
     def validate_end_marker(self, md_data: str) -> bool:
@@ -408,6 +422,7 @@ class Page:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the end marker \"---\" is missing or incorrect.")
             return False
+        
         return True
 
     def validate_header(self) -> bool:
@@ -420,12 +435,13 @@ class Page:
             md_data = f.readlines()
 
         # Validate all fields in the header
-        if not self.validate_starting_marker(md_data[0]) or not self.validate_title_field(md_data[1]) or \
-                not self.validate_description_field(md_data[2]) or not self.validate_date_field(md_data[3]) or \
-                not self.validate_modified_field(md_data[4]) or not self.validate_tags_field(md_data[5]) or \
-                not self.validate_end_marker(md_data[6]):
-            return False
-        return True
+        return self.validate_starting_marker(md_data[0]) and \
+                self.validate_title_field(md_data[1]) and \
+                self.validate_description_field(md_data[2]) and \
+                self.validate_date_field(md_data[3]) and \
+                self.validate_modified_field(md_data[4]) and \
+                self.validate_tags_field(md_data[5]) and \
+                self.validate_end_marker(md_data[6])
 
     def raise_when_invalid(self) -> None:
         if not self.validate_header():
