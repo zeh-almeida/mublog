@@ -409,7 +409,7 @@ class Page:
                 f"Failed to validate header of {self.src_path} - the tags field is missing, empty, or incorrect.")
             return False
         
-        self.tags = [tag for tag in re.findall(r'[^,\s][^,]*[^,\s]|[^,\s]', matched.group(1))]
+        self.tags = sorted((tag for tag in re.findall(r'[^,\s][^,]*[^,\s]|[^,\s]', matched.group(1))), key=lambda tag: tag.casefold())
         return True
 
     def validate_end_marker(self, md_data: str) -> bool:
