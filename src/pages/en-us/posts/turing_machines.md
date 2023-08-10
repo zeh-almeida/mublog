@@ -2,7 +2,7 @@
 title: Turing Machines
 description: The most basic definition of a computer
 date: 2023-08-01
-modified: 2023-08-05
+modified: 2023-08-10
 tags: turing,machine,computer,definition,instruction,algorithm,tape,head,alphabet,general,purpose
 ---
 # <i class="fa-solid fa-computer"></i> Turing Machines - The Most Basic Definition of a Computer
@@ -62,7 +62,7 @@ Such instructions may include conditions and even interact with other `Algorithm
 
 If you use `Facebook`, `TikTok`, `YouTube` or any other social media, you are probably aware of the existence of the `Recommendation Algorithms`. Those are proprietary sets of `algorithms` and can be considered part of the brain of those applications
 
-I think the International Institute in Geneva has a better explanation I could ever give about `algorithms` [here](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding).
+I think the [International Institute in Geneva has a better explanation I could ever give about `algorithms`](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding).
 
 ### <i class="fa-solid fa-server"></i> General-purpose Computing
 
@@ -90,7 +90,7 @@ The `Turing Machine` is comprised of a few, shall we say, parts: the `Head`, the
 
 In order for the machine to work, an `Alphabet` must be defined in which the machine takes an action based on a specific symbol.
 
-This is analogous to what we call [`computer instructions`](https://pclt.sites.yale.edu/cpu-instructions) today.
+This is [analogous to what we call `computer instructions` today](https://pclt.sites.yale.edu/cpu-instructions).
 
 #### <i class="fa-solid fa-tape"></i> The Tape
 
@@ -104,7 +104,7 @@ In this abstract machine, it is a `infinite tape` divided into cells, all of the
 
 Once the `Head` enters a cell, it scans its content and based on the `Alphabet` definition it will move itself to another cell or write another symbol in the current cell.
 
-This is analogous to how modern-day [CPUs work](https://en.wikipedia.org/wiki/Instruction_cycle).
+This is [analogous to how modern-day CPUs work](https://en.wikipedia.org/wiki/Instruction_cycle).
 
 ## <i class="fa-regular fa-star"></i> Ok but why should I care?
 
@@ -150,7 +150,7 @@ I mentioned this before, I am not a computer scientist. I am just a very crazy p
 
 This is all to say that I will do my best in explaining this as if you were 5 years-old. Next year you'll be six so it may be easier to understand later.
 
-I will use the [MOS 6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) architecture as an example because it is a (relatively) very simple and straight-forward architecture.
+I will use the [MOS 6502 architecture](https://en.wikipedia.org/wiki/MOS_Technology_6502) as an example because it is a (relatively) very simple and straight-forward architecture.
 
 ### <i class="fa-solid fa-palette"></i> Everything is Either Black or White
 

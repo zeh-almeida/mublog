@@ -2,7 +2,7 @@
 title: Máquinas de Turing
 description: A definição mais básica de um computador
 date: 2023-08-03
-modified: 2023-08-03
+modified: 2023-08-10
 tags: turing,máquina,computador,definição,instrução,algoritmo,fita,cabeça,alfabeto,genérico,propósito
 ---
 # <i class="fa-solid fa-computador"></i> Máquinas de Turing - A Definição Mais Básica de um Computador
@@ -62,7 +62,7 @@ Essas instruções podem conter condições e até interagir com outros `Algorit
 
 Se você usa `Facebook`, `TikTok`, `YouTube` ou qualquer outra mídia social, você provavelmente já conhece a existência dos `Algoritmos de Recomendação`. Esses são `algoritmos` proprietários que podem ser considerados parte do cérebro dessas aplicações.
 
-Eu acho que o Instituto Internacional de Geneva tem uma explicação muito melhor que a minha sobre `algoritmos` [aqui](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding) (texto em inglês).
+Eu acho que o [Instituto Internacional de Geneva tem uma explicação muito melhor que a minha sobre `algoritmos`](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding) (texto em inglês).
 
 ### <i class="fa-solid fa-server"></i> Computador de Propósito Genérico
 
@@ -90,7 +90,7 @@ A `Máquina de Turing` é feita de algumas, digamos, partes: a `Cabeça`, a `Fit
 
 Para que a máquina funcione, um `Alfabeto` precisa ser definido, assim a máquina pode executar suas ações a partir do significado desses símbolos.
 
-Isso é análogo ao que chamados de [`instruções de máquina`](https://pclt.sites.yale.edu/cpu-instructions) hoje.
+Isso é [análogo ao que chamados de `instruções de máquina` hoje](https://pclt.sites.yale.edu/cpu-instructions).
 
 #### <i class="fa-solid fa-tape"></i> A Fita
 
@@ -104,7 +104,7 @@ Nessa máquina abstrata, essa `fita infinita` é dividida em células, todas do 
 
 Uma vez que a `cabeça` entra numa célula, ela escaneia o conteúdo e a partir da definição do `Alfabeto`, se move para outra célula ou escreve um novo símbolo na célula atual.
 
-isso é análogo ao modo como as [CPUs modernas trabalham](https://en.wikipedia.org/wiki/Instruction_cycle).
+Isso é análogo ao [modo como as CPUs modernas trabalham](https://en.wikipedia.org/wiki/Instruction_cycle).
 
 ## <i class="fa-regular fa-star"></i> Mas Por Que Devo me Importar?
 
@@ -150,7 +150,7 @@ Como mencionei anteriormente, eu não sou um cientista da computação. Eu sou s
 
 Tudo isso é pra dizer que vou tentar fazer a melhor explicação do assunto como se você tivesse 5 anos. Ano que vem você terá 6 e com certeza será ainda mais fácil de entender.
 
-Eu vou usar a arquitetura [MOS 6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) como exemplo porque é (relativamente) simples e direta.
+Eu vou usar a [arquitetura MOS 6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) como exemplo porque é (relativamente) simples e direta.
 
 ### <i class="fa-solid fa-palette"></i> É Tudo Preto ou Branco
 

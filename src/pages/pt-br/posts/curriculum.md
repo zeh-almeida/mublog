@@ -7,7 +7,7 @@ tags: .Net Core,ASP.Net MVC Core,AWS,Análise,Azure,Azure AD,Azure DevOps,Azure 
 ---
 # <i class="fa-solid fa-scroll"></i> Currículo
 
-<i class="fa-regular fa-file-pdf fa-xl"></i> [Download em PDF](/assets/files/Curriculum_PT.pdf)
+<i class="fa-regular fa-file-pdf fa-xl"></i> [Download em PDF](/assets/files/Curriculum_PT.pdf "Currículo no formato PDF")
 
 ## <i class="fa-solid fa-list-ul"></i> Índice
 

@@ -7,7 +7,7 @@ tags: .Net Core,ASP.Net MVC Core,AWS,Agile and Scrum,Analysis,Azure,Azure AD,Azu
 ---
 # <i class="fa-solid fa-scroll"></i> Curriculum
 
-<i class="fa-regular fa-file-pdf fa-xl"></i> [Download in PDF](/assets/files/Curriculum_ENG.pdf)
+<i class="fa-regular fa-file-pdf fa-xl"></i> [Download in PDF](/assets/files/Curriculum_ENG.pdf "Curriculum in PDF Format")
 
 ## <i class="fa-solid fa-list-ul"></i> Index
 
