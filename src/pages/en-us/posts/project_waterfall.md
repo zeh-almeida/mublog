@@ -16,10 +16,12 @@ tags: project,management,agile,waterfall,requirement,business rule,analysis,prob
 
 - [First Things First: What is a Project Lifecycle?](#first-things-first-what-is-a-project-lifecycle)
 - [Navigating Through the Waterfall](#navigating-through-the-waterfall)
-    - [Having the Boat In the Water](#having-the-boat-in-the-water)
-        - [Make Sure the Water is Deep Enough](#make-sure-the-water-is-deep-enough)
-    - [All the Fools Sailed Away](#all-the-fools-sailed-away)
-        - [Rule of Thumb](#rule-of-thumb)
+- [Having the Boat In the Water](#having-the-boat-in-the-water)
+    - [Make Sure the Water is Deep Enough](#make-sure-the-water-is-deep-enough)
+- [All the Fools Sailed Away](#all-the-fools-sailed-away)
+    - [Rule of Thumb](#rule-of-thumb)
+- [Navigate the Sea Charts](#navigate-the-sea-charts)
+    - [Uncharted Territory](#uncharted-territory)
 - [Still Under Construction](#still-under-construction)
 
 ___
@@ -45,9 +47,9 @@ It is called a `Waterfall` because it starts from the top and goes to the bottom
 
 Of course, the results of the current phase should be validated and accepted by the team before going to the next phase.
 
-### <i class="fa-solid fa-sailboat"></i> Having the Boat In the Water
+## [>](#index) <i class="fa-solid fa-sailboat"></i> Having the Boat In the Water
 
-In order to reach the `Waterfall`, one must first procure a boat.
+> In order to reach the `Waterfall`, one must first procure a boat.
 
 Everything starts with the `problem statement`:
  - What needs to be done
@@ -61,7 +63,7 @@ There is no limit for the number of `requirements`. Of course, the longer the li
 
 > While this is very opinionated, I believe the success of the project lies in having a small but carefully selected `requirements`, separated in distinct phases.
 
-#### <i class="fa-solid fa-water-ladder"></i> Make Sure the Water is Deep Enough
+### <i class="fa-solid fa-water-ladder"></i> Make Sure the Water is Deep Enough
 
 The `requirement gathering stage` **must** result in a single yet very detailed artifact: The [`Requirement Document`](https://en.wikipedia.org/wiki/Product_requirements_document).
 
@@ -75,9 +77,9 @@ Let's say you have a very simple `requirement` of having a wall built. The `stat
 
  In this `statement` there is nothing like the dimension of the wall, the materials to use, whatever. The `statement` is very simple: it `tells in simple text what the problem is and what is expected to be done`.
 
-### <i class="fa-solid fa-wind"></i> [All the Fools Sailed Away](https://open.spotify.com/track/0SYF0IKXsDZI0XR7TM2Kxr?si=f571b8fc704a4fe0 "Ronnie James Dio, The Man on the Silver Mountain")
+## [>](#index) <i class="fa-solid fa-wind"></i> [All the Fools Sailed Away](https://open.spotify.com/track/0SYF0IKXsDZI0XR7TM2Kxr?si=f571b8fc704a4fe0 "Ronnie James Dio, The Man on the Silver Mountain")
 
-Now that ou have your boat on the water, where are you going?
+> Now that ou have your boat on the water, where are you going?
 
 Using your `problem statement`, you have your `whats` and `whys` so you have to figure out the `hows`.
 
@@ -98,7 +100,7 @@ Once each and every `requirement` is analyzed thoroughly, they must be extensive
 
 No matter how many `requirements` are correct: if only one of them could not be successfully analyzed and/or documented, please stop the project - it is doomed to fail.
 
-#### <i class="fa-solid fa-thumbs-up"></i> Rule of Thumb
+### <i class="fa-solid fa-thumbs-up"></i> Rule of Thumb
 
 The result of having gone through all the `requirements` and making sure they are valid is a more technical approach to the `how` of the `problem statement`.
 
@@ -116,6 +118,30 @@ Going back to the [wall example](#make-sure-the-water-is-deep-enough), we can de
 Ok, this gives a much clearer idea of `how` that `requirement` will be fulfilled, though my example is clearly not a real one, it is just used to illustrate the situation.
 
 Now that we have both the `list of requirements we must achieve` and `how each and every requirement should be implemented` we can finally move ahead.
+
+## [>](#index) <i class="fa-regular fa-compass"></i> Navigate the Sea Charts
+
+> Alright: we got ourselves a boat on the water with the destination set, great! How do we navigate there?
+
+After the `requirements` became `business rules` we now have our `whats`, `whys` and `hows`, so what is missing?
+
+In simple terms, we need to know in which way our `business rules` will interact with each other. We have already established those `rules` are connected but they do not cross over each other, so we must find a way to make them live together,
+
+That's when the `design phase` comes in. Sure, it does look like it arrived late at the party but it really didn't. In order for the `design` to complete it's goals, said goals **MUST** be unequivocally clear and we just only reached that stage with our `business rules`.
+
+Keeping with our `civil engineering theme` in the examples, this phase would be analogous to the `architecture design`: You know the limitations of `walls` and `rooms` so you have to `design` the `project` in such a way as to optimize the usage according to the `business rules`.
+
+### <i class="fa-solid fa-compass-drafting"></i> Uncharted Territory
+
+> It is possible your map does not have a route for the destination you desire.
+
+While organizing the many `business rules` and their connections, it may be impossible to accomodate them all.
+
+Imagine, if you will, that you need your first floor to have a certain amount of rooms and your `business rules` determined that rooms must have a specific size.
+
+What would happen if there is physically no more space to fit all rooms according to the `rules`? Well, it means the `project is bust`.
+
+Realistically, this problem _could_ and really, **should** have been caught during the `analysis` phase but sometimes the complexity and minute details of the `business requirements` take a little longer to creep up.
 
 ## [>](#index) <i class="fa-solid fa-person-digging"></i> Still Under Construction
 
