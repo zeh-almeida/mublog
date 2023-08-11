@@ -51,7 +51,8 @@ Atualmente eu tenho o objetivo pessoal de ajudar outras pessoas a obter êxito e
 
 Caso queria conhecer mais sobre mim, por favor dê uma olhada no meu [currículo](posts/curriculum.html "Currículo completo e atualizado") postado aqui no blog assim como os [links](#links "Links externos sobre mim") que deixo abaixo. Eles vão te levar ao meu perfil profissional do `LinkedIn` bem como ao meu perfil pessoal do `GitHub`, onde eu deixo alguns projetos públicos como esse blog!
 
-## <i class="fa-regular fa-address-card"></i> Links
+## <i class="fa-regular fa-address-card"></i> Links Externos
 
-- <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
-- <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>
+- <i class="fa-brands fa-linkedin"></i> [Perfil Profissional no LinkedIn](https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida)
+- <i class="fa-brands fa-github"></i> [Perfil Pessoal no GitHub](https://github.com/zeh-almeida)
+- <i class="fa-brands fa-telegram"></i> <a href="${author_contact}" title="Perfil no Telegram">Contato via Telegram</a>

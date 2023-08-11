@@ -363,7 +363,8 @@ ___
 
 ## [>](#index) <i class="fa-regular fa-address-card"></i> Additional Information
 
-- <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
-- <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>
+- <i class="fa-brands fa-linkedin"></i> [LinkedIn Professional Profile](https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida)
+- <i class="fa-brands fa-github"></i> [GitHub Personal Profile](https://github.com/zeh-almeida)
+- <i class="fa-brands fa-telegram"></i> <a href="${author_contact}" title="Telegram Profile">Contact me on Telegram</a>
 
 ___

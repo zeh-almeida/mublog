@@ -49,7 +49,8 @@ Currently, I have the personal objective to help other succeed in their developm
 
 If you would like to know more about me, please take a look at my [curriculum](posts/curriculum.html "Complete and updated Curriculum") as well as the [links](#links "External links about me") I've placed here as they will direct you to my `LinkedIn` professional profile as well as my `GitHub` personal profile, where I keep some of my personal projects public such as this blog!
 
-## <i class="fa-regular fa-address-card"></i> Links
+## <i class="fa-regular fa-address-card"></i> External Links
 
-- <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
-- <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>
+- <i class="fa-brands fa-linkedin"></i> [LinkedIn Professional Profile](https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida)
+- <i class="fa-brands fa-github"></i> [GitHub Personal Profile](https://github.com/zeh-almeida)
+- <i class="fa-brands fa-telegram"></i> <a href="${author_contact}" title="Telegram Profile">Contact me on Telegram</a>

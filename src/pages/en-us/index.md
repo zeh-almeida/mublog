@@ -15,7 +15,8 @@ Sometimes I may ramble here. This may include rants, curiosities or even explana
 
 This blog is powered by [μblog](https://github.com/766F6964/mublog "External project used in the development of this blog"), please show some love!
 
-## <i class="fa-regular fa-address-card"></i> Personal Links
+## <i class="fa-regular fa-address-card"></i> External Links
 
-- <i class="fa-brands fa-linkedin"></i> <https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida>
-- <i class="fa-brands fa-github"></i> <https://github.com/zeh-almeida>
+- <i class="fa-brands fa-linkedin"></i> [LinkedIn Professional Profile](https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida)
+- <i class="fa-brands fa-github"></i> [GitHub Personal Profile](https://github.com/zeh-almeida)
+- <i class="fa-brands fa-telegram"></i> <a href="${author_contact}" title="Telegram Profile">Contact me on Telegram</a>

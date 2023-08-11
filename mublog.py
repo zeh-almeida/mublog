@@ -277,6 +277,7 @@ class Page:
         :return: Map of known substitutions to make in templates
         """
         common_subs = Helper.common_substitutions(self.config, self.paths)
+        
         page_subs = {
             "file_name": self.file_name,
             "current_lang": self.current_lang,
