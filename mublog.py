@@ -326,7 +326,7 @@ class Page:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the starting marker \"---\" is missing or incorrect.")
             return False
-        
+
         return True
 
     def validate_title_field(self, md_data: str) -> bool:
@@ -341,7 +341,7 @@ class Page:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the title field is missing, empty, or incorrect.")
             return False
-        
+
         self.title = matched.group(1)
         return True
 
@@ -357,7 +357,7 @@ class Page:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the description field is missing, empty, or incorrect.")
             return False
-        
+
         self.description = matched.group(1)
         return True
 
@@ -374,7 +374,7 @@ class Page:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the date field is missing, empty, or incorrect.")
             return False
-        
+
         self.date = matched.group(1)
         return True
 
@@ -391,7 +391,7 @@ class Page:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the modified field is missing, empty, or incorrect.")
             return False
-        
+
         self.modified = matched.group(1)
         return True
 
@@ -408,7 +408,7 @@ class Page:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the tags field is missing, empty, or incorrect.")
             return False
-        
+
         self.tags = sorted((tag for tag in re.findall(r'[^,\s][^,]*[^,\s]|[^,\s]', matched.group(1))), key=lambda tag: tag.casefold())
         return True
 
@@ -422,7 +422,7 @@ class Page:
             logger.error(
                 f"Failed to validate header of {self.src_path} - the end marker \"---\" is missing or incorrect.")
             return False
-        
+
         return True
 
     def validate_header(self) -> bool:
@@ -462,22 +462,25 @@ class Post(Page):
         Wraps the tags of the post in html divs
         :return: The tags wrapped in html divs
         """
-        tags = []
+        tags: list[str] = []
+
         for tag in self.tags:
             tag_name = urllib.parse.urlencode({"tag": tag})
-            tag_html = f"<div class=\"tag-bubble\" onclick=\"location.href='/articles.html?{tag_name}'\">{tag}</div>"
-            tags.append(tag_html)
-        return "<div class=\"tags\">\n" + "\n".join(tags) + "\n</div>"
+            tags.append(f'<a class="tag-bubble" href="../articles.html?{tag_name}">{tag}</a>')
+
+        return f'<div class="tags">{"".join(tags)}</div>'
 
     def get_tags_as_meta(self) -> str:
         """
         Wraps the tags of the post in header meta tags
         :return: The tags wrapped in header meta tags
         """
-        tags = []
+        tags: list[str] = []
+
         for tag in self.tags:
-            tag_html = f"<meta property=\"og:article:tag\" content=\"{tag}\"/>"
-            tags.append(tag_html)
+            tag_name = urllib.parse.urlencode({"tag": tag})
+            tags.append(f"<meta property=\"og:article:tag\" content=\"{tag_name}\"/>")
+
         return "".join(tags)
 
     def process_content(self) -> tuple[str, dict[str, str]]:
@@ -510,14 +513,14 @@ class TagsPage(Page):
         sorted_tags = sorted(unique_tags, key=lambda tag: (tag_counts[tag], tag.casefold()))
 
         tags = ["<div class=\"tags\">"]
-        
+
         for tag in sorted_tags:
             tag_count = tag_counts[tag]
             tag_param = urllib.parse.urlencode({"tag": tag})
 
             tags.append(f'<a class="tag-bubble" href="articles.html?{tag_param}">'
                      f"{tag}<span>{tag_count}</span></a>")
-            
+
         tags.append("</div>")
         return "".join(tags)
 
@@ -554,6 +557,7 @@ class ArticlesPage(Page):
             article_listing.append(f'<b>[{post.date}]</b> ')
             article_listing.append(f'<a href=\"/{post.remote_path}\" title=\"{post.title}\">{post.title}</a>')
             article_listing.append(f'</li>')
+
         article_listing.append("</ul>")
         article_listing.append("</article>")
 
@@ -586,6 +590,7 @@ class RSSFeed:
         # Load RSS template
         template_path = os.path.join(self.paths.src_templates_dir_path, "feed.xml.template")
         logger.debug(f"Processing {template_path} ...")
+
         with open(template_path, mode="r", encoding="utf-8") as f:
             rss_template = f.read()
 
@@ -643,6 +648,7 @@ class Sitemap:
         # Load Sitemap template
         template_path = os.path.join(self.paths.src_templates_dir_path, "sitemap.xml.template")
         logger.debug(f"Processing {template_path} ...")
+
         with open(template_path, mode="r", encoding="utf-8") as f:
             sitemap_template = f.read()
 
@@ -693,6 +699,7 @@ class Robots:
         # Load Robots template
         template_path = os.path.join(self.paths.src_templates_dir_path, "robots.txt.template")
         logger.debug(f"Processing {template_path} ...")
+
         with open(template_path, mode="r", encoding="utf-8") as f:
             robots_template = f.read()
 
@@ -702,6 +709,7 @@ class Robots:
 
         # Write substituted template to file
         sitemap_path = os.path.join(self.paths.dst_dir_path, "robots.txt")
+
         with open(sitemap_path, mode="w", encoding="utf-8") as f:
             f.write(robots_template)
 
@@ -825,6 +833,7 @@ class Blog:
         """
         try:
             shutil.rmtree(self.paths.dst_dir_path, ignore_errors=True)
+
         except Exception as e:
             logger.error(f"Failed to remove old build directory: {str(e)}")
 
@@ -871,6 +880,7 @@ class Blog:
         Processes all posts, i.e. validates the post header, generates the post html and writes the post to a file
         """
         source_path = os.path.join(self.paths.language_source(self.current_lang), self.paths.post_dir_name)
+
         for file_path in glob.glob(os.path.join(source_path, "*.md")):
             # Skip posts that start with the ignore prefix
             if os.path.basename(file_path).startswith(self.config.post_ignore_prefix):
