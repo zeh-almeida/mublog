@@ -54,6 +54,10 @@
     </span>
 
     <span class="pl-half">
+        <i class="fa-brands fa-telegram fa-xs icon-padding"></i><a href="${author_contact}" title="${label_contact}">${label_contact}</a>
+    </span>
+
+    <span class="pl-half">
         <i class="fa-solid fa-rss fa-xs icon-padding"></i><a href="/${current_lang}_feed.xml" title="${label_rss}">${label_rss}</a>
     </span>
 

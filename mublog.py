@@ -61,6 +61,7 @@ class BlogConfig:
         self.blog_description = ""
         self.blog_author_name = ""
         self.blog_author_mail = ""
+        self.blog_author_contact = ""
         self.post_ignore_prefix = ""
         self.blog_author_copyright = ""
 
@@ -76,6 +77,7 @@ class BlogConfig:
         self.label_tags = ""
         self.label_rss = ""
         self.label_dark_mode = ""
+        self.label_contact = ""
 
         self.blog_version = uuid.uuid4().hex
 
@@ -212,6 +214,8 @@ class Helper:
 
             "author_name": config.blog_author_name,
             "author_mail": config.blog_author_mail,
+            "author_contact": config.blog_author_contact,
+            "label_contact": config.label_contact,
             "author_copyright": config.blog_author_copyright,
 
             "label_about": config.label_about,
@@ -221,6 +225,7 @@ class Helper:
             "label_tags": config.label_tags,
             "label_rss": config.label_rss,
             "label_dark_mode": config.label_dark_mode,
+            "label_contact": config.label_contact,
 
             "languages": Helper.build_language_selector(config),
 
@@ -794,6 +799,7 @@ class Blog:
         self.config.blog_url = section["blog_url"]
         self.config.blog_author_name = section["blog_author_name"]
         self.config.blog_author_mail = section["blog_author_mail"]
+        self.config.blog_author_contact = section["blog_author_contact"]
         self.config.post_ignore_prefix = section["post_ignore_prefix"]
         self.config.blog_author_copyright = section["blog_author_copyright"]
 
@@ -826,6 +832,7 @@ class Blog:
         self.config.label_tags = section["label_tags"]
         self.config.label_rss = section["label_rss"]
         self.config.label_dark_mode = section["label_dark_mode"]
+        self.config.label_contact = section["label_contact"]
 
     def clean_build_directory(self) -> None:
         """

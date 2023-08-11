@@ -36,8 +36,13 @@
     <title>${blog_title}</title>
 </head>
 <nav>
-    <i class="fa-regular fa-envelope fa-xs pl-half"></i>
-    <a href="mailto:${author_mail}" title="${label_mail}" class="pl-half">${label_mail}</a>
+    <span class="pl-half">
+        <i class="fa-regular fa-envelope fa-xs icon-padding"></i><a href="mailto:${author_mail}" title="${label_mail}">${label_mail}</a>
+    </span>
+
+    <span class="pl-half">
+        <i class="fa-brands fa-telegram fa-xs icon-padding"></i><a href="${author_contact}" title="${label_contact}">${label_contact}</a>
+    </span>
 </nav>
 <main>
 <div class="buttons">
