@@ -143,6 +143,7 @@ What would happen if there is physically no more space to fit all rooms accordin
 
 Realistically, this problem _could_ and really, **should** have been caught during the `analysis` phase but sometimes the complexity and minute details of the `business requirements` take a little longer to creep up.
 
+___
 ## [>](#index) <i class="fa-solid fa-person-digging"></i> Still Under Construction
 
 Welp, you've reached this far already? Well, I haven't finished writing the whole article yet.
