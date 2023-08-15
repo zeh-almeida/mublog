@@ -22,6 +22,8 @@ tags: project,management,agile,waterfall,requirement,business rule,analysis,prob
     - [Rule of Thumb](#rule-of-thumb)
 - [Navigate the Sea Charts](#navigate-the-sea-charts)
     - [Uncharted Territory](#uncharted-territory)
+- [Get Your Engine Rollin'](#get-your-engine-rollin)
+    - [Trying to Stay Above the Weather!](#trying-to-stay-above-the-weather)
 - [Still Under Construction](#still-under-construction)
 
 ___
@@ -135,13 +137,48 @@ Keeping with our `civil engineering theme` in the examples, this phase would be 
 
 > It is possible your map does not have a route for the destination you desire.
 
-While organizing the many `business rules` and their connections, it may be impossible to accomodate them all.
+While organizing the many `business rules` and their connections, it may be impossible to accommodate them all.
 
 Imagine, if you will, that you need your first floor to have a certain amount of rooms and your `business rules` determined that rooms must have a specific size.
 
 What would happen if there is physically no more space to fit all rooms according to the `rules`? Well, it means the `project is bust`.
 
 Realistically, this problem _could_ and really, **should** have been caught during the `analysis` phase but sometimes the complexity and minute details of the `business requirements` take a little longer to creep up.
+
+## [>](#index) <i class="fa-solid fa-gauge-high"></i> Get Your Engine Rollin'
+
+> We know how to go, where to go so let's just go, then!
+
+We **finally** got to the part where "things get done". Not that the other steps weren't "doing" anything: they were all **extremely** necessary but they didn't deliver anything that solved the `problem` in the first place. All they did was `prepare the terrain`, so to speak, for the `real solution to the problem`.
+
+Let's list all the things we've gathered so far:
+- `Requirements`: what needs to be done
+- `Business Rules`: how it must be done
+- `Solution Design`: how it should be organized
+
+Things look good, we have a good understanding of the situation we are undertaking. What's left now is to really do it, that's why this phase is called `the Construction` or, in software projects, `the Coding`.
+
+This phase is where things start taking shape: you start `cleaning the terrain`, `making sure it is leveled`, `getting your bricks, sand and concrete` all lined up in the yard, looks amazing.
+
+`Business Rules` are being worked on by the crew `as designed` and `following the rules`, maybe we will keep this trip right on schedule, right?
+
+Right?
+
+### <i class="fa-solid fa-cloud-showers-water"></i> Trying to Stay Above the Weather!
+
+> No matter how detailed your trip plan was: Weather is a force of it's own, no one can control it.
+
+`The Construction` phase is when the `requirements` and `business rules` take shape "in reality". Up until this points they were ideals, things that had real importance but were still ethereal.
+
+Once they reach this phase, however, `the materialization from ethereal to real may not be perfect`.
+
+Sure, your `design` was extremely clear and precise on the measurements but `someone ordered the wrong bricks` and now `things don't line up`.
+
+What you said? Oh, the paint `should have been sound proof`? Well, guess you won't like the sound of what I have to tell you.
+
+Things like this are so much more common than what we would like, I believe everyone has some kind of story about situations like this. Being unpredictable is the flavor of life, I suppose.
+
+Going for the same song and dance, `things like this are unacceptable in Waterfall` and instantly means the project failed.
 
 ___
 ## [>](#index) <i class="fa-solid fa-person-digging"></i> Still Under Construction
