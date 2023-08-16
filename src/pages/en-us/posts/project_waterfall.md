@@ -26,6 +26,8 @@ tags: project,management,agile,waterfall,requirement,business rule,analysis,prob
     - [Trying to Stay Above the Weather!](#trying-to-stay-above-the-weather)
 - [Check Your Engine and Mind the Fuel](#check-your-engine-and-mind-the-fuel)
     - [Well, There's Your Problem!](#well-theres-your-problem)
+- [You Have Arrived! Customs is at Your Left](#you-have-arrived-customs-is-at-your-left)
+    - [You Haven't Declared This Item](#you-havent-declared-this-item)
 - [Still Under Construction](#still-under-construction)
 
 ___
@@ -182,7 +184,7 @@ Things like this are so much more common than what we would like, I believe ever
 
 Going for the same song and dance, `things like this are unacceptable in Waterfall` and instantly means the project failed.
 
-## [>](#index) <i class="fa-solid fa-temperature-quarter"></i>Check Your Engine and Mind the Fuel
+## [>](#index) <i class="fa-solid fa-temperature-quarter"></i> Check Your Engine and Mind the Fuel
 
 > The trip is proceeding smoothly, just as it should. Don't let the engine get hot nor thirsty, we are almost at our destination!
 
@@ -203,6 +205,26 @@ In the case of `civil construction`, some people have so much experience and kno
 Of course, I should be very clear: this does not mean the team is incompetent or rogue actors. Building things is **HARD** and **complicated**, doesn't matter if it's a `calculator app` or a `multi-platform, cloud-ready, do-it-all operating system`.
 
 Make sure any defect is well documented: it **MUST** include what was expected, what was experienced and why this is wrong. This will help the `root cause analysis` and improve the team's `response time` for fixing things.
+
+## [>](#index) <i class="fa-solid fa-building-shield"></i> You Have Arrived! Customs is at Your Left
+
+> Finally, we have reached your destination! Great vacation, very relaxing. Oh, let's not forget to go through Customs before going back, we brought so many souvenirs!
+
+Finally, our trip is over, we conquered the `Waterfall`. However before we go home, we got to go through the Customs processes.
+
+It goes like that in our example of `civil construction` as well: once all inspections are done and green lit, all that's left is to let the client in. Maybe it's their `dream house` or event their new `office space`, surely they want to use the space as soon as possible.
+
+This means, of course, `moving`: `Setting up furniture`, `putting up the paintings and photos`, `wiring up the equipments`... Oh, the joy of moving in, right?
+
+But hey, once this process is done you're free to use it as you like because things are **finally** done!
+
+### <i class="fa-solid fa-handcuffs"></i> You Haven't Declared This Item
+
+Unfortunately for some, not everything ends well sometimes.
+
+Maybe you have a `standup desk` that is just to big to enter the room and can't be disassembled, or maybe your new bed doesn't fit the room because you bought it _after_ the measurements were taken.
+
+Things like this happen and they may `kill the project`. If you cannot deliver the project, can ou say it's finished?
 
 ___
 ## [>](#index) <i class="fa-solid fa-person-digging"></i> Still Under Construction
