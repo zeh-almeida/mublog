@@ -24,6 +24,8 @@ tags: project,management,agile,waterfall,requirement,business rule,analysis,prob
     - [Uncharted Territory](#uncharted-territory)
 - [Get Your Engine Rollin'](#get-your-engine-rollin)
     - [Trying to Stay Above the Weather!](#trying-to-stay-above-the-weather)
+- [Check Your Engine and Mind the Fuel](#check-your-engine-and-mind-the-fuel)
+    - [Well, There's Your Problem!](#well-theres-your-problem)
 - [Still Under Construction](#still-under-construction)
 
 ___
@@ -162,23 +164,45 @@ This phase is where things start taking shape: you start `cleaning the terrain`,
 
 `Business Rules` are being worked on by the crew `as designed` and `following the rules`, maybe we will keep this trip right on schedule, right?
 
-Right?
+**Right?**
 
 ### <i class="fa-solid fa-cloud-showers-water"></i> Trying to Stay Above the Weather!
 
-> No matter how detailed your trip plan was: Weather is a force of it's own, no one can control it.
+> No matter how detailed and planned your trip plan was: Nature is a harsh mistress and is prone to mood swings.
 
-`The Construction` phase is when the `requirements` and `business rules` take shape "in reality". Up until this points they were ideals, things that had real importance but were still ethereal.
+`The Construction phase` is when the `requirements` and `business rules` take shape "in reality". Up until this points they were ideals, things that had real importance but were still ethereal.
 
 Once they reach this phase, however, `the materialization from ethereal to real may not be perfect`.
 
 Sure, your `design` was extremely clear and precise on the measurements but `someone ordered the wrong bricks` and now `things don't line up`.
 
-What you said? Oh, the paint `should have been sound proof`? Well, guess you won't like the sound of what I have to tell you.
+What did you say? Oh, the faucet `should have been on the other wall`? Can't you just, I don't know, `invert` the room?
 
 Things like this are so much more common than what we would like, I believe everyone has some kind of story about situations like this. Being unpredictable is the flavor of life, I suppose.
 
 Going for the same song and dance, `things like this are unacceptable in Waterfall` and instantly means the project failed.
+
+## [>](#index) <i class="fa-solid fa-temperature-quarter"></i>Check Your Engine and Mind the Fuel
+
+> The trip is proceeding smoothly, just as it should. Don't let the engine get hot nor thirsty, we are almost at our destination!
+
+Can you believe `things got done` already? Wow, so much work has been accomplished up until this point and yet, there is some more to be done: we are now entering the `validation phase` of our trip.
+
+If the very very **VERY** careful and detailed planning made was followed and the `construction phase` went on without a hitch, it is time to make sure things were done correctly and to the letter. Since `waterfall` is not really about `feedbacks`, this step _should_ be just a formality, simply a way to demonstrate things are as they should be.
+
+But life is a box of surprises and [Murphy's Law](https://en.wikipedia.org/wiki/Murphy%27s_law) tends to show up anytime.
+
+### <i class="fa-solid fa-temperature-high"></i> Well, There's Your Problem!
+
+Because we are dealing with the `Waterfall`, problems tend to accumulate until they burst. The `validation phase` is known for picking on `bad interpretation of requirements`, `incompatible business rules` or simply, a `bad construction job`.
+
+Didn't we review things before moving to the next step? Surely those things were fixed before, right? Well, they should have been but not always. 
+
+In the case of `civil construction`, some people have so much experience and knowledge about the processes that they become second nature and don't deviate. In things like software, for example, where every solution is different because it is tailored for specific problems, it is quite common to catch stragglers.
+
+Of course, I should be very clear: this does not mean the team is incompetent or rogue actors. Building things is **HARD** and **complicated**, doesn't matter if it's a `calculator app` or a `multi-platform, cloud-ready, do-it-all operating system`.
+
+Make sure any defect is well documented: it **MUST** include what was expected, what was experienced and why this is wrong. This will help the `root cause analysis` and improve the team's `response time` for fixing things.
 
 ___
 ## [>](#index) <i class="fa-solid fa-person-digging"></i> Still Under Construction
