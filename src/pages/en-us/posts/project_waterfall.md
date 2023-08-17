@@ -2,7 +2,7 @@
 title: Project Lifecycle - The Waterfall
 description: What is the Waterfall Model, also known as "Project Management 101"
 date: 2023-08-10
-modified: 2023-08-10
+modified: 2023-08-17
 tags: project,management,agile,waterfall,requirement,business rule,analysis,problem,statement
 ---
 # <i class="fa-solid fa-water"></i> Project Lifecycle - The Waterfall
@@ -28,7 +28,11 @@ tags: project,management,agile,waterfall,requirement,business rule,analysis,prob
     - [Well, There's Your Problem!](#well-theres-your-problem)
 - [You Have Arrived! Customs is at Your Left](#you-have-arrived-customs-is-at-your-left)
     - [You Haven't Declared This Item](#you-havent-declared-this-item)
-- [Still Under Construction](#still-under-construction)
+- [What is Waterfall Good For, Then?](#what-is-waterfall-good-for-then)
+    - [Where Waterfall Succeeds](#where-waterfall-succeeds)
+    - [Where Waterfall Fails](#where-waterfall-fails)
+    - [Keep it Looping](#keep-it-looping)
+- [Finally, Let's Rest](#finally-lets-rest)
 
 ___
 ## [>](#index) <i class="fa-solid fa-chart-line"></i> First Things First: What is a Project Lifecycle?
@@ -226,13 +230,72 @@ Maybe you have a `standup desk` that is just to big to enter the room and can't 
 
 Things like this happen and they may `kill the project`. If you cannot deliver the project, can ou say it's finished?
 
-___
-## [>](#index) <i class="fa-solid fa-person-digging"></i> Still Under Construction
+## [>](#index) <i class="fa-solid fa-clipboard-question"></i> What is Waterfall Good For, Then?
 
-Welp, you've reached this far already? Well, I haven't finished writing the whole article yet.
+Throughout the article I was very incisive that `every little pebble can kill the project`. This is only _"real"_ in the `theory`: in `practice` people tend to find ways around the issues in order to keep the project going.
 
-Probably sounds crazy to publish as-is but I want to gather feedback while I write.
+Even if you do finish the project, however, all those `attention points` raised are now things you **have** to work on in order to `really solve the problem statement`.
 
-Now that I think about it, it's very ironic to ask for feedback because I am writing about Waterfall, right? We will get to that, don't worry.
+So `what is Waterfall good for`? It seems to be very `bureaucratic` and `hard to navigate` but it has an immense strength:
+
+> The Waterfall Project is great for projects in which previous experiences can be incorporated and reused.
+
+### <i class="fa-regular fa-circle-check"></i> Where Waterfall Succeeds
+
+`Waterfall` seems to succeed in `project which have repeating elements`.
+This means it is great for `civil construction`, for example:
+
+ - You will probably always set a brick wall the `same way`;
+ - You will probably always raise a drywall panel the `same way`;
+ - Building codes and laws `take years to change` and they should be incremental;
+ - While wiring technology may change from rigid to twisted, `the way they are laid hasn't really changed`;
+
+Of course, you may have some `architectural feature` which could make the construction a little less ordinary but let's face it, `that's the exception`.
+
+`Waterfall` would really fir the bill in those scenarios because they are `extremely previsible` which is awesome because `waterfall is averse to change`.
+
+> Any scenario in which conditions can be static or as close to it as possible will be able to use `waterfall` with a high confidence for success.
+
+### <i class="fa-regular fa-circle-xmark"></i> Where Waterfall Fails
+
+There are many ways in which `Waterfall` will help deliver you a `win` but there are also ways in which it will contribute to a `loss`:
+
+> `Waterfall` abhors changes. If you need any kind of `feedback` during the project execution, `Waterfall`  is **NOT** for you.
+
+Before I explain what I mean by `feedback` I rather present some examples of where it is used first:
+ - Research Projects
+ - Prototyping Solutions
+ - Team Interactions
+
+In those situations, you want to `adapt to change as fast as possible`. When you're researching something, you apply the `scientific method` in which you `test your hypothesis and make adjustments as you go`, you `embrace and welcome change at every step`.
+
+> `Software is no different`: It **requires** a `feedback loop` in order to achieve best results. I cannot think a single instance in which `software` produced with `Waterfall management` would be successful.
+
+Unless you have infinite time and money, of course.
+
+### <i class="fa-solid fa-arrow-rotate-left"></i> Keep it Looping
+
+What is this `feedback loop` I keep talking about?
+
+Going back to the `scientific experiment` example, it is when you keep `iterating solutions` until you reach an `inflection point`, which means: `it succeeds or it fails`.
+
+Seems close to what `Waterfall` tries to achieve, because the idea of `project management` is to succeed at the end: the difference is in the `how they manage the project`.
+
+In `feedback loops` you work with `smaller and incremental changes` making it possible for you to `understand what works, what doesn't and why`, enabling you and your team to `work more efficiently` and `avoid past mistakes`.
+
+> Just like `Waterfall`, however, they are not suited for every kind of project: they are just a tool for the job. It is your responsibility to choose the best tool to the job you're taking.
+
+If we're talking about `software`, the `feedback loop` is best represented with the `Agile Framework` but that's a topic for future Articles, OK?
+
+
+## <i class="fa-solid fa-umbrella-beach"></i> Finally, Let's Rest
+
+Finally, this trip is over, no more surprises. I hope you got a better understanding of what `Waterfall` is, where to use, when to use and how to use it.
+
+If you already knew it, hope this was a good refresher.
+
+As always: if you have any questions or comments, send me an e-mail or message me through Telegram, the links are at the top of the page.
+
+Bye for now.
 
 ___
