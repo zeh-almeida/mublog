@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "SpaceMono";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url(../assets/SpaceMono-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  font-weight: bold;
+  font-style: normal;
+
+  src: url(../assets/SpaceMono-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  font-weight: bold;
+  font-style: italic;
+
+  src: url(../assets/SpaceMono-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  font-weight: normal;
+  font-style: italic;
+
+  src: url(../assets/SpaceMono-Italic.ttf) format('truetype');
+}
+
 :root {
   --color-blue-lgt: #14263b;
   --color-blue-mid: #030811;
@@ -13,17 +45,17 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 1.5;
   background-color: var(--color-blue-drk);
-  font-family: IBM Plex Mono, monospace;
+  font-family: "SpaceMono", IBM Plex Mono, monospace;
   color: var(--color-gray-light);
 }
 
 body {
   margin: 0 auto;
   padding: 0 1.5rem;
-  max-width: 900px;
+  max-width: 57em;
   align-content: center;
   min-height: 100vh;
   flex-direction: column;
@@ -34,8 +66,8 @@ body {
 body nav {
   font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 
 body main {
