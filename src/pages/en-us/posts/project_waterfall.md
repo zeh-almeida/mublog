@@ -3,7 +3,7 @@ title: Project Lifecycle - The Waterfall
 description: What is the Waterfall Model, also known as "Project Management 101"
 date: 2023-08-10
 modified: 2023-08-17
-tags: project,management,agile,waterfall,requirement,business rule,analysis,problem,statement
+tags: project,management,agile,waterfall,requirement,business rule,analysis,problem,statement,iteration,navigation,work,result,delivery
 ---
 # <i class="fa-solid fa-water"></i> Project Lifecycle - The Waterfall
 
@@ -35,6 +35,7 @@ tags: project,management,agile,waterfall,requirement,business rule,analysis,prob
 - [Finally, Let's Rest](#finally-lets-rest)
 
 ___
+
 ## [>](#index) <i class="fa-solid fa-chart-line"></i> First Things First: What is a Project Lifecycle?
 
 Let's say you got yourself a problem. Not that hard to imagine, is it?
@@ -62,6 +63,7 @@ Of course, the results of the current phase should be validated and accepted by 
 > In order to reach the `Waterfall`, one must first procure a boat.
 
 Everything starts with the `problem statement`:
+
  - What needs to be done
  - Why it needs to be done this way
 
@@ -95,6 +97,7 @@ Using your `problem statement`, you have your `whats` and `whys` so you have to 
 
 This part of the lifecycle is called `Analysis` and it is really straight-forward.
 You have to make sure:
+
  - All the `requirements` are clear
  - All the `requirements` are achievable
  - The `requirements` do not cancel one another
@@ -160,6 +163,7 @@ Realistically, this problem _could_ and really, **should** have been caught duri
 We **finally** got to the part where "things get done". Not that the other steps weren't "doing" anything: they were all **extremely** necessary but they didn't deliver anything that solved the `problem` in the first place. All they did was `prepare the terrain`, so to speak, for the `real solution to the problem`.
 
 Let's list all the things we've gathered so far:
+
 - `Requirements`: what needs to be done
 - `Business Rules`: how it must be done
 - `Solution Design`: how it should be organized
@@ -263,6 +267,7 @@ There are many ways in which `Waterfall` will help deliver you a `win` but there
 > `Waterfall` abhors changes. If you need any kind of `feedback` during the project execution, `Waterfall`  is **NOT** for you.
 
 Before I explain what I mean by `feedback` I rather present some examples of where it is used first:
+
  - Research Projects
  - Prototyping Solutions
  - Team Interactions
@@ -286,7 +291,6 @@ In `feedback loops` you work with `smaller and incremental changes` making it po
 > Just like `Waterfall`, however, they are not suited for every kind of project: they are just a tool for the job. It is your responsibility to choose the best tool to the job you're taking.
 
 If we're talking about `software`, the `feedback loop` is best represented with the `Agile Framework` but that's a topic for future Articles, OK?
-
 
 ## <i class="fa-solid fa-umbrella-beach"></i> Finally, Let's Rest
 

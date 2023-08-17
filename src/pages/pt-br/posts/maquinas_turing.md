@@ -13,6 +13,7 @@ tags: turing,máquina,computador,definição,instrução,algoritmo,fita,cabeça,
 **Em caso de dúvida, consulte as fontes**. Obrigado e que o show continue!
 
 ## <i class="fa-solid fa-list-ul"></i> Índice
+
 - [Afinal, quem é Turing?](#afinal-quem-é-turing)
 - [O Que São Essas Coisas?](#o-que-são-essas-coisas)
     - [Algoritmos](#algoritmos)
