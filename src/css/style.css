@@ -3,7 +3,7 @@
   font-weight: normal;
   font-style: normal;
 
-  src: url(../assets/SpaceMono-Regular.ttf) format('truetype');
+  src: url(../assets/SpaceMono-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-weight: bold;
   font-style: normal;
 
-  src: url(../assets/SpaceMono-Bold.ttf) format('truetype');
+  src: url(../assets/SpaceMono-Bold.ttf) format("truetype");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-weight: bold;
   font-style: italic;
 
-  src: url(../assets/SpaceMono-BoldItalic.ttf) format('truetype');
+  src: url(../assets/SpaceMono-BoldItalic.ttf) format("truetype");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-weight: normal;
   font-style: italic;
 
-  src: url(../assets/SpaceMono-Italic.ttf) format('truetype');
+  src: url(../assets/SpaceMono-Italic.ttf) format("truetype");
 }
 
 :root {
@@ -68,6 +68,10 @@ body nav {
   text-align: center;
   margin-bottom: 2em;
   margin-top: 2em;
+  display: flex;
+  flex-direction: initial;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 body main {
@@ -396,16 +400,16 @@ img[src*="#profile-pic"] {
 }
 
 .darken .tag-bubble {
-    color-scheme: dark;
-    color: rgb(207, 203, 197);
+  color-scheme: dark;
+  color: rgb(207, 203, 197);
 }
 
 .pr-half {
-  padding-right: .5em;
+  padding-right: 0.5em;
 }
 
 .pl-half {
-  padding-left: .5em;
+  padding-left: 0.5em;
 }
 
 .icon-padding {
