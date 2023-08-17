@@ -80,7 +80,7 @@ hr {
 
 header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 2.5em;
   font-size: 1.3rem;
 }
 
@@ -123,15 +123,15 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
-  row-gap: 10px;
-  column-gap: 20px;
+  row-gap: 0.625em;
+  column-gap: 1.25em;
 }
 
 .tag-bubble {
   display: inline-block;
   color: white;
   padding: 0.2em 0.5em;
-  border-radius: 10px;
+  border-radius: 0.625em;
   border-style: solid;
   border-color: var(--color-gray-mid);
   border-width: 1px;
@@ -152,7 +152,7 @@ a:hover {
 
 img {
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 0.3125em;
   width: 100%;
 }
 
@@ -185,7 +185,7 @@ h3 {
 
 article ul {
   list-style-type: disc;
-  padding: 5px;
+  padding: 0.3125em;
   text-align: start;
 }
 
@@ -203,7 +203,7 @@ article a {
 
 .block-code {
   background-color: #161b22;
-  border-radius: 5px;
+  border-radius: 0.3125em;
   display: block;
   padding: 0.6rem 1rem;
   overflow-x: auto;
@@ -219,7 +219,7 @@ article a {
 }
 
 blockquote {
-  border-left: 10px solid var(--color-blue-mid);
+  border-left: 0.625em solid var(--color-blue-mid);
   margin: 1.5rem 0;
   padding: 0 1.5rem;
 }
