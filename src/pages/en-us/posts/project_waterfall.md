@@ -232,7 +232,7 @@ Unfortunately for some, not everything ends well sometimes.
 
 Maybe you have a `standup desk` that is just to big to enter the room and can't be disassembled, or maybe your new bed doesn't fit the room because you bought it _after_ the measurements were taken.
 
-Things like this happen and they may `kill the project`. If you cannot deliver the project, can ou say it's finished?
+Things like this happen and they may `kill the project`. If you cannot deliver the project, can you say it's finished?
 
 ## [>](#index) <i class="fa-solid fa-clipboard-question"></i> What is Waterfall Good For, Then?
 
