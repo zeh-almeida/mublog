@@ -55,4 +55,4 @@ Caso queria conhecer mais sobre mim, por favor dê uma olhada no meu [currículo
 
 - <i class="fa-brands fa-linkedin"></i> [Perfil Profissional no LinkedIn](https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida){target="_blank"}
 - <i class="fa-brands fa-github"></i> [Perfil Pessoal no GitHub](https://github.com/zeh-almeida){target="_blank"}
-- <i class="fa-brands fa-telegram"></i> <a href="${author_contact}" title="Perfil no Telegram">Contato via Telegram</a>
+- <i class="fa-brands fa-telegram"></i> <a href="${author_contact}" target="_blank" title="Perfil no Telegram">Contato via Telegram</a>
