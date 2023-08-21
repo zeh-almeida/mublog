@@ -25,7 +25,7 @@ Estou localizado em Curitiba, Paraná - Brasil mas nasci em São Paulo. Eu moro 
 
 Eu tenho um cachorro chamado **Arroz**. As vezes ele dá um jeito de aparecer nas reuniões, atrapalhando o andamento das coisas. Mas ele é muito **fofo** então está perdoado.
 
-Não sou casado mas tenho uma parceira, [Isabela Salmazo](https://instagram.com/matercriativa "Instragram Profisional da Isabela") e nós temos a filha **mais linda** do mundo, **Mariana** (ou Nena, como eu gosto de chama-la).
+Não sou casado mas tenho uma parceira, [Isabela Salmazo](https://instagram.com/_matercriativa "Instragram Profisional da Isabela"){target="_blank"} e nós temos a filha **mais linda** do mundo, **Mariana** (ou Nena, como eu gosto de chama-la).
 
 Eu sou um `desenvolvedor` por amor, primeiramente: Eu **AMO** mexer com código, aprender como as coisas funcionam, seus significados e importâncias. É praticamente uma necessidade na minha vida mexer com código, acredite se quiser.
 
@@ -49,10 +49,10 @@ Atualmente eu tenho o objetivo pessoal de ajudar outras pessoas a obter êxito e
 
 > Eu realmente acredito que o melhor software não é escrito por indivíduos mas por times coesos e entrosados.
 
-Caso queria conhecer mais sobre mim, por favor dê uma olhada no meu [currículo](posts/curriculum.html "Currículo completo e atualizado") postado aqui no blog assim como os [links](#links "Links externos sobre mim") que deixo abaixo. Eles vão te levar ao meu perfil profissional do `LinkedIn` bem como ao meu perfil pessoal do `GitHub`, onde eu deixo alguns projetos públicos como esse blog!
+Caso queria conhecer mais sobre mim, por favor dê uma olhada no meu [currículo](posts/curriculum.html "Currículo completo e atualizado"){target="_blank"} postado aqui no blog assim como os [links](#links "Links externos sobre mim") que deixo abaixo. Eles vão te levar ao meu perfil profissional do `LinkedIn` bem como ao meu perfil pessoal do `GitHub`, onde eu deixo alguns projetos públicos como esse blog!
 
 ## <i class="fa-regular fa-address-card"></i> Links Externos
 
-- <i class="fa-brands fa-linkedin"></i> [Perfil Profissional no LinkedIn](https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida)
-- <i class="fa-brands fa-github"></i> [Perfil Pessoal no GitHub](https://github.com/zeh-almeida)
+- <i class="fa-brands fa-linkedin"></i> [Perfil Profissional no LinkedIn](https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida){target="_blank"}
+- <i class="fa-brands fa-github"></i> [Perfil Pessoal no GitHub](https://github.com/zeh-almeida){target="_blank"}
 - <i class="fa-brands fa-telegram"></i> <a href="${author_contact}" title="Perfil no Telegram">Contato via Telegram</a>
