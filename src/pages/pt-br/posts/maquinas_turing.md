@@ -37,9 +37,9 @@ tags: turing,máquina,computador,definição,instrução,algoritmo,fita,cabeça,
 
 ___
 ## <i class="fa-solid fa-person-circle-question"></i> Afinal, quem é Turing?
-> Nossos mortos nunca morrem pra nós, até que esqueçamos deles. - [George Elliot](https://www.brainyquote.com/quotes/george_eliot_148896)
+> Nossos mortos nunca morrem pra nós, até que esqueçamos deles. - [George Elliot](https://www.brainyquote.com/quotes/george_eliot_148896){target="_blank"}
 
-**Alan Mathison Turing** foi um [matemático, cientista da computação, lógico, criptoanalista, filósofo e biólogo teórico inglês](https://en.wikipedia.org/wiki/Alan_Turing).
+**Alan Mathison Turing** foi um [matemático, cientista da computação, lógico, criptoanalista, filósofo e biólogo teórico inglês](https://en.wikipedia.org/wiki/Alan_Turing){target="_blank"}.
 
 Ele foi um dos responsáveis pela criação e desenvolvimento da ciência da computação por definir conceitos como **algoritmos** e **computador de propósito genérico** via **Máquina de Turing**.
 
@@ -49,7 +49,7 @@ Ele foi um dos responsáveis pela criação e desenvolvimento da ciência da com
 
 ### <i class="fa-solid fa-code-branch"></i> Algoritmos
 
-#### <i class="fa-solid fa-shuffle"></i> **[TL;DR](https://www.urbandictionary.com/define.php?term=tl%3Bdr)**
+#### <i class="fa-solid fa-shuffle"></i> **[TL;DR](https://www.urbandictionary.com/define.php?term=tl%3Bdr){target="_blank"}**
 
 `Algoritmos` a são definição, passo-a-passo, de como resolver um problema.
 
@@ -63,13 +63,13 @@ Essas instruções podem conter condições e até interagir com outros `Algorit
 
 Se você usa `Facebook`, `TikTok`, `YouTube` ou qualquer outra mídia social, você provavelmente já conhece a existência dos `Algoritmos de Recomendação`. Esses são `algoritmos` proprietários que podem ser considerados parte do cérebro dessas aplicações.
 
-Eu acho que o [Instituto Internacional de Geneva tem uma explicação muito melhor que a minha sobre `algoritmos`](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding) (texto em inglês).
+Eu acho que o [Instituto Internacional de Geneva tem uma explicação muito melhor que a minha sobre `algoritmos`](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding){target="_blank"} (texto em inglês).
 
 ### <i class="fa-solid fa-server"></i> Computador de Propósito Genérico
 
 No passado a computação era usada como uma forma de executar cálculos mais rápido do que qualquer humano. Porém, esses computadores tinham uma lógica extremamente específica, de forma que eles não podiam ser reprogramados para executar cálculos diferentes daqueles para os que foram projetados em primeiro lugar.
 
-Essa limitação, bem como a grande complexidade e tamanhos gigantescos, fez com que essas máquinas fossem muito caras e difíceis de manter, como é explicado na história do primeiro computador genérico, [o ENIAC](https://penntoday.upenn.edu/news/worlds-first-general-purpose-computer-turns-75).
+Essa limitação, bem como a grande complexidade e tamanhos gigantescos, fez com que essas máquinas fossem muito caras e difíceis de manter, como é explicado na história do primeiro computador genérico, [o ENIAC](https://penntoday.upenn.edu/news/worlds-first-general-purpose-computer-turns-75){target="_blank"} (texto em inglês).
 
 Tudo isso significava que eram necessários `algoritmos` extremamente específicos para máquinas extremamente específicas. Não era possível simplesmente atualizar a lógica e re-executar. Seria necessário realinhar partes do computador ou até ter que usar uma máquina completamente diferente, o que podia ser um impeditivo.
 
@@ -91,7 +91,7 @@ A `Máquina de Turing` é feita de algumas, digamos, partes: a `Cabeça`, a `Fit
 
 Para que a máquina funcione, um `Alfabeto` precisa ser definido, assim a máquina pode executar suas ações a partir do significado desses símbolos.
 
-Isso é [análogo ao que chamados de `instruções de máquina` hoje](https://pclt.sites.yale.edu/cpu-instructions).
+Isso é [análogo ao que chamados de `instruções de máquina` hoje](https://pclt.sites.yale.edu/cpu-instructions){target="_blank"} (texto em inglês).
 
 #### <i class="fa-solid fa-tape"></i> A Fita
 
@@ -105,7 +105,7 @@ Nessa máquina abstrata, essa `fita infinita` é dividida em células, todas do 
 
 Uma vez que a `cabeça` entra numa célula, ela escaneia o conteúdo e a partir da definição do `Alfabeto`, se move para outra célula ou escreve um novo símbolo na célula atual.
 
-Isso é análogo ao [modo como as CPUs modernas trabalham](https://en.wikipedia.org/wiki/Instruction_cycle).
+Isso é análogo ao [modo como as CPUs modernas trabalham](https://en.wikipedia.org/wiki/Instruction_cycle){target="_blank"} (texto em inglês).
 
 ## <i class="fa-regular fa-star"></i> Mas Por Que Devo me Importar?
 
@@ -115,7 +115,7 @@ Entender esse modelo pode ajudar a interagir melhor com a tecnologia também, um
 
 Não importa se a máquina é um IBM PC Original de 1980 ou o ficcional (por enquanto) iPhone 99x Pro: ambos possuem uma CPU modelada a a partir da `Máquina de Turing`.
 
-E sim, mesmo aqueles "[joguinhos](https://www.pinterest.com/pin/102105116538007472/)" são `Máquinas de Turing` de uma forma.
+E sim, mesmo aqueles "[joguinhos](https://www.pinterest.com/pin/102105116538007472/){target="_blank"}" são `Máquinas de Turing` de uma forma.
 
 Vamos listar alguns objetos que também são `Máquinas de Turing`:
 
@@ -136,12 +136,12 @@ Mesmo utilizando linguagens de programação como `Python`, `Javascript`, `Java`
 
 Toda arquitetura de computadores tem seu próprio `alfabeto assembly` e aqui estão algumas arquiteturas que eu consigo lembrar no momento:
 
-- [x86/x64](https://en.wikipedia.org/wiki/X86-64) - Praticamente todo computador Windows, desde sempre. Certo, existe a questão das eras de  `16`, `32` e `64-bit` mas isso é um tópico para outra discussão.
-- [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family) - Praticamente todo aparelho que existe como TVs, celulares, etc.
-- [MIPS](https://en.wikipedia.org/wiki/MIPS_architecture) - Ah os bons e velhos N64 e PlayStation...
-- [RISC V](https://en.wikipedia.org/wiki/RISC-V) - Nova no mercado, comparável com ARM mas é uma arquitetura a parte.
-- [POWER](https://en.wikipedia.org/wiki/IBM_POWER_architecture) - Arquitetura IBM. Usada principalmente em mainframes e aplicações industriais.
-- [6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) - Usada no Nintendo Entertainment System, Apple II e muitos outros.
+- [x86/x64](https://en.wikipedia.org/wiki/X86-64){target="_blank"} - Praticamente todo computador Windows, desde sempre. Certo, existe a questão das eras de  `16`, `32` e `64-bit` mas isso é um tópico para outra discussão.
+- [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family){target="_blank"} - Praticamente todo aparelho que existe como TVs, celulares, etc.
+- [MIPS](https://en.wikipedia.org/wiki/MIPS_architecture){target="_blank"} - Ah os bons e velhos N64 e PlayStation...
+- [RISC V](https://en.wikipedia.org/wiki/RISC-V){target="_blank"} - Nova no mercado, comparável com ARM mas é uma arquitetura a parte.
+- [POWER](https://en.wikipedia.org/wiki/IBM_POWER_architecture){target="_blank"} - Arquitetura IBM. Usada principalmente em mainframes e aplicações industriais.
+- [6502](https://en.wikipedia.org/wiki/MOS_Technology_6502){target="_blank"} - Usada no Nintendo Entertainment System, Apple II e muitos outros.
 
 ## <i class="fa-solid fa-robot"></i> Como que essas Arquiteturas Implementam o Modelo da Máquina de Turing?
 
@@ -151,7 +151,7 @@ Como mencionei anteriormente, eu não sou um cientista da computação. Eu sou s
 
 Tudo isso é pra dizer que vou tentar fazer a melhor explicação do assunto como se você tivesse 5 anos. Ano que vem você terá 6 e com certeza será ainda mais fácil de entender.
 
-Eu vou usar a [arquitetura MOS 6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) como exemplo porque é (relativamente) simples e direta.
+Eu vou usar a [arquitetura MOS 6502](https://en.wikipedia.org/wiki/MOS_Technology_6502){target="_blank"} como exemplo porque é (relativamente) simples e direta.
 
 ### <i class="fa-solid fa-palette"></i> É Tudo Preto ou Branco
 
@@ -171,7 +171,7 @@ O `6502` implementa a `Máquina de Turing` com as seguintes características:
 
 #### <i class="fa-solid fa-dove"></i> Qual é a Palavra?
 
-(Outra piada que se perdeu na tradução... [the bird is the word](https://youtu.be/9Gc4QTqslN4))
+(Outra piada que se perdeu na tradução... [the bird is the word](https://youtu.be/9Gc4QTqslN4){target="_blank"})
 
 É um pouco estranho comparar `Alfabeto` com `Palavras` mas eu posso explicar:
 
@@ -189,19 +189,19 @@ O que farei, então, é explicar algumas `palavras`, ou `instruções`, específ
 
 #### <i class="fa-solid fa-chalkboard-user"></i> Por Favor, me Instrua
 
-> Para o pedante: eu sei que o 6502 tem modos de endereçamento e outros detalhes mas eles não são relevantes aqui. Por sinal, eu escrevi um [emulador do 6502](https://github.com/zeh-almeida/6502-sharp) que entra nesses detalhes, se tiver interesse.
+> Para o pedante: eu sei que o 6502 tem modos de endereçamento e outros detalhes mas eles não são relevantes aqui. Por sinal, eu escrevi um [emulador do 6502](https://github.com/zeh-almeida/6502-sharp){target="_blank"} que entra nesses detalhes, se tiver interesse.
 
 Tentarei explicar algumas `instruções` que serão apresentadas num exemplo posterior:
 
-##### Clear Carry Flag ([CLC](https://masswerk.at/6502/6502_instruction_set.html#CLC))
+##### Clear Carry Flag ([CLC](https://masswerk.at/6502/6502_instruction_set.html#CLC){target="_blank"})
 
 Instrui a `Cabeça` a marcar o `registrador carry` com `zero`.
 
-##### Load Accumulator ([LDA](https://masswerk.at/6502/6502_instruction_set.html#LDA))
+##### Load Accumulator ([LDA](https://masswerk.at/6502/6502_instruction_set.html#LDA){target="_blank"})
 
 Instrui a `Cabeça` a substituir o valor atual do `registrador acumulador` com o valor que definirmos.
 
-##### Add With Carry ([ADC](https://masswerk.at/6502/6502_instruction_set.html#ADC))
+##### Add With Carry ([ADC](https://masswerk.at/6502/6502_instruction_set.html#ADC){target="_blank"})
 
 Incrementa o `registrador acumulador` na `Cabeça` com o valor que definirmos.
 
@@ -211,7 +211,7 @@ Isso significa que é possível adicionar números além do valor de `255` porqu
 
 Uma analogia é tentar contar número maiores que `5` na sua mão: você sabe quantas vezes você precisou recomeçar a conta nos dedos e por isso consegue contar valores maiores que `5` sem problemas.
 
-##### Branch Carry Clear ([BCC](https://masswerk.at/6502/6502_instruction_set.html#BCC))
+##### Branch Carry Clear ([BCC](https://masswerk.at/6502/6502_instruction_set.html#BCC){target="_blank"})
 
 Instrui a `Cabeça` a pular para uma `célula` específica apenas se o `registrador carry` for `zero`.
 
@@ -244,7 +244,7 @@ BCC FC  ; Pula para a célula anterior quando o registrador carry tiver valor ig
 
 Aposto que você está vendo esse valor `FC` e se perguntando: Que?
 
-Realmente, parece que esse valor veio do nada. Esse número é o resultado de `255` menos `3 bytes`, o que faz com que ele caia na `célula` da `instrução` `ADC` só que expressado na [notação hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal).
+Realmente, parece que esse valor veio do nada. Esse número é o resultado de `255` menos `3 bytes`, o que faz com que ele caia na `célula` da `instrução` `ADC` só que expressado na [notação hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal){target="_blank"}.
 
 #### <i class="fa-solid fa-flag-checkered"></i> Ao Vencedor, os Espólios
 

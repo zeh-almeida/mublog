@@ -36,9 +36,9 @@ tags: turing,machine,computer,definition,instruction,algorithm,tape,head,alphabe
 
 ___
 ## <i class="fa-solid fa-person-circle-question"></i> First of all, who is Turing?
-> Our dead are never dead to us, until we have forgotten them. - [George Elliot](https://www.brainyquote.com/quotes/george_eliot_148896)
+> Our dead are never dead to us, until we have forgotten them. - [George Elliot](https://www.brainyquote.com/quotes/george_eliot_148896){target="_blank"}
 
-**Alan Mathison Turing** was a [British mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist](https://en.wikipedia.org/wiki/Alan_Turing).
+**Alan Mathison Turing** was a [British mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist](https://en.wikipedia.org/wiki/Alan_Turing){target="_blank"}.
 
 He was one of the responsible for the creation and development of computer science because he defined the concepts of **algorithms** and the **general-purpose computer** with the **Turing Machine**.
 
@@ -48,7 +48,7 @@ Really, much of the modern society we live in is still based on things Turing th
 
 ### <i class="fa-solid fa-code-branch"></i> Algorithms
 
-#### <i class="fa-solid fa-shuffle"></i> **[TL;DR](https://www.urbandictionary.com/define.php?term=tl%3Bdr)**
+#### <i class="fa-solid fa-shuffle"></i> **[TL;DR](https://www.urbandictionary.com/define.php?term=tl%3Bdr){target="_blank"}**
 
 `Algorithms` are the definition, step-by-step, of how to solve a problem.
 
@@ -62,13 +62,13 @@ Such instructions may include conditions and even interact with other `Algorithm
 
 If you use `Facebook`, `TikTok`, `YouTube` or any other social media, you are probably aware of the existence of the `Recommendation Algorithms`. Those are proprietary sets of `algorithms` and can be considered part of the brain of those applications
 
-I think the [International Institute in Geneva has a better explanation I could ever give about `algorithms`](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding).
+I think the [International Institute in Geneva has a better explanation I could ever give about `algorithms`](https://www.iig.ch/en-en/blog/computer-science/algorithm-computer-science-definition-and-understanding){target="_blank"}.
 
 ### <i class="fa-solid fa-server"></i> General-purpose Computing
 
 In the past, computing was used as a way to perform calculations faster than a human could. However, those computers had very specific logic, meaning they could not be programmed to calculate things other than the one they were originally programmed for.
 
-This limitation, as well as their gigantic size and complexity, made them very expensive, hard to use and maintain, as explained in the [history of the first general computer, ENIAC](https://penntoday.upenn.edu/news/worlds-first-general-purpose-computer-turns-75).
+This limitation, as well as their gigantic size and complexity, made them very expensive, hard to use and maintain, as explained in the [history of the first general computer, ENIAC](https://penntoday.upenn.edu/news/worlds-first-general-purpose-computer-turns-75){target="_blank"}.
 
 What this all meant was that you had to write very specific `algorithms` for very specific machines. You could not simply update your logic and re-run. You would probably have to re-align parts of the computer or even have to use a completely different machine, which could be impossible.
 
@@ -90,7 +90,7 @@ The `Turing Machine` is comprised of a few, shall we say, parts: the `Head`, the
 
 In order for the machine to work, an `Alphabet` must be defined in which the machine takes an action based on a specific symbol.
 
-This is [analogous to what we call `computer instructions` today](https://pclt.sites.yale.edu/cpu-instructions).
+This is [analogous to what we call `computer instructions` today](https://pclt.sites.yale.edu/cpu-instructions){target="_blank"}.
 
 #### <i class="fa-solid fa-tape"></i> The Tape
 
@@ -104,7 +104,7 @@ In this abstract machine, it is a `infinite tape` divided into cells, all of the
 
 Once the `Head` enters a cell, it scans its content and based on the `Alphabet` definition it will move itself to another cell or write another symbol in the current cell.
 
-This is [analogous to how modern-day CPUs work](https://en.wikipedia.org/wiki/Instruction_cycle).
+This is [analogous to how modern-day CPUs work](https://en.wikipedia.org/wiki/Instruction_cycle){target="_blank"}.
 
 ## <i class="fa-regular fa-star"></i> Ok but why should I care?
 
@@ -114,7 +114,7 @@ Understanding this model could help you have a better time with any technology a
 
 It doesn't matter if you have a Original IBM PC from 1980 or the newest fictional (for now) iPhone 99x Pro: they both have a CPU that is modeled after the `Turing Machine`.
 
-And yes, even those "[cheapo](https://www.pinterest.com/pin/102105116538007472/)" games are `Turing Machines` in a way or another.
+And yes, even those "[cheapo](https://www.pinterest.com/pin/102105116538007472/){target="_blank"}" games are `Turing Machines` in a way or another.
 
 Let's list some of the objects which are also `Turing Machines`:
 
@@ -135,12 +135,12 @@ Even if you use programming languages such as `Python`, `Javascript`, `Java`, `C
 
 Every computer architecture has it's own `assembly alphabet` and here are some of the architectures I can remember on the top of my head:
 
-- [x86/x64](https://en.wikipedia.org/wiki/X86-64) - Pretty much every Windows computer, since ever. Granted, there is the whole `16`, `32` and `64-bit` eras but this is topic for another discussion.
-- [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family) - Pretty much all appliances you have, such as TVs, Cellphones, etc.
-- [MIPS](https://en.wikipedia.org/wiki/MIPS_architecture) - Ah the good old N64 and PlayStation...
-- [RISC V](https://en.wikipedia.org/wiki/RISC-V) - New player, comparable to ARM chips but it is a different architecture.
-- [POWER](https://en.wikipedia.org/wiki/IBM_POWER_architecture) - IBM architecture. used mainly in mainframes and other industrial applications.
-- [6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) - used in the Nintendo Entertainment System, Apple II and many others.
+- [x86/x64](https://en.wikipedia.org/wiki/X86-64){target="_blank"} - Pretty much every Windows computer, since ever. Granted, there is the whole `16`, `32` and `64-bit` eras but this is topic for another discussion.
+- [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family){target="_blank"} - Pretty much all appliances you have, such as TVs, Cellphones, etc.
+- [MIPS](https://en.wikipedia.org/wiki/MIPS_architecture){target="_blank"} - Ah the good old N64 and PlayStation...
+- [RISC V](https://en.wikipedia.org/wiki/RISC-V){target="_blank"} - New player, comparable to ARM chips but it is a different architecture.
+- [POWER](https://en.wikipedia.org/wiki/IBM_POWER_architecture){target="_blank"} - IBM architecture. used mainly in mainframes and other industrial applications.
+- [6502](https://en.wikipedia.org/wiki/MOS_Technology_6502){target="_blank"} - used in the Nintendo Entertainment System, Apple II and many others.
 
 ## <i class="fa-solid fa-robot"></i> How does the Architectures Implement the Turing machine Model?
 
@@ -150,7 +150,7 @@ I mentioned this before, I am not a computer scientist. I am just a very crazy p
 
 This is all to say that I will do my best in explaining this as if you were 5 years-old. Next year you'll be six so it may be easier to understand later.
 
-I will use the [MOS 6502 architecture](https://en.wikipedia.org/wiki/MOS_Technology_6502) as an example because it is a (relatively) very simple and straight-forward architecture.
+I will use the [MOS 6502 architecture](https://en.wikipedia.org/wiki/MOS_Technology_6502){target="_blank"} as an example because it is a (relatively) very simple and straight-forward architecture.
 
 ### <i class="fa-solid fa-palette"></i> Everything is Either Black or White
 
@@ -166,7 +166,7 @@ The `6502` implements the `Turing Machine` with the following characteristics:
 - The `Tape` can have up to `65.535` cells (in this case, `bits`);
 - The `Head` has some special cells called `registers` so it can store some execution information such as `Tape cell index`, for example;
 
-#### <i class="fa-solid fa-dove"></i> What is the [Word](https://youtu.be/9Gc4QTqslN4)?
+#### <i class="fa-solid fa-dove"></i> What is the [Word](https://youtu.be/9Gc4QTqslN4){target="_blank"}?
 
 It is a little weird to compare `Alphabet` to `Words` but I can explain:
 
@@ -183,19 +183,19 @@ Instead, I will explain a couple of `words` or `instructions` just to illustrate
 
 #### <i class="fa-solid fa-chalkboard-user"></i> Instruct Me, Please
 
-> For the pedantic: I know the 6502 has addressing modes and other quirks but they are not relevant here. Matter of fact, I have a [6502 emulator](https://github.com/zeh-almeida/6502-sharp) that goes into those details if you're interested.
+> For the pedantic: I know the 6502 has addressing modes and other quirks but they are not relevant here. Matter of fact, I have a [6502 emulator](https://github.com/zeh-almeida/6502-sharp){target="_blank"} that goes into those details if you're interested.
 
 I will do my best to explain some simple `instructions` which will show up in an example later.
 
-##### Clear Carry Flag ([CLC](https://masswerk.at/6502/6502_instruction_set.html#CLC))
+##### Clear Carry Flag ([CLC](https://masswerk.at/6502/6502_instruction_set.html#CLC){target="_blank"})
 
 Tells the `Head` to set the `carry register` as `zero`.
 
-##### Load Accumulator ([LDA](https://masswerk.at/6502/6502_instruction_set.html#LDA))
+##### Load Accumulator ([LDA](https://masswerk.at/6502/6502_instruction_set.html#LDA){target="_blank"})
 
 Tells the `Head` to replace the value of the `accumulator register` with the value we defined.
 
-##### Add With Carry ([ADC](https://masswerk.at/6502/6502_instruction_set.html#ADC))
+##### Add With Carry ([ADC](https://masswerk.at/6502/6502_instruction_set.html#ADC){target="_blank"})
 
 Increments the `accumulator register` in the `Head` with the value we defined.
 
@@ -205,7 +205,7 @@ What this means is that you can add numbers way past the `255` value because you
 
 A good analogy to this behavior is how we can count past `5` using our hands: we know how many times we restarted the fingers during the count, that's how we can keep track of values larger than `5`.
 
-##### Branch Carry Clear ([BCC](https://masswerk.at/6502/6502_instruction_set.html#BCC))
+##### Branch Carry Clear ([BCC](https://masswerk.at/6502/6502_instruction_set.html#BCC){target="_blank"})
 
 Instructs the `Head` to jump to a specific `cell` if the `carry register` is `zero`.
 
@@ -238,7 +238,7 @@ BCC FC  ; Jumps back to the previous cell if the clear flag equals zero.
 
 I see you're looking at that `FC` value there thinking: What?
 
-Well, it is understandable, is seemly came out of nowhere. It is the number `255` minus `3 bytes`, meaning it will land on the `cell` for the `ADC` `instruction` but this time expressed in [hexadecimal notation](https://en.wikipedia.org/wiki/Hexadecimal).
+Well, it is understandable, is seemly came out of nowhere. It is the number `255` minus `3 bytes`, meaning it will land on the `cell` for the `ADC` `instruction` but this time expressed in [hexadecimal notation](https://en.wikipedia.org/wiki/Hexadecimal){target="_blank"}.
 
 #### <i class="fa-solid fa-flag-checkered"></i> To the Winner Goes the Spoils
 
