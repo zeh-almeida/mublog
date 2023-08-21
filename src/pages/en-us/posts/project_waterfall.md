@@ -52,7 +52,7 @@ They are a `collection of steps, phases and operations you execute in order to h
 
 ## [>](#index) <i class="fa-solid fa-clipboard-question"></i> Navigating Through the Waterfall
 
-The Waterfall lifecycle is actually one of the oldest and probably the first method of lifecycle management for software projects, [according to Wikipedia](https://en.wikipedia.org/wiki/Waterfall_model).
+The Waterfall lifecycle is actually one of the oldest and probably the first method of lifecycle management for software projects, [according to Wikipedia](https://en.wikipedia.org/wiki/Waterfall_model){target="_blank"}.
 
 It is called a `Waterfall` because it starts from the top and goes to the bottom, no chance of going back.
 
@@ -69,7 +69,7 @@ Everything starts with the `problem statement`:
 
 This is regularly called `requirements` and, in my personal opinion `are the most common thing to get wrong in any project`.
 
-`Requirements` are the things the project **MUST** accomplish, no questions asked: either the project fulfills the `requirements` or it fails. Therefore, it is imperative the `requirements` are clear. Otherwise you might as well require the software to [solve the halting problem](https://en.wikipedia.org/wiki/Halting_problem).
+`Requirements` are the things the project **MUST** accomplish, no questions asked: either the project fulfills the `requirements` or it fails. Therefore, it is imperative the `requirements` are clear. Otherwise you might as well require the software to [solve the halting problem](https://en.wikipedia.org/wiki/Halting_problem){target="_blank"}.
 
 There is no limit for the number of `requirements`. Of course, the longer the list, the harder it will be to maintain and develop for.
 
@@ -77,7 +77,7 @@ There is no limit for the number of `requirements`. Of course, the longer the li
 
 ### <i class="fa-solid fa-water-ladder"></i> Make Sure the Water is Deep Enough
 
-The `requirement gathering stage` **must** result in a single yet very detailed artifact: The [`Requirement Document`](https://en.wikipedia.org/wiki/Product_requirements_document).
+The `requirement gathering stage` **must** result in a single yet very detailed artifact: The [`Requirement Document`](https://en.wikipedia.org/wiki/Product_requirements_document){target="_blank"}.
 
 This document should be very clear and specific on `what the problem requires`, not `how the problem will be solved`. This question will be answered in following phases.
 
@@ -89,7 +89,7 @@ Let's say you have a very simple `requirement` of having a wall built. The `stat
 
  In this `statement` there is nothing like the dimension of the wall, the materials to use, whatever. The `statement` is very simple: it `tells in simple text what the problem is and what is expected to be done`.
 
-## [>](#index) <i class="fa-solid fa-wind"></i> [All the Fools Sailed Away](https://open.spotify.com/track/0SYF0IKXsDZI0XR7TM2Kxr?si=f571b8fc704a4fe0 "Ronnie James Dio, The Man on the Silver Mountain")
+## [>](#index) <i class="fa-solid fa-wind"></i> [All the Fools Sailed Away](https://open.spotify.com/track/0SYF0IKXsDZI0XR7TM2Kxr?si=f571b8fc704a4fe0 "Ronnie James Dio, The Man on the Silver Mountain"){target="_blank"}
 
 > Now that ou have your boat on the water, where are you going?
 
@@ -200,7 +200,7 @@ Can you believe `things got done` already? Wow, so much work has been accomplish
 
 If the very very **VERY** careful and detailed planning made was followed and the `construction phase` went on without a hitch, it is time to make sure things were done correctly and to the letter. Since `waterfall` is not really about `feedbacks`, this step _should_ be just a formality, simply a way to demonstrate things are as they should be.
 
-But life is a box of surprises and [Murphy's Law](https://en.wikipedia.org/wiki/Murphy%27s_law) tends to show up anytime.
+But life is a box of surprises and [Murphy's Law](https://en.wikipedia.org/wiki/Murphy%27s_law){target="_blank"} tends to show up anytime.
 
 ### <i class="fa-solid fa-temperature-high"></i> Well, There's Your Problem!
 

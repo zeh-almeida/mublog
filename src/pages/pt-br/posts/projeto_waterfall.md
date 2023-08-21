@@ -51,7 +51,7 @@ Bom, se você soubesse fazer isso, você não teria um problema, não é verdade
 
 ## [>](#index) <i class="fa-solid fa-clipboard-question"></i> Navegando Pela Cascata
 
-O `Ciclo de Vida de Cascata` é um dos mais antigos e provavelmente o primeiro ciclo de vida para projetos de software, [de acordo com a Wikipedia](https://en.wikipedia.org/wiki/Waterfall_model).
+O `Ciclo de Vida de Cascata` é um dos mais antigos e provavelmente o primeiro ciclo de vida para projetos de software, [de acordo com a Wikipedia](https://en.wikipedia.org/wiki/Waterfall_model){target="_blank"}.
 
 Esse ciclo se chama `Cascata` porquê ele começa no topo e vai até o final, sem chance de retorno.
 
@@ -67,7 +67,7 @@ Tudo começa com a `declaração do problema`:
 
 Normalmente chamamos isso de `requisitos` e, na minha opinião pessoal `são as coisas mais comuns de estarem erradas num projeto`.
 
-`Requisitos` são as coisas que o projeto **PRECISA** alcançar, sem mais nem menos: ou o projeto entrega os `requisitos` ou ele falha. Por isso é imperativo que os `requisitos` estejam claros. Senão é como pedir para um software [resolver o problema da parada](https://pt.wikipedia.org/wiki/Problema_da_parada).
+`Requisitos` são as coisas que o projeto **PRECISA** alcançar, sem mais nem menos: ou o projeto entrega os `requisitos` ou ele falha. Por isso é imperativo que os `requisitos` estejam claros. Senão é como pedir para um software [resolver o problema da parada](https://pt.wikipedia.org/wiki/Problema_da_parada){target="_blank"}.
 
 Não existe limites para o número de `requisitos`. Claro que quanto maior a lista, mais difícil será a manutenção e o desenvolvimento do projeto.
 
@@ -75,7 +75,7 @@ Não existe limites para o número de `requisitos`. Claro que quanto maior a lis
 
 ### <i class="fa-solid fa-water-ladder"></i> A Água Deve Ser Funda o Suficiente
 
-A `fase de elicitação de requisitos` **deve** resultar num único porém extremamente detalhado artefato: O [`Documento de Requisitos`](https://en.wikipedia.org/wiki/Product_requisitos_document).
+A `fase de elicitação de requisitos` **deve** resultar num único porém extremamente detalhado artefato: O [`Documento de Requisitos`](https://en.wikipedia.org/wiki/Product_requisitos_document){target="_blank"}.
 
 Esse documento deve ser extremamente claro e específico ao detalhar `o que o problema requer`, não `como o problema deve ser resolvido`. Essa questão será respondida em fases futuras.
 
@@ -87,7 +87,7 @@ Digamos que você tem o simples `requisito` de construir uma parede. Essa `decla
 
 Nessa `declaração` não temos nada como dimensão das paredes, quais materiais devemos usar, etc. A `declaração` é muito simples: ela `diz num texto simples e claro qual o problema e o que esperar como resultado`.
 
-## [>](#index) <i class="fa-solid fa-wind"></i> [All the Fools Sailed Away (E Os Tolos Navegaram)](https://open.spotify.com/track/0SYF0IKXsDZI0XR7TM2Kxr?si=f571b8fc704a4fe0 "Ronnie James Dio, The Man on the Silver Mountain")
+## [>](#index) <i class="fa-solid fa-wind"></i> [All the Fools Sailed Away (E Os Tolos Navegaram)](https://open.spotify.com/track/0SYF0IKXsDZI0XR7TM2Kxr?si=f571b8fc704a4fe0 "Ronnie James Dio, The Man on the Silver Mountain"){target="_blank"}
 
 > Agora que seu barco está na água, para onde você vai?
 
@@ -101,7 +101,7 @@ Você precisa ter certeza que:
  - Os `requisitos` não se cancelam
  - Os `requisitos` podem ser testados de uma forma clara e direta
 
-Nessa parte da viagem pode ser impossível continuar navegando simplesmente porque uma dessas declarações não pôde ser atendida de forma satisfatória. O Modelo `Cascata` entende que os resultados de fases anteriores são verdades absolutas para continuar nas fases seguites.
+Nessa parte da viagem pode ser impossível continuar navegando simplesmente porque uma dessas declarações não pôde ser atendida de forma satisfatória. O Modelo `Cascata` entende que os resultados de fases anteriores são verdades absolutas para continuar nas fases seguintes.
 
 Isso significa que se algum dos seus`requisitos` não estiver nos padrões esperados na fase de `análise` o projeto _deve_ ser terminado, pelo menos na teoria.
 
@@ -199,7 +199,7 @@ Você consegue acreditar que `as coisas já foram feitas`? Tanto trabalho já re
 
 Se você fez um planejamento muito muito **MUITO** cuidadoso que foi seguido a risca e a `fase de construção` seguiu sem problemas, está na hora de garantir que as coisas foram feitas à risca. Como a `Cascata` não é sobre `feedbacks`, esse passo _deveria_ ser apenas uma formalidade, simplesmente uma forma de demonstrar que as coisas estão como deveriam ser.
 
-Mas a vida é uma caixinha de surpresas e a [lei de Murphy](https://en.wikipedia.org/wiki/Murphy%27s_law) costuma aparecer quando menos esperamos.
+Mas a vida é uma caixinha de surpresas e a [lei de Murphy](https://en.wikipedia.org/wiki/Murphy%27s_law){target="_blank"} costuma aparecer quando menos esperamos.
 
 ### <i class="fa-solid fa-temperature-high"></i> Ora, Aqui Está Seu Problema
 
