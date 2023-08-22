@@ -1,6 +1,7 @@
 import configparser
 import email.utils
 import glob
+import json
 import logging
 import os
 import time
@@ -551,7 +552,9 @@ class ArticlesPage(Page):
         article_posts = sorted(self.posts, key=lambda p: p.date, reverse=True)
 
         for post in article_posts:
-            article_listing.append(f'<li id=\"{post.file_name}\">')
+            post_tags = [x for x in post.tags]
+
+            article_listing.append(f'<li class="post-item" id=\"{post.file_name}\" data-tags=\'{json.dumps(post_tags)}\'>')
             article_listing.append(f'<b>[{post.date}]</b> ')
             article_listing.append(f'<a href=\"/{post.remote_path}\" title=\"{post.title}\">{post.title}</a>')
             article_listing.append(f'</li>')
@@ -752,8 +755,6 @@ class Blog:
             self.process_posts()
             logger.info("Processing pages...")
             self.process_pages()
-            logger.info("Processing scripts...")
-            self.process_scripts()
             logger.info("Processing rss feed...")
             self.process_rss_feed()
 
@@ -943,24 +944,6 @@ class Blog:
         """
         feed = RSSFeed(self.config, self.paths, self.current_lang, self.posts)
         feed.generate()
-
-    def process_scripts(self) -> None:
-        """
-        Processes all scripts, i.e. generates the tag mapping script
-        """
-        # Load the JavaScript template
-        tags_template_path = os.path.join(self.paths.src_templates_dir_path, "tags.js.template")
-        logger.debug(f"Processing {tags_template_path} ...")
-        with open(tags_template_path, mode="r", encoding="utf-8") as f:
-            js_template = f.read()
-
-        # Create a mapping of post filenames to tags and substitute the template placeholders with the actual values
-        with open(os.path.join(self.paths.dst_js_dir_path, f"tags_{self.current_lang}.js"), mode="w", encoding="utf-8") as f:
-            entries = [f'"{post.file_name}": [{",".join(map(repr, post.tags))}]' for post in self.posts]
-            substitutions = {
-                "tag_mapping": ",".join(entries)
-            }
-            f.write(Template(js_template).substitute(substitutions))
 
     def minify_files(self) -> None:
         """
