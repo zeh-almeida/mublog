@@ -196,7 +196,7 @@ class Helper:
         options = []
 
         for lang in config.available_languages:
-            options.append(f"<button class=\"language-button\" data-link=\"/{lang}/index.html\"><span class=\"fi fi-{lang[-2:]}\"></span> {lang}</button>")
+            options.append(f"<button class=\"language-button\" data-link=\"/{lang}/index.html\" title=\"{lang}\"><span class=\"fi fi-{lang[-2:]}\"></span> {lang}</button>")
 
         return "".join(options)
 
@@ -256,14 +256,6 @@ class Page:
         self.dst_path = Helper.post_src_to_dst_path(src_page_path, os.path.join(self.paths.dst_dir_path, self.current_lang), ".html")
         self.remote_path = Helper.strip_top_directory_in_path(self.dst_path)
         self.file_name = os.path.basename(src_page_path).split('.')[0]
-
-    def build_language_selector(self) -> str:
-        options = []
-
-        for lang in self.config.available_languages:
-            options.append(f"<button class=\"language-button\" data-link=\"/{lang}/index.html\"><span class=\"fi fi-{lang[-2:]}\"></span> {lang}</button>")
-
-        return "".join(options)
 
     def load_template(self) -> str:
         with open(os.path.join(self.paths.src_templates_dir_path, self.template), mode="r", encoding="utf-8") as f:
