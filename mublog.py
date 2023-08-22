@@ -196,7 +196,7 @@ class Helper:
         options = []
 
         for lang in config.available_languages:
-            options.append(f"<button class=\"language-button\" data-link=\"/{lang}/index.html\" title=\"{lang}\"><span class=\"fi fi-{lang[-2:]}\"></span> {lang}</button>")
+            options.append(f"<a class=\"tag-bubble\" href=\"/{lang}/index.html\"><span class=\"fi fi-{lang[-2:]}\"></span>{lang}</a>")
 
         return "".join(options)
 
@@ -269,7 +269,7 @@ class Page:
         :return: Map of known substitutions to make in templates
         """
         common_subs = Helper.common_substitutions(self.config, self.paths)
-        
+
         page_subs = {
             "file_name": self.file_name,
             "current_lang": self.current_lang,
