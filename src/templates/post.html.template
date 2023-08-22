@@ -31,6 +31,8 @@
     <link rel="favicon" href="/favicon.ico?v=${blog_version}"/>
 
     <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/normalize.css?v=${blog_version}">
+    <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/font_spacemono.css?v=${blog_version}">
+    <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/font_intelonemono.css?v=${blog_version}">
     <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/style.css?v=${blog_version}">
     <link rel="stylesheet" type="text/css" media="all" href="/${css_dir}/fontawesome_all.min.css?v=${blog_version}">
     <link rel="stylesheet" type="text/css" media="all" crossorigin="anonymous" referrerpolicy="no-referrer" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.9.1/css/flag-icons.min.css" integrity="sha512-ZQKxM5Z+PmOVa/VmISvHcqlUgzPejY92+I+sur69qiB7Vd+dAaDNMwy7AnRr6HcFbYY4so1FFPBgugE5s2jm7Q==" />
