@@ -28,6 +28,12 @@ RUN npm install terser clean-css-cli -g
 FROM base-image AS builder
 WORKDIR /app
 
+# Labels for the image
+LABEL source="mublog"
+LABEL mublog.author "766F6964"
+LABEL blog.url "https://zeh-almeida.olamundo.org/"
+LABEL maintainer='Zeh Almeida <zeca_16@hotmail.com>'
+
 # Copy blog script and configs
 COPY ./mublog.py ./mublog.py
 COPY ./mublog.ini ./mublog.ini
@@ -39,10 +45,9 @@ COPY ./src ./src
 RUN python3 mublog.py
 
 # Execute the minifications
-WORKDIR /app/dst
-RUN terser js/darkmode.js -c ecma=6,drop_console=true,passes=3 -m -o js/darkmode.js
-RUN terser js/tags.js -c ecma=6,drop_console=true,passes=3 -m -o js/tags.js
-RUN cleancss -O2 --batch --batch-suffix '' css/*.css
+RUN terser dst/js/darkmode.js -c ecma=6,drop_console=true,passes=3 -m -o dst/js/darkmode.js
+RUN terser dst/js/tags.js -c ecma=6,drop_console=true,passes=3 -m -o dst/js/tags.js
+RUN cleancss -O2 --batch --batch-suffix '' dst/css/*.css
 
 # zip blog generated data for output
-RUN zip -r build.zip /app/dst
+RUN zip -r build.zip ./dst

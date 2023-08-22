@@ -27,6 +27,12 @@ RUN npm install terser clean-css-cli -g
 FROM base-image AS builder
 WORKDIR /app
 
+# Labels for the image
+LABEL source="mublog"
+LABEL mublog.author "766F6964"
+LABEL blog.url "https://zeh-almeida.olamundo.org/"
+LABEL maintainer='Zeh Almeida <zeca_16@hotmail.com>'
+
 # Copy blog script and configs
 COPY ./mublog.py ./mublog.py
 COPY ./mublog.ini ./mublog.ini
@@ -46,6 +52,12 @@ RUN cleancss -O2 --batch --batch-suffix '' css/*.css
 ####################################################################################################
 # run the folder as a small webserver
 FROM python:3-alpine AS server
+
+# Labels for the image
+LABEL source="mublog"
+LABEL mublog.author "766F6964"
+LABEL blog.url "https://zeh-almeida.olamundo.org/"
+LABEL maintainer='Zeh Almeida <zeca_16@hotmail.com>'
 
 COPY --from=builder /app/dst /app
 WORKDIR /app
