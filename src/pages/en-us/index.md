@@ -2,9 +2,11 @@
 title: Index
 description: Homepage
 date: 2023-07-20
-modified: 2023-08-10
+modified: 2023-08-22
 tags: home,index,english
 ---
+![](/assets/profile.jpg#profile-pic "Zeh and Arroz")
+
 # <i class="fa-solid fa-user-astronaut"></i> Hello there and welcome!
 
 My name is **José Ricardo Carvalho Prado de Almeida** and I use this blog to showcase myself to the world.

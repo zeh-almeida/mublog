@@ -2,9 +2,12 @@
 title: Landing
 description: Blog's Front Door
 date: 2023-07-20
-modified: 2023-08-10
+modified: 2023-08-22
 tags: home,index,language
 ---
+
+![](/assets/profile.jpg#profile-pic "Zeh and Arroz")
+
 # ${blog_title}
 
 ## <span class="fi fi-us"></span> Hey there and welcome!
