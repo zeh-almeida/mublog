@@ -1,6 +1,8 @@
 # syntax=docker/dockerfile:1
 
-FROM amd64/alpine:latest
+####################################################################################################
+# Base image for running the blog script
+FROM python:3-alpine AS base-image
 WORKDIR /app
 
 # Labels for the image
@@ -15,14 +17,15 @@ ENV PYTHONUNBUFFERED=1
 # Install all necessary packages
 RUN apk add --update --no-cache \
     pandoc \
-    python3 \
-    rust \
-    cargo
+    npm
 
-# Configure Python/pip
-RUN ln -sf python3 /usr/bin/python \
-    && python3 -m ensurepip \
-    && pip3 install --no-cache --upgrade pip setuptools minify-html
+# Install Terser for minification
+RUN npm install terser clean-css-cli -g
+
+####################################################################################################
+# Execute the blog generation
+FROM base-image AS builder
+WORKDIR /app
 
 # Copy blog script and configs
 COPY ./mublog.py ./mublog.py
@@ -34,9 +37,18 @@ COPY ./src ./src
 # Execute blog generation
 RUN python3 mublog.py
 
-# Set workdir to the generated blog folder
+# Execute the minifications
 WORKDIR /app/dst
+RUN terser js/darkmode.js -c ecma=6,drop_console=true,passes=3 -m -o js/darkmode.js
+RUN terser js/tags.js -c ecma=6,drop_console=true,passes=3 -m -o js/tags.js
+RUN cleancss -O2 --batch --batch-suffix '' css/*.css
 
+####################################################################################################
 # run the folder as a small webserver
+FROM python:3-alpine AS server
+
+COPY --from=builder /app/dst /app
+WORKDIR /app
+
 EXPOSE 8000 8000
 ENTRYPOINT ["python", "-m", "http.server", "8000"]
