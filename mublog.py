@@ -525,7 +525,7 @@ class TagsPage(Page):
             tag_param = urllib.parse.urlencode({"tag": tag})
 
             tags.append(f'<a class="tag-bubble" href="articles.html?{tag_param}">'
-                     f"{tag}<span>{tag_count}</span></a>")
+                     f"{tag}<span>({tag_count})</span></a>")
 
         tags.append("</div>")
         return "".join(tags)

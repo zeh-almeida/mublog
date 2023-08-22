@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" class="light">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -48,9 +48,10 @@
 </nav>
 <main>
 <div class="buttons">
-    <button class="dark-toggle" type="button">
-        <i class="fa-regular fa-lightbulb"></i> ${label_dark_mode}
+    <button class="theme_btn dark-toggle" type="button" title="${label_dark_mode}">
+        <i class="fa-solid fa-circle-half-stroke"></i>
     </button>
+
     ${languages}
 </div>
 <hr>
@@ -58,10 +59,17 @@ ${page_content}
 </main>
 <footer>
     <hr>
-    <p>
-        ${author_copyright}
-        <br>
-    </p>
+    <div class="footer-elements">
+        <div class="footer-copyright">
+            ${author_copyright}
+            <br>
+        </div>
+        <div class="footer-theme-toggle">
+            <button class="theme_btn dark-toggle" type="button" title="${label_dark_mode}">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+        </div>
+    </div>
 </footer>
 </body>
 </html>
