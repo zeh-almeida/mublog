@@ -196,7 +196,7 @@ class Helper:
         options = []
 
         for lang in config.available_languages:
-            options.append(f"<a class=\"tag-bubble\" href=\"/{lang}/index.html\"><span class=\"fi fi-{lang[-2:]}\"></span>{lang}</a>")
+            options.append(f'<a class="tag-bubble" href="/{lang}/index.html" title="{lang}"><span class="fi fi-{lang[-2:]}"></span>{lang}</a>')
 
         return "".join(options)
 
@@ -464,7 +464,7 @@ class Post(Page):
 
         for tag in self.tags:
             tag_name = urllib.parse.urlencode({"tag": tag})
-            tags.append(f'<a class="tag-bubble" href="../articles.html?{tag_name}">{tag}</a>')
+            tags.append(f'<a class="tag-bubble" href="../articles.html?{tag_name}" title="{tag}">{tag}</a>')
 
         return f'<div class="tags">{"".join(tags)}</div>'
 
@@ -516,7 +516,7 @@ class TagsPage(Page):
             tag_count = tag_counts[tag]
             tag_param = urllib.parse.urlencode({"tag": tag})
 
-            tags.append(f'<a class="tag-bubble" href="articles.html?{tag_param}">'
+            tags.append(f'<a class="tag-bubble" href="articles.html?{tag_param}" title="{tag_param}">'
                      f"{tag}<span>({tag_count})</span></a>")
 
         tags.append("</div>")

@@ -73,8 +73,8 @@
 </nav>
 <main>
 <div class="buttons">
-    <button class="theme_btn dark-toggle" type="button" title="${label_dark_mode}">
-        <i class="fa-solid fa-circle-half-stroke"></i>
+    <button class="tag-bubble dark-toggle" type="button" title="${label_dark_mode}">
+        <i class="fa-solid fa-circle-half-stroke"></i> ${label_dark_mode}
     </button>
 
     ${languages}
