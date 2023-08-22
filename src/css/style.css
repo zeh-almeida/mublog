@@ -1,35 +1,3 @@
-@font-face {
-  font-family: "SpaceMono";
-  font-weight: normal;
-  font-style: normal;
-
-  src: url(../assets/SpaceMono-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "SpaceMono";
-  font-weight: bold;
-  font-style: normal;
-
-  src: url(../assets/SpaceMono-Bold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "SpaceMono";
-  font-weight: bold;
-  font-style: italic;
-
-  src: url(../assets/SpaceMono-BoldItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "SpaceMono";
-  font-weight: normal;
-  font-style: italic;
-
-  src: url(../assets/SpaceMono-Italic.ttf) format("truetype");
-}
-
 :root {
   --color-blue-lgt: #14263b;
   --color-blue-mid: #030811;
@@ -48,7 +16,7 @@ html {
   font-size: 1.25em;
   line-height: 1.5;
   background-color: var(--color-blue-drk);
-  font-family: "SpaceMono", IBM Plex Mono, monospace;
+  font-family: "IntelOneMono", "SpaceMono", IBM Plex Mono, monospace;
   color: var(--color-gray-light);
 }
 
