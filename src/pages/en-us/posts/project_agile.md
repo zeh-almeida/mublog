@@ -195,4 +195,4 @@ Welp, you've reached this far already? Well, I haven't finished writing the whol
 
 Probably sounds crazy to publish as-is but I want to gather feedback while I write.
 
-Now that I think about it, it's very ironic to ask for feedback because I am writing about Waterfall, right? We will get to that, don't worry.
+After all, `agile` is all about `getting feedback`, right?
