@@ -42,7 +42,7 @@ ___
 
 ## [>](#index) <i class="fa-solid fa-backward-fast"></i> Let's Rewind A Little Before Moving Forward
 
-Previously I [talked about the Waterfall Project Management](project_waterfall.html) and how stiff it was: `You had to follow everything by the book or else it fails`.
+Previously I [talked about the Waterfall Project Management](project_waterfall.html){target="_blank"} and how stiff it was: `You had to follow everything by the book or else it fails`.
 
 > If you haven't read it, I highly recommend you to do so before continuing, I will heavily lean on it to explain my view of the `Agile Framework`.
 
@@ -68,12 +68,12 @@ Before we suggest improvements, let's list the problems in `Waterfall` first:
  - `Collaboration` is more important than `contract negotiations`;
  - `Changes should be embraced` even whey they `don't conform to the plan`;
 
- That is to say, `things on the right have their value but one should prefer the things on the left`. Knowledgeable readers may correctly identify that [I have taken this straight from the Agile Manifesto](https://agilemanifesto.org/) and I admit it, because this is **THE** place to know more about `Agile`, though in a more `Software-oriented` approach while I want to take a more generalist one.
+ That is to say, `things on the right have their value but one should prefer the things on the left`. Knowledgeable readers may correctly identify that [I have taken this straight from the Agile Manifesto](https://agilemanifesto.org/){target="_blank"} and I admit it, because this is **THE** place to know more about `Agile`, though in a more `Software-oriented` approach while I want to take a more generalist one.
 
 ## [>](#index) <i class="fa-solid fa-ruler-combined"></i> The twelve ~~Commandments~~ Principles of Agile
 
 While `Agile` is indeed a `Framework` of practices, there are `twelve principles` which should always be upheld.
-They are listed in the order they appear at the [Agile Manifesto page](https://agilemanifesto.org/principles.html) and I have also added examples on how to use them.
+They are listed in the order they appear at the [Agile Manifesto page](https://agilemanifesto.org/principles.html){target="_blank"} and I have also added examples on how to use them.
 
 ### List of Principles
 
@@ -100,11 +100,11 @@ This `principle` focus on the idea that `you don't need to deliver the whole pro
 
 Doing so will allow both the `customer` and the `team` to receive and process `feedback` easily, as there is more availability to `discuss` and `validate` the deliverable.
 
-### [>>](#list-of-principles) <i class="fa-solid fa-2"></i> [The Wind of Change](https://open.spotify.com/track/3ovjw5HZZv43SxTwApooCM?si=44f78920c4394618)
+### [>>](#list-of-principles) <i class="fa-solid fa-2"></i> [The Wind of Change](https://open.spotify.com/track/3ovjw5HZZv43SxTwApooCM?si=44f78920c4394618){target="_blank"}
 
 > Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
 
-Things change and always will: That is the principle in which the [Evolution Theory](https://en.wikipedia.org/wiki/Evolution) and the [Scientific Method](https://en.wikipedia.org/wiki/Scientific_method) are based upon.
+Things change and always will: That is the principle in which the [Evolution Theory](https://en.wikipedia.org/wiki/Evolution){target="_blank"} and the [Scientific Method](https://en.wikipedia.org/wiki/Scientific_method){target="_blank"} are based upon.
 
 Instead of fighting against it, we should `embrace change` at every step. What if you planned to build yourself a `house` for a `family of 3` and `suddenly` you discover that you have a `baby coming`, would you simply `abandon the project and start over` or would you try to `make changes to it in order to accommodate the new lifestyle`?
 
@@ -120,7 +120,7 @@ The [First Principle](#get-your-priorities-straight) makes it clear we must `del
 
 The answer to this question really `depends on the team` as well as the `project being worked on`. When talking about `software` there tends to be a preference for `2-week cycles` but this is not a `hard rule`.
 
-Going back to the [Waterfall article](project_waterfall.html) and the `civil construction examples`: if your team is `capable of finishing a floor foundation in two weeks`, that's your `cadence of delivery`, at least for this phase of the project.
+Going back to the [Waterfall article](project_waterfall.html){target="_blank"} and the `civil construction examples`: if your team is `capable of finishing a floor foundation in two weeks`, that's your `cadence of delivery`, at least for this phase of the project.
 
 ### [>>](#list-of-principles) <i class="fa-solid fa-4"></i> One Mind, Many Hearts
 
@@ -268,8 +268,8 @@ But does this mean you have to build your `team` workflow from scratch every tim
 While `agile` is a framework and doesn't force you to follow any specific method, there are some, let's call them `implementations` of this framework which can be used out-of-the-box.
 
 The two most common, at least for me, are:
- - [SCRUM](https://www.atlassian.com/agile/scrum)
- - [Kanban](https://kanbanize.com/kanban-resources/getting-started/what-is-kanban)
+ - [SCRUM](https://www.atlassian.com/agile/scrum){target="_blank"}
+ - [Kanban](https://kanbanize.com/kanban-resources/getting-started/what-is-kanban){target="_blank"}
 
  There are many more ways to use the `agile framework` than just those two, think of it as a `LEGO brick`.
 
@@ -293,8 +293,8 @@ Make sure you really understand and stand behind the [agile principles](#the-twe
 
 Some examples of `anti-agile` methods include but are not exclusive to:
 
- - [eXtreme Go Horse](https://medium.com/@dekaah/22-axioms-of-the-extreme-go-horse-methodology-xgh-9fa739ab55b4) - Some people take this seriously, _why_?
- - [Waterfall](project_waterfall.html) - Yes, I had to include this because some people think you can agilize `Waterfall`: **You can't**.
+ - [eXtreme Go Horse](https://medium.com/@dekaah/22-axioms-of-the-extreme-go-horse-methodology-xgh-9fa739ab55b4){target="_blank"} - Some people take this seriously, _why_?
+ - [Waterfall](project_waterfall.html){target="_blank"} - Yes, I had to include this because some people think you can agilize `Waterfall`: **You can't**.
 
 ## [>](#index) <i class="fa-solid fa-flag-checkered"></i> The End of the Race
 
