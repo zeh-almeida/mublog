@@ -2,8 +2,8 @@
 title: Project Lifecycle - Agile Framework
 description: What is the Agile Framework, does it make you faster?
 date: 2023-08-23
-modified: 2023-08-23
-tags: project,management,agile,iteration,analysis,problem,statement,navigation,work,result,delivery,feedback,framework
+modified: 2023-08-25
+tags: project,management,agile,iteration,analysis,problem,statement,navigation,work,result,delivery,feedback,framework,manifesto,structure,waterfall,tool,people,team
 ---
 # <i class="fa-solid fa-arrows-spin"></i> Project Lifecycle - Agile Framework
 
@@ -33,7 +33,10 @@ tags: project,management,agile,iteration,analysis,problem,statement,navigation,w
 - [The Puzzling Framework](#the-puzzling-framework)
 - [Where Are My Deliverables?](#where-are-my-deliverables)
 - [The Dream Team](#the-dream-team)
-- [<i class="fa-solid fa-person-digging"></i> Still Under Construction](#still-under-construction)
+- [Framework Pre-Fabrication](#framework-pre-fabrication)
+- [Embrace Agility](#embrace-agility)
+- [Fake Agile](#fake-agile)
+- [The End of the Race](#the-end-of-the-race)
 
 ___
 
@@ -70,8 +73,7 @@ Before we suggest improvements, let's list the problems in `Waterfall` first:
 ## [>](#index) <i class="fa-solid fa-ruler-combined"></i> The twelve ~~Commandments~~ Principles of Agile
 
 While `Agile` is indeed a `Framework` of practices, there are `twelve principles` which should always be upheld.
-
-They are listed in the order they appear at the [Agile Manifesto page](https://agilemanifesto.org/principles.html) and I have also tried to add examples on how to use them.
+They are listed in the order they appear at the [Agile Manifesto page](https://agilemanifesto.org/principles.html) and I have also added examples on how to use them.
 
 ### List of Principles
 
@@ -255,12 +257,53 @@ You also have `team members which are not directly part of the match`. This incl
 
 `All that matters is that all the people in the team have the same objectives`. In this case, it's to win the match, no matter what your assigned role is at the beginning.
 
+## [>](#index) <i class="fa-solid fa-trowel-bricks"></i> Framework Pre-Fabrication
+
+So `agile` is pretty forgivable in how you `organize your team` and `how your work is laid out` because all that matters is that you **always** follow the [principles](#the-twelve-commandments-principles-of-agile).
+
+But does this mean you have to build your `team` workflow from scratch every time?
+
+**Of course not!**
+
+While `agile` is a framework and doesn't force you to follow any specific method, there are some, let's call them `implementations` of this framework which can be used out-of-the-box.
+
+The two most common, at least for me, are:
+ - [SCRUM](https://www.atlassian.com/agile/scrum)
+ - [Kanban](https://kanbanize.com/kanban-resources/getting-started/what-is-kanban)
+
+ There are many more ways to use the `agile framework` than just those two, think of it as a `LEGO brick`.
+
+Those two do follow the [agile principles](#the-twelve-commandments-principles-of-agile) in their own way but they are **NOT** interchangeable. `Choose them wisely before starting` because they have `very distinct ways of handling work and changes`.
+
+## [>](#index) <i class="fa-solid fa-rocket"></i> Embrace Agility
+
+`Agile` **does not mean** you will `deliver faster` nor `finish the project earlier`, so why choose something which seems so random instead of the structure `Waterfall` provides?
+
+Simply put, `agile` allows you to have `better previsibility`, `better quality control` and `greater understanding of the project`.
+
+The ability to `embrace changes` and `take care of the people` allows `agile projects` to `adapt better to changing conditions`, be it market, weather or even political ones.
+
+## [>](#index) <i class="fa-solid fa-poo-storm"></i> Fake Agile
+
+Not everything smells like roses, unfortunately. Because of its `framework` nature, `agile` allows people to `implement their own version` of it.
+
+Some implementations are great such as the [examples above](#framework-pre-fabrication). Others, however, convince you they are `agile` when in fact, they are their own `flavor of doom`.
+
+Make sure you really understand and stand behind the [agile principles](#the-twelve-commandments-principles-of-agile) before choosing or creating your `flavor of agile` or this will mean the `downfall of your project`.
+
+Some examples of `anti-agile` methods include but are not exclusive to:
+
+ - [eXtreme Go Horse](https://medium.com/@dekaah/22-axioms-of-the-extreme-go-horse-methodology-xgh-9fa739ab55b4) - Some people take this seriously, _why_?
+ - [Waterfall](project_waterfall.html) - Yes, I had to include this because some people think you can agilize `Waterfall`: **You can't**.
+
+## [>](#index) <i class="fa-solid fa-flag-checkered"></i> The End of the Race
+
+ Let's conclude your `agile` adventure, shall we? I hope by now you have a good understanding on what `agile` is, how to use it and how to make it better.
+
+ Like every tool in the universe, `it's power comes from how you use it, not from the tool itself`. You don't have to exclude `Waterfall` from your life, `it may be a powerful tool in other scenarios` but I personally think you should start thinking about `agile` first, regardless.
+
+As always: if you have any questions or comments, send me an e-mail or message me through `Telegram`, the links are at the top of the page.
+
+Bye for now.
 
 ___
-## [>](#index) <i class="fa-solid fa-person-digging"></i> Still Under Construction
-
-Welp, you've reached this far already? Well, I haven't finished writing the whole article yet.
-
-Probably sounds crazy to publish as-is but I want to gather feedback while I write.
-
-After all, `agile` is all about `getting feedback`, right?
