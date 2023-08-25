@@ -29,6 +29,10 @@ tags: project,management,agile,iteration,analysis,problem,statement,navigation,w
     - [10: Give It a KISS](#give-it-a-kiss)
     - [11: Self Improvement Is Real](#self-improvement-is-real)
     - [12: Hindsight is 20/20](#hindsight-is-2020)
+- [What Does It Mean to be Agile?](#what-does-it-mean-to-be-agile)
+- [The Puzzling Framework](#the-puzzling-framework)
+- [Where Are My Deliverables?](#where-are-my-deliverables)
+- [The Dream Team](#the-dream-team)
 - [<i class="fa-solid fa-person-digging"></i> Still Under Construction](#still-under-construction)
 
 ___
@@ -187,6 +191,70 @@ Such ability also allows the team to make `better decisions, faster` which `incr
 `Retrospectives` are events which should occur as regularly as `delivers`, so you can always iterate on the most recent achievement.
 
 The `retrospective` should focus in `what went well`, `what didn't go well` and `how can the team improve`. Of course, `this is not a rule` and `the team is free to adapt it to use what is best for the team itself`.
+
+## [>](#index) <i class="fa-solid fa-clipboard-question"></i> What Does It Mean to be Agile?
+
+Contrary to popular belief, `being agile is not the same as being fast`. Crazy, right?
+
+At least in the context of `project management`, being `agile` means `being able to react to changes as soon as possible`.
+
+This is a good contrast to `Waterfall`, where any and all changes would mean the `project termination`.
+
+The changes handled in `agile` don't include only `project changes` but also `team-related changes` as well. This means `agile` is ready to embrace individuals `coming and going` from the team just as well as it handles `requirement changes`.
+
+## [>](#index) <i class="fa-solid fa-puzzle-piece"></i> The Puzzling Framework
+
+I have [already stated](#get-in-gear-what-is-agile) that `agile` is actually a `framework`, but what is that?
+
+Essentially, a `framework` is a `collection of tools, practices and processes` but without a fixed structure.
+
+This allows you to combine those `tools`, `practices` and `processes` in whatever way you want, as long you don't go against the [principles](#the-twelve-commandments-principles-of-agile).
+
+This allows you to have a `tailor-made approach` as to how your team works and because of the `agile` nature, it also allows you the `flexibility to change anything, anytime`.
+
+Of course, this can also present a challenge: `no two teams work the same way`. This amount of customization _may_ introduce some confusion as to how teams operate among each other, as they each have their own way of doing things.
+
+At the same time, this is exactly what `agile` is good for: `Individuals and interactions`. Because the teams are `agile`, they _should_ `easily transform this perceived difficulty` into `something useful for both teams`.
+
+## [>](#index) <i class="fa-solid fa-list-check"></i> Where Are My Deliverables?
+
+In `Waterfall` we had many `artifacts` or `deliverables`, pretty much one for every phase. How does `agile` handles this?
+
+The short answer is that it doesn't: `there are no artifacts in agile`, at least in principle. Maybe your team decides to output some `artifacts` but that will depend on your own goals for the `project`.
+
+`Agile focuses on delivering value`. While some `artifacts` are important overall, they do not `directly add value` to the `project` or they may even `cost too much time to maintain`.
+
+The `Business Rules` are a great example of this contrast between `Agile` and `Waterfall`.
+
+In `Waterfall`, there is no turning back once the `Rules` are set and they get documented into a very thick paper tower. If, by the will of the universe, those `rules` need any kind of change, `the current version of the document must be trashed` while a new version is produced. Not only that, `the team would have to halt work on the project until such changes are made` because they cannot afford to rework on something.
+
+In `Agile` changes are part of the daily life, therefore a update on any of the `rules` is not only expected but also welcomed. The team, `using it's own tools, practices and processes` will `find its own way to document and implement those changes seamlessly`, without adverse impact to the workflow.
+
+In essence, everything in `agile` is decided by the `team`, including what a `deliverable` is and how to approach it.
+
+## [>](#index) <i class="fa-solid fa-people-group"></i> The Dream Team
+
+At this point of the article there's a sense of `too much responsibility` being at the hands of the team, but that's a `good thing`.
+
+After all, `the team is composed of anyone of interest to the project`, even if they are not directly working on the deliverables.
+
+In `agile` there is `less focus in what role you possess` and more in `how can you help the team succeed` which means `your job title doesn't affect how the team operates, only your actions matter`.
+
+Let's imagine a football (soccer) team and how it works. There are 11 players in `many different positions` with `two objectives for every match`: `Score goals at the other team's goal` and `do your best to block the other team from scoring at your goal`.
+
+In order to better organize the team, it is broken down in about 4 main groups: `offense`, `mid-field`, `defense` and `goal keeper`. Each group respects the `two main objectives` but each accomplishes them in `different ways`:
+
+- The role of the `offense` is score goals;
+- The `mid-fielders` make sure the ball reaches the `offense` and does it best to avoid the adversary's attack;
+- In order to protect the goal, the `defense` is specialized in taking the ball from the adversary and performing `counter-attacks`;
+- If everything fails, the `goal keeper` is the last line of defense against the adversary. The job is simple: do not let the ball get through at any cost.
+
+`Having roles is important for a team`, it allows everyone to `know what part they should take during the match`. At the same time, `the role does not limit them to that specific position at the field`. There are no rules against a `defense player` getting the ball and scoring a goal, nor a rule against a `offense player` making a daring dribble and saving the team from taking a goal.
+
+You also have `team members which are not directly part of the match`. This includes the `coach` and the assistants, for example. `Their job is to help the team get to the match in top-notch condition` and even `handle some unforeseen circumstances` such as strategy changes or player substitutions.
+
+`All that matters is that all the people in the team have the same objectives`. In this case, it's to win the match, no matter what your assigned role is at the beginning.
+
 
 ___
 ## [>](#index) <i class="fa-solid fa-person-digging"></i> Still Under Construction
