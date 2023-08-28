@@ -15,7 +15,6 @@ from datetime import datetime
 from string import Template
 from urllib.parse import urljoin
 
-##import minify_html
 
 class PathConfig:
     def __init__(self):
@@ -79,6 +78,8 @@ class BlogConfig:
         self.label_rss = ""
         self.label_dark_mode = ""
         self.label_contact = ""
+        self.label_written = ""
+        self.label_modified = ""
 
         self.blog_version = uuid.uuid4().hex
 
@@ -227,6 +228,8 @@ class Helper:
             "label_rss": config.label_rss,
             "label_dark_mode": config.label_dark_mode,
             "label_contact": config.label_contact,
+            "label_written": config.label_written,
+            "label_modified": config.label_modified,
 
             "languages": Helper.build_language_selector(config),
 
@@ -771,8 +774,6 @@ class Blog:
         self.process_sitemap()
         logger.info("Processing robots...")
         self.process_robots()
-        #logger.info("Processing minification...")
-        #self.minify_files()
 
     def load_base_configuration(self)->None:
         path = "mublog.ini"
@@ -827,6 +828,9 @@ class Blog:
         self.config.label_rss = section["label_rss"]
         self.config.label_dark_mode = section["label_dark_mode"]
         self.config.label_contact = section["label_contact"]
+        self.config.label_written = section["label_written"]
+        self.config.label_modified = section["label_modified"]
+        
 
     def clean_build_directory(self) -> None:
         """
@@ -944,37 +948,6 @@ class Blog:
         """
         feed = RSSFeed(self.config, self.paths, self.current_lang, self.posts)
         feed.generate()
-
-    # def minify_files(self) -> None:
-    #     """
-    #     Minifies all files in the destination
-    #     """
-    #     files = []
-    #     targets = ['**/*.js', '**/*.html', '**/*.css', '**/*.webmanifest']
-
-    #     for target in targets:
-    #         files += glob.glob(os.path.join(self.paths.dst_dir_path, target), recursive=True)
-
-    #     for item in files:
-    #         with open(item, mode="r+", encoding="utf-8") as file:
-    #             contents = file.read()
-    #             file.seek(0)
-
-    #             minified = minify_html.minify(
-    #                 code=contents,
-    #                 minify_js=True,
-    #                 minify_css=True,
-    #                 remove_bangs=True,
-    #                 keep_comments=False,
-    #                 keep_closing_tags=True,
-    #                 do_not_minify_doctype=True,
-    #                 keep_spaces_between_attributes=True,
-    #                 remove_processing_instructions=True,
-    #                 keep_html_and_head_opening_tags=True,
-    #                 ensure_spec_compliant_unquoted_attribute_values=True)
-
-    #             file.write(minified)
-    #             file.truncate()
 
     def process_favicon(self) -> None:
         """

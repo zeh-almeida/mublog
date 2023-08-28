@@ -391,3 +391,13 @@ a.tag-bubble {
 nav a {
   color: var(--color-text);
 }
+
+.post-dates {
+  display: flex;
+  flex-flow: column;
+  font-size: 0.6rem;
+}
+
+.post-date {
+  font-weight: bold;
+}

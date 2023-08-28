@@ -80,6 +80,12 @@
     ${languages}
 </div>
 <hr>
+
+<div class="post-dates">
+    <span class="post-creation"><i class="fa-solid fa-calendar-day"></i> ${label_written} <span class="post-date">${page_date}</span></span>
+    <span class="post-modified"><i class="fa-regular fa-calendar-plus"></i> ${label_modified} <span class="post-date">${page_modified}</span></span>
+</div>
+
 ${page_content}
 ${post_tags}
 </main>
