@@ -549,9 +549,7 @@ class ArticlesPage(Page):
         Generates the html for the article listing of all posts
         :return: The html for the article listing
         """
-        article_listing = ["<article>"]
-        article_listing.append("<ul class=\"articles\">")
-
+        article_listing = ["<article><ul class=\"articles\">"]
         article_posts = sorted(self.posts, key=lambda p: p.date, reverse=True)
 
         for post in article_posts:
@@ -559,11 +557,10 @@ class ArticlesPage(Page):
 
             article_listing.append(f'<li class="post-item" id=\"{post.file_name}\" data-tags=\'{json.dumps(post_tags)}\'>')
             article_listing.append(f'<b>[{post.date}]</b> ')
-            article_listing.append(f'<a href=\"/{post.remote_path}\" title=\"{post.title}\">{post.title}</a>')
+            article_listing.append(f'<a href=\"/{post.remote_path}\" title=\"{post.title} : {post.description}\">{post.title}</a>')
             article_listing.append(f'</li>')
 
-        article_listing.append("</ul>")
-        article_listing.append("</article>")
+        article_listing.append("</ul></article>")
 
         return "".join(article_listing)
 
@@ -830,7 +827,7 @@ class Blog:
         self.config.label_contact = section["label_contact"]
         self.config.label_written = section["label_written"]
         self.config.label_modified = section["label_modified"]
-        
+
 
     def clean_build_directory(self) -> None:
         """
