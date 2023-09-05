@@ -22,7 +22,7 @@ tags: project,management,agile,iteration,analysis,problem,statement,navigation,w
     - [3: Keep on Deliverin'](#keep-on-deliverin)
     - [4: One Mind, Many Hearts](#one-mind-many-hearts)
     - [5: The Team Makes The Dream Come True](#the-team-makes-the-dream-come-true)
-    - [6: Avoid E-Mails That Cloud Be a Conversation](#avoid-e-mails-that-cloud-be-a-conversation)
+    - [6: Avoid E-Mails That Could Be a Conversation](#avoid-e-mails-that-cloud-be-a-conversation)
     - [7: How Far Are We?](#how-far-are-we)
     - [8: Keeping Up the Pace](#keeping-up-the-pace)
     - [9: Attention to the Details](#attention-to-the-details)
@@ -82,7 +82,7 @@ They are listed in the order they appear at the [Agile Manifesto page](https://a
 - [3: Keep on Deliverin'](#keep-on-deliverin)
 - [4: One Mind, Many Hearts](#one-mind-many-hearts)
 - [5: The Team Makes The Dream Come True](#the-team-makes-the-dream-come-true)
-- [6: Avoid E-Mails That Cloud Be a Conversation](#avoid-e-mails-that-cloud-be-a-conversation)
+- [6: Avoid E-Mails That Could Be a Conversation](#avoid-e-mails-that-could-be-a-conversation)
 - [7: How Far Are We?](#how-far-are-we)
 - [8: Keeping Up the Pace](#keeping-up-the-pace)
 - [9: Attention to the Details](#attention-to-the-details)
@@ -138,7 +138,7 @@ In order to perform their best, people must be feeling their best. Nobody likes 
 
 `Agile` focus on people: `Your team is your greatest treasure`, take care of them.
 
-### [>>](#list-of-principles) <i class="fa-solid fa-6"></i> Avoid E-Mails That Cloud Be a Conversation
+### [>>](#list-of-principles) <i class="fa-solid fa-6"></i> Avoid E-Mails That Could Be a Conversation
 
 > The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.
 
