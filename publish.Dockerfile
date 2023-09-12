@@ -46,6 +46,7 @@ RUN python3 mublog.py
 
 # Execute the minifications
 RUN terser dst/js/darkmode.js -c ecma=6,drop_console=true,passes=3 -m -o dst/js/darkmode.js
+RUN terser dst/js/fonts.js -c ecma=6,drop_console=true,passes=3 -m -o dst/js/fonts.js
 RUN terser dst/js/tags.js -c ecma=6,drop_console=true,passes=3 -m -o dst/js/tags.js
 RUN cleancss -O2 --batch --batch-suffix '' dst/css/*.css
 

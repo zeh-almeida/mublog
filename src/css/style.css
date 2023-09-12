@@ -48,6 +48,22 @@ html {
   font-family: "IntelOneMono", "SpaceMono", IBM Plex Mono, monospace;
 }
 
+.IBM_Plex_Mono_font {
+  font-family: IBM Plex Mono;
+}
+
+.monospace_font {
+  font-family: monospace;
+}
+
+.IntelOneMono_font {
+  font-family: "IntelOneMono";
+}
+
+.SpaceMono_font {
+  font-family: "SpaceMono";
+}
+
 body {
   margin: 0 auto;
   padding: 0 1.5rem;

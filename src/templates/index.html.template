@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" media="all" crossorigin="anonymous" referrerpolicy="no-referrer" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.9.1/css/flag-icons.min.css" integrity="sha512-ZQKxM5Z+PmOVa/VmISvHcqlUgzPejY92+I+sur69qiB7Vd+dAaDNMwy7AnRr6HcFbYY4so1FFPBgugE5s2jm7Q==" />
 
     <script type="text/javascript" src="/${js_dir}/darkmode.js?v=${blog_version}"></script>
+    <script type="text/javascript" src="/${js_dir}/fonts.js?v=${blog_version}"></script>
     <script type="text/javascript" src="/${js_dir}/tags.js?v=${blog_version}"></script>
 
     <title>${blog_title}</title>
@@ -53,6 +54,7 @@
     </button>
 
     ${languages}
+    ${fonts}
 </div>
 <hr>
 ${page_content}

@@ -68,6 +68,9 @@ class BlogConfig:
         self.preferred_language = ""
         self.available_languages: list[str] = []
 
+        self.preferred_font = ""
+        self.available_fonts: list[str] = []
+
         self.blog_title = ""
         self.blog_description = ""
         self.label_about = ""
@@ -80,6 +83,7 @@ class BlogConfig:
         self.label_contact = ""
         self.label_written = ""
         self.label_modified = ""
+        self.label_select_font = ""
 
         self.blog_version = uuid.uuid4().hex
 
@@ -203,6 +207,17 @@ class Helper:
         return "".join(options)
 
     @staticmethod
+    def build_font_selector(config: BlogConfig) -> str:
+        options = [f'<select name="fonts" id="font-selection" title="{config.label_select_font}">']
+
+        for font in config.available_fonts:
+            selected = 'selected' if font == config.preferred_font else ''
+            options.append(f'<option value="{font.replace(" ", "_")}" {selected}>{font}</option>')
+
+        options.append('</select>')
+        return "".join(options)
+
+    @staticmethod
     def common_substitutions(config: BlogConfig, paths: PathConfig) -> dict[str, str]:
         """
         Maps common substitutions in blog templates
@@ -232,6 +247,7 @@ class Helper:
             "label_modified": config.label_modified,
 
             "languages": Helper.build_language_selector(config),
+            "fonts": Helper.build_font_selector(config),
 
             "js_dir": Helper.strip_top_directory_in_path(paths.dst_js_dir_path),
             "css_dir": Helper.strip_top_directory_in_path(paths.dst_css_dir_path),
@@ -798,6 +814,9 @@ class Blog:
         self.config.preferred_language = section["preferred_language"]
         self.config.available_languages = section["available_languages"].split(",")
 
+        self.config.preferred_font = section["preferred_font"]
+        self.config.available_fonts = section["available_fonts"].split(",")
+
     def load_lang_configuration(self, lang: str)->None:
         path = "mublog.ini"
 
@@ -827,7 +846,7 @@ class Blog:
         self.config.label_contact = section["label_contact"]
         self.config.label_written = section["label_written"]
         self.config.label_modified = section["label_modified"]
-
+        self.config.label_select_font = section["label_select_font"]
 
     def clean_build_directory(self) -> None:
         """
