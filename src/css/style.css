@@ -64,6 +64,10 @@ html {
   font-family: "SpaceMono";
 }
 
+.Helvetica_font {
+  font-family: Helvetica, sans-serif;
+}
+
 body {
   margin: 0 auto;
   padding: 0 1.5rem;
