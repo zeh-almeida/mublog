@@ -35,13 +35,13 @@ tags: project,management,agile,principles,gohorse,error,failure,waterfall,graphi
 
 ## [>](#index) <i class="fa-solid fa-arrow-rotate-left"></i> Quick Recap on Agile and Waterfall
 
-In order to understand the [Eldritch Terror](https://en.wikipedia.org/wiki/Lovecraftian_horror){target="\_blank"} which is the `GoHorse GFX` approach, we must first understand what good approaches are.
+In order to understand the [Eldritch Terror](https://en.wikipedia.org/wiki/Lovecraftian_horror){target="_blank"} which is the `GoHorse GFX` approach, we must first understand what good approaches are.
 
 And yes, I just mentioned that `Waterfall` can indeed be a good thing, deal with it. 😎
 
 ### <i class="fa-solid fa-water"></i> The Waterfall
 
-> If you want to get deep into the water, [I have already written extensively about Waterfall](project_waterfall.html){target="\_blank"} before.
+> If you want to get deep into the water, [I have already written extensively about Waterfall](project_waterfall.html){target="_blank"} before.
 
 `Waterfall` is a project management technique in which `each step depends directly from the one before`, with `no chance of iteration`.
 
@@ -49,13 +49,13 @@ While inflexible, it can be a very powerful tool for `problems with known soluti
 
 ### <i class="fa-solid fa-arrows-spin"></i> The Agile Framework
 
-> For a quick feedback you may [check my article explaining the Agile Framework](project_agile.html){target="\_blank"} first.
+> For a quick feedback you may [check my article explaining the Agile Framework](project_agile.html){target="_blank"} first.
 
 The `Agile Framework` is about taking care of the `team` and `dealing with changes as they come`: Giving and receiving honest and clear `Feedback` is a must in order to grow and mature.
 
 ## [>](#index) <i class="fa-solid fa-warehouse"></i> <i class="fa-solid fa-horse"></i> Breeding Horses
 
-> If you like sarcasm and want to taint your mind with the content, [check the GoHorse axioms at your own peril](https://medium.com/@dekaah/22-axioms-of-the-extreme-go-horse-methodology-xgh-9fa739ab55b4){target="\_blank"}.
+> If you like sarcasm and want to taint your mind with the content, [check the GoHorse axioms at your own peril](https://medium.com/@dekaah/22-axioms-of-the-extreme-go-horse-methodology-xgh-9fa739ab55b4){target="_blank"}.
 
 `GoHorse` is **NOT** a real methodology. It is the result of fundamental lack of understanding about the `project`, `requirements` and `effort`. It may be however, the single most used _"format"_ of working in `projects` out there.
 
@@ -63,13 +63,13 @@ Simply put, `GoHorse` is the amalgamation of `bad practices` performed by anyone
 
 `Project management` is not really a science but it is a very complex area: You have to `manage people, expectations and results` in a way that is `satisfactory for your clients and stakeholders` while maintaining the `structure of the team`.
 
-It is not simply a [_"throw money to solve"_](https://en.wikipedia.org/wiki/Sunk_cost){target="\_blank"} kind of problem. It requires `dedication`, `attention` and `work ethics`.
+It is not simply a [_"throw money to solve"_](https://en.wikipedia.org/wiki/Sunk_cost){target="_blank"} kind of problem. It requires `dedication`, `attention` and `work ethics`.
 
 Do you realize now why `GoHorse` is so prevalent in today's world?
 
 ## [>](#index) The Anatomy of GoHorse GFX
 
-`GoHorse GFX` tries its best to pretend to be `Agile` and normally it chooses [SCRUM](https://www.atlassian.com/agile/scrum){target="\_blank"} as the template for its nefarious deeds.
+`GoHorse GFX` tries its best to pretend to be `Agile` and normally it chooses [SCRUM](https://www.atlassian.com/agile/scrum){target="_blank"} as the template for its nefarious deeds.
 
 > `SCRUM` is actually a **GREAT** `agile` implementation and you should really consider it for your `team` if you're thinking about `being agile`. As it is customary, `GoHorse` leans on this reputation in order to take a foothold and ends up tarnishing `SCRUM` as a `methodology`.
 
@@ -92,7 +92,7 @@ The descent to madness happens in different ways, sometimes many ways at once:
 Some companies will have the `technical teams` be subordinates of the `business teams`. This means that the `technical team` is not capable of having their own priorities, having to serve the `business teams` as their lords.
 This makes the job of the `technical teams` very hard because they may have `changes in priorities` which they not be ready for.
 
-Looking at the `Agile principles` of [setting your priorities](project_agile.html#get-your-priorities-straight){target="\_blank"} and [togetherness](project_agile.html#one-mind-many-hearts){target="\_blank"} is becomes clear that such an approach of having `two different backlogs` will not respect neither the `agile framework` nor `SCRUM`.
+Looking at the `Agile principles` of [setting your priorities](project_agile.html#get-your-priorities-straight){target="_blank"} and [togetherness](project_agile.html#one-mind-many-hearts){target="_blank"} is becomes clear that such an approach of having `two different backlogs` will not respect neither the `agile framework` nor `SCRUM`.
 
 Since the `business teams` control the budget for the `projects` under the `technical teams`, they ultimately have the power to change whatever `roadmap` the `technical team` has, effectively undermining their efforts to make themselves `agile`.
 
@@ -110,7 +110,7 @@ Once you work in `very predictable` or even `repetitive projects`, it is easy to
 
 However, when you tackle `new` or `unexpected projects`, such as a `research` or a `software solution`, you can't **accurately** `estimate the time to completion` because you don't have enough information for it.
 
-This is why the `agile framework` asks for the `feedback loop` in many different ways ([1](project_agile.html#hindsight-is-2020){target="\_blank"}, [2](project_agile.html#give-it-a-kiss){target="\_blank"}, [3](project_agile.html#keeping-up-the-pace){target="\_blank"}) in order to make sure `the team understand how much effort it takes to deliver something.`
+This is why the `agile framework` asks for the `feedback loop` in many different ways ([1](project_agile.html#hindsight-is-2020){target="_blank"}, [2](project_agile.html#give-it-a-kiss){target="_blank"}, [3](project_agile.html#keeping-up-the-pace){target="_blank"}) in order to make sure `the team understand how much effort it takes to deliver something.`
 
 It then becomes clear that any `project` created with the sole purpose of `adhering to a schedule` **will** face a lot of difficulties and it is `more likely to fail that succeed`.
 
@@ -118,7 +118,7 @@ It then becomes clear that any `project` created with the sole purpose of `adher
 
 What happens when you `sell a feature you don't have` or `buys something you have no idea how to use`?
 
-Obviously it becomes a `project` which needs to be tackled as soon as possible because [money in on the line](https://en.wikipedia.org/wiki/Sunk_cost){target="\_blank"}.
+Obviously it becomes a `project` which needs to be tackled as soon as possible because [money in on the line](https://en.wikipedia.org/wiki/Sunk_cost){target="_blank"}.
 
 #### <i class="fa-solid fa-cash-register"></i> To Sell The Void
 
@@ -131,7 +131,7 @@ The `company's executives` will **not** allow a sale to do under because not onl
 
 What's the solution to this conundrum? Well, no matter how hard, difficult and exhausting it will be: `the team will have to implement this feature before the client starts using the product`.
 
-That goes against most of the [Agile Principles](project_agile.html#the-twelve-commandments-principles-of-agile){target="\_blank"} right off the bat and is pretty much as `GoHorse` as you can make something.
+That goes against most of the [Agile Principles](project_agile.html#the-twelve-commandments-principles-of-agile){target="_blank"} right off the bat and is pretty much as `GoHorse` as you can make something.
 
 #### <i class="fa-solid fa-cart-arrow-down"></i> If You Bought It, You Got To Use It
 
@@ -145,7 +145,7 @@ As in other scenarios, this `forces the team` to move into `GoHorse` territory, 
 
 ### [>>](#the-anatomy-of-gohorse-gfx) <i class="fa-solid fa-users-between-lines"></i> Overcrowding The Team
 
-`Agile teams` [have to become self sufficient](project_agile.html#self-improvement-is-real){target="\_blank"} in order to [have high performance](project_agile.html#the-team-makes-the-dream-come-true){target="\_blank"} as well as [making sure everyone is connected](project_agile.html#avoid-e-mails-that-could-be-a-conversation){target="\_blank"}.
+`Agile teams` [have to become self sufficient](project_agile.html#self-improvement-is-real){target="_blank"} in order to [have high performance](project_agile.html#the-team-makes-the-dream-come-true){target="_blank"} as well as [making sure everyone is connected](project_agile.html#avoid-e-mails-that-could-be-a-conversation){target="_blank"}.
 
 Those `principles` are easy to lose track of, especially if your `team` get too big. What does it really mean, `to have a team too big`? You know you have passed `critical mass` when `managers do not have enough time in their calendars to have a 15-minute conversation with their personnel at least once a month`.
 
@@ -190,7 +190,7 @@ Regularly `big companies` have `budget adjustments` which are often close to the
 
 As you may have guessed, this is a prime scenario for `useless projects` to be born. Their sole purpose is to have budget allocated, **not** to succeed. Of course, a `project which is not meant to succeed can only fail` but it _mustn't_ or the `budget gets deallocated` and may not be available after the review.
 
-What ends up happening is something close to the [sunk cost fallacy](https://en.wikipedia.org/wiki/Sunk_cost){target="\_blank"}: you avoid stopping the investment because you are already so deep into it but in order to justify past expenses, you keep spending more.
+What ends up happening is something close to the [sunk cost fallacy](https://en.wikipedia.org/wiki/Sunk_cost){target="_blank"}: you avoid stopping the investment because you are already so deep into it but in order to justify past expenses, you keep spending more.
 
 ### <i class="fa-solid fa-repeat"></i> Same Old Song and Dance
 
@@ -206,9 +206,9 @@ As you may have guessed by the hints I left, those strict rules may `prevent` co
 
 ### <i class="fa-solid fa-book"></i> The Advent of the Buzzwords
 
-[Buzzwords](https://en.wikipedia.org/wiki/Buzzword){target="\_blank"} have the habit of using an important word or term and `diluting` their meaning.
+[Buzzwords](https://en.wikipedia.org/wiki/Buzzword){target="_blank"} have the habit of using an important word or term and `diluting` their meaning.
 
-`Agile` is one of the victims, as the `buzzword version` of `agile` tries to convince the reader it is `fast`, `modern`, is `always better` and will `generate profit by itself` (which _may_ actually happen but only if you adhere to the [principles](project_agile.html#the-twelve-commandments-principles-of-agile){target="\_blank"}). Of course, the `buzzword` doesn't care about the `principles` as it is just a conversation tool, to embellish the contents of the speech.
+`Agile` is one of the victims, as the `buzzword version` of `agile` tries to convince the reader it is `fast`, `modern`, is `always better` and will `generate profit by itself` (which _may_ actually happen but only if you adhere to the [principles](project_agile.html#the-twelve-commandments-principles-of-agile){target="_blank"}). Of course, the `buzzword` doesn't care about the `principles` as it is just a conversation tool, to embellish the contents of the speech.
 
 At the same time, `buzzwords` caused a real problem to `old-fashioned business`: People `started using those words` and `some of those people even knew what they really meant`. Coupled with the fact that some business `were pretty successful` using some of the `buzzwords` the right way, the trend was set: We must now make ourselves `agile`.
 
@@ -243,9 +243,9 @@ I must apologize if you got this far into this article. You were probably trigge
 
 I have named this article `GoHorse GFX` because of the [graphical style](#graphics-are-more-important-than-the-gameplay) I have seen going around, I myself got caught in some `projects` using this.
 
-But hey, **there really is a light at the end of the tunnel**: make sure you also [know the agile framework](project_agile.html){target="\_blank"} and even the [waterfall method](project_waterfall.html) too, why not?
+But hey, **there really is a light at the end of the tunnel**: make sure you also [know the agile framework](project_agile.html){target="_blank"} and even the [waterfall method](project_waterfall.html){target="_blank"} too, why not?
 
-Make sure you understand them and fight for them: only you can stop `GoHorse` from being a regular occurrence in your life.
+Make sure you understand them and `fight for them`: only you can stop `GoHorse` from being a regular occurrence in your life.
 
 Thank you!
 
