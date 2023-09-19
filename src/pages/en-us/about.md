@@ -52,5 +52,6 @@ If you would like to know more about me, please take a look at my [curriculum](p
 ## <i class="fa-regular fa-address-card"></i> External Links
 
 - <i class="fa-brands fa-linkedin"></i> [LinkedIn Professional Profile](https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida){target="_blank"}
+- <i class="fa-solid fa-file-signature"></i> [Indeed Professional Profile](https://profile.indeed.com/p/josricardocarvalhop-1cbmxrw){target="_blank"}
 - <i class="fa-brands fa-github"></i> [GitHub Personal Profile](https://github.com/zeh-almeida){target="_blank"}
 - <i class="fa-brands fa-telegram"></i> <a href="${author_contact}" target="_blank" title="Telegram Profile">Contact me on Telegram</a>

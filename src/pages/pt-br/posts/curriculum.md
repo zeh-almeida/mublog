@@ -360,5 +360,6 @@ ___
 ## [>](#índice) <i class="fa-regular fa-address-card"></i> Informações Adicionais
 
 - <i class="fa-brands fa-linkedin"></i> [Perfil Profissional no LinkedIn](https://www.linkedin.com/in/jos%C3%A9-ricardo-prado-de-almeida){target="_blank"}
+- <i class="fa-solid fa-file-signature"></i> [Perfil Profissional no Indeed](https://profile.indeed.com/p/josricardocarvalhop-1cbmxrw){target="_blank"}
 - <i class="fa-brands fa-github"></i> [Perfil Pessoal no GitHub](https://github.com/zeh-almeida){target="_blank"}
 - <i class="fa-brands fa-telegram"></i> <a href="${author_contact}" target="_blank" title="Perfil no Telegram">Contato via Telegram</a>
