@@ -338,6 +338,8 @@ ___
 ### [>](#professional-experience) <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programmer
 <i class="fa-regular fa-calendar"></i> 2014 - 2015
 
+#### <i class="fa-solid fa-diagram-project"></i> Project:
+
 - Maintenance of a Android app and it's web-service for vehicle inspection tailor-made for a vehicle factory park maintainer in a major factory in the Curitiba area.
     - Users took pictures of the vehicles in three distinct moments: when they left the assembly, when they were placed in the transports or in regular checks in the vehicle park where they resided.
     - The app allowed users to select specific chassis for different vehicle classes;

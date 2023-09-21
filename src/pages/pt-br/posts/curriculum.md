@@ -288,6 +288,8 @@ ___
 ### <i class="fa-regular fa-building"></i> Trackmob <i class="fa-regular fa-circle-dot"></i> Engenheiro de Software
 <i class="fa-regular fa-calendar"></i> 2015 - 2016
 
+#### <i class="fa-solid fa-diagram-project"></i> Projetos:
+
 - Análise e Desenvolvimento de um sistema CRM para ONGs
     - Escrito em Ruby on Rails numa arquitetura monolítica por se tratar de um MVP.
     - Desenhado de forma a ser multi-cliente, como um SaaS.
@@ -333,6 +335,8 @@ ___
 ___
 ### <i class="fa-regular fa-building"></i> Regazzo Soluções em Tecnologia <i class="fa-regular fa-circle-dot"></i> Programador
 <i class="fa-regular fa-calendar"></i> 2014 - 2016
+
+#### <i class="fa-solid fa-diagram-project"></i> Projeto:
 
 - Manutenção de um aplicativo Android e seu web-service para inspeção de veículos feito sob medida para um gestor de pátio de uma grande fábrica na região de Curitiba.
     - Usuários podem tirar fotos dos veículos em três momentos distintos: quando saem da linha de montagem,quando são entregues a transportadora ou em inspeções regulares dentro do pátio.
